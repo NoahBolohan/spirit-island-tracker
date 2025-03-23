@@ -1,0 +1,68 @@
+{
+    "A Diversity of Spirits" : {
+        "has_image" : "yes",
+        "difficulty" : 0
+    },
+    "Blitz" : {
+        "has_image" : "yes",
+        "difficulty" : 0
+    },
+    "Dahan Insurrection" : {
+        "has_image" : "yes",
+        "difficulty" : 4
+    },
+    "Despicable Theft" : {
+        "has_image" : "yes",
+        "difficulty" : 2
+    },
+    "Destiny Unfolds" : {
+        "has_image" : "yes",
+        "difficulty" : 1
+    },
+    "Elemental Invocation" : {
+        "has_image" : "yes",
+        "difficulty" : 1
+    },
+    "Guard the Isle's Heart" : {
+        "has_image" : "yes",
+        "difficulty" : 0
+    },
+    "Powers Long Forgotten" : {
+        "has_image" : "yes",
+        "difficulty" : 1
+    },
+    "Rituals of Terror" : {
+        "has_image" : "yes",
+        "difficulty" : 3
+    },
+    "Rituals of the Destroying Flame" : {
+        "has_image" : "yes",
+        "difficulty" : 3
+    },
+    "Second Wave" : {
+        "has_image" : "yes",
+        "difficulty" : "1/-1"
+    },
+    "Surges of Colonization (+2)" : {
+        "alt_name" : "Surges of Colonization",
+        "has_image" : "no",
+        "difficulty" : 2
+    },
+    "Surges of Colonization (+7)" : {
+        "alt_name" : "Surges of Colonization",
+        "has_image" : "no",
+        "difficulty" : 7
+    },
+    "The Great River" : {
+        "has_image" : "yes",
+        "difficulty" : 3
+    },
+    "Varied Terrains" : {
+        "has_image" : "yes",
+        "difficulty" : 2
+    },
+    "Ward the Shores" : {
+        "has_image" : "yes",
+        "difficulty" : 2
+    }
+}
