@@ -134,6 +134,12 @@ function generate_spirit_select_button_for_spirit(
         spirit_config
     );
 
+    var list_item = $("<li>").attr(
+        {
+            id: spirit_name
+        }
+    );
+
     var button = $("<button>").attr(
         {
             class : "col-3 btn btn-xs",
@@ -141,16 +147,6 @@ function generate_spirit_select_button_for_spirit(
                 spirit_button_name
             }`
         }
-    )
-
-    $(`#button_${spirit_button_name}`).data(
-        "name",
-        spirit_name
-    );
-
-    $(`#button_${spirit_button_name}`).data(
-        "config",
-        spirit_config
     )
 
     $("<img>").attr(
@@ -165,9 +161,23 @@ function generate_spirit_select_button_for_spirit(
     ).appendTo(
         button
     );
-    
+
     button.appendTo(
-        `#div_spirit_select_buttons`
+        list_item
+    );
+
+    list_item.data(
+        "name",
+        spirit_name
+    );
+
+    list_item.data(
+        "expansion",
+        spirit_config["expansion"]
+    );
+    
+    list_item.appendTo(
+        `#list_spirit_select_buttons`
     );
 
     $(`#button_${spirit_button_name}`).on(
@@ -203,7 +213,7 @@ function generate_spirit_select_button_for_spirit(
 
 $(document).ready(
     function() {
-        $(`#div_spirit_select_buttons`).empty();
+        $(`#list_spirit_select_buttons`).empty();
 
         $.ajax({
             url: "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/spirits.json",
@@ -224,3 +234,32 @@ $(document).ready(
         });
     }
 )
+
+// https://www.w3schools.com/howto/howto_js_filter_lists.asp
+function spirit_select_filter() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = $("#input_spirit_select_search").val().toUpperCase();
+    // filter = input.value.toUpperCase();
+
+    var spirit_select_list_items = $("#list_spirit_select_buttons li");
+  
+    // Loop through all list items, and hide those who don't match the search query
+    spirit_select_list_items.each(function(idx, li) {
+
+        var spirit_select_item = $(li);
+    
+
+        if (spirit_select_item.attr("id").toUpperCase().indexOf(input) > -1) {
+            spirit_select_item.css(
+                "display",
+                ""
+            );
+        } else {
+            spirit_select_item.css(
+                "display",
+                "none"
+            );
+        }
+    })
+};
