@@ -17,9 +17,9 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-		
-		<script src="js/no_sleep_script.js"></script>
 		<script src="js/no_sleep.min.js"></script>
+		<script src="js/no_sleep_script.js"></script>
+		
 		<script src="js/scripts.js"></script>
 	</head>
 
@@ -55,6 +55,28 @@
 			</div>
 		</div>
 
+		<div class="modal fade" id="modal_spirits">
+
+			<div class="modal-dialog" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center">
+	
+						<h2 class="modal-title">Spirits</h2>
+					</div>
+	
+					<div class="modal-body" id="modal_spirits_body">
+
+						<div class="p-0 container-fluid">
+	
+							<div class="row p-0 mt-2 justify-content-center margin_auto" id="div_spirit_select_buttons"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container-fluid mb-1">
 				
 			<div class="row justify-content-center">
@@ -76,37 +98,32 @@
 
 			<div class="row mt-1 p-0 g-0 justify-content-center margin_auto" id="row_game_info">
 
-				<div class="col-6 card margin_auto" id="card_spirit">
+				<div class="col p-1">
 
-					<div class="card-header text-center">
-						Spirit
+					<div class="row p-0 justify-content-center margin_auto">
+						Select spirit:
 					</div>
-					<div class="row m-3 justify-content-center">
-						<input class="col" type="text" list="list_spirit_selection" autocomplete="on" id="spirit_selection" placeholder="Enter spirit" type="search">
-						<datalist id="list_spirit_selection"></datalist>
+
+					<div class="row p-0 justify-content-center margin_auto">
+
+						<button class="p-0 btn btn-xs btn-info round-end-goal-button" id="button_select_spirit">
+							&#x2795;
+						</button>
 					</div>
 				</div>
 
-				<div class="col-6 card margin_auto" id="card_adversary_1">
+				<div class="col p-1">
 
-					<div class="card-header bg-transparent text-center">
-						Leading
+					<div class="row p-0 justify-content-center margin_auto">
+						Select adversary:
 					</div>
 
-					<select class="row m-3 justify-content-center" id="row_select_adversary_1" name="adversary_1">
-						<option selected value="">No adversary</option>
-					</select>
+					<div class="row p-0 justify-content-center margin_auto">
 
-					<select class="row mb-3 mx-3 justify-content-center" id="row_select_adversary_1_level" name="adversary_1_level" disabled>
-						<option disabled selected>Level</option>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-					</select>
+						<button class="p-0 btn btn-xs btn-info round-end-goal-button" id="button_select_adversary">
+							&#x2795;
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

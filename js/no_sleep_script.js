@@ -1,4 +1,3 @@
-
 // https://github.com/richtr/NoSleep.js
 
 var noSleep = new NoSleep();
