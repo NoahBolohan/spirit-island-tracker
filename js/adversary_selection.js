@@ -4,6 +4,9 @@ $(document).ready(
         $("#button_select_adversary").on(
             "click",
             function() {
+                
+                $("#input_adversary_select_search").val("");
+                adversary_select_filter();
                 $("#modal_adversaries").modal("show");
             }
         );

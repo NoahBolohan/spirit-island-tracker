@@ -4,6 +4,9 @@ $(document).ready(
         $("#button_select_spirit").on(
             "click",
             function() {
+
+                $("#input_spirit_select_search").val("");
+                spirit_select_filter();
                 $("#modal_spirits").modal("show");
             }
         );
