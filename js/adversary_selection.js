@@ -4,7 +4,7 @@ $(document).ready(
         $("#button_select_adversary").on(
             "click",
             function() {
-                
+
                 $("#input_adversary_select_search").val("");
                 adversary_select_filter();
                 $("#modal_adversaries").modal("show");
@@ -66,7 +66,7 @@ function generate_adversary_button_name(
     );
 }
 
-function generate_adversary_select_button_for_adversary(
+function generate_adversary_select_list_item_for_adversary(
     adversary_name,
 ) {
 
@@ -102,10 +102,22 @@ function generate_adversary_select_button_for_adversary(
         button
     );
 
+    
+    $("<div>").css(
+        {
+            "text-align" : "center",
+            "height" : "2lh"
+        }
+    ).text(
+        adversary_name
+    ).appendTo(
+        button
+    );
+
     button.appendTo(
         list_item
     );
-    
+
     list_item.appendTo(
         `#list_adversary_select_buttons`
     );
@@ -152,7 +164,7 @@ $(document).ready(
                     json,
                     function(key, value) {
 
-                        generate_adversary_select_button_for_adversary(
+                        generate_adversary_select_list_item_for_adversary(
                             key
                         );
                     }

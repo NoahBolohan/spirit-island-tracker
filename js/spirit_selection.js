@@ -103,7 +103,7 @@ function generate_spirit_button_name(
     );
 }
 
-function generate_spirit_select_button_for_spirit(
+function generate_spirit_select_list_item_for_spirit(
     spirit_name,
     spirit_config
 ) {
@@ -193,7 +193,7 @@ $(document).ready(
                     json,
                     function(key, value) {
 
-                        generate_spirit_select_button_for_spirit(
+                        generate_spirit_select_list_item_for_spirit(
                             key,
                             value
                         );
