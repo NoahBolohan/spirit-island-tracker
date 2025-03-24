@@ -168,6 +168,13 @@ function generate_spirit_select_list_item_for_spirit(
         function() {
 
             $(`#button_select_spirit`).empty();
+            $("#row_innate_power_cols").empty();
+            $("#div_modals_innate_powers").empty();
+
+            $("#spirit_island_tracker_body").data(
+                "selected_spirit_config",
+                spirit_config
+            );
         
             $("<img>").attr(
                 {
@@ -187,6 +194,46 @@ function generate_spirit_select_list_item_for_spirit(
                     "border" : "none"
                 }
             );
+
+            $("#row_innate_powers").attr(
+                "style",
+                `background-image : url(${new_url}); background-size: center; background-size: cover; background-color: rgba(255,255,255,0); background-blend-mode: lighten;`
+            );
+
+            if ("innate_power_5" in spirit_config) {
+                for (var i = 1; i <= 5; i++) {
+
+                    parse_innate_power(
+                        spirit_config[`innate_power_${i}`],
+                        i,
+                        6
+                    ).appendTo(
+                        "#row_innate_power_cols"
+                    );
+                }
+            }
+            else if ("innate_power_2" in spirit_config) {
+
+                for (var i = 1; i <= 2; i++) {
+
+                    parse_innate_power(
+                        spirit_config[`innate_power_${i}`],
+                        i,
+                        6
+                    ).appendTo(
+                        "#row_innate_power_cols"
+                    );
+                }
+            }
+            else if ("innate_power_1" in spirit_config) {
+                parse_innate_power(
+                    spirit_config["innate_power_1"],
+                    1,
+                    6
+                ).appendTo(
+                    "#row_innate_power_cols"
+                );
+            }
 
             $(`#modal_spirits`).modal("hide");
         }

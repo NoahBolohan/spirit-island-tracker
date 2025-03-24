@@ -65,7 +65,7 @@ function reset_spirit_selction() {
     );
 }
 
-function reset_adversary_selction() {
+function reset_adversary_selection() {
 
     $("#button_select_adversary").empty();
 
@@ -85,15 +85,57 @@ function reset_adversary_selction() {
         }
     );
 }
+
+function reset_innate_power_row() {
+
+    $("#row_innate_powers").attr(
+        "style",
+        `background-image : none;`
+    );
+
+    $("#row_innate_power_cols").empty();
+    $("#div_modals_innate_powers").empty();
+
+    var placeholder_row_innate_power_cols = $("<p>").attr(
+        {
+            style : "margin: 5px 5px 0px 5px;"
+        }
+    );
+
+    var fear_object = $("<object>").attr(
+        {
+            data : "static/icons/fear.svg",
+            height : "15px"
+        }
+    );
+
+    placeholder_row_innate_power_cols.append(
+        fear_object.clone()
+    );
+
+    placeholder_row_innate_power_cols.append(
+        " Select a Spirit to display their innate powers "
+    );
+
+    placeholder_row_innate_power_cols.append(
+        fear_object.clone()
+    );
+
+    placeholder_row_innate_power_cols.appendTo(
+        $("#row_innate_power_cols")
+    );
+}
+
 $(document).ready(
     function() {
 
         $("#button_reset_selections").on(
             "click",
             function() {
-                
+
+                reset_innate_power_row()
                 reset_spirit_selction();
-                reset_adversary_selction();
+                reset_adversary_selection();
             }
         );
     }

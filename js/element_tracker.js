@@ -303,5 +303,3 @@ $(document).ready(
         );
     }
 );
-
-function check_tier_availabilities() {};
