@@ -100,30 +100,6 @@ function generate_spirit_button_name(
     );
 }
 
-$(document).ready(
-    function() {
-
-        $.ajax({
-            url: "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/spirits.json",
-            async: false,
-            dataType: "json",
-            success: function (json) {
-                $.each(
-                    json,
-                    function(key, value) {
-
-                        $("#list_spirit_selection").append(
-                            `<option value="${key}">`
-                        );
-                    }
-                )
-            }
-        });
-
-        $("#spirit_selection").prop("selectedIndex",0);
-    }
-)
-
 function generate_spirit_select_button_for_spirit(
     spirit_name,
     spirit_config
@@ -136,7 +112,8 @@ function generate_spirit_select_button_for_spirit(
 
     var list_item = $("<li>").attr(
         {
-            id: spirit_name
+            id: spirit_name,
+            class: "spirit_select_list_item"
         }
     );
 
@@ -191,7 +168,6 @@ function generate_spirit_select_button_for_spirit(
             $(`#button_select_spirit`).css(
                 {
                     "background-color": "transparent",
-                    // "outline" : "none",
                     "border" : "none"
                 }
             );

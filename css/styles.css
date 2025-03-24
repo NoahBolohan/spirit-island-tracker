@@ -118,16 +118,22 @@ border-radius: 50%;
     cursor: pointer;
 }
 
-ul
-{
+ul {
     list-style-type:none;
     padding:0px;
     margin:0px;
 }
 
-li {
+.spirit_select_list_item {
     list-style:none;
     display: inline-block;
     width: 25%;
+    padding: 1px;
+}
+
+.adversary_select_list_item {
+    list-style:none;
+    display: inline-block;
+    width: 50%;
     padding: 1px;
 }

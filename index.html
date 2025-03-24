@@ -21,6 +21,7 @@
 		<script src="js/misc_functions.js"></script>
 		<script src="js/settings.js"></script>
 		<script src="js/spirit_selection.js"></script>
+		<script src="js/adversary_selection.js"></script>
 	</head>
 
 	<body class="parallax" id="spirit_island_tracker_body">
@@ -88,6 +89,36 @@
 			</div>
 		</div>
 
+		<div class="modal fade" id="modal_adversaries">
+
+			<div class="modal-dialog" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Adversaries</h2>
+						<button class="btn astext" id="button_close_modal_adversaries" style="position:absolute;right:1em;">
+							&#x274c;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_adversaries_body">
+
+						<div class="p-0 container-fluid">
+
+							<div class="row px-0 pb-1 justify-content-center margin_auto">
+								<input class="col-10" type="text" id="input_adversary_select_search" onkeyup="adversary_select_filter()" placeholder="Search by name">
+								<button class="col-2 btn astext" id="button_clear_adversary_select_search">Clear</button>
+							</div>
+
+							<ul id="list_adversary_select_buttons"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container-fluid mb-1">
 				
 			<div class="row justify-content-center">
@@ -117,7 +148,7 @@
 
 					<div class="row p-0 justify-content-center margin_auto">
 
-						<button class="p-0 btn btn-xs btn-info round-end-goal-button" id="button_select_spirit">
+						<button class="p-0 btn btn-xs btn-info" id="button_select_spirit">
 							&#x2795;
 						</button>
 					</div>
@@ -131,7 +162,7 @@
 
 					<div class="row p-0 justify-content-center margin_auto">
 
-						<button class="p-0 btn btn-xs btn-info round-end-goal-button" id="button_select_adversary">
+						<button class="p-0 btn btn-xs btn-info" id="button_select_adversary">
 							&#x2795;
 						</button>
 					</div>
