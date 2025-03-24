@@ -102,11 +102,12 @@ function generate_adversary_select_list_item_for_adversary(
         button
     );
 
-    
     $("<div>").css(
         {
             "text-align" : "center",
-            "height" : "2lh"
+            "font-size" : "0.7em",
+            "height" : "4lh",
+            "padding-top" : "5px"
         }
     ).text(
         adversary_name

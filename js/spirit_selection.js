@@ -142,6 +142,19 @@ function generate_spirit_select_list_item_for_spirit(
         button
     );
 
+    $("<div>").css(
+        {
+            "text-align" : "center",
+            "font-size" : "0.7em",
+            "height" : "4lh",
+            "padding-top" : "5px"
+        }
+    ).text(
+        spirit_name
+    ).appendTo(
+        button
+    );
+
     button.appendTo(
         list_item
     );

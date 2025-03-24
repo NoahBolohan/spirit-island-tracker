@@ -43,3 +43,58 @@ $(document).ready(
           }, false);
     }
 )
+
+function reset_spirit_selction() {
+
+    $("#button_select_spirit").empty();
+
+    $("#button_select_spirit").attr(
+        {
+            class : "p-0 btn btn-xs btn-info",
+            id : "button_select_spirit"
+        }
+    ).html(
+        "&#x2795;"
+    )
+
+    $("#button_select_spirit").css(
+        {
+            "background-color": "",
+            "border" : ""
+        }
+    );
+}
+
+function reset_adversary_selction() {
+
+    $("#button_select_adversary").empty();
+
+    $("#button_select_adversary").attr(
+        {
+            class : "p-0 btn btn-xs btn-info",
+            id : "button_select_adversary"
+        }
+    ).html(
+        "&#x2795;"
+    )
+
+    $("#button_select_adversary").css(
+        {
+            "background-color": "",
+            "border" : ""
+        }
+    );
+}
+$(document).ready(
+    function() {
+
+        $("#button_reset_selections").on(
+            "click",
+            function() {
+                
+                reset_spirit_selction();
+                reset_adversary_selction();
+            }
+        );
+    }
+)
