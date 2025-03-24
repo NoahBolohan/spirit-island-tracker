@@ -101,3 +101,17 @@ border-radius: 50%;
     padding:0;
     cursor: pointer;
 }
+
+ul
+{
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+
+li {
+    list-style:none;
+    display: inline-block;
+    width: 25%;
+    padding: 1px;
+}

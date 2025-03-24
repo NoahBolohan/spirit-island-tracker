@@ -142,10 +142,11 @@ function generate_spirit_select_button_for_spirit(
 
     var button = $("<button>").attr(
         {
-            class : "col-3 btn btn-xs",
+            class : "btn btn-xs",
             id : `button_${
                 spirit_button_name
-            }`
+            }`,
+            "style" : "padding : 0px;"
         }
     )
 
@@ -155,8 +156,7 @@ function generate_spirit_select_button_for_spirit(
                 spirit_name,
                 spirit_config
             ),
-            "class" : "col-3 p-0",
-            "style" : "width : 100%"
+            "style" : "width : 100%;"
         }
     ).appendTo(
         button
@@ -235,27 +235,25 @@ $(document).ready(
     }
 )
 
-// https://www.w3schools.com/howto/howto_js_filter_lists.asp
+// Pseudo-code: https://www.w3schools.com/howto/howto_js_filter_lists.asp
+// Convert to jQuery: https://stackoverflow.com/questions/4511652/looping-through-list-items-with-jquery
 function spirit_select_filter() {
-    // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
-    input = $("#input_spirit_select_search").val().toUpperCase();
-    // filter = input.value.toUpperCase();
 
+    var input = $("#input_spirit_select_search").val().toUpperCase();
     var spirit_select_list_items = $("#list_spirit_select_buttons li");
   
-    // Loop through all list items, and hide those who don't match the search query
     spirit_select_list_items.each(function(idx, li) {
 
         var spirit_select_item = $(li);
-    
 
         if (spirit_select_item.attr("id").toUpperCase().indexOf(input) > -1) {
+
             spirit_select_item.css(
                 "display",
                 ""
             );
         } else {
+
             spirit_select_item.css(
                 "display",
                 "none"
