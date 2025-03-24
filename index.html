@@ -22,8 +22,9 @@
 		<script src="js/settings.js"></script>
 		<script src="js/spirit_selection.js"></script>
 		<script src="js/adversary_selection.js"></script>
+		<script src="js/element_tracker.js"></script>
 
-		<script src="https://kit.fontawesome.com/1cbbe880ba.js" crossorigin="anonymous"></script>
+		<!-- <script src="https://kit.fontawesome.com/1cbbe880ba.js" crossorigin="anonymous"></script> -->
 	</head>
 
 	<body class="parallax" id="spirit_island_tracker_body">
@@ -170,6 +171,47 @@
 						<button class="p-0 btn btn-xs btn-info" id="button_select_adversary">
 							&#x2795;
 						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_element_tracker">
+
+				<div class="card col p-0 margin_auto" id="col_element_tracker_card" style="background-color : rgba(255,255,255,0.4); background-blend-mode : lighten">
+	
+					<div class="card-header text-center">
+						Element Trackers
+					</div>
+	
+					<div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker"></div>
+
+					<div class="row mb-2 p-0 justify-content-center margin-auto">
+
+						<button class="col-3 btn btn-primary" id="button_toggle_lock_element_tracker" type="button">
+							Lock
+						</button>
+
+						<button class="col-3 offset-1 btn btn-danger" id="button_reset_element_tracker" type="button">
+							Reset
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_innate_powers">
+
+				<div class="card p-0 margin_auto" id="col_element_tracker_card" style="background-color : rgba(255,255,255,0);">
+	
+					<div class="card-header text-center">
+						Innate Powers
+					</div>
+	
+					<div class="row m-1 p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
+						<p>
+							<object data="static/icons/fear.svg" height="15px"></object>
+							Select a Spirit to display their innate powers
+							<object data="static/icons/fear.svg" height="15px"></object>
+						</p>
 					</div>
 				</div>
 			</div>
