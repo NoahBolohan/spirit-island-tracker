@@ -165,16 +165,6 @@ function generate_spirit_select_button_for_spirit(
     button.appendTo(
         list_item
     );
-
-    list_item.data(
-        "name",
-        spirit_name
-    );
-
-    list_item.data(
-        "expansion",
-        spirit_config["expansion"]
-    );
     
     list_item.appendTo(
         `#list_spirit_select_buttons`
@@ -261,3 +251,16 @@ function spirit_select_filter() {
         }
     })
 };
+
+$(document).ready(
+    function() {
+
+        $("#button_clear_spirit_select_search").on(
+            "click",
+            function() {
+                $("#input_spirit_select_search").val("");
+                spirit_select_filter();
+            }
+        );
+    }
+)
