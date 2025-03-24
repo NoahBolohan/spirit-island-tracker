@@ -93,3 +93,11 @@ border-radius: 34px;
 .slider.round:before {
 border-radius: 50%;
 }
+
+.astext {
+    /* background:transparent; */
+    border:none !important;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}

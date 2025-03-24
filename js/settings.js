@@ -1,5 +1,28 @@
-// https://github.com/richtr/NoSleep.js
+$(document).ready(
+    function() {
 
+        $("#button_settings").on(
+            "click",
+            function() {
+                $("#modal_settings").modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_close_modal_settings").on(
+            "click",
+            function() {
+                $("#modal_settings").modal("hide");
+            }
+        );
+    }
+)
+
+// https://github.com/richtr/NoSleep.js
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
 

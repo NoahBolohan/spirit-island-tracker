@@ -18,9 +18,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 		<script src="js/no_sleep.min.js"></script>
-		<script src="js/no_sleep_script.js"></script>
-		
-		<script src="js/scripts.js"></script>
+		<script src="js/misc_functions.js"></script>
+		<script src="js/settings.js"></script>
+		<script src="js/spirit_selection.js"></script>
 	</head>
 
 	<body class="parallax" id="spirit_island_tracker_body">
@@ -31,9 +31,12 @@
 	
 				<div class="modal-content">
 	
-					<div class="modal-header justify-content-center">
+					<div class="modal-header justify-content-center" style="position:relative;">
 	
 						<h2 class="modal-title">Settings</h2>
+						<button class="btn astext" id="button_close_modal_settings" style="position:absolute;right:1em;">
+							&#x274c;
+						</button>
 					</div>
 	
 					<div class="modal-body" id="modal_settings_body">
@@ -61,9 +64,12 @@
 	
 				<div class="modal-content">
 	
-					<div class="modal-header justify-content-center">
+					<div class="modal-header justify-content-center" style="position:relative;">
 	
 						<h2 class="modal-title">Spirits</h2>
+						<button class="btn astext" id="button_close_modal_spirits" style="position:absolute;right:1em;">
+							&#x274c;
+						</button>
 					</div>
 	
 					<div class="modal-body" id="modal_spirits_body">

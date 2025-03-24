@@ -1,32 +1,10 @@
-function custom_show(div_id) {
-    $(div_id).css(
-        "visibility",
-        "visible"
-    );
-    $(div_id).css(
-        "max-height",
-        "100%"
-    );
-}
-
-function custom_hide(div_id) {
-    $(div_id).css(
-        "visibility",
-        "hidden"
-    );
-    $(div_id).css(
-        "max-height",
-        "0"
-    );
-}
-
 $(document).ready(
     function() {
 
-        $("#button_settings").on(
+        $("#button_select_spirit").on(
             "click",
             function() {
-                $("#modal_settings").modal("show");
+                $("#modal_spirits").modal("show");
             }
         );
     }
@@ -35,10 +13,10 @@ $(document).ready(
 $(document).ready(
     function() {
 
-        $("#button_select_spirit").on(
+        $("#button_close_modal_spirits").on(
             "click",
             function() {
-                $("#modal_spirits").modal("show");
+                $("#modal_spirits").modal("hide");
             }
         );
     }
@@ -222,7 +200,6 @@ function generate_spirit_select_button_for_spirit(
         }
     );
 }
-
 
 $(document).ready(
     function() {
