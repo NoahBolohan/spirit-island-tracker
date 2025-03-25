@@ -11,40 +11,146 @@
         "any"
     ],
     "keywords" : {
-        "+1_RANGE" : "+1_range.svg",
-        "1_RANGE" : "1_range.svg",
-        "2_RANGE" : "2_range.svg",
-        "BADLANDS" : "badlands.svg",
-        "BEASTS" : "beasts.svg",
-        "BLIGHT" : "blight.svg",
-        "CITY" : "city.svg",
-        "DAHAN" : "dahan.svg",
-        "DEEPS" : "deeps.svg",
-        "DESTROYED_PRESENCE" : "destroyed_presence.svg",
-        "DISEASE" : "disease.svg",
-        "EXPLORER" : "explorer.svg",
-        "FAST" : "fast.svg",
-        "FEAR" : "fear.svg",
-        "IMPENDING_CARD" : "impending_card.svg",
-        "INCARNA_BREATH_OF_DARKNESS_DOWN_YOUR_SPINE" : "incarna_breath_of_darkness_down_your_spine.svg",
-        "INCARNA_EMBER_EYED_BEHEMOTH" : "incarna_ember_eyed_behemoth.svg",
-        "INCARNA_LURE_OF_THE_DEEP_WILDERNESS" : "incarna_lure_of_the_deep_wilderness.svg",
-        "INCARNA_POWERED" : "incarna_powered.svg",
-        "INCARNA_THUNDERSPEAKER" : "incarna_thunderspeaker.svg",
-        "INCARNA_TOWERING_ROOTS_OF_THE_JUNGLE" : "incarna_towering_roots_of_the_jungle.svg",
-        "INCARNA_UNEMPOWERED" : "incarna_unempowered.svg",
-        "INCARNA_WANDERING_VOICE_KEENS_DELIRIUM" : "incarna_wandering_voice_keens_delirium.svg",
-        "MOVE_ARROW" : "move_arrow.svg",
-        "NO_RANGE" : "no_range.svg",
-        "PRESENCE" : "presence.svg",
-        "QUAKE" : "quake.svg",
-        "RANGE_ARROW" : "range_arrow.svg",
-        "SACRED_SITE" : "sacred_site.svg",
-        "SLOW" : "slow.svg",
-        "STRIFE" : "strife.svg",
-        "THE_ENDLESS_DARK" : "the_endless_dark.svg",
-        "TOWN" : "town.svg",
-        "VITALITY" : "vitality.svg",
-        "WILDS" : "wilds.svg"
+        
+        "+1_RANGE" : {
+            "file_name" : "+1_range.svg",
+            "vertical-align" : ""
+        },
+        "1_RANGE" : {
+            "file_name" : "1_range.svg",
+            "vertical-align" : ""
+        },
+        "2_RANGE" : {
+            "file_name" : "2_range.svg",
+            "vertical-align" : ""
+        },
+        "BADLANDS" : {
+            "file_name" : "badlands.svg",
+            "vertical-align" : ""
+        },
+        "BEASTS" : {
+            "file_name" : "beasts.svg",
+            "vertical-align" : ""
+        },
+        "BLIGHT" : {
+            "file_name" : "blight.svg",
+            "vertical-align" : ""
+        },
+        "CITY" : {
+            "file_name" : "city.svg",
+            "vertical-align" : ""
+        },
+        "DAHAN" : {
+            "file_name" : "dahan.svg",
+            "vertical-align" : ""
+        },
+        "DEEPS" : {
+            "file_name" : "deeps.svg",
+            "vertical-align" : ""
+        },
+        "DESTROYED_PRESENCE" : {
+            "file_name" : "destroyed_presence.svg",
+            "vertical-align" : ""
+        },
+        "DISEASE" : {
+            "file_name" : "disease.svg",
+            "vertical-align" : ""
+        },
+        "EXPLORER" : {
+            "file_name" : "explorer.svg",
+            "vertical-align" : ""
+        },
+        "FAST" : {
+            "file_name" : "fast.svg",
+            "vertical-align" : ""
+        },
+        "FEAR" : {
+            "file_name" : "fear.svg",
+            "vertical-align" : ""
+        },
+        "IMPENDING_CARD" : {
+            "file_name" : "impending_card.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_BREATH_OF_DARKNESS_DOWN_YOUR_SPINE" : {
+            "file_name" : "incarna_breath_of_darkness_down_your_spine.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_EMBER_EYED_BEHEMOTH" : {
+            "file_name" : "incarna_ember_eyed_behemoth.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_LURE_OF_THE_DEEP_WILDERNESS" : {
+            "file_name" : "incarna_lure_of_the_deep_wilderness.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_POWERED" : {
+            "file_name" : "incarna_powered.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_THUNDERSPEAKER" : {
+            "file_name" : "incarna_thunderspeaker.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_TOWERING_ROOTS_OF_THE_JUNGLE" : {
+            "file_name" : "incarna_towering_roots_of_the_jungle.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_UNEMPOWERED" : {
+            "file_name" : "incarna_unempowered.svg",
+            "vertical-align" : ""
+        },
+        "INCARNA_WANDERING_VOICE_KEENS_DELIRIUM" : {
+            "file_name" : "incarna_wandering_voice_keens_delirium.svg",
+            "vertical-align" : ""
+        },
+        "MOVE_ARROW" : {
+            "file_name" : "move_arrow.svg",
+            "vertical-align" : ""
+        },
+        "NO_RANGE" : {
+            "file_name" : "no_range.svg",
+            "vertical-align" : ""
+        },
+        "PRESENCE" : {
+            "file_name" : "presence.svg",
+            "vertical-align" : ""
+        },
+        "QUAKE" : {
+            "file_name" : "quake.svg",
+            "vertical-align" : ""
+        },
+        "RANGE_ARROW" : {
+            "file_name" : "range_arrow.svg",
+            "vertical-align" : ""
+        },
+        "SACRED_SITE" : {
+            "file_name" : "sacred_site.svg",
+            "vertical-align" : ""
+        },
+        "SLOW" : {
+            "file_name" : "slow.svg",
+            "vertical-align" : ""
+        },
+        "STRIFE" : {
+            "file_name" : "strife.svg",
+            "vertical-align" : ""
+        },
+        "THE_ENDLESS_DARK" : {
+            "file_name" : "the_endless_dark.svg",
+            "vertical-align" : ""
+        },
+        "TOWN" : {
+            "file_name" : "town.svg",
+            "vertical-align" : ""
+        },
+        "VITALITY" : {
+            "file_name" : "vitality.svg",
+            "vertical-align" : ""
+        },
+        "WILDS" : {
+            "file_name" : "wilds.svg",
+            "vertical-align" : ""
+        }
     }
 }
