@@ -11,22 +11,21 @@
         "any"
     ],
     "keywords" : {
-        
         "+1_RANGE" : {
             "file_name" : "+1_range.svg",
-            "vertical-align" : ""
+            "vertical-align" : "baseline"
         },
         "1_RANGE" : {
             "file_name" : "1_range.svg",
-            "vertical-align" : ""
+            "vertical-align" : "baseline"
         },
         "2_RANGE" : {
             "file_name" : "2_range.svg",
-            "vertical-align" : ""
+            "vertical-align" : "baseline"
         },
         "BADLANDS" : {
             "file_name" : "badlands.svg",
-            "vertical-align" : ""
+            "vertical-align" : "middle"
         },
         "BEASTS" : {
             "file_name" : "beasts.svg",
@@ -34,15 +33,15 @@
         },
         "BLIGHT" : {
             "file_name" : "blight.svg",
-            "vertical-align" : ""
+            "vertical-align" : "baseline"
         },
         "CITY" : {
             "file_name" : "city.svg",
-            "vertical-align" : ""
+            "vertical-align" : "text-top"
         },
         "DAHAN" : {
             "file_name" : "dahan.svg",
-            "vertical-align" : ""
+            "vertical-align" : "baseline"
         },
         "DEEPS" : {
             "file_name" : "deeps.svg",
@@ -114,7 +113,7 @@
         },
         "PRESENCE" : {
             "file_name" : "presence.svg",
-            "vertical-align" : ""
+            "vertical-align" : "baseline"
         },
         "QUAKE" : {
             "file_name" : "quake.svg",
@@ -142,7 +141,7 @@
         },
         "TOWN" : {
             "file_name" : "town.svg",
-            "vertical-align" : ""
+            "vertical-align" : "text-top"
         },
         "VITALITY" : {
             "file_name" : "vitality.svg",

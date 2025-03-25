@@ -31,23 +31,6 @@ body {
     background-blend-mode: lighten;
 }
 
-.modal-content {
-    margin:0;
-    padding:0;
-
-    background-image: url("https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/master/static/misc/Spirit_Island_Cover_Art.jpg");
-
-    /* min-height: 99svh; */
-    background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-color: rgba(255,255,255,0.7);
-    background-blend-mode: lighten;
-}
-
-
 .switch {
     position: relative;
     display: inline-block;

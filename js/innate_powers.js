@@ -75,14 +75,22 @@ function generate_element_threshold_button_for_tier(
     innate_power_tier,
     innate_power_config
 ) {
+    // var tier_button = $("<button>").attr(
+    //     {
+    //         class : "col btn btn-primary",
+    //         id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
+    //         type : "button"
+    //     }
+    // ).prop(
+    //     "disabled",true
+    // );
+
     var tier_button = $("<button>").attr(
         {
             class : "col btn btn-primary",
             id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
             type : "button"
         }
-    ).prop(
-        "disabled",true
     );
 
     append_threshold_string(
@@ -195,14 +203,13 @@ function assign_modal_to_tier_button(
     var modal_for_tier_button = $("<div>").attr(
         {
             class : "modal fade",
-            id  : `model_innate_power_${innate_power_number}_${innate_power_tier}`,
-            style: "position: absolute; float: left; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 75%;"
+            id  : `model_innate_power_${innate_power_number}_${innate_power_tier}`
         }
     );
 
     var modal_dialog =$("<div>").attr(
         {
-            class : "modal-dialog",
+            class : "modal-dialog modal-dialog-centered",
             role : "document"
         }
     ).appendTo(
@@ -265,9 +272,9 @@ function assign_modal_to_tier_button(
         modal_content
     );
 
-    modal_content.appendTo(
-        modal_for_tier_button
-    );
+    // modal_content.appendTo(
+    //     modal_for_tier_button
+    // );
 
     modal_for_tier_button.appendTo(
         "#div_modals_innate_powers"
@@ -345,7 +352,10 @@ function spirit_text_keyword_converter(
                     if (value in json["keywords"]) {
                         return_html_array.push(
                             // `<object data="static/icons/${json["keywords"][value]}" height="${height}px"></object>`
-                            `<object data="static/icons/${json["keywords"][value]}" style="max-height: ${max_size}px; max-width: ${max_size}px;"></object>`
+                            // `<object data="static/icons/${json["keywords"][value]}" style="max-height: ${max_size}px; max-width: ${max_size}px;"></object>`
+                            `<object data="static/icons/${
+                                json["keywords"][value]["file_name"]
+                            }" style="max-height: ${max_size}px; max-width: ${max_size}px;display: inline-block; vertical-align: baseline;"></object>`
                         )
                     }
                     else {
