@@ -118,6 +118,12 @@
 							</div>
 
 							<ul id="list_leading_adversary_select_buttons"></ul>
+
+							<div class="row p-0 pt-2 justify-content-center margin_auto">
+								<button class="col-8 btn btn-danger" id="button_remove_leading_adversary" type="button">
+									Remove adversary
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -149,6 +155,12 @@
 							</div>
 
 							<ul id="list_supporting_adversary_select_buttons"></ul>
+
+							<div class="row p-0 pt-2 justify-content-center margin_auto">
+								<button class="col-8 btn btn-danger" id="button_remove_supporting_adversary" type="button">
+									Remove supporting adversary
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -201,11 +213,21 @@
 						Select adversary:
 					</div>
 
-					<div class="row p-0 justify-content-center margin_auto">
+					<div class="row p-0 justify-content-center margin_auto wrapper">
 
-						<button class="p-0 btn btn-xs btn-info" id="button_select_leading_adversary">
-							&#x2795;
-						</button>
+						<section id="section_leading_adversary">
+
+							<button class="p-0 btn btn-xs btn-info" id="button_select_leading_adversary" style="width: 100%;">
+								&#x2795;
+							</button>
+						</section>
+
+						<section class="is_hidden" id="section_supporting_adversary">
+							
+							<button class="p-0 btn btn-xs btn-info" id="button_select_supporting_adversary">
+								&#x2795;
+							</button>
+						</section>
 					</div>
 				</div>
 			</div>

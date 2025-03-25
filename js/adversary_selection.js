@@ -5,9 +5,58 @@ $(document).ready(
             "click",
             function() {
 
-                $(`#input_adversary_select_search`).val("");
+                $(`#input_leading_adversary_select_search`).val("");
                 adversary_select_filter("leading");
                 $(`#modal_leading_adversaries`).modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $(`#button_select_supporting_adversary`).on(
+            "click",
+            function() {
+
+                $(`#input_supporting_adversary_select_search`).val("");
+                adversary_select_filter("supporting");
+                $(`#modal_supporting_adversaries`).modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $(`#button_remove_leading_adversary`).on(
+            "click",
+            function() {
+
+                $(`#input_leading_adversary_select_search`).val("");
+                adversary_select_filter("leading");
+                generate_default_adversary_select_button();
+                $(`#modal_leading_adversaries`).modal("hide");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $(`#button_remove_supporting_adversary`).on(
+            "click",
+            function() {
+
+                $(`#input_supporting_adversary_select_search`).val("");
+                adversary_select_filter("supporting");
+                custom_hide(
+                    "#section_supporting_adversary"
+                );
+                $(`#modal_supporting_adversaries`).modal("hide");
             }
         );
     }
@@ -173,6 +222,22 @@ function generate_adversary_select_list_item_for_adversary(
 
             $(`#modal_${adversary_type}_adversaries`).modal("hide");
         }
+    );
+}
+
+function generate_default_adversary_select_button() {
+
+    $(`#button_select_leading_adversary`).empty();
+
+    $(`#button_select_leading_adversary`).css(
+        {
+            "background-color": "",
+            "border" : ""
+        }
+    );
+
+    $(`#button_select_leading_adversary`).html(
+        "&#x2795;"
     );
 }
 

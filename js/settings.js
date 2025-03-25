@@ -67,23 +67,8 @@ function reset_spirit_selction() {
 
 function reset_adversary_selection() {
 
-    $("#button_select_adversary").empty();
-
-    $("#button_select_adversary").attr(
-        {
-            class : "p-0 btn btn-xs btn-info",
-            id : "button_select_adversary"
-        }
-    ).html(
-        "&#x2795;"
-    )
-
-    $("#button_select_adversary").css(
-        {
-            "background-color": "",
-            "border" : ""
-        }
-    );
+    $(`#button_remove_leading_adversary`).click();
+    $(`#button_remove_supporting_adversary`).click();
 }
 
 function reset_innate_power_row() {

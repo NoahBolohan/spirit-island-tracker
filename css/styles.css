@@ -147,3 +147,24 @@ ul {
     paint-order: stroke fill;
     
 }
+
+.wrapper {
+    /* height: 100vh; */
+    display: flex;
+}
+
+.wrapper section {
+    padding: 0px;
+    flex: 1;
+    display: flex;
+}
+
+/* .wrapper section:first-child {
+    background: center/cover;
+} */
+
+.wrapper section:last-child {
+    margin-left: -45vw;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    background: center/cover;
+}
