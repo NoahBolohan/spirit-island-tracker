@@ -1,13 +1,13 @@
 $(document).ready(
     function() {
 
-        $("#button_select_adversary").on(
+        $(`#button_select_leading_adversary`).on(
             "click",
             function() {
 
-                $("#input_adversary_select_search").val("");
-                adversary_select_filter();
-                $("#modal_adversaries").modal("show");
+                $(`#input_adversary_select_search`).val("");
+                adversary_select_filter("leading");
+                $(`#modal_leading_adversaries`).modal("show");
             }
         );
     }
@@ -16,12 +16,27 @@ $(document).ready(
 $(document).ready(
     function() {
 
-        $("#button_close_modal_adversaries").on(
-            "click",
-            function() {
-                $("#modal_adversaries").modal("hide");
+        $.each(
+            [
+                "leading",
+                "supporting"
+            ],
+            function (idx, adversary_type) {
+
+                $(`#button_select_${adversary_type}_adversary`).on(
+                    "click",
+                    function() {
+        
+                        $(`#button_close_modal_${adversary_type}_adversaries`).on(
+                            "click",
+                            function() {
+                                $(`#modal_${adversary_type}_adversaries`).modal("hide");
+                            }
+                        );
+                    }
+                );
             }
-        );
+        )
     }
 )
 
@@ -68,6 +83,7 @@ function generate_adversary_button_name(
 
 function generate_adversary_select_list_item_for_adversary(
     adversary_name,
+    adversary_type
 ) {
 
     var adversary_button_name = generate_adversary_button_name(
@@ -85,6 +101,8 @@ function generate_adversary_select_list_item_for_adversary(
         {
             class : "btn btn-xs",
             id : `button_${
+                adversary_type
+            }_${
                 adversary_button_name
             }`,
             "style" : "padding : 0px;"
@@ -120,14 +138,20 @@ function generate_adversary_select_list_item_for_adversary(
     );
 
     list_item.appendTo(
-        `#list_adversary_select_buttons`
+        `#list_${adversary_type}_adversary_select_buttons`
     );
 
-    $(`#button_${adversary_button_name}`).on(
+    $(
+        `#button_${
+            adversary_type
+        }_${
+            adversary_button_name
+        }`
+    ).on(
         "click",
         function() {
 
-            $(`#button_select_adversary`).empty();
+            $(`#button_select_${adversary_type}_adversary`).empty();
         
             $("<img>").attr(
                 {
@@ -137,37 +161,49 @@ function generate_adversary_select_list_item_for_adversary(
                     "style" : "width : 100%"
                 }
             ).appendTo(
-                `#button_select_adversary`
+                `#button_select_${adversary_type}_adversary`
             );
 
-            $(`#button_select_adversary`).css(
+            $(`#button_select_${adversary_type}_adversary`).css(
                 {
                     "background-color": "transparent",
                     "border" : "none"
                 }
             );
 
-            $(`#modal_adversaries`).modal("hide");
+            $(`#modal_${adversary_type}_adversaries`).modal("hide");
         }
     );
 }
 
 $(document).ready(
     function() {
-        $(`#list_adversary_select_buttons`).empty();
 
         $.ajax({
             url: "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/adversaries.json",
             async: false,
             dataType: "json",
             success: function (json) {
-                $.each(
-                    json,
-                    function(key, value) {
 
-                        generate_adversary_select_list_item_for_adversary(
-                            key
-                        );
+                $.each(
+                    [
+                        "leading",
+                        "supporting"
+                    ],
+                    function (idx, adversary_type) {
+        
+                        $(`#list_${adversary_type}_adversary_select_buttons`).empty();
+
+                        $.each(
+                            json,
+                            function(adversary_name, value) {
+        
+                                generate_adversary_select_list_item_for_adversary(
+                                    adversary_name,
+                                    adversary_type
+                                );
+                            }
+                        )
                     }
                 )
             }
@@ -177,10 +213,12 @@ $(document).ready(
 
 // Pseudo-code: https://www.w3schools.com/howto/howto_js_filter_lists.asp
 // Convert to jQuery: https://stackoverflow.com/questions/4511652/looping-through-list-items-with-jquery
-function adversary_select_filter() {
+function adversary_select_filter(
+    adversary_type
+) {
 
-    var input = $("#input_adversary_select_search").val().toUpperCase();
-    var adversary_select_list_items = $("#list_adversary_select_buttons li");
+    var input = $(`#input_${adversary_type}_adversary_select_search`).val().toUpperCase();
+    var adversary_select_list_items = $(`#list_${adversary_type}_adversary_select_buttons li`);
   
     adversary_select_list_items.each(function(idx, li) {
 
@@ -205,12 +243,21 @@ function adversary_select_filter() {
 $(document).ready(
     function() {
 
-        $("#button_clear_adversary_select_search").on(
-            "click",
-            function() {
-                $("#input_adversary_select_search").val("");
-                adversary_select_filter();
+        $.each(
+            [
+                "leading",
+                "supporting"
+            ],
+            function (idx, adversary_type) {
+
+                $(`#button_clear_${adversary_type}_adversary_select_search`).on(
+                    "click",
+                    function() {
+                        $(`#input_${adversary_type}_adversary_select_search`).val("");
+                        adversary_select_filter(adversary_type);
+                    }
+                );
             }
-        );
+        )
     }
 )
