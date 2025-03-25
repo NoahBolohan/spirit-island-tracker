@@ -2997,7 +2997,63 @@
         "aspect_for" : "River Surges in Sunlight",
         "expansion" : "nature_incarnate",
         "complexity" : "up",
-        "aspect_art" : "false"
+        "aspect_art" : "false",
+        "setup" : "Put 1 PRESENCE on your starting board in the highest-numbered Wetland.",
+        "innate_power_1" : {
+            "name" : "haven",
+            "tier_1" : {
+                "effect" : "Defend E.",
+                "threshold" : {
+                    "sun" : 1,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 1,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_2" : {
+                "effect" : "In an adjacent land with your PRESENCE, Defend E.",
+                "threshold" : {
+                    "sun" : 1,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 2,
+                    "earth" : 1,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "In target land or an adjacent land with your PRESENCE, Gather up to E DAHAN.",
+                "threshold" : {
+                    "sun" : 1,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 1
+                }
+            },
+            "tier_4" : {
+                "effect" : "Remove up to E health worth of invaders.",
+                "threshold" : {
+                    "sun" : 1,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 1,
+                    "earth" : 0,
+                    "plant" : 2,
+                    "animal" : 0
+                }
+            }
+        }
     },
     "Serpent Slumbering Beneath the Island" : {
         "expansion" : "feather_and_flame",
