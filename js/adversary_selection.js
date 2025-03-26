@@ -38,7 +38,15 @@ $(document).ready(
                 $(`#input_leading_adversary_select_search`).val("");
                 adversary_select_filter("leading");
                 generate_default_leading_adversary_select_button();
+                $("#spirit_island_tracker_body").data(
+                    "leading_adversary",
+                    ""
+                );
                 generate_default_supporting_adversary_select_button()
+                $("#spirit_island_tracker_body").data(
+                    "supporting_adversary",
+                    ""
+                );
                 custom_hide(
                     "#section_supporting_adversary"
                 );
@@ -58,6 +66,10 @@ $(document).ready(
                 $(`#input_supporting_adversary_select_search`).val("");
                 adversary_select_filter("supporting");
                 generate_default_supporting_adversary_select_button();
+                $("#spirit_island_tracker_body").data(
+                    "supporting_adversary",
+                    ""
+                );
                 
                 $(`#modal_supporting_adversaries`).modal("hide");
             }
@@ -228,6 +240,13 @@ function generate_adversary_select_list_item_for_adversary(
             custom_show(
                 "#section_supporting_adversary"
             );
+
+            $("#spirit_island_tracker_body").data(
+                `${adversary_type}_adversary`,
+                adversary_name
+            );
+
+            // difficulty_calculator();
 
             $(`#modal_${adversary_type}_adversaries`).modal("hide");
         }
