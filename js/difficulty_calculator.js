@@ -4,35 +4,33 @@ function difficulty_calculator() {
 
             var total_difficulty = 0;
 
-            // Compute adversary 1 difficulty
+            // Compute leading adversary difficulty
             if ($("#spirit_island_tracker_body").data("leading_adversary") == "") {
-                var adv_1_difficulty = 0;
+                var leading_adversary_difficulty = 0;
             }
             else {
-                if ($("#row_select_adversary_1_level").val() == null) {
-                    var adv_1_difficulty = adversaries[$("#spirit_island_tracker_body").data("leading_adversary")]["difficulty"]["0"];
-                }
-                else {
-                    var adv_1_difficulty = adversaries[$("#spirit_island_tracker_body").data("leading_adversary")]["difficulty"][$("#row_select_adversary_1_level").val()];
-                }
+                leading_adversary_difficulty = adversaries[
+                    $("#spirit_island_tracker_body").data("leading_adversary")
+                ]["difficulty"][
+                    $("#spirit_island_tracker_body").data("leading_adversary_level")
+                ];
             }
 
-            total_difficulty += adv_1_difficulty;
+            total_difficulty += leading_adversary_difficulty;
 
-            // Compute adversary 2 difficulty
+            // Compute supporting adversary difficulty
             if ($("#spirit_island_tracker_body").data("supporting_adversary") == "") {
-                var adv_2_difficulty = 0;
+                var supporting_adversary_difficulty = 0;
             }
             else {
-                if ($("#row_select_adversary_2_level").val() == null) {
-                    var adv_2_difficulty = adversaries[$("#spirit_island_tracker_body").data("supporting_adversary")]["difficulty"]["0"];
-                }
-                else {
-                    var adv_2_difficulty = adversaries[$("#spirit_island_tracker_body").data("supporting_adversary")]["difficulty"][$("#row_select_adversary_2_level").val()];
-                }
+                supporting_adversary_difficulty = adversaries[
+                    $("#spirit_island_tracker_body").data("supporting_adversary")
+                ]["difficulty"][
+                    $("#spirit_island_tracker_body").data("supporting_adversary_level")
+                ];
             }
 
-            total_difficulty += adv_2_difficulty;
+            total_difficulty += supporting_adversary_difficulty;
 
             // // Compute scenario difficulty
             // if ($("#col_select_scenario").val() == "Second Wave") {

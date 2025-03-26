@@ -29,7 +29,7 @@
 		<!-- <script src="https://kit.fontawesome.com/1cbbe880ba.js" crossorigin="anonymous"></script> -->
 	</head>
 
-	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-supporting_adversary="">
+	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-leading_adversary_level=0 data-supporting_adversary="" data-supporting_adversary_level=0>
 
 		<div class="modal fade" id="modal_settings">
 
@@ -146,6 +146,42 @@
 			</div>
 		</div>
 
+		<div class="modal fade" id="modal_leading_adversary_level">
+
+			<div class="modal-dialog modal-dialog-centered" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Select the adversaries level</h2>
+
+						<button class="btn astext" id="button_close_modal_leading_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
+							&#x27A6;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_leading_adversary_level_body">
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_leading_aversary_difficulty_0_to_2">
+							<div class="col-2" id="div_leading_adversary_flag_for_difficulty_modal"></div>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_0" type="button">0</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_1" type="button">1</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_2" type="button">2</button>
+						</div>
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_leading_aversary_difficulty_3_to_6">
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_3" type="button">3</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_4" type="button">4</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_5" type="button">5</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_6" type="button">6</button>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="modal fade" id="modal_supporting_adversaries">
 
 			<div class="modal-dialog" role="document">
@@ -177,6 +213,42 @@
 									Remove supporting adversary
 								</button>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modal_supporting_adversary_level">
+
+			<div class="modal-dialog modal-dialog-centered" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Select the adversaries level</h2>
+
+						<button class="btn astext" id="button_close_modal_supporting_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
+							&#x27A6;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_supporting_adversary_level_body">
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_0_to_2">
+							<div class="col-2" id="div_supporting_adversary_flag_for_difficulty_modal"></div>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_0" type="button">0</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_1" type="button">1</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_2" type="button">2</button>
+						</div>
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_3_to_6">
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_3" type="button">3</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_4" type="button">4</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_5" type="button">5</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_6" type="button">6</button>
+						</div>
 						</div>
 					</div>
 				</div>

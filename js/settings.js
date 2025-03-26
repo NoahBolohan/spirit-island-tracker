@@ -153,7 +153,6 @@ function reset_spirit_selction() {
 function reset_adversary_selection() {
 
     $(`#button_remove_leading_adversary`).click();
-    $(`#button_remove_supporting_adversary`).click();
 }
 
 function reset_innate_power_row() {
