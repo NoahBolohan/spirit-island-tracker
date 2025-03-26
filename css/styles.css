@@ -94,7 +94,6 @@ border-radius: 50%;
 }
 
 .astext {
-    /* background:transparent; */
     border:none !important;
     margin:0;
     padding:0;
@@ -149,7 +148,6 @@ ul {
 }
 
 .wrapper {
-    /* height: 100vh; */
     display: flex;
 }
 
@@ -158,10 +156,6 @@ ul {
     flex: 1;
     display: flex;
 }
-
-/* .wrapper section:first-child {
-    background: center/cover;
-} */
 
 .wrapper section:last-child {
     margin-left: -45vw;

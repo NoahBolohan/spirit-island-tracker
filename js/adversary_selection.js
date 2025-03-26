@@ -37,7 +37,11 @@ $(document).ready(
 
                 $(`#input_leading_adversary_select_search`).val("");
                 adversary_select_filter("leading");
-                generate_default_adversary_select_button();
+                generate_default_leading_adversary_select_button();
+                generate_default_supporting_adversary_select_button()
+                custom_hide(
+                    "#section_supporting_adversary"
+                );
                 $(`#modal_leading_adversaries`).modal("hide");
             }
         );
@@ -53,9 +57,8 @@ $(document).ready(
 
                 $(`#input_supporting_adversary_select_search`).val("");
                 adversary_select_filter("supporting");
-                custom_hide(
-                    "#section_supporting_adversary"
-                );
+                generate_default_supporting_adversary_select_button();
+                
                 $(`#modal_supporting_adversaries`).modal("hide");
             }
         );
@@ -207,7 +210,7 @@ function generate_adversary_select_list_item_for_adversary(
                     "src" : generate_encoded_adversary_image_url(
                         adversary_name
                     ),
-                    "style" : "width : 100%"
+                    "style" : "width : 100%",
                 }
             ).appendTo(
                 `#button_select_${adversary_type}_adversary`
@@ -216,8 +219,14 @@ function generate_adversary_select_list_item_for_adversary(
             $(`#button_select_${adversary_type}_adversary`).css(
                 {
                     "background-color": "transparent",
-                    "border" : "none"
+                    "border" : "none",
+                    "height" : "",
+                    "aspect-ratio" : ""
                 }
+            );
+
+            custom_show(
+                "#section_supporting_adversary"
             );
 
             $(`#modal_${adversary_type}_adversaries`).modal("hide");
@@ -225,7 +234,7 @@ function generate_adversary_select_list_item_for_adversary(
     );
 }
 
-function generate_default_adversary_select_button() {
+function generate_default_leading_adversary_select_button() {
 
     $(`#button_select_leading_adversary`).empty();
 
@@ -237,6 +246,24 @@ function generate_default_adversary_select_button() {
     );
 
     $(`#button_select_leading_adversary`).html(
+        "&#x2795;"
+    );
+}
+
+function generate_default_supporting_adversary_select_button()  {
+
+    $(`#button_select_supporting_adversary`).empty();
+
+    $(`#button_select_supporting_adversary`).css(
+        {
+            "background-color": "",
+            "border" : "",
+            "height" : "40%",
+            "aspect-ratio" : "1/1"
+        }
+    );
+
+    $(`#button_select_supporting_adversary`).html(
         "&#x2795;"
     );
 }
