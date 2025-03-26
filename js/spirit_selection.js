@@ -182,7 +182,7 @@ function generate_spirit_select_list_item_for_spirit(
                         spirit_name,
                         spirit_config
                     ),
-                    "style" : "height : 120.31px; width : auto"
+                    "style" : "width:100%;"
                 }
             ).appendTo(
                 `#button_select_spirit`
