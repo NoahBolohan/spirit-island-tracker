@@ -45,7 +45,8 @@
 					</div>
 	
 					<div class="modal-body" id="modal_settings_body">
-						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_screen_sleep">
+
+						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_toggle_screen_sleep">
 
 							<div class="col-5 p-0 align-self-center">
 								Prevent screen sleep:
@@ -54,6 +55,20 @@
 							<div class="col-2 offset-1 p-0">
 								<label class="switch">
 									<input type="checkbox" id="button_toggle_screen_sleep">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+
+						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_toggle_innate_powers_row">
+
+							<div class="col-5 p-0 align-self-center">
+								Show innate powers:
+							</div>
+			
+							<div class="col-2 offset-1 p-0">
+								<label class="switch">
+									<input type="checkbox" id="button_toggle_innate_powers_row" checked>
 									<span class="slider round"></span>
 								</label>
 							</div>
@@ -251,9 +266,9 @@
 				</div>
 			</div>
 
-			<div class="row mt-2 p-0 justify-content-center margin_auto" id="row_innate_powers">
+			<div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
 
-				<div class="card p-0 margin_auto" id="col_element_tracker_card" style="background-color : rgba(255,255,255,0.4);">
+				<div class="card mt-2 p-0 margin_auto" id="col_innate_powers" style="background-color : rgba(255,255,255,0.4); background-blend-mode : lighten; background-size : cover;">
 	
 					<div class="row mx-1 mb-1 mt-0 p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
 
