@@ -265,6 +265,7 @@ $(document).ready(
         $("#button_toggle_lock_element_tracker").on(
             "click",
             function() {
+
                 if ($("#button_toggle_lock_element_tracker").text() == "Lock") {
                     $("#button_toggle_lock_element_tracker").text(
                         "Unlock"

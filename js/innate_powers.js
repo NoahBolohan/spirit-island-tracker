@@ -7,7 +7,7 @@ function parse_innate_power(
 
     var innate_power_col = $("<div>").attr(
         {
-            class : `col-${col_width}`
+            class : `col-${col_width} m-0`
         }
     )
 
