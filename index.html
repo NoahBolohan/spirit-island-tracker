@@ -21,6 +21,7 @@
 		<script src="js/misc_functions.js"></script>
 		<script src="js/settings.js"></script>
 		<script src="js/spirit_selection.js"></script>
+		<script src="js/difficulty_calculator.js"></script>
 		<script src="js/adversary_selection.js"></script>
 		<script src="js/innate_powers.js"></script>
 		<script src="js/element_tracker.js"></script>
@@ -28,7 +29,7 @@
 		<!-- <script src="https://kit.fontawesome.com/1cbbe880ba.js" crossorigin="anonymous"></script> -->
 	</head>
 
-	<body class="parallax" id="spirit_island_tracker_body">
+	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-leading_adversary_level=0 data-supporting_adversary="" data-supporting_adversary_level=0>
 
 		<div class="modal fade" id="modal_settings">
 
@@ -45,7 +46,8 @@
 					</div>
 	
 					<div class="modal-body" id="modal_settings_body">
-						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_screen_sleep">
+
+						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_toggle_screen_sleep">
 
 							<div class="col-5 p-0 align-self-center">
 								Prevent screen sleep:
@@ -54,6 +56,20 @@
 							<div class="col-2 offset-1 p-0">
 								<label class="switch">
 									<input type="checkbox" id="button_toggle_screen_sleep">
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+
+						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_toggle_innate_powers_row">
+
+							<div class="col-5 p-0 align-self-center">
+								Show innate powers:
+							</div>
+			
+							<div class="col-2 offset-1 p-0">
+								<label class="switch">
+									<input type="checkbox" id="button_toggle_innate_powers_row" checked>
 									<span class="slider round"></span>
 								</label>
 							</div>
@@ -71,7 +87,7 @@
 	
 					<div class="modal-header justify-content-center" style="position:relative;">
 	
-						<h2 class="modal-title">Spirits</h2>
+						<h2 class="modal-title">Select a spirit</h2>
 						<button class="btn astext" id="button_close_modal_spirits" style="position:absolute;right:1em;">
 							&#x274c;
 						</button>
@@ -93,7 +109,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_adversaries">
+		<div class="modal fade" id="modal_leading_adversaries">
 
 			<div class="modal-dialog" role="document">
 	
@@ -101,22 +117,138 @@
 	
 					<div class="modal-header justify-content-center" style="position:relative;">
 	
-						<h2 class="modal-title">Adversaries</h2>
-						<button class="btn astext" id="button_close_modal_adversaries" style="position:absolute;right:1em;">
+						<h2 class="modal-title">Select a leading adversary</h2>
+
+						<button class="btn astext" id="button_close_modal_leading_adversaries" style="position:absolute;right:1em;">
 							&#x274c;
 						</button>
 					</div>
 	
-					<div class="modal-body" id="modal_adversaries_body">
+					<div class="modal-body" id="modal_leading_adversaries_body">
 
 						<div class="p-0 container-fluid">
 
 							<div class="row px-0 pb-2 justify-content-center margin_auto">
-								<input class="col-10" type="text" id="input_adversary_select_search" onkeyup="adversary_select_filter()" placeholder="Search by name">
-								<button class="col-2 btn astext" id="button_clear_adversary_select_search">Clear</button>
+								<input class="col-10" type="text" id="input_leading_adversary_select_search" onkeyup="adversary_select_filter('leading')" placeholder="Search by name">
+								<button class="col-2 btn astext" id="button_clear_leading_adversary_select_search">Clear</button>
 							</div>
 
-							<ul id="list_adversary_select_buttons"></ul>
+							<ul id="list_leading_adversary_select_buttons"></ul>
+
+							<div class="row p-0 pt-2 justify-content-center margin_auto">
+								<button class="col-8 btn btn-danger" id="button_remove_leading_adversary" type="button">
+									Remove adversary
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modal_leading_adversary_level">
+
+			<div class="modal-dialog modal-dialog-centered" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Select the adversaries level</h2>
+
+						<button class="btn astext" id="button_close_modal_leading_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
+							&#x27A6;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_leading_adversary_level_body">
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_leading_aversary_difficulty_0_to_2">
+							<div class="col-2" id="div_leading_adversary_flag_for_difficulty_modal"></div>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_0" type="button">0</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_1" type="button">1</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_2" type="button">2</button>
+						</div>
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_leading_aversary_difficulty_3_to_6">
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_3" type="button">3</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_4" type="button">4</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_5" type="button">5</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_6" type="button">6</button>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modal_supporting_adversaries">
+
+			<div class="modal-dialog" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Select a supporting adversary</h2>
+
+						<button class="btn astext" id="button_close_modal_supporting_adversaries" style="position:absolute;right:1em;">
+							&#x274c;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_supporting_adversaries_body">
+
+						<div class="p-0 container-fluid">
+
+							<div class="row px-0 pb-2 justify-content-center margin_auto">
+								<input class="col-10" type="text" id="input_supporting_adversary_select_search" onkeyup="adversary_select_filter('supporting')" placeholder="Search by name">
+								<button class="col-2 btn astext" id="button_clear_supporting_adversary_select_search">Clear</button>
+							</div>
+
+							<ul id="list_supporting_adversary_select_buttons"></ul>
+
+							<div class="row p-0 pt-2 justify-content-center margin_auto">
+								<button class="col-8 btn btn-danger" id="button_remove_supporting_adversary" type="button">
+									Remove supporting adversary
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modal_supporting_adversary_level">
+
+			<div class="modal-dialog modal-dialog-centered" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Select the adversaries level</h2>
+
+						<button class="btn astext" id="button_close_modal_supporting_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
+							&#x27A6;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_supporting_adversary_level_body">
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_0_to_2">
+							<div class="col-2" id="div_supporting_adversary_flag_for_difficulty_modal"></div>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_0" type="button">0</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_1" type="button">1</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_2" type="button">2</button>
+						</div>
+
+						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_3_to_6">
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_3" type="button">3</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_4" type="button">4</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_5" type="button">5</button>
+							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_6" type="button">6</button>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -150,7 +282,6 @@
 			<div class="row mt-1 p-0 g-1 justify-content-center margin_auto" id="row_game_info">
 
 				<div class="col-6">
-
 					<div class="row p-0 justify-content-center margin_auto">
 						Select spirit:
 					</div>
@@ -169,11 +300,21 @@
 						Select adversary:
 					</div>
 
-					<div class="row p-0 justify-content-center margin_auto">
+					<div class="row p-0 justify-content-center margin_auto wrapper">
 
-						<button class="p-0 btn btn-xs btn-info" id="button_select_adversary">
-							&#x2795;
-						</button>
+						<section id="section_leading_adversary">
+
+							<button class="p-0 btn btn-xs btn-info" id="button_select_leading_adversary" style="width: 100%;">
+								&#x2795;
+							</button>
+						</section>
+
+						<section class="is_hidden" id="section_supporting_adversary">
+							
+							<button class="p-0 btn btn-xs btn-info" id="button_select_supporting_adversary" style="margin:auto 0 0 auto;height:40%;aspect-ratio: 1/1;">
+								&#x2795;
+							</button>
+						</section>
 					</div>
 				</div>
 			</div>
@@ -182,17 +323,11 @@
 
 				<div class="card col p-0 margin_auto" id="col_element_tracker_card" style="background-color : rgba(255,255,255,0.4); background-blend-mode : lighten">
 	
-					<!-- <div class="card-header text-center" style="background-color : rgba(255,255,255,0.8);">
-						Element Trackers
-					</div> -->
-	
 					<div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker"></div>
 
 					<div class="row mb-2 p-0 justify-content-center margin-auto">
 
-						<button class="col-3 btn btn-primary" id="button_toggle_lock_element_tracker" type="button">
-							Lock
-						</button>
+						<button class="col-3 btn btn-primary" id="button_toggle_lock_element_tracker" type="button">Lock</button>
 
 						<button class="col-3 offset-1 btn btn-danger" id="button_reset_element_tracker" type="button">
 							Reset
@@ -201,15 +336,11 @@
 				</div>
 			</div>
 
-			<div class="row mt-2 p-0 justify-content-center margin_auto" id="row_innate_powers">
+			<div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
 
-				<div class="card p-0 margin_auto" id="col_element_tracker_card" style="background-color : rgba(255,255,255,0.4);">
+				<div class="card mt-2 p-0 margin_auto" id="col_innate_powers" style="background-color : rgba(255,255,255,0.4); background-blend-mode : lighten; background-size : cover;">
 	
-					<!-- <div class="card-header text-center" style="background-color : rgba(255,255,255,0.8);">
-						Innate Powers
-					</div> -->
-	
-					<div class="row mx-1 mb-1 mt-0 p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
+					<div class="row m-1 p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
 
 						<p style="margin: 5px 5px 0px 5px;">
 							<object data="static/icons/fear.svg" height="15px"></object>
@@ -222,8 +353,8 @@
 
 			<div class="row mt-1 p-0 g-1 justify-content-center margin_auto">
 
-				<button class="col-5 btn btn-danger" id="button_reset_selections" style="font-size: 1em;">
-					Clear selections
+				<button class="col-4 btn btn-danger" id="button_reset_selections" style="font-size: 1em;">
+					Reset page
 				</button>
 			</div>
 		</div>

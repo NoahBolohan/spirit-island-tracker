@@ -31,23 +31,6 @@ body {
     background-blend-mode: lighten;
 }
 
-.modal-content {
-    margin:0;
-    padding:0;
-
-    background-image: url("https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/master/static/misc/Spirit_Island_Cover_Art.jpg");
-
-    /* min-height: 99svh; */
-    background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-color: rgba(255,255,255,0.7);
-    background-blend-mode: lighten;
-}
-
-
 .switch {
     position: relative;
     display: inline-block;
@@ -111,7 +94,6 @@ border-radius: 50%;
 }
 
 .astext {
-    /* background:transparent; */
     border:none !important;
     margin:0;
     padding:0;
@@ -163,4 +145,20 @@ ul {
     -webkit-text-stroke: 2px black;
     paint-order: stroke fill;
     
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper section {
+    padding: 0px;
+    flex: 1;
+    display: flex;
+}
+
+.wrapper section:last-child {
+    margin-left: -45vw;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    background: center/cover;
 }

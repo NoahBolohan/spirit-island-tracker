@@ -30,17 +30,96 @@ $(document).ready(
 
     function() {
 
-        var toggleEl = document.querySelector("#button_toggle_screen_sleep");
-
-        toggleEl.addEventListener('click', function() {
-            if (!wakeLockEnabled) {
-              noSleep.enable(); // keep the screen on!
-              wakeLockEnabled = true;
-            } else {
-              noSleep.disable(); // let the screen turn off.
-              wakeLockEnabled = false;
+        $("#button_toggle_screen_sleep").on(
+            "click",
+            function() {
+                if (!wakeLockEnabled) {
+                    noSleep.enable(); // keep the screen on!
+                    wakeLockEnabled = true;
+                } else {
+                    noSleep.disable(); // let the screen turn off.
+                    wakeLockEnabled = false;
+                }
             }
-          }, false);
+        )
+    }
+)
+
+$(document).ready(
+
+    function() {
+
+        $("#button_toggle_innate_powers_row").on(
+            "click",
+            function() {
+                if($("#button_toggle_innate_powers_row").is(":checked")) {
+
+                    $("#row_innate_powers").css(
+                        {
+                            "position" : "",
+                            "left" : ""
+                        }
+                        
+                    )
+
+                    $("#col_innate_powers").css(
+                        {
+                            "position" : "",
+                            "left" : ""
+                        }
+                        
+                    )
+
+                    $("#row_innate_power_cols").css(
+                        {
+                            "position" : "",
+                            "left" : ""
+                        }
+                        
+                    )
+
+                    // custom_show(
+                    //     "#row_innate_powers"
+                    // );
+                    // custom_show(
+                    //     "#row_innate_power_cols"
+                    // );
+                }
+                else {
+
+                    $("#row_innate_powers").css(
+                        {
+                            "position" : "absolute",
+                            "left" : "-99999px"
+                        }
+                        
+                    )
+
+                    $("#col_innate_powers").css(
+                        {
+                            "position" : "absolute",
+                            "left" : "-99999px"
+                        }
+                        
+                    )
+
+                    $("#row_innate_power_cols").css(
+                        {
+                            "position" : "absolute",
+                            "left" : "-99999px"
+                        }
+                        
+                    )
+
+                    // custom_hide(
+                    //     "#row_innate_powers"
+                    // );
+                    // custom_hide(
+                    //     "#row_innate_power_cols"
+                    // );
+                }
+            }
+        )
     }
 )
 
@@ -63,27 +142,17 @@ function reset_spirit_selction() {
             "border" : ""
         }
     );
+
+    $("#col_innate_powers").css(
+        {
+            "background-image" : ``,
+        }
+    );
 }
 
 function reset_adversary_selection() {
 
-    $("#button_select_adversary").empty();
-
-    $("#button_select_adversary").attr(
-        {
-            class : "p-0 btn btn-xs btn-info",
-            id : "button_select_adversary"
-        }
-    ).html(
-        "&#x2795;"
-    )
-
-    $("#button_select_adversary").css(
-        {
-            "background-color": "",
-            "border" : ""
-        }
-    );
+    $(`#button_remove_leading_adversary`).click();
 }
 
 function reset_innate_power_row() {

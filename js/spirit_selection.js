@@ -182,7 +182,7 @@ function generate_spirit_select_list_item_for_spirit(
                         spirit_name,
                         spirit_config
                     ),
-                    "style" : "width : 100%"
+                    "style" : "width:100%;"
                 }
             ).appendTo(
                 `#button_select_spirit`
@@ -195,9 +195,9 @@ function generate_spirit_select_list_item_for_spirit(
                 }
             );
 
-            $("#row_innate_powers").attr(
-                "style",
-                `background-image : url(${new_url}); background-size: center; background-size: cover; background-color: rgba(255,255,255,0); background-blend-mode: lighten;`
+            $("#col_innate_powers").css(
+                "background-image",
+                `url(${new_url})`
             );
 
             if ("innate_power_5" in spirit_config) {
