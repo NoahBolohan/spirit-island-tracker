@@ -75,22 +75,14 @@ function generate_element_threshold_button_for_tier(
     innate_power_tier,
     innate_power_config
 ) {
-    // var tier_button = $("<button>").attr(
-    //     {
-    //         class : "col btn btn-primary",
-    //         id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
-    //         type : "button"
-    //     }
-    // ).prop(
-    //     "disabled",true
-    // );
-
     var tier_button = $("<button>").attr(
         {
             class : "col btn btn-primary",
             id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
             type : "button"
         }
+    ).prop(
+        "disabled",true
     );
 
     append_threshold_string(
