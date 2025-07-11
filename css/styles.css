@@ -328,3 +328,25 @@ ul {
     background-color:rgba(var(--danger));
     opacity: 0.7;
 }
+
+.btn-innate-tier {
+    background-color:rgba(var(--background-dark));
+}
+
+.btn-innate-tier:hover {
+    background-color:rgba(var(--background-dark),0.5);
+}
+
+.btn-innate-tier:active {
+    background-color:rgba(var(--background-dark))!important;
+}
+
+.btn-innate-tier:focus {
+    outline: 1px solid rgba(var(--font-color-dark))!important;
+    background-color:rgba(var(--background-dark));
+}
+
+.btn-innate-tier:disabled {
+    background-color:rgba(var(--background-dark));
+    opacity: 0.7;
+}

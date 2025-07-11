@@ -209,3 +209,28 @@ $(document).ready(
         );
     }
 )
+
+const current_theme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
+
+if (current_theme == null) {
+    document.documentElement.setAttribute(
+        "data-theme",
+        "A_Spread_of_Rampant_Green"
+    );
+}
+else {
+    document.documentElement.setAttribute(
+        "data-theme",
+        current_theme
+    );
+}
+
+$(document).ready(
+    function() {
+        switch_theme(
+            document.documentElement.getAttribute(
+                "data-theme"
+            )
+        )
+    }
+)

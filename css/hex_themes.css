@@ -31,13 +31,13 @@ Theme template:
 
 [data-theme="A_Spread_of_Rampant_Green"] {
     --font-color-dark:#090b19;
-    --font-color-light:#33a9d6;
+    --font-color-light:#74c9f3;
 
-    --primary:#138333;
-    --secondary:#194417;
-    --tertiary:#545635;
-    --danger:#3bea8e;
+    --primary:#1954c4;
+    --secondary:#46baf3;
+    --tertiary:#6a6d44;
+    --danger:#e2a554;
 
-    --background-dark:#181c48;
-    --background-light:#33a9d6;
+    --background-dark:#193717;
+    --background-light:#28a354;
 }

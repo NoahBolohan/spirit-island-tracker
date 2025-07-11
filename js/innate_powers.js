@@ -87,7 +87,7 @@ function generate_element_threshold_button_for_tier(
 ) {
     var tier_button = $("<button>").attr(
         {
-            class : "col btn btn-lock-elements",
+            class : "col btn btn-innate-tier",
             id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
             type : "button"
         }
@@ -137,7 +137,7 @@ function append_threshold_string(
                 if (count > 0) {
                     $("<span>").attr(
                         {
-                            style : "display: inline-block; vertical-align: middle;"
+                            style : "display: inline-block; vertical-align: middle;color: rgba(var(--font-color-light));"
                         }
                     ).html(
                         "&nbsp;" + count
@@ -246,6 +246,11 @@ function assign_modal_to_tier_button(
             class: "modal-title"
         }
     );
+    
+    append_threshold_string(
+        modal_header,
+        innate_power_config["threshold"]
+    );
 
     $("<button>").attr(
         {
@@ -255,13 +260,6 @@ function assign_modal_to_tier_button(
         }
     ).html(
         "&#x274c;"
-    ).appendTo(
-        modal_title
-    );
-    
-    append_threshold_string(
-        modal_title,
-        innate_power_config["threshold"]
     ).appendTo(
         modal_header
     );
