@@ -184,3 +184,250 @@ Theme template:
     --background-dark:#26283b;
     --background-light:#6d9f81;
 }
+
+[data-theme="Heart_of_the_Wildfire"] {
+    --font-color-dark:#2b191f;
+    --font-color-light:#f7d756;
+
+    --primary:#dd7b34;
+    --secondary:#d52316;
+    --tertiary:#916457;
+    --danger:#f7d756;
+
+    --background-dark:#424138;
+    --background-light:#7c7b5f;
+}
+
+[data-theme="Hearth-Vigil"] {
+    --font-color-dark:#2d2823;
+    --font-color-light:#e7b97e;
+
+    --primary:#b99180;
+    --secondary:#db6c91;
+    --tertiary:#8b8431;
+    --danger:#efe0b6;
+
+    --background-dark:#435043;
+    --background-light:#abbaec;
+}
+
+[data-theme="Keeper_of_the_Forbidden_Wilds"] {
+    --font-color-dark:#31291b;
+    --font-color-light:#e8dcbc;
+
+    --primary:#a58d71;
+    --secondary:#a57f54;
+    --tertiary:#ab9886;
+    --danger:#ece1bb;
+
+    --background-dark:#50422c;
+    --background-light:#b7ae6d;
+}
+
+[data-theme="Lightning's_Swift_Strike"] {
+    --font-color-dark:#1a0d1b;
+    --font-color-light:#fbe8a2;
+
+    --primary:#d27448;
+    --secondary:#893934;
+    --tertiary:#937474;
+    --danger:#fffec7;
+
+    --background-dark:#732229;
+    --background-light:#fbcf70;
+}
+
+[data-theme="Lure_of_the_Deep_Wilderness"] {
+    --font-color-dark:#262114;
+    --font-color-light:#fcd476;
+
+    --primary:#cc7c2c;
+    --secondary:#bca444;
+    --tertiary:#937474;
+    --danger:#f9e179;
+
+    --background-dark:#4e3f23;
+    --background-light:#d7b96c;
+}
+
+[data-theme="Madness"] {
+    --font-color-dark:#210e1c;
+    --font-color-light:#eecbae;
+
+    --primary:#f5e13a;
+    --secondary:#af5190;
+    --tertiary:#f4b497;
+    --danger:#e46270;
+
+    --background-dark:#853a6f;
+    --background-light:#dcbacc;
+}
+
+[data-theme="Many_Minds_Move_as_One"] {
+    --font-color-dark:#373738;
+    --font-color-light:#e1e4de;
+
+    --primary:#71756e;
+    --secondary:#747c6c;
+    --tertiary:#7c8474;
+    --danger:#acb4ac;
+
+    --background-dark:#44464a;
+    --background-light:#e5e3d4;
+}
+
+[data-theme="Ocean's_Hungry_Grasp"] {
+    --font-color-dark:#3e4042;
+    --font-color-light:#e9e7e7;
+
+    --primary:#4177a9;
+    --secondary:#64a4cc;
+    --tertiary:#dff2fc;
+    --danger:#b48cac;
+
+    --background-dark:#446799;
+    --background-light:#efe2e0;
+}
+
+[data-theme="Pandemonium"] {
+    --font-color-dark:#0f0d11;
+    --font-color-light:#83cef3;
+
+    --primary:#b53448;
+    --secondary:#dd4a4f;
+    --tertiary:#b6b7cd;
+    --danger:#f1d3bd;
+
+    --background-dark:#162542;
+    --background-light:#5eafd6;
+}
+
+[data-theme="Reach"] {
+    --font-color-dark:#251420;
+    --font-color-light:#e4bbeb;
+
+    --primary:#804a72;
+    --secondary:#9a64b1;
+    --tertiary:#5f545f;
+    --danger:#d82931;
+
+    --background-dark:#452d53;
+    --background-light:#f7e7fb;
+}
+
+[data-theme="Relentless_Gaze_of_the_Sun"] {
+    --font-color-dark:#313638;
+    --font-color-light:#eeeddf;
+
+    --primary:#f6bf58;
+    --secondary:#f4d48c;
+    --tertiary:#eeedd1;
+    --danger:#7694b1;
+
+    --background-dark:#6a8fad;
+    --background-light:#acccdc;
+}
+
+[data-theme="Resilience"] {
+    --font-color-dark:#45331a;
+    --font-color-light:#deece4;
+
+    --primary:#d4d64d;
+    --secondary:#b7a761;
+    --tertiary:#868b58;
+    --danger:#3cede5;
+
+    --background-dark:#392b16;
+    --background-light:#d2eedd;
+}
+
+[data-theme="Rising_Heat_of_Stone_and_Sand"] {
+    --font-color-dark:#402c29;
+    --font-color-light:#f5e3a8;
+
+    --primary:#f2c54f;
+    --secondary:#af6d32;
+    --tertiary:#e38438;
+    --danger:#f8ed3b;
+
+    --background-dark:#312834;
+    --background-light:#f5eab4;
+}
+
+[data-theme="River_Surges_in_Sunlight"] {
+    --font-color-dark:#141f27;
+    --font-color-light:#d7dfd1;
+
+    --primary:#7cd4cd;
+    --secondary:#57a7a7;
+    --tertiary:#7fb7c2;
+    --danger:#a8b0a9;
+
+    --background-dark:#4c4b3e;
+    --background-light:#eee3b9;
+}
+
+[data-theme="Serpent_Slumbering_Beneath_the_Island"] {
+    --font-color-dark:#292417;
+    --font-color-light:#f7e2bf;
+
+    --primary:#bf8945;
+    --secondary:#858d3f;
+    --tertiary:#746c64;
+    --danger:#bc3c6c;
+
+    --background-dark:#3f471c;
+    --background-light:#f7d394;
+}
+
+[data-theme="Shadows_Flicker_like_Flame"] {
+    --font-color-dark:#181c1c;
+    --font-color-light:#adeaf0;
+
+    --primary:#498380;
+    --secondary:#63a2a6;
+    --tertiary:#518a4f;
+    --danger:#c93a16;
+
+    --background-dark:#2f4c3f;
+    --background-light:#d4c87a;
+}
+
+[data-theme="Sharp_Fangs_Behind_the_Leaves"] {
+    --font-color-dark:#101311;
+    --font-color-light:#bebeb4;
+
+    --primary:#861c12;
+    --secondary:#c43427;
+    --tertiary:#518a4f;
+    --danger:#fafafa;
+
+    --background-dark:#353b34;
+    --background-light:#97b997;
+}
+
+[data-theme="Shifting_Memory_of_Ages"] {
+    --font-color-dark:#332327;
+    --font-color-light:#f0e1cb;
+
+    --primary:#8f7266;
+    --secondary:#c8b091;
+    --tertiary:#b4b4ac;
+    --danger:#a6dfe4;
+
+    --background-dark:#5a3b44;
+    --background-light:#cebfa8;
+}
+
+[data-theme="Shroud_of_Silent_Mist"] {
+    --font-color-dark:#2e2136;
+    --font-color-light:#e6f3f8;
+
+    --primary:#749b8a;
+    --secondary:#84acac;
+    --tertiary:#a6d0db;
+    --danger:#5d7060;
+
+    --background-dark:#3e3247;
+    --background-light:#d3eaef;
+}

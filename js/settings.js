@@ -216,7 +216,7 @@ const current_theme = localStorage.getItem("theme") ? localStorage.getItem("them
 if (current_theme == null) {
     document.documentElement.setAttribute(
         "data-theme",
-        "Grinning_Trickster_Stirs_Up_Trouble"
+        "Shroud_of_Silent_Mist"
     );
 }
 else {
