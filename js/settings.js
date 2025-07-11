@@ -167,7 +167,8 @@ function reset_innate_power_row() {
 
     var placeholder_row_innate_power_cols = $("<p>").attr(
         {
-            class: "col m-0 d-flex justify-content-center"
+            class: "col m-0 d-flex justify-content-center",
+            style: "color:rgba(var(--font-color-dark));"
         }
     );
 
@@ -215,7 +216,7 @@ const current_theme = localStorage.getItem("theme") ? localStorage.getItem("them
 if (current_theme == null) {
     document.documentElement.setAttribute(
         "data-theme",
-        "Breath_of_Darkness_Down_Your_Spine"
+        "Grinning_Trickster_Stirs_Up_Trouble"
     );
 }
 else {

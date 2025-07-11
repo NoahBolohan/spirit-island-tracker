@@ -54,3 +54,133 @@ Theme template:
     --background-dark:44,47,47;
     --background-light:132,156,141;
 }
+
+[data-theme="Bringer_of_Dreams_and_Nightmares"] {
+    --font-color-dark:12,13,28;
+    --font-color-light:223,250,253;
+
+    --primary:74,112,209;
+    --secondary:140,156,198;
+    --tertiary:112,112,112;
+    --danger:195,88,115;
+
+    --background-dark:36,47,95;
+    --background-light:119,192,231;
+}
+
+[data-theme="Dances_Up_Earthquakes"] {
+    --font-color-dark:43,16,30;
+    --font-color-light:241,221,204;
+
+    --primary:129,68,76;
+    --secondary:93,71,106;
+    --tertiary:243,196,118;
+    --danger:190,108,103;
+
+    --background-dark:67,43,72;
+    --background-light:140,116,140;
+}
+
+[data-theme="Devouring_Teeth_Lurk_Underfoot"] {
+    --font-color-dark:55,40,28;
+    --font-color-light:222,222,229;
+
+    --primary:226,180,109;
+    --secondary:168,95,58;
+    --tertiary:198,189,180;
+    --danger:179,38,36;
+
+    --background-dark:76,60,52;
+    --background-light:196,171,135;
+}
+
+[data-theme="Downpour_Drenches_the_World"] {
+    --font-color-dark:30,40,39;
+    --font-color-light:222,241,235;
+
+    --primary:40,188,252;
+    --secondary:194,74,230;
+    --tertiary:203,161,106;
+    --danger:171,229,252;
+
+    --background-dark:43,85,59;
+    --background-light:186,204,220;
+}
+
+[data-theme="Ember-Eyed_Behemoth"] {
+    --font-color-dark:55,49,38;
+    --font-color-light:196,193,171;
+
+    --primary:133,148,67;
+    --secondary:181,153,114;
+    --tertiary:225,160,81;
+    --danger:155,165,153;
+
+    --background-dark:64,65,95;
+    --background-light:222,209,166;
+}
+
+[data-theme="Eyes_Watch_from_the_Trees"] {
+    --font-color-dark:24,28,25;
+    --font-color-light:187,180,160;
+
+    --primary:240,207,205;
+    --secondary:153,150,135;
+    --tertiary:127,144,117;
+    --danger:221,132,102;
+
+    --background-dark:38,66,41;
+    --background-light:163,161,141;
+}
+
+[data-theme="Fathomless_Mud_of_the_Swamp"] {
+    --font-color-dark:59,57,50;
+    --font-color-light:211,216,210;
+
+    --primary:125,121,106;
+    --secondary:109,127,138;
+    --tertiary:147,158,139;
+    --danger:156,199,124;
+
+    --background-dark:53,39,35;
+    --background-light:183,192,182;
+}
+
+[data-theme="Finder_of_Paths_Unseen"] {
+    --font-color-dark:25,30,38;
+    --font-color-light:206,228,235;
+
+    --primary:110,134,192;
+    --secondary:121,187,210;
+    --tertiary:89,132,117;
+    --danger:105,222,217;
+
+    --background-dark:53,39,35;
+    --background-light:184,218,228;
+}
+
+[data-theme="Fractured_Days_Split_the_Sky"] {
+    --font-color-dark:40,43,81;
+    --font-color-light:153,221,242;
+
+    --primary:253,212,29;
+    --secondary:218,244,239;
+    --tertiary:97,95,174;
+    --danger:252,254,248;
+
+    --background-dark:38,40,59;
+    --background-light:155,191,207;
+}
+
+[data-theme="Grinning_Trickster_Stirs_Up_Trouble"] {
+    --font-color-dark:63,49,32;
+    --font-color-light:150,197,179;
+
+    --primary:143,122,59;
+    --secondary:147,131,64;
+    --tertiary:163,150,75;
+    --danger:102,130,100;
+
+    --background-dark:38,40,59;
+    --background-light:109,159,129;
+}

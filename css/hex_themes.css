@@ -54,3 +54,133 @@ Theme template:
     --background-dark:#2c2f2f;
     --background-light:#849c8d;
 }
+
+[data-theme="Bringer_of_Dreams_and_Nightmares"] {
+    --font-color-dark:#0c0d1c;
+    --font-color-light:#dffafd;
+
+    --primary:#4a70d1;
+    --secondary:#8c9cc6;
+    --tertiary:#707070;
+    --danger:#c35873;
+
+    --background-dark:#242f5f;
+    --background-light:#77c0e7;
+}
+
+[data-theme="Dances_Up_Earthquakes"] {
+    --font-color-dark:#2b101e;
+    --font-color-light:#f1ddcc;
+
+    --primary:#81444c;
+    --secondary:#5d476a;
+    --tertiary:#f3c476;
+    --danger:#be6c67;
+
+    --background-dark:#432b48;
+    --background-light:#8c748c;
+}
+
+[data-theme="Devouring_Teeth_Lurk_Underfoot"] {
+    --font-color-dark:#37281c;
+    --font-color-light:#dedee5;
+
+    --primary:#e2b46d;
+    --secondary:#a85f3a;
+    --tertiary:#c6bdb4;
+    --danger:#b32624;
+
+    --background-dark:#4c3c34;
+    --background-light:#c4ab87;
+}
+
+[data-theme="Downpour_Drenches_the_World"] {
+    --font-color-dark:#1e2827;
+    --font-color-light:#def1eb;
+
+    --primary:#28bcfc;
+    --secondary:#c24ae6;
+    --tertiary:#cba16a;
+    --danger:#abe5fc;
+
+    --background-dark:#2b553b;
+    --background-light:#baccdc;
+}
+
+[data-theme="Ember-Eyed_Behemoth"] {
+    --font-color-dark:#373126;
+    --font-color-light:#c4c1ab;
+
+    --primary:#859443;
+    --secondary:#b59972;
+    --tertiary:#e1a051;
+    --danger:#9ba599;
+
+    --background-dark:#40415f;
+    --background-light:#ded1a6;
+}
+
+[data-theme="Eyes_Watch_from_the_Trees"] {
+    --font-color-dark:#181c19;
+    --font-color-light:#bbb4a0;
+
+    --primary:#f0cfcd;
+    --secondary:#999687;
+    --tertiary:#7f9075;
+    --danger:#dd8466;
+
+    --background-dark:#264229;
+    --background-light:#a3a18d;
+}
+
+[data-theme="Fathomless_Mud_of_the_Swamp"] {
+    --font-color-dark:#3b3932;
+    --font-color-light:#d3d8d2;
+
+    --primary:#7d796a;
+    --secondary:#6d7f8a;
+    --tertiary:#939e8b;
+    --danger:#9cc77c;
+
+    --background-dark:#352723;
+    --background-light:#b7c0b6;
+}
+
+[data-theme="Finder_of_Paths_Unseen"] {
+    --font-color-dark:#191e26;
+    --font-color-light:#cee4eb;
+
+    --primary:#6e86c0;
+    --secondary:#79bbd2;
+    --tertiary:#598475;
+    --danger:#69ded9;
+
+    --background-dark:#352723;
+    --background-light:#b8dae4;
+}
+
+[data-theme="Fractured_Days_Split_the_Sky"] {
+    --font-color-dark:#282b51;
+    --font-color-light:#99ddf2;
+
+    --primary:#fdd41d;
+    --secondary:#daf4ef;
+    --tertiary:#615fae;
+    --danger:#fcfef8;
+
+    --background-dark:#26283b;
+    --background-light:#9bbfcf;
+}
+
+[data-theme="Grinning_Trickster_Stirs_Up_Trouble"] {
+    --font-color-dark:#3f3120;
+    --font-color-light:#96c5b3;
+
+    --primary:#8f7a3b;
+    --secondary:#938340;
+    --tertiary:#a3964b;
+    --danger:#668264;
+
+    --background-dark:#26283b;
+    --background-light:#6d9f81;
+}
