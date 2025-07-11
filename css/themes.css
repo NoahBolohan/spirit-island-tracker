@@ -41,3 +41,16 @@ Theme template:
     --background-dark:25,55,23;
     --background-light:40,163,84;
 }
+
+[data-theme="Breath_of_Darkness_Down_Your_Spine"] {
+    --font-color-dark:22,22,23;
+    --font-color-light:170,161,119;
+
+    --primary:91,100,92;
+    --secondary:129,108,79;
+    --tertiary:144,136,101;
+    --danger:140,68,52;
+
+    --background-dark:44,47,47;
+    --background-light:132,156,141;
+}

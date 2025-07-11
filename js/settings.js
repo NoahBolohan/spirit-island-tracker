@@ -215,7 +215,7 @@ const current_theme = localStorage.getItem("theme") ? localStorage.getItem("them
 if (current_theme == null) {
     document.documentElement.setAttribute(
         "data-theme",
-        "A_Spread_of_Rampant_Green"
+        "Breath_of_Darkness_Down_Your_Spine"
     );
 }
 else {
