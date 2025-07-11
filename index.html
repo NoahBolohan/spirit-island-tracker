@@ -15,6 +15,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/themes.css" media="screen" />
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 		<script src="js/no_sleep.min.js"></script>
@@ -40,7 +42,7 @@
 					<div class="modal-header justify-content-center" style="position:relative;">
 	
 						<h2 class="modal-title">Settings</h2>
-						<button class="btn astext" id="button_close_modal_settings" style="position:absolute;right:1em;">
+						<button class="btn astext btn-settings" id="button_close_modal_settings" style="position:absolute;right:1em;">
 							&#x274c;
 						</button>
 					</div>
@@ -88,7 +90,7 @@
 					<div class="modal-header justify-content-center" style="position:relative;">
 	
 						<h2 class="modal-title">Select a spirit</h2>
-						<button class="btn astext" id="button_close_modal_spirits" style="position:absolute;right:1em;">
+						<button class="btn astext btn-settings" id="button_close_modal_spirits" style="position:absolute;right:1em;">
 							&#x274c;
 						</button>
 					</div>
@@ -97,9 +99,9 @@
 
 						<div class="p-0 container-fluid">
 
-							<div class="row px-0 pb-2 justify-content-center margin_auto">
-								<input class="col-10" type="text" id="input_spirit_select_search" onkeyup="spirit_select_filter()" placeholder="Search by name">
-								<button class="col-2 btn astext" id="button_clear_spirit_select_search">Clear</button>
+							<div class="row px-0 pb-2 justify-content-between margin_auto">
+								<input class="col-9" type="text" id="input_spirit_select_search" onkeyup="spirit_select_filter()" placeholder="Search by name">
+								<button class="col-2 btn astext btn-settings" id="button_clear_spirit_select_search">Clear</button>
 							</div>
 
 							<ul id="list_spirit_select_buttons"></ul>
@@ -119,7 +121,7 @@
 	
 						<h2 class="modal-title">Select a leading adversary</h2>
 
-						<button class="btn astext" id="button_close_modal_leading_adversaries" style="position:absolute;right:1em;">
+						<button class="btn astext btn-settings" id="button_close_modal_leading_adversaries" style="position:absolute;right:1em;">
 							&#x274c;
 						</button>
 					</div>
@@ -128,9 +130,9 @@
 
 						<div class="p-0 container-fluid">
 
-							<div class="row px-0 pb-2 justify-content-center margin_auto">
-								<input class="col-10" type="text" id="input_leading_adversary_select_search" onkeyup="adversary_select_filter('leading')" placeholder="Search by name">
-								<button class="col-2 btn astext" id="button_clear_leading_adversary_select_search">Clear</button>
+							<div class="row px-0 pb-2 justify-content-between margin_auto">
+								<input class="col-9" type="text" id="input_leading_adversary_select_search" onkeyup="adversary_select_filter('leading')" placeholder="Search by name">
+								<button class="col-2 btn astext btn-settings" id="button_clear_leading_adversary_select_search">Clear</button>
 							</div>
 
 							<ul id="list_leading_adversary_select_buttons"></ul>
@@ -156,25 +158,24 @@
 	
 						<h2 class="modal-title">Select the adversaries level</h2>
 
-						<button class="btn astext" id="button_close_modal_leading_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
+						<button class="btn astext btn-settings" id="button_close_modal_leading_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
 							&#x27A6;
 						</button>
 					</div>
 	
 					<div class="modal-body" id="modal_leading_adversary_level_body">
 
-						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_leading_aversary_difficulty_0_to_2">
-							<div class="col-2" id="div_leading_adversary_flag_for_difficulty_modal"></div>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_0" type="button">0</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_1" type="button">1</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_2" type="button">2</button>
+						<div class="row p-0 justify-content-center margin_auto" id="row_leading_aversary_difficulty_0_to_2">
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_0" type="button">0</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_1" type="button">1</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_2" type="button">2</button>
 						</div>
 
 						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_leading_aversary_difficulty_3_to_6">
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_3" type="button">3</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_4" type="button">4</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_5" type="button">5</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_leading_adversary_level_6" type="button">6</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_3" type="button">3</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_4" type="button">4</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_5" type="button">5</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_leading_adversary_level_6" type="button">6</button>
 						</div>
 						</div>
 					</div>
@@ -192,7 +193,7 @@
 	
 						<h2 class="modal-title">Select a supporting adversary</h2>
 
-						<button class="btn astext" id="button_close_modal_supporting_adversaries" style="position:absolute;right:1em;">
+						<button class="btn astext btn-settings" id="button_close_modal_supporting_adversaries" style="position:absolute;right:1em;">
 							&#x274c;
 						</button>
 					</div>
@@ -201,9 +202,9 @@
 
 						<div class="p-0 container-fluid">
 
-							<div class="row px-0 pb-2 justify-content-center margin_auto">
-								<input class="col-10" type="text" id="input_supporting_adversary_select_search" onkeyup="adversary_select_filter('supporting')" placeholder="Search by name">
-								<button class="col-2 btn astext" id="button_clear_supporting_adversary_select_search">Clear</button>
+							<div class="row px-0 pb-2 justify-content-between margin_auto">
+								<input class="col-9" type="text" id="input_supporting_adversary_select_search" onkeyup="adversary_select_filter('supporting')" placeholder="Search by name">
+								<button class="col-2 btn astext btn-settings" id="button_clear_supporting_adversary_select_search">Clear</button>
 							</div>
 
 							<ul id="list_supporting_adversary_select_buttons"></ul>
@@ -229,25 +230,24 @@
 	
 						<h2 class="modal-title">Select the adversaries level</h2>
 
-						<button class="btn astext" id="button_close_modal_supporting_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
+						<button class="btn astext btn-settings" id="button_close_modal_supporting_adversary_level" style="position:absolute;right:1em;font-size: 1.5em;transform: rotate(180deg);">
 							&#x27A6;
 						</button>
 					</div>
 	
 					<div class="modal-body" id="modal_supporting_adversary_level_body">
 
-						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_0_to_2">
-							<div class="col-2" id="div_supporting_adversary_flag_for_difficulty_modal"></div>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_0" type="button">0</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_1" type="button">1</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_2" type="button">2</button>
+						<div class="row p-0 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_0_to_2">
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_0" type="button">0</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_1" type="button">1</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_2" type="button">2</button>
 						</div>
 
 						<div class="row p-0 mt-2 justify-content-center margin_auto" id="row_supporting_aversary_difficulty_3_to_6">
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_3" type="button">3</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_4" type="button">4</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_5" type="button">5</button>
-							<button class="col-2 m-1 btn btn-light nav-button" id="col_button_supporting_adversary_level_6" type="button">6</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_3" type="button">3</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_4" type="button">4</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_5" type="button">5</button>
+							<button class="col-2 mx-1 btn btn-primary" id="col_button_supporting_adversary_level_6" type="button">6</button>
 						</div>
 						</div>
 					</div>
@@ -273,8 +273,8 @@
 
 				<div class="col-1 offset-2 p-0 align-self-center">
 
-					<button class="btn astext" id="button_settings">
-						<img src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/gear.svg" style="width: 80%;">
+					<button class="btn astext btn-settings" type="button" id="button_settings">
+						<img src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/gear.svg" style="width: 100%;">
 					</button>
 				</div>
 			</div>
@@ -282,36 +282,29 @@
 			<div class="row mt-1 p-0 g-1 justify-content-center margin_auto" id="row_game_info">
 
 				<div class="col-6">
-					<div class="row p-0 justify-content-center margin_auto">
-						Select spirit:
-					</div>
 
 					<div class="row p-0 justify-content-center margin_auto">
 
-						<button class="p-0 btn btn-xs btn-info" id="button_select_spirit">
-							&#x2795;
+						<button class="p-0 btn btn-xs btn-settings" id="button_select_spirit">
+							Select spirit
 						</button>
 					</div>
 				</div>
 
 				<div class="col-6">
 
-					<div class="row p-0 justify-content-center margin_auto">
-						Select adversary:
-					</div>
-
 					<div class="row p-0 justify-content-center margin_auto wrapper">
 
 						<section id="section_leading_adversary">
 
-							<button class="p-0 btn btn-xs btn-info" id="button_select_leading_adversary" style="width: 100%;">
-								&#x2795;
+							<button class="p-0 btn btn-xs btn-settings" id="button_select_leading_adversary" style="width: 100%;">
+								Select adversary
 							</button>
 						</section>
 
 						<section class="is_hidden" id="section_supporting_adversary">
 							
-							<button class="p-0 btn btn-xs btn-info" id="button_select_supporting_adversary" style="margin:auto 0 0 auto;height:40%;aspect-ratio: 1/1;">
+							<button class="p-0 btn btn-xs btn-settings" id="button_select_supporting_adversary" style="margin:auto 0 0 auto;height:40%;aspect-ratio: 1/1;">
 								&#x2795;
 							</button>
 						</section>
@@ -321,15 +314,15 @@
 
 			<div class="row mt-2 p-0 justify-content-center margin_auto" id="row_element_tracker">
 
-				<div class="card col p-0 margin_auto" id="col_element_tracker_card" style="background-color : rgba(255,255,255,0.4); background-blend-mode : lighten">
+				<div class="card col p-0 margin_auto card-body" id="col_element_tracker_card" style="background-blend-mode : lighten">
 	
 					<div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker"></div>
 
 					<div class="row mb-2 p-0 justify-content-center margin-auto">
 
-						<button class="col-3 btn btn-primary" id="button_toggle_lock_element_tracker" type="button">Lock</button>
+						<button class="col-3 btn btn-lock-elements" id="button_toggle_lock_element_tracker" type="button">Lock</button>
 
-						<button class="col-3 offset-1 btn btn-danger" id="button_reset_element_tracker" type="button">
+						<button class="col-3 offset-1 btn btn-reset-elements" id="button_reset_element_tracker" type="button">
 							Reset
 						</button>
 					</div>
@@ -338,11 +331,12 @@
 
 			<div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
 
-				<div class="card mt-2 p-0 margin_auto" id="col_innate_powers" style="background-color : rgba(255,255,255,0.4); background-blend-mode : lighten; background-size : cover;">
+				<!-- <div class="card mt-2 p-0 margin_auto card-body" id="col_innate_powers" style="background-blend-mode : lighten; background-size : cover;"> -->
+				<div class="mt-2 p-0 margin_auto" id="col_innate_powers" style="background-blend-mode : lighten; background-size : cover;"></div>
 	
 					<div class="row m-1 p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
 
-						<p style="margin: 5px 5px 0px 5px;">
+						<p class="col m-0 d-flex justify-content-center">
 							<object data="static/icons/fear.svg" height="15px"></object>
 							Select a Spirit to display their innate powers
 							<object data="static/icons/fear.svg" height="15px"></object>
@@ -353,7 +347,7 @@
 
 			<div class="row mt-1 p-0 g-1 justify-content-center margin_auto">
 
-				<button class="col-4 btn btn-danger" id="button_reset_selections" style="font-size: 1em;">
+				<button class="col-4 btn btn-reset-page" id="button_reset_selections" style="font-size: 1em;">
 					Reset page
 				</button>
 			</div>

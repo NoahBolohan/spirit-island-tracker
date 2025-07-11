@@ -42,7 +42,7 @@ $(document).ready(
                     "leading_adversary",
                     ""
                 );
-                generate_default_supporting_adversary_select_button()
+                generate_default_supporting_adversary_select_button();
                 $("#spirit_island_tracker_body").data(
                     "supporting_adversary",
                     ""
@@ -52,6 +52,14 @@ $(document).ready(
                 );
 
                 difficulty_calculator();
+
+                $(`#button_select_leading_adversary`).removeClass(
+                    "btn-outlineless"
+                );
+
+                $(`#button_select_leading_adversary`).addClass(
+                    "btn-settings"
+                );
 
                 $(`#modal_leading_adversaries`).modal("hide");
             }
@@ -75,6 +83,14 @@ $(document).ready(
                 );
 
                 difficulty_calculator();
+
+                $(`#button_select_supporting_adversary`).removeClass(
+                    "btn-outlineless"
+                );
+
+                $(`#button_select_supporting_adversary`).addClass(
+                    "btn-settings"
+                );
                 
                 $(`#modal_supporting_adversaries`).modal("hide");
             }
@@ -170,7 +186,7 @@ function generate_adversary_select_list_item_for_adversary(
 
     var button = $("<button>").attr(
         {
-            class : "btn btn-xs",
+            class : "btn btn-xs btn-outlineless",
             id : `button_${
                 adversary_type
             }_${
@@ -235,10 +251,16 @@ function generate_adversary_select_list_item_for_adversary(
                 `#button_select_${adversary_type}_adversary`
             );
 
+            $(`#button_select_${adversary_type}_adversary`).removeClass(
+                "btn-settings"
+            );
+
+            $(`#button_select_${adversary_type}_adversary`).addClass(
+                "btn-outlineless"
+            );
+
             $(`#button_select_${adversary_type}_adversary`).css(
                 {
-                    "background-color": "transparent",
-                    "border" : "none",
                     "height" : "",
                     "aspect-ratio" : ""
                 }
@@ -305,8 +327,8 @@ function generate_default_leading_adversary_select_button() {
         }
     );
 
-    $(`#button_select_leading_adversary`).html(
-        "&#x2795;"
+    $(`#button_select_leading_adversary`).text(
+        "Select adversary"
     );
 
     $("#spirit_island_tracker_body").data(

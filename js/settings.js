@@ -129,12 +129,12 @@ function reset_spirit_selction() {
 
     $("#button_select_spirit").attr(
         {
-            class : "p-0 btn btn-xs btn-info",
+            class : "p-0 btn btn-xs btn-settings",
             id : "button_select_spirit"
         }
-    ).html(
-        "&#x2795;"
-    )
+    ).text(
+        "Select spirit"
+    );
 
     $("#button_select_spirit").css(
         {
@@ -167,7 +167,7 @@ function reset_innate_power_row() {
 
     var placeholder_row_innate_power_cols = $("<p>").attr(
         {
-            style : "margin: 5px 5px 0px 5px;"
+            class: "col m-0 d-flex justify-content-center"
         }
     );
 

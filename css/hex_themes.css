@@ -1,0 +1,43 @@
+/*
+Theme template:
+
+[data-theme="theme_name"] {
+    --font-color-dark:;
+    --font-color-light:;
+
+    --primary:;
+    --secondary:;
+    --tertiary:;
+    --danger:;
+
+    --background-dark:;
+    --background-light:;
+}
+
+*/
+
+:root {
+    --font-color-dark:#000000;
+    --font-color-light:#ffffff;
+
+    --primary:#0000ff;
+    --secondary:#008000;
+    --tertiary:#808080;
+    --danger:#ff0000;
+
+    --background-dark:#800080;
+    --background-light:#ffc0cb;
+}
+
+[data-theme="A_Spread_of_Rampant_Green"] {
+    --font-color-dark:#090b19;
+    --font-color-light:#33a9d6;
+
+    --primary:#138333;
+    --secondary:#194417;
+    --tertiary:#545635;
+    --danger:#3bea8e;
+
+    --background-dark:#181c48;
+    --background-light:#33a9d6;
+}

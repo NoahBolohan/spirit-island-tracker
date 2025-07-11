@@ -25,12 +25,22 @@ function parse_innate_power(
         if (key == "name") {
             $("<div>").attr(
                 {
-                    class : "card-header text-center mb-1 p-1",
+                    class : "card-header text-center",
                     style: "font-size : 13px"
                 }
             ).text(
                 value.toUpperCase()
             ).appendTo(
+                innate_power_card
+            );
+
+            var innate_power_card_body = $("<div>").attr(
+                {
+                    class : "card-body p-1"
+                }
+            );
+            
+            innate_power_card_body.appendTo(
                 innate_power_card
             );
         }
@@ -39,7 +49,7 @@ function parse_innate_power(
                 innate_power_number,
                 key,
                 value
-            ).appendTo(innate_power_card);
+            ).appendTo(innate_power_card_body);
         }
     }
 
@@ -75,22 +85,14 @@ function generate_element_threshold_button_for_tier(
     innate_power_tier,
     innate_power_config
 ) {
-    // var tier_button = $("<button>").attr(
-    //     {
-    //         class : "col btn btn-primary",
-    //         id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
-    //         type : "button"
-    //     }
-    // ).prop(
-    //     "disabled",true
-    // );
-
     var tier_button = $("<button>").attr(
         {
-            class : "col btn btn-primary",
+            class : "col btn btn-lock-elements",
             id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
             type : "button"
         }
+    ).prop(
+        "disabled",true
     );
 
     append_threshold_string(
@@ -104,10 +106,17 @@ function generate_element_threshold_button_for_tier(
         innate_power_config
     );
 
+    $(`#button_close_modal_innate_power_${innate_power_number}_${innate_power_tier}`).on(
+        "click",
+        function() {
+            $(`#modal_innate_power_${innate_power_number}_${innate_power_tier}`).modal("hide");
+        }
+    );
+
     tier_button.on(
         "click",
         function() {
-            $(`#model_innate_power_${innate_power_number}_${innate_power_tier}`).modal("show");
+            $(`#modal_innate_power_${innate_power_number}_${innate_power_tier}`).modal("show");
         }
     )
 
@@ -203,7 +212,7 @@ function assign_modal_to_tier_button(
     var modal_for_tier_button = $("<div>").attr(
         {
             class : "modal fade",
-            id  : `model_innate_power_${innate_power_number}_${innate_power_tier}`
+            id  : `modal_innate_power_${innate_power_number}_${innate_power_tier}`
         }
     );
 
@@ -234,22 +243,21 @@ function assign_modal_to_tier_button(
 
     var modal_title = $("<div>").attr(
         {
-            class: "modal-title justify-content-center",
-            style: "position:relative;"
+            class: "modal-title"
         }
     );
 
-    // $("<button>").attr(
-    //     {
-    //         class : "btn astext",
-    //         id : "button_close_modal_settings",
-    //         style : "position:absolute;right:1em;"
-    //     }
-    // ).html(
-    //     "&#x274c;"
-    // ).appendTo(
-    //     modal_title
-    // );
+    $("<button>").attr(
+        {
+            class : "btn astext btn-settings",
+            id : `button_close_modal_innate_power_${innate_power_number}_${innate_power_tier}`,
+            style : "position:absolute;right:1em;"
+        }
+    ).html(
+        "&#x274c;"
+    ).appendTo(
+        modal_title
+    );
     
     append_threshold_string(
         modal_title,
@@ -260,8 +268,7 @@ function assign_modal_to_tier_button(
 
     $("<div>").attr(
         {
-            class: "modal-body",
-            style: "padding-top: 0px;"
+            class: "modal-body"
         }
     ).html(
         spirit_text_keyword_converter(

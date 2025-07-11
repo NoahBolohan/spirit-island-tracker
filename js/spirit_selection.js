@@ -122,7 +122,7 @@ function generate_spirit_select_list_item_for_spirit(
 
     var button = $("<button>").attr(
         {
-            class : "btn btn-xs",
+            class : "btn btn-xs btn-outlineless",
             id : `button_${
                 spirit_button_name
             }`,
@@ -188,11 +188,12 @@ function generate_spirit_select_list_item_for_spirit(
                 `#button_select_spirit`
             );
 
-            $(`#button_select_spirit`).css(
-                {
-                    "background-color": "transparent",
-                    "border" : "none"
-                }
+            $(`#button_select_spirit`).removeClass(
+                "btn-settings"
+            );
+
+            $(`#button_select_spirit`).addClass(
+                "btn-outlineless"
             );
 
             $("#col_innate_powers").css(

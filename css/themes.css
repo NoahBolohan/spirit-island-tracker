@@ -1,0 +1,43 @@
+/*
+Theme template:
+
+[data-theme="theme_name"] {
+    --font-color-dark:;
+    --font-color-light:;
+
+    --primary:;
+    --secondary:;
+    --tertiary:;
+    --danger:;
+
+    --background-dark:;
+    --background-light:;
+}
+
+*/
+
+:root {
+    --font-color-dark:0,0,0;
+    --font-color-light:255,255,255;
+
+    --primary:0,0,255;
+    --secondary:0,128,0;
+    --tertiary:128,128,128;
+    --danger:255,0,0;
+
+    --background-dark:128,0,128;
+    --background-light:255,192,203;
+}
+
+[data-theme="A_Spread_of_Rampant_Green"] {
+    --font-color-dark:9,11,25;
+    --font-color-light:51,169,214;
+
+    --primary:19,131,51;
+    --secondary:25,68,23;
+    --tertiary:84,86,53;
+    --danger:59,234,142;
+
+    --background-dark:24,28,72;
+    --background-light:51,169,214;
+}
