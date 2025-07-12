@@ -196,10 +196,10 @@ function generate_spirit_select_list_item_for_spirit(
                 "btn-outlineless"
             );
 
-            $("#col_innate_powers").css(
-                "background-image",
-                `url(${new_url})`
-            );
+            // $("#col_innate_powers").css(
+            //     "background-image",
+            //     `url(${new_url})`
+            // );
 
             if ("innate_power_5" in spirit_config) {
                 for (var i = 1; i <= 5; i++) {

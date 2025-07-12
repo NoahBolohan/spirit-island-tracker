@@ -167,7 +167,7 @@ function reset_innate_power_row() {
 
     var placeholder_row_innate_power_cols = $("<p>").attr(
         {
-            class: "col m-0 d-flex justify-content-center",
+            class: "col m-0 mb-1 d-flex justify-content-center",
             style: "color:rgba(var(--font-color-dark));"
         }
     );
@@ -213,10 +213,11 @@ $(document).ready(
 
 const current_theme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
 
-if (current_theme == null) {
+if ((current_theme == null)|(current_theme=="default")) {
+    
     document.documentElement.setAttribute(
         "data-theme",
-        "Shroud_of_Silent_Mist"
+        "Wounded_Waters_Bleeding"
     );
 }
 else {

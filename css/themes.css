@@ -431,3 +431,146 @@ Theme template:
     --background-dark:62,50,71;
     --background-light:211,234,239;
 }
+
+[data-theme="Starlight_Seeks_Its_Form"] {
+    --font-color-dark:11,17,31;
+    --font-color-light:154,204,216;
+
+    --primary:66,178,197;
+    --secondary:148,55,128;
+    --tertiary:132,64,134;
+    --danger:196,148,180;
+
+    --background-dark:28,26,66;
+    --background-light:117,172,197;
+}
+
+[data-theme="Stone's_Unyielding_Defiance"] {
+    --font-color-dark:36,43,46;
+    --font-color-light:210,209,194;
+
+    --primary:136,147,160;
+    --secondary:150,166,178;
+    --tertiary:103,124,148;
+    --danger:183,178,173;
+
+    --background-dark:53,63,68;
+    --background-light:204,206,184;
+}
+
+[data-theme="Sun-Bright_Whirlwind"] {
+    --font-color-dark:19,43,24;
+    --font-color-light:238,235,171;
+
+    --primary:208,170,69;
+    --secondary:190,176,79;
+    --tertiary:175,114,31;
+    --danger:247,248,243;
+
+    --background-dark:39,86,49;
+    --background-light:229,225,186;
+}
+
+[data-theme="Thunderspeaker"] {
+    --font-color-dark:25,26,20;
+    --font-color-light:218,205,181;
+
+    --primary:164,84,52;
+    --secondary:125,146,134;
+    --tertiary:113,91,79;
+    --danger:197,197,186;
+
+    --background-dark:29,65,49;
+    --background-light:206,144,98;
+}
+
+[data-theme="Towering_Roots_of_the_Jungle"] {
+    --font-color-dark:40,37,39;
+    --font-color-light:186,186,206;
+
+    --primary:97,104,67;
+    --secondary:217,193,104;
+    --tertiary:134,95,70;
+    --danger:197,197,186;
+
+    --background-dark:52,55,85;
+    --background-light:164,127,78;
+}
+
+[data-theme="Vengeance_as_a_Burning_Plague"] {
+    --font-color-dark:61,55,51;
+    --font-color-light:215,217,205;
+
+    --primary:243,45,34;
+    --secondary:213,140,57;
+    --tertiary:171,184,80;
+    --danger:141,119,65;
+
+    --background-dark:143,42,37;
+    --background-light:244,228,108;
+}
+
+[data-theme="Vital_Strength_of_the_Earth"] {
+    --font-color-dark:69,51,26;
+    --font-color-light:222,236,228;
+
+    --primary:156,134,92;
+    --secondary:191,191,182;
+    --tertiary:134,139,88;
+    --danger:172,161,85;
+
+    --background-dark:57,43,22;
+    --background-light:243,219,170;
+}
+
+[data-theme="Volcano_Looming_High"] {
+    --font-color-dark:34,35,44;
+    --font-color-light:229,190,77;
+
+    --primary:108,108,124;
+    --secondary:178,139,67;
+    --tertiary:156,92,76;
+    --danger:255,229,73;
+
+    --background-dark:55,60,71;
+    --background-light:148,140,116;
+}
+
+[data-theme="Wandering_Voice_Keens_Delirium"] {
+    --font-color-dark:31,30,35;
+    --font-color-light:213,192,152;
+
+    --primary:222,196,122;
+    --secondary:148,84,45;
+    --tertiary:124,106,104;
+    --danger:250,248,242;
+
+    --background-dark:52,36,44;
+    --background-light:156,148,140;
+}
+
+[data-theme="Wind"] {
+    --font-color-dark:26,45,68;
+    --font-color-light:168,226,245;
+
+    --primary:246,206,61;
+    --secondary:244,235,76;
+    --tertiary:202,140,55;
+    --danger:231,223,197;
+
+    --background-dark:33,57,86;
+    --background-light:139,199,219;
+}
+
+[data-theme="Wounded_Waters_Bleeding"] {
+    --font-color-dark:26,45,68;
+    --font-color-light:164,228,236;
+
+    --primary:163,26,23;
+    --secondary:201,94,76;
+    --tertiary:102,126,127;
+    --danger:210,199,189;
+
+    --background-dark:87,21,19;
+    --background-light:194,222,225;
+}

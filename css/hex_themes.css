@@ -431,3 +431,146 @@ Theme template:
     --background-dark:#3e3247;
     --background-light:#d3eaef;
 }
+
+[data-theme="Starlight_Seeks_Its_Form"] {
+    --font-color-dark:#0b111f;
+    --font-color-light:#9accd8;
+
+    --primary:#42b2c5;
+    --secondary:#943780;
+    --tertiary:#844086;
+    --danger:#c494b4;
+
+    --background-dark:#1c1a42;
+    --background-light:#75acc5;
+}
+
+[data-theme="Stone's_Unyielding_Defiance"] {
+    --font-color-dark:#242b2e;
+    --font-color-light:#d2d1c2;
+
+    --primary:#8893a0;
+    --secondary:#96a6b2;
+    --tertiary:#677c94;
+    --danger:#b7b2ad;
+
+    --background-dark:#353f44;
+    --background-light:#ccceb8;
+}
+
+[data-theme="Sun-Bright_Whirlwind"] {
+    --font-color-dark:#132b18;
+    --font-color-light:#eeebab;
+
+    --primary:#d0aa45;
+    --secondary:#beb04f;
+    --tertiary:#af721f;
+    --danger:#f7f8f3;
+
+    --background-dark:#275631;
+    --background-light:#e5e1ba;
+}
+
+[data-theme="Thunderspeaker"] {
+    --font-color-dark:#191a14;
+    --font-color-light:#dacdb5;
+
+    --primary:#a45434;
+    --secondary:#7d9286;
+    --tertiary:#715b4f;
+    --danger:#c5c5ba;
+
+    --background-dark:#1d4131;
+    --background-light:#ce9062;
+}
+
+[data-theme="Towering_Roots_of_the_Jungle"] {
+    --font-color-dark:#282527;
+    --font-color-light:#babace;
+
+    --primary:#616843;
+    --secondary:#d9c168;
+    --tertiary:#865f46;
+    --danger:#c5c5ba;
+
+    --background-dark:#343755;
+    --background-light:#a47f4e;
+}
+
+[data-theme="Vengeance_as_a_Burning_Plague"] {
+    --font-color-dark:#3d3733;
+    --font-color-light:#d7d9cd;
+
+    --primary:#f32d22;
+    --secondary:#d58c39;
+    --tertiary:#abb850;
+    --danger:#8d7741;
+
+    --background-dark:#8f2a25;
+    --background-light:#f4e46c;
+}
+
+[data-theme="Vital_Strength_of_the_Earth"] {
+    --font-color-dark:#45331a;
+    --font-color-light:#deece4;
+
+    --primary:#9c865c;
+    --secondary:#bfbfb6;
+    --tertiary:#868b58;
+    --danger:#aca155;
+
+    --background-dark:#392b16;
+    --background-light:#f3dbaa;
+}
+
+[data-theme="Volcano_Looming_High"] {
+    --font-color-dark:#22232c;
+    --font-color-light:#e5be4d;
+
+    --primary:#6c6c7c;
+    --secondary:#b28b43;
+    --tertiary:#9c5c4c;
+    --danger:#ffe549;
+
+    --background-dark:#373c47;
+    --background-light:#948c74;
+}
+
+[data-theme="Wandering_Voice_Keens_Delirium"] {
+    --font-color-dark:#1f1e23;
+    --font-color-light:#d5c098;
+
+    --primary:#dec47a;
+    --secondary:#94542d;
+    --tertiary:#7c6a68;
+    --danger:#faf8f2;
+
+    --background-dark:#34242c;
+    --background-light:#9c948c;
+}
+
+[data-theme="Wind"] {
+    --font-color-dark:#1a2d44;
+    --font-color-light:#a8e2f5;
+
+    --primary:#f6ce3d;
+    --secondary:#f4eb4c;
+    --tertiary:#ca8c37;
+    --danger:#e7dfc5;
+
+    --background-dark:#213956;
+    --background-light:#8bc7db;
+}
+
+[data-theme="Wounded_Waters_Bleeding"] {
+    --font-color-dark:#1a2d44;
+    --font-color-light:#a4e4ec;
+
+    --primary:#a31a17;
+    --secondary:#c95e4c;
+    --tertiary:#667e7f;
+    --danger:#d2c7bd;
+
+    --background-dark:#571513;
+    --background-light:#c2dee1;
+}
