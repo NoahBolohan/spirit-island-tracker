@@ -206,6 +206,12 @@ $(document).ready(
                 reset_innate_power_row()
                 reset_spirit_selction();
                 reset_adversary_selection();
+                if (
+                    $("#button_toggle_lock_element_tracker").text() != "Lock"
+                ) {
+                    $("#button_toggle_lock_element_tracker").click();
+                }
+                $("#button_reset_element_tracker").click();
                 switch_theme(
                     "default"
                 );

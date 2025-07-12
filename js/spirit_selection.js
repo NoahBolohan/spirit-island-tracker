@@ -25,7 +25,7 @@ $(document).ready(
     }
 )
 
-function generate_encoded_spirit_image_url(
+function generate_spirit_image_file_name(
     spirit_name,
     spirit_config
 ) {
@@ -33,7 +33,11 @@ function generate_encoded_spirit_image_url(
     if ("alt_name" in spirit_config & "aspect_art" in spirit_config & spirit_config["aspect_art"] == "true") {
         var spirit_image_file_name = spirit_config[
             "alt_name"
-        ]
+        ].split(
+            ' '
+        ).join(
+            '_'
+        )
     }
     else if ("aspect_for" in spirit_config) {
         var spirit_image_file_name = spirit_config[
@@ -51,6 +55,18 @@ function generate_encoded_spirit_image_url(
             '_'
         )
     }
+
+    return spirit_image_file_name;
+}
+function generate_encoded_spirit_image_url(
+    spirit_name,
+    spirit_config
+) {
+
+    var spirit_image_file_name = generate_spirit_image_file_name(
+        spirit_name,
+        spirit_config
+    );
 
     new_url = encodeURI(
         "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/spirit_images/" + spirit_image_file_name + ".png"
@@ -70,28 +86,21 @@ function generate_spirit_button_name(
     spirit_config
 ) {
 
-    if ("alt_name" in spirit_config & "aspect_art" in spirit_config & spirit_config["aspect_art"] == "true") {
-        var spirit_image_file_name = spirit_config[
-            "alt_name"
-        ]
-    }
-    else if ("aspect_for" in spirit_config) {
-        var spirit_image_file_name = spirit_config[
-            "aspect_for"
-        ].split(
-            ' '
-        ).join(
-            '_'
-        ) + '_' + spirit_config[
-            "alt_name"
-        ]
-    }
-    else {
-        var spirit_image_file_name = spirit_name.split(
-            ' '
-        ).join(
-            '_'
-        )
+    var spirit_image_file_name = generate_spirit_image_file_name(
+        spirit_name,
+        spirit_config
+    );
+
+    if (
+        "alt_name" in spirit_config
+    ) {
+        spirit_image_file_name = `${spirit_image_file_name}_${
+        spirit_config["alt_name"].split(
+                ' '
+            ).join(
+                '_'
+            )
+        }`
     }
 
     return spirit_image_file_name.replace(
@@ -243,9 +252,35 @@ function generate_spirit_select_list_item_for_spirit(
 
             $(`#modal_spirits`).modal("hide");
 
+            var theme = "none";
+
+            if (
+                "aspect_art" in spirit_config
+            ) {
+                theme = generate_spirit_image_file_name(
+                    spirit_name,
+                    spirit_config
+                )
+            } else if (
+                "aspect_for" in spirit_config
+            ) {
+                theme =  spirit_config["aspect_for"].split(
+                    ' '
+                ).join(
+                    '_'
+                )
+            }
+            else {
+                theme = generate_spirit_image_file_name(
+                    spirit_name,
+                    spirit_config
+                )
+            }
+
             switch_theme(
-                spirit_button_name
-            )
+                theme
+            );
+            
         }
     );
 }
