@@ -206,26 +206,18 @@ $(document).ready(
                 reset_innate_power_row()
                 reset_spirit_selction();
                 reset_adversary_selection();
+                switch_theme(
+                    "default"
+                );
             }
         );
     }
 )
 
-const current_theme = localStorage.getItem("theme") ? localStorage.getItem("theme") : null;
-
-if ((current_theme == null)|(current_theme=="default")) {
-    
-    document.documentElement.setAttribute(
-        "data-theme",
-        "default"
-    );
-}
-else {
-    document.documentElement.setAttribute(
-        "data-theme",
-        current_theme
-    );
-}
+document.documentElement.setAttribute(
+    "data-theme",
+    "default"
+);
 
 $(document).ready(
     function() {
@@ -236,3 +228,14 @@ $(document).ready(
         )
     }
 )
+
+function switch_theme(theme) {
+    document.documentElement.setAttribute(
+        "data-theme",
+        theme
+    );
+    localStorage.setItem(
+        "theme",
+        theme
+    );
+}

@@ -201,6 +201,11 @@ function generate_spirit_select_list_item_for_spirit(
             //     `url(${new_url})`
             // );
 
+            // document.documentElement.setAttribute(
+            //     "data-theme",
+            //     spirit_name
+            // );
+
             if ("innate_power_5" in spirit_config) {
                 for (var i = 1; i <= 5; i++) {
 
@@ -237,6 +242,10 @@ function generate_spirit_select_list_item_for_spirit(
             }
 
             $(`#modal_spirits`).modal("hide");
+
+            switch_theme(
+                spirit_button_name
+            )
         }
     );
 }
