@@ -17,16 +17,16 @@ Theme template:
 */
 
 :root {
-    --font-color-dark:0,0,0;
-    --font-color-light:255,255,255;
+    --font-color-dark:59,28,19;
+    --font-color-light:213,234,223;
 
-    --primary:0,0,255;
-    --secondary:0,128,0;
-    --tertiary:128,128,128;
-    --danger:255,0,0;
+    --primary:120,137,57;
+    --secondary:146,189,46;
+    --tertiary:193,85,70;
+    --danger:175,87,60;
 
-    --background-dark:128,0,128;
-    --background-light:255,192,203;
+    --background-dark:58,94,109;
+    --background-light:162,228,243;
 }
 
 [data-theme="A_Spread_of_Rampant_Green"] {

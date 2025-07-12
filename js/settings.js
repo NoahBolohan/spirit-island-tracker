@@ -217,7 +217,7 @@ if ((current_theme == null)|(current_theme=="default")) {
     
     document.documentElement.setAttribute(
         "data-theme",
-        "Wounded_Waters_Bleeding"
+        "default"
     );
 }
 else {
