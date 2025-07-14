@@ -206,6 +206,25 @@ $(document).ready(
                 reset_innate_power_row()
                 reset_spirit_selction();
                 reset_adversary_selection();
+                if (
+                    $("#button_toggle_lock_element_tracker").data("lock_status") == "locked"
+                ) {
+                    unlock_element_tracker();
+                }
+                
+                $.getJSON("https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/config.json", function(data) {
+
+                    $.each(
+                        data["elements"],
+                        function(key, element) {
+
+                            reset_element_tracker(
+                                        element
+                                    );
+                        }
+                    );
+                });
+                
                 switch_theme(
                     "default"
                 );
