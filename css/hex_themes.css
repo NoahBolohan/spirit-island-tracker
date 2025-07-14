@@ -514,12 +514,12 @@ Theme template:
     --font-color-dark:#3d3733;
     --font-color-light:#d7d9cd;
 
-    --primary:#f32d22;
+    --primary:#f64929;
     --secondary:#d58c39;
     --tertiary:#abb850;
     --danger:#8d7741;
 
-    --background-dark:#8f2a25;
+    --background-dark:#657b76;
     --background-light:#f4e46c;
 }
 

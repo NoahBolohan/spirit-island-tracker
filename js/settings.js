@@ -249,7 +249,6 @@ $(document).ready(
 )
 
 function switch_theme(theme) {
-    alert(theme)
     document.documentElement.setAttribute(
         "data-theme",
         theme
