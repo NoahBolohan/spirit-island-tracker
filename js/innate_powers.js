@@ -36,7 +36,8 @@ function parse_innate_power(
 
             var innate_power_card_body = $("<div>").attr(
                 {
-                    class : "card-body p-1"
+                    class : "card-body p-1",
+                    style : "border-radius: 1%;"
                 }
             );
             
