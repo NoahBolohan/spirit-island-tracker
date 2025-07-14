@@ -380,7 +380,7 @@ Theme template:
     --background-light:247,211,148;
 }
 
-[data-theme="Shadows_Flicker_like_Flame"] {
+[data-theme="Shadows_Flicker_Like_Flame"] {
     --font-color-dark:24,28,28;
     --font-color-light:173,234,240;
 
@@ -469,6 +469,19 @@ Theme template:
 
     --background-dark:39,86,49;
     --background-light:229,225,186;
+}
+
+[data-theme="Sunshine"] {
+    --font-color-dark:20,31,39;
+    --font-color-light:215,223,209;
+
+    --primary:87,167,167;
+    --secondary:247,242,186;
+    --tertiary:124,212,205;
+    --danger:168,176,169;
+
+    --background-dark:104,111,122;
+    --background-light:253,228,223;
 }
 
 [data-theme="Thunderspeaker"] {

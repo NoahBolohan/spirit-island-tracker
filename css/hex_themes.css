@@ -380,7 +380,7 @@ Theme template:
     --background-light:#f7d394;
 }
 
-[data-theme="Shadows_Flicker_like_Flame"] {
+[data-theme="Shadows_Flicker_Like_Flame"] {
     --font-color-dark:#181c1c;
     --font-color-light:#adeaf0;
 
@@ -469,6 +469,19 @@ Theme template:
 
     --background-dark:#275631;
     --background-light:#e5e1ba;
+}
+
+[data-theme="Sunshine"] {
+    --font-color-dark:#141f27;
+    --font-color-light:#d7dfd1;
+
+    --primary:#57a7a7;
+    --secondary:#f7f2ba;
+    --tertiary:#7cd4cd;
+    --danger:#a8b0a9;
+
+    --background-dark:#686f7a;
+    --background-light:#fde4df;
 }
 
 [data-theme="Thunderspeaker"] {
