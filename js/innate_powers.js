@@ -255,7 +255,7 @@ function assign_modal_to_tier_button(
 
     $("<button>").attr(
         {
-            class : "btn astext btn-settings",
+            class : "btn btn-settings",
             id : `button_close_modal_innate_power_${innate_power_number}_${innate_power_tier}`,
             style : "position:absolute;right:1em;"
         }
