@@ -405,8 +405,4 @@ function switch_theme(theme) {
         "data-theme",
         theme
     );
-    localStorage.setItem(
-        "theme",
-        theme
-    );
 }
