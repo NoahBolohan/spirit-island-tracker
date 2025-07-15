@@ -14,7 +14,8 @@ function parse_innate_power(
     var innate_power_card = $("<div>").attr(
         {
             class : `card margin-auto`,
-            id : `col_innate_power_${innate_power_number}`
+            id : `col_innate_power_${innate_power_number}`,
+            style : "overflow: clip;"
         }
     ).appendTo(
         innate_power_col
@@ -36,8 +37,7 @@ function parse_innate_power(
 
             var innate_power_card_body = $("<div>").attr(
                 {
-                    class : "card-body p-1",
-                    style : "border-radius: 2%;"
+                    class : "card-body p-1"
                 }
             );
             
