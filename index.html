@@ -255,6 +255,88 @@
 			</div>
 		</div>
 
+		<div class="modal fade" id="modal_compute_score">
+
+			<div class="modal-dialog" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Compute your score</h2>
+						<button class="btn astext btn-settings" id="button_close_modal_compute_score" style="position:absolute;right:1em;">
+							&#x274c;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_compute_score_body">
+
+						<div class="row mb-2 margin_auto" id="row_n_players">
+							<div class=" col-10 p-0" id="col_n_players">
+								How many players in this game?
+							</div>
+							<input class=" col-2 p-0" id="text_n_players" name="n_players" type="number" min="0" step="1" required></input>
+						</div>
+
+						<div class="row mb-2 margin_auto" id="row_victory">
+							<div class="col-10 p-0" id="col_victory_text">
+								Did you win?
+							</div>
+							<input id="checkbox_win_hidden" name="victory" type="hidden" value="no"></input>
+							<input class="col-2 p-0" id="checkbox_win" name="victory" type="checkbox" value="yes"></input>
+						</div>
+
+						<div class="row mb-2 margin_auto" id="row_invader_cards_in_deck">
+							<div class=" col-10 p-0" id="col_invader_cards_in_deck_text">
+								How many invader cards are left in the deck?
+							</div>
+							<input class=" col-2 p-0" id="text_invader_cards_in_deck" name="invader_cards_in_deck" type="number" min="0" step="1" required></input>
+						</div>
+
+						<div class="row mb-2 margin_auto" id="row_invader_cards_not_in_deck">
+							<div class=" col-10 p-0" id="col_invader_cards_not_in_deck_text">
+								How many invader cards are not in the deck?
+							</div>
+							<input class=" col-2 p-0" id="text_invader_cards_not_in_deck" name="invader_cards_not_in_deck" type="number" min="0" step="1" required></input>
+						</div>
+
+						<div class="row mb-2 margin_auto" id="row_remaining_dahan">
+							<div class=" col-10 p-0" id="col_remaining_dahan">
+								How many living Dahan remain on the island?
+							</div>
+							<input class=" col-2 p-0" id="text_remaining_dahan" name="remaining_dahan" type="number" min="0" step="1" required></input>
+						</div>
+
+						<div class="row mb-2 margin_auto" id="row_blight_on_island">
+							<div class=" col-10 p-0" id="col_blight_on_island">
+								How much blight is on the island?
+							</div>
+							<input class=" col-2 p-0" id="text_blight_on_island" name="blight_on_island" type="number" min="0" step="1" required></input>
+						</div>
+
+						<div class="row justify-content-center" id="row_score">
+							
+							<div class="col-2 p-0" id="col_score_text">
+								Score:
+							</div>
+
+							<div class="col-1 p-0" id="col_score_number">
+								0
+							</div>
+						</div>
+
+						<div class="row p-0 justify-content-center margin_auto">
+
+							<button class="col-4 btn btn-reset-page" id="button_reset_score" style="font-size: 1em;">
+								Reset score
+							</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div id="div_modals_innate_powers"></div>
 
 		<div class="container-fluid mb-1">
@@ -343,6 +425,13 @@
 						</p>
 					</div>
 				</div>
+			</div>
+
+			<div class="row p-0 mb-2 justify-content-center margin_auto">
+
+				<button class="col-5 btn btn-settings" id="button_compute_score" style="font-size: 1em;">
+					Compute score
+				</button>
 			</div>
 
 			<div class="row p-0 justify-content-center margin_auto">
