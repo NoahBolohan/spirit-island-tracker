@@ -33,9 +33,9 @@ Theme template:
     --font-color-dark:#090b19;
     --font-color-light:#74c9f3;
 
-    --primary:#2994f9;
-    --secondary:#46baf3;
-    --tertiary:#868a58;
+    --primary:#61b1fc;
+    --secondary:#6fb9dd;
+    --tertiary:#a3a77f;
     --danger:#e2a554;
 
     --background-dark:#193717;
@@ -44,12 +44,12 @@ Theme template:
 
 [data-theme="Breath_of_Darkness_Down_Your_Spine"] {
     --font-color-dark:#161617;
-    --font-color-light:#aaa177;
+    --font-color-light:#bdb79c;
 
-    --primary:#677269;
-    --secondary:#816c4f;
-    --tertiary:#908865;
-    --danger:#8c4434;
+    --primary:#7f8881;
+    --secondary:#96856e;
+    --tertiary:#918b72;
+    --danger:#94655b;
 
     --background-dark:#2c2f2f;
     --background-light:#849c8d;
@@ -72,13 +72,13 @@ Theme template:
     --font-color-dark:#2b101e;
     --font-color-light:#f1ddcc;
 
-    --primary:#885159;
-    --secondary:#6f6677;
+    --primary:#a86f78;
+    --secondary:#968ba0;
     --tertiary:#f3c476;
     --danger:#be6c67;
 
     --background-dark:#432b48;
-    --background-light:#928392;
+    --background-light:#b6a1b6;
 }
 
 [data-theme="Devouring_Teeth_Lurk_Underfoot"] {
@@ -88,7 +88,7 @@ Theme template:
     --primary:#e2b46d;
     --secondary:#ad6e4f;
     --tertiary:#c6bdb4;
-    --danger:#b32624;
+    --danger:#b9504e;
 
     --background-dark:#4c3c34;
     --background-light:#c4ab87;
@@ -109,7 +109,7 @@ Theme template:
 
 [data-theme="Ember-Eyed_Behemoth"] {
     --font-color-dark:#373126;
-    --font-color-light:#c4c1ab;
+    --font-color-light:#dad6bd;
 
     --primary:#859443;
     --secondary:#b59972;
@@ -122,11 +122,11 @@ Theme template:
 
 [data-theme="Eyes_Watch_from_the_Trees"] {
     --font-color-dark:#181c19;
-    --font-color-light:#bbb4a0;
+    --font-color-light:#dfd5b9;
 
     --primary:#f0cfcd;
     --secondary:#999687;
-    --tertiary:#7f9075;
+    --tertiary:#95a38c;
     --danger:#dd8466;
 
     --background-dark:#264229;
@@ -134,7 +134,7 @@ Theme template:
 }
 
 [data-theme="Fathomless_Mud_of_the_Swamp"] {
-    --font-color-dark:#3b3932;
+    --font-color-dark:#141411;
     --font-color-light:#d3d8d2;
 
     --primary:#7d796a;
@@ -152,7 +152,7 @@ Theme template:
 
     --primary:#6e86c0;
     --secondary:#79bbd2;
-    --tertiary:#69867c;
+    --tertiary:#829790;
     --danger:#69ded9;
 
     --background-dark:#352723;
@@ -174,12 +174,12 @@ Theme template:
 
 [data-theme="Grinning_Trickster_Stirs_Up_Trouble"] {
     --font-color-dark:#3f3120;
-    --font-color-light:#96c5b3;
+    --font-color-light:#a8ddc9;
 
     --primary:#8f7a3b;
     --secondary:#938340;
     --tertiary:#a3964b;
-    --danger:#668264;
+    --danger:#82a080;
 
     --background-dark:#26283b;
     --background-light:#6d9f81;
@@ -191,7 +191,7 @@ Theme template:
 
     --primary:#db8446;
     --secondary:#d6463c;
-    --tertiary:#8f6b62;
+    --tertiary:#a38a84;
     --danger:#f7d756;
 
     --background-dark:#424138;
@@ -200,7 +200,7 @@ Theme template:
 
 [data-theme="Hearth-Vigil"] {
     --font-color-dark:#2d2823;
-    --font-color-light:#e7b97e;
+    --font-color-light:#f3cfa1;
 
     --primary:#b99180;
     --secondary:#db6c91;
@@ -229,8 +229,8 @@ Theme template:
     --font-color-light:#fbe8a2;
 
     --primary:#d27448;
-    --secondary:#96625f;
-    --tertiary:#937474;
+    --secondary:#9e7371;
+    --tertiary:#b99f9f;
     --danger:#fffec7;
 
     --background-dark:#732229;
@@ -239,11 +239,11 @@ Theme template:
 
 [data-theme="Lure_of_the_Deep_Wilderness"] {
     --font-color-dark:#262114;
-    --font-color-light:#fcd476;
+    --font-color-light:#f5e1b2;
 
     --primary:#cc7c2c;
     --secondary:#bca444;
-    --tertiary:#968585;
+    --tertiary:#aa9999;
     --danger:#f9e179;
 
     --background-dark:#4e3f23;
@@ -267,10 +267,10 @@ Theme template:
     --font-color-dark:#1c1c1d;
     --font-color-light:#e1e4de;
 
-    --primary:#80817f;
-    --secondary:#878f80;
-    --tertiary:#7c8474;
-    --danger:#acb4ac;
+    --primary:#a6a7a5;
+    --secondary:#bac2b4;
+    --tertiary:#a5ac9e;
+    --danger:#d8ebd8;
 
     --background-dark:#313235;
     --background-light:#e5e3d4;
@@ -280,10 +280,10 @@ Theme template:
     --font-color-dark:#18181a;
     --font-color-light:#e9e7e7;
 
-    --primary:#5984ac;
-    --secondary:#64a4cc;
+    --primary:#7896b3;
+    --secondary:#9fc2d8;
     --tertiary:#dff2fc;
-    --danger:#b48cac;
+    --danger:#c0a7bb;
 
     --background-dark:#446799;
     --background-light:#efe2e0;
@@ -291,10 +291,10 @@ Theme template:
 
 [data-theme="Pandemonium"] {
     --font-color-dark:#0f0d11;
-    --font-color-light:#83cef3;
+    --font-color-light:#b0ddf3;
 
-    --primary:#b85262;
-    --secondary:#dd4a4f;
+    --primary:#be737e;
+    --secondary:#e6777a;
     --tertiary:#b6b7cd;
     --danger:#f1d3bd;
 
@@ -324,7 +324,7 @@ Theme template:
     --tertiary:#eeedd1;
     --danger:#8ca3b8;
 
-    --background-dark:#6a8fad;
+    --background-dark:#677d8f;
     --background-light:#acccdc;
 }
 
@@ -334,7 +334,7 @@ Theme template:
 
     --primary:#d4d64d;
     --secondary:#b7a761;
-    --tertiary:#868b58;
+    --tertiary:#a7ad6f;
     --danger:#3cede5;
 
     --background-dark:#392b16;
@@ -363,7 +363,7 @@ Theme template:
     --tertiary:#7fb7c2;
     --danger:#a8b0a9;
 
-    --background-dark:#4c4b3e;
+    --background-dark:#38372f;
     --background-light:#eee3b9;
 }
 
@@ -374,7 +374,7 @@ Theme template:
     --primary:#bf8945;
     --secondary:#858d3f;
     --tertiary:#9e9d9c;
-    --danger:#bb5d7f;
+    --danger:#c28b9f;
 
     --background-dark:#3f471c;
     --background-light:#f7d394;
@@ -386,20 +386,20 @@ Theme template:
 
     --primary:#639693;
     --secondary:#63a2a6;
-    --tertiary:#708870;
-    --danger:#c93a16;
+    --tertiary:#8fa78f;
+    --danger:#c95e44;
 
-    --background-dark:#2f4c3f;
+    --background-dark:#284135;
     --background-light:#d4c87a;
 }
 
 [data-theme="Sharp_Fangs_Behind_the_Leaves"] {
     --font-color-dark:#101311;
-    --font-color-light:#bebeb4;
+    --font-color-light:#e2e2d1;
 
     --primary:#9b615c;
     --secondary:#d6584d;
-    --tertiary:#518a4f;
+    --tertiary:#7eb47c;
     --danger:#fafafa;
 
     --background-dark:#353b34;
@@ -410,10 +410,10 @@ Theme template:
     --font-color-dark:#332327;
     --font-color-light:#f0e1cb;
 
-    --primary:#8f7266;
+    --primary:#b49588;
     --secondary:#c8b091;
-    --tertiary:#b4b4ac;
-    --danger:#a6dfe4;
+    --tertiary:#a6dfe4;
+    --danger:#b4b4ac;
 
     --background-dark:#5a3b44;
     --background-light:#cebfa8;
@@ -426,7 +426,7 @@ Theme template:
     --primary:#749b8a;
     --secondary:#84acac;
     --tertiary:#a6d0db;
-    --danger:#787e79;
+    --danger:#929c94;
 
     --background-dark:#3e3247;
     --background-light:#d3eaef;
@@ -438,7 +438,7 @@ Theme template:
 
     --primary:#42b2c5;
     --secondary:#b981ad;
-    --tertiary:#957096;
+    --tertiary:#c393c5;
     --danger:#c494b4;
 
     --background-dark:#1c1a42;
@@ -447,14 +447,14 @@ Theme template:
 
 [data-theme="Stone's_Unyielding_Defiance"] {
     --font-color-dark:#242b2e;
-    --font-color-light:#d2d1c2;
+    --font-color-light:#e4e2d1;
 
     --primary:#8893a0;
     --secondary:#96a6b2;
-    --tertiary:#7e868d;
+    --tertiary:#96a0a8;
     --danger:#b7b2ad;
 
-    --background-dark:#353f44;
+    --background-dark:#293135;
     --background-light:#ccceb8;
 }
 
@@ -464,7 +464,7 @@ Theme template:
 
     --primary:#d0aa45;
     --secondary:#beb04f;
-    --tertiary:#af864c;
+    --tertiary:#daa65f;
     --danger:#f7f8f3;
 
     --background-dark:#275631;
@@ -480,33 +480,33 @@ Theme template:
     --tertiary:#7cd4cd;
     --danger:#a8b0a9;
 
-    --background-dark:#686f7a;
+    --background-dark:#464a50;
     --background-light:#fde4df;
 }
 
 [data-theme="Towering_Roots_of_the_Jungle"] {
     --font-color-dark:#282527;
-    --font-color-light:#babace;
+    --font-color-light:#d1d1eb;
 
-    --primary:#616843;
+    --primary:#8a945f;
     --secondary:#d9c168;
-    --tertiary:#977763;
+    --tertiary:#be977e;
     --danger:#c5c5ba;
 
-    --background-dark:#343755;
+    --background-dark:#2c2f49;
     --background-light:#a38a6a;
 }
 
 [data-theme="Thunderspeaker"] {
     --font-color-dark:#191a14;
-    --font-color-light:#dacdb5;
+    --font-color-light:#ece1cd;
 
-    --primary:#a36147;
+    --primary:#d4815f;
     --secondary:#7d9286;
-    --tertiary:#8a776d;
+    --tertiary:#c5aa9c;
     --danger:#c5c5ba;
 
-    --background-dark:#1d4131;
+    --background-dark:#173326;
     --background-light:#ce9062;
 }
 
@@ -517,9 +517,9 @@ Theme template:
     --primary:#fd6044;
     --secondary:#d58c39;
     --tertiary:#abb850;
-    --danger:#8d7741;
+    --danger:#ad9557;
 
-    --background-dark:#51635e;
+    --background-dark:#43534f;
     --background-light:#f4e46c;
 }
 
@@ -529,8 +529,8 @@ Theme template:
 
     --primary:#9c865c;
     --secondary:#bfbfb6;
-    --tertiary:#868b58;
-    --danger:#aca155;
+    --tertiary:#a7ad6f;
+    --danger:#dfcf6c;
 
     --background-dark:#392b16;
     --background-light:#f3dbaa;
@@ -538,11 +538,11 @@ Theme template:
 
 [data-theme="Volcano_Looming_High"] {
     --font-color-dark:#22232c;
-    --font-color-light:#e5be4d;
+    --font-color-light:#fdd65f;
 
-    --primary:#6c6c7c;
+    --primary:#a6a6c2;
     --secondary:#b28b43;
-    --tertiary:#9c5c4c;
+    --tertiary:#d37d68;
     --danger:#ffe549;
 
     --background-dark:#373c47;
@@ -551,20 +551,20 @@ Theme template:
 
 [data-theme="Wandering_Voice_Keens_Delirium"] {
     --font-color-dark:#1f1e23;
-    --font-color-light:#d5c098;
+    --font-color-light:#f7deb0;
 
     --primary:#dec47a;
-    --secondary:#94542d;
-    --tertiary:#8d7e7d;
+    --secondary:#e0854d;
+    --tertiary:#c0a4a2;
     --danger:#faf8f2;
 
     --background-dark:#34242c;
-    --background-light:#9c948c;
+    --background-light:#bdb3aa;
 }
 
 [data-theme="Wind"] {
     --font-color-dark:#1a2d44;
-    --font-color-light:#a8e2f5;
+    --font-color-light:#d5eff8;
 
     --primary:#f6ce3d;
     --secondary:#f4eb4c;
@@ -577,11 +577,11 @@ Theme template:
 
 [data-theme="Wounded_Waters_Bleeding"] {
     --font-color-dark:#121f30;
-    --font-color-light:#a4e4ec;
+    --font-color-light:#c3eff5;
 
-    --primary:#a03d3b;
-    --secondary:#c95e4c;
-    --tertiary:#788b8b;
+    --primary:#da5956;
+    --secondary:#e09486;
+    --tertiary:#a3bdbd;
     --danger:#d2c7bd;
 
     --background-dark:#571513;
