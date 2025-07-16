@@ -33,13 +33,13 @@ Theme template:
     --font-color-dark:9,11,25;
     --font-color-light:116,201,243;
 
-    --primary:25,84,196;
+    --primary:41,148,249;
     --secondary:70,186,243;
-    --tertiary:106,109,68;
+    --tertiary:134,138,88;
     --danger:226,165,84;
 
     --background-dark:25,55,23;
-    --background-light:40,163,84;
+    --background-light:95,218,132;
 }
 
 [data-theme="Breath_of_Darkness_Down_Your_Spine"] {
