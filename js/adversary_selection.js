@@ -186,7 +186,7 @@ function generate_adversary_select_list_item_for_adversary(
 
     var button = $("<button>").attr(
         {
-            class : "btn btn-xs btn-outlineless",
+            class : "btn btn-outlineless",
             id : `button_${
                 adversary_type
             }_${
@@ -319,6 +319,20 @@ $(document).ready(
 function generate_default_leading_adversary_select_button() {
 
     $(`#button_select_leading_adversary`).empty();
+
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        $(`#button_select_leading_adversary`).addClass(
+            "dark-mode"
+        );
+    } else {
+        $(`#button_select_leading_adversary`).removeClass(
+            "dark-mode"
+        );
+    }
 
     $(`#button_select_leading_adversary`).css(
         {

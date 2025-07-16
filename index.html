@@ -31,7 +31,7 @@
 		<!-- <script src="https://kit.fontawesome.com/1cbbe880ba.js" crossorigin="anonymous"></script> -->
 	</head>
 
-	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-leading_adversary_level=0 data-supporting_adversary="" data-supporting_adversary_level=0>
+	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-leading_adversary_level=0 data-supporting_adversary="" data-supporting_adversary_level=0 data-colour_scheme="light">
 
 		<div class="modal fade" id="modal_settings">
 
@@ -51,7 +51,7 @@
 
 						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_toggle_screen_sleep">
 
-							<div class="col-5 p-0 align-self-center">
+							<div class="col-5 p-0 align-self-center text-line">
 								Prevent screen sleep:
 							</div>
 			
@@ -65,7 +65,7 @@
 
 						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_toggle_innate_powers_row">
 
-							<div class="col-5 p-0 align-self-center">
+							<div class="col-5 p-0 align-self-center text-line">
 								Show innate powers:
 							</div>
 			
@@ -79,7 +79,7 @@
 
 						<div class="row mt-1 p-0 justify-content-center margin_auto" id="row_setting_dark_mode">
 
-							<div class="col-5 p-0 align-self-center">
+							<div class="col-5 p-0 align-self-center text-line">
 								Dark mode:
 							</div>
 			
@@ -286,14 +286,14 @@
 					<div class="modal-body" id="modal_compute_score_body">
 
 						<div class="row mb-2 margin_auto" id="row_n_players">
-							<div class=" col-10 p-0" id="col_n_players">
+							<div class="col-10 p-0 text-line" id="col_n_players">
 								How many players in this game?
 							</div>
-							<input class=" col-2 p-0" id="text_n_players" name="n_players" type="number" min="0" step="1" required></input>
+							<input class="col-2 p-0" id="text_n_players" name="n_players" type="number" min="0" step="1" required></input>
 						</div>
 
 						<div class="row mb-2 margin_auto" id="row_victory">
-							<div class="col-10 p-0" id="col_victory_text">
+							<div class="col-10 p-0 text-line" id="col_victory_text">
 								Did you win?
 							</div>
 							<input id="checkbox_win_hidden" name="victory" type="hidden" value="no"></input>
@@ -301,40 +301,40 @@
 						</div>
 
 						<div class="row mb-2 margin_auto" id="row_invader_cards_in_deck">
-							<div class=" col-10 p-0" id="col_invader_cards_in_deck_text">
+							<div class=" col-10 p-0 text-line" id="col_invader_cards_in_deck_text">
 								How many invader cards are left in the deck?
 							</div>
-							<input class=" col-2 p-0" id="text_invader_cards_in_deck" name="invader_cards_in_deck" type="number" min="0" step="1" required></input>
+							<input class="col-2 p-0" id="text_invader_cards_in_deck" name="invader_cards_in_deck" type="number" min="0" step="1" required></input>
 						</div>
 
 						<div class="row mb-2 margin_auto" id="row_invader_cards_not_in_deck">
-							<div class=" col-10 p-0" id="col_invader_cards_not_in_deck_text">
+							<div class="col-10 p-0 text-line" id="col_invader_cards_not_in_deck_text">
 								How many invader cards are not in the deck?
 							</div>
-							<input class=" col-2 p-0" id="text_invader_cards_not_in_deck" name="invader_cards_not_in_deck" type="number" min="0" step="1" required></input>
+							<input class="col-2 p-0" id="text_invader_cards_not_in_deck" name="invader_cards_not_in_deck" type="number" min="0" step="1" required></input>
 						</div>
 
 						<div class="row mb-2 margin_auto" id="row_remaining_dahan">
-							<div class=" col-10 p-0" id="col_remaining_dahan">
+							<div class="col-10 p-0 text-line" id="col_remaining_dahan">
 								How many living Dahan remain on the island?
 							</div>
-							<input class=" col-2 p-0" id="text_remaining_dahan" name="remaining_dahan" type="number" min="0" step="1" required></input>
+							<input class="col-2 p-0" id="text_remaining_dahan" name="remaining_dahan" type="number" min="0" step="1" required></input>
 						</div>
 
 						<div class="row mb-2 margin_auto" id="row_blight_on_island">
-							<div class=" col-10 p-0" id="col_blight_on_island">
+							<div class="col-10 p-0 text-line" id="col_blight_on_island">
 								How much blight is on the island?
 							</div>
 							<input class=" col-2 p-0" id="text_blight_on_island" name="blight_on_island" type="number" min="0" step="1" required></input>
 						</div>
 
-						<div class="row justify-content-center" id="row_score">
+						<div class="row mb-2 justify-content-center" id="row_score">
 							
-							<div class="col-2 p-0" id="col_score_text">
+							<div class="col-2 p-0 text-line text-end" id="col_score_text">
 								Score:
 							</div>
 
-							<div class="col-1 p-0" id="col_score_number">
+							<div class="col-2 p-0 text-line text-center" id="col_score_number">
 								0
 							</div>
 						</div>
@@ -361,11 +361,11 @@
 
 			<div class="row mt-1 justify-content-center">
 
-				<div class="col-3 offset-4 p-0 align-self-center" id="col_difficulty_text">
+				<div class="col-3 offset-4 p-0 align-self-center text-line" id="col_difficulty_text">
 					Difficulty:
 				</div>
 
-				<div class="col-1 p-0 align-self-center" id="col_difficulty_number">0</div>
+				<div class="col-1 p-0 align-self-center text-line" id="col_difficulty_number">0</div>
 
 				<div class="col-1 offset-2 p-0 align-self-center">
 
@@ -381,7 +381,7 @@
 
 					<div class="row p-0 justify-content-center margin_auto">
 
-						<button class="p-0 btn btn-xs btn-settings" id="button_select_spirit">
+						<button class="p-0 btn  btn-settings" id="button_select_spirit">
 							Select spirit
 						</button>
 					</div>
@@ -393,14 +393,14 @@
 
 						<section id="section_leading_adversary">
 
-							<button class="p-0 btn btn-xs btn-settings" id="button_select_leading_adversary" style="width: 100%;">
+							<button class="p-0 btn  btn-settings" id="button_select_leading_adversary" style="width: 100%;">
 								Select adversary
 							</button>
 						</section>
 
 						<section class="is_hidden" id="section_supporting_adversary">
 							
-							<button class="p-0 btn btn-xs btn-settings" id="button_select_supporting_adversary" style="margin:auto 0 0 auto;height:40%;aspect-ratio: 1/1;">
+							<button class="p-0 btn  btn-settings" id="button_select_supporting_adversary" style="margin:auto 0 0 auto;height:40%;aspect-ratio: 1/1;">
 								&#x2795;
 							</button>
 						</section>
@@ -432,10 +432,10 @@
 	
 					<div class="row p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
 
-						<p class="col m-0 mb-1 d-flex justify-content-center" style="color:rgba(var(--font-color-dark));">
-							<object data="static/icons/fear.svg" height="15px"></object>
+						<p class="col m-0 mb-1 d-flex justify-content-center text-line">
+							<object class="text-line" data="static/icons/fear.svg" height="15px"></object>
 							Select a Spirit to display their innate powers
-							<object data="static/icons/fear.svg" height="15px"></object>
+							<object class="text-line" data="static/icons/fear.svg" height="15px"></object>
 						</p>
 					</div>
 				</div>

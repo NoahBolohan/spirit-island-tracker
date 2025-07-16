@@ -1,4 +1,3 @@
-
 function parse_innate_power(
     innate_power_config,
     innate_power_number, 
@@ -11,9 +10,19 @@ function parse_innate_power(
         }
     )
 
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
     var innate_power_card = $("<div>").attr(
         {
-            class : `card margin-auto`,
+            class : `card margin-auto ${dark_mode_flag}`,
             id : `col_innate_power_${innate_power_number}`,
             style : "overflow: clip;"
         }
@@ -25,22 +34,22 @@ function parse_innate_power(
                     
         if (key == "name") {
             $("<div>").attr(
-                {
-                    class : "card-header text-center",
-                    style: "font-size : 13px"
-                }
-            ).text(
-                value.toUpperCase()
-            ).appendTo(
-                innate_power_card
-            );
+                    {
+                        class : `card-header text-center ${dark_mode_flag}`,
+                        style: "font-size : 13px"
+                    }
+                ).text(
+                    value.toUpperCase()
+                ).appendTo(
+                    innate_power_card
+                );
+                
+                var innate_power_card_body = $("<div>").attr(
+                    {
+                        class : `card-body p-1 ${dark_mode_flag}`
+                    }
+                );
 
-            var innate_power_card_body = $("<div>").attr(
-                {
-                    class : "card-body p-1"
-                }
-            );
-            
             innate_power_card_body.appendTo(
                 innate_power_card
             );
@@ -86,9 +95,19 @@ function generate_element_threshold_button_for_tier(
     innate_power_tier,
     innate_power_config
 ) {
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
     var tier_button = $("<button>").attr(
         {
-            class : "col btn btn-innate-tier",
+            class : `col btn btn-innate-tier ${dark_mode_flag}`,
             id : `button_innate_power_${innate_power_number}_${innate_power_tier}`,
             type : "button"
         }
@@ -210,16 +229,26 @@ function assign_modal_to_tier_button(
     innate_power_config
 ) {
 
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
     var modal_for_tier_button = $("<div>").attr(
         {
-            class : "modal fade",
+            class : `modal fade ${dark_mode_flag}`,
             id  : `modal_innate_power_${innate_power_number}_${innate_power_tier}`
         }
     );
 
     var modal_dialog =$("<div>").attr(
         {
-            class : "modal-dialog modal-dialog-centered",
+            class : `modal-dialog modal-dialog-centered ${dark_mode_flag}`,
             role : "document"
         }
     ).appendTo(
@@ -228,7 +257,7 @@ function assign_modal_to_tier_button(
 
     var modal_content =$("<div>").attr(
         {
-            class : "modal-content"
+            class : `modal-content ${dark_mode_flag}`
         }
     ).appendTo(
         modal_dialog
@@ -236,7 +265,7 @@ function assign_modal_to_tier_button(
 
     var modal_header = $("<div>").attr(
         {
-            class: "modal-header justify-content-center"
+            class: `modal-header justify-content-center ${dark_mode_flag}`
         }
     ).appendTo(
         modal_content
@@ -244,7 +273,7 @@ function assign_modal_to_tier_button(
 
     var modal_title = $("<div>").attr(
         {
-            class: "modal-title"
+            class: `modal-title ${dark_mode_flag}`
         }
     );
     
@@ -255,7 +284,7 @@ function assign_modal_to_tier_button(
 
     $("<button>").attr(
         {
-            class : "btn btn-settings",
+            class : `btn btn-settings ${dark_mode_flag}`,
             id : `button_close_modal_innate_power_${innate_power_number}_${innate_power_tier}`,
             style : "position:absolute;right:1em;"
         }
@@ -267,7 +296,7 @@ function assign_modal_to_tier_button(
 
     $("<div>").attr(
         {
-            class: "modal-body"
+            class: `modal-body ${dark_mode_flag}`
         }
     ).html(
         spirit_text_keyword_converter(
@@ -340,11 +369,21 @@ function spirit_text_keyword_converter(
     max_size
 ) {
 
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
     var input_string_array = string.split(
         /(\:|\(|\)|\/|\<|\>|\.|\,|\s+)/
     );
 
-    var return_html_array = ['<p style="margin-bottom: 0px;">'];
+    var return_html_array = [`<p class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
 
     $.ajax({
         url: 'https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/config.json',

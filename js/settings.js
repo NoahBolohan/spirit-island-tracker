@@ -125,19 +125,29 @@ $(document).ready(
     }
 )
 
-function reset_spirit_selction() {
+function reset_spirit_selection() {
 
     $("#button_select_spirit").empty();
 
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
     $("#button_select_spirit").attr(
         {
-            class : "p-0 btn btn-xs btn-settings",
+            class : `p-0 btn btn-settings ${dark_mode_flag}`,
             id : "button_select_spirit"
         }
     ).text(
         "Select spirit"
     );
-
+    
     $("#button_select_spirit").css(
         {
             "background-color": "",
@@ -169,8 +179,23 @@ function reset_innate_power_row() {
 
     var placeholder_row_innate_power_cols = $("<p>").attr(
         {
-            class: "col m-0 mb-1 d-flex justify-content-center",
-            style: "color:rgba(var(--font-color-dark));"
+            class: "col m-0 mb-1 d-flex justify-content-center"
+        }
+    );
+
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
+    var placeholder_row_innate_power_cols = $("<p>").attr(
+        {
+            class: `col m-0 mb-1 d-flex justify-content-center text-line ${dark_mode_flag}`
         }
     );
 
@@ -206,7 +231,7 @@ $(document).ready(
             function() {
 
                 reset_innate_power_row()
-                reset_spirit_selction();
+                reset_spirit_selection();
                 reset_adversary_selection();
                 if (
                     $("#button_toggle_lock_element_tracker").data("lock_status") == "locked"
@@ -221,8 +246,8 @@ $(document).ready(
                         function(key, element) {
 
                             reset_element_tracker(
-                                        element
-                                    );
+                                element
+                            );
                         }
                     );
                 });
@@ -364,7 +389,7 @@ $(document).ready(
 
 function reset_score() {
     $("#text_n_players").val("");
-    $("#checkbox_win").attr("checked", false);
+    $("#checkbox_win").prop("checked", false);
     $("#text_invader_cards_in_deck").val("");
     $("#text_invader_cards_not_in_deck").val("");
     $("#text_remaining_dahan").val("");
@@ -420,13 +445,29 @@ $(document).ready(
                 if(
                     $("#button_dark_mode").is(":checked")
                 ) {
+                    $("body").data(
+                        "colour_scheme",
+                        "dark"
+                    );
+                    
                     $("body").addClass(
                         "dark-mode-body"
-                    )
+                    );
+                    $("input").addClass(
+                        "dark-mode-input"
+                    );
                 } else {
+                    $("body").data(
+                        "colour_scheme",
+                        "light"
+                    );
+                    
                     $("body").removeClass(
                         "dark-mode-body"
-                    )
+                    );
+                    $("input").removeClass(
+                        "dark-mode-input"
+                    );
                 }
 
                 $.each(
@@ -442,7 +483,9 @@ $(document).ready(
                         ".btn-reset-elements",
                         ".btn-settings",
                         ".btn-reset-page",
-                        ".btn-innate-tier"
+                        ".btn-innate-tier",
+                        ".text-line",
+                        ".slider"
                     ],
                     function (
                         idx,

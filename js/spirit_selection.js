@@ -131,7 +131,7 @@ function generate_spirit_select_list_item_for_spirit(
 
     var button = $("<button>").attr(
         {
-            class : "btn btn-xs btn-outlineless",
+            class : "btn btn-outlineless",
             id : `button_${
                 spirit_button_name
             }`,

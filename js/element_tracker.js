@@ -42,7 +42,7 @@ $(document).ready(
 
                     $("<button>").attr(
                         {
-                            class : "col btn btn-xs astext btn-outlineless",
+                            class : "col btn astext btn-outlineless",
                             id : `button_${element}_plus`,
                             type : "button"
                         }
@@ -75,7 +75,7 @@ $(document).ready(
 
                     $("<button>").attr(
                         {
-                            class : "col btn btn-xs astext btn-outlineless",
+                            class : "col btn astext btn-outlineless",
                             id : `button_${element}_minus`,
                             type : "button",
                         }
