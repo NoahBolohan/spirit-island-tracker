@@ -17,13 +17,16 @@ Theme template:
 */
 
 :root {
+
+    color-scheme: light dark;
+
     --font-color-dark:#3b1c13;
     --font-color-light:#d5eadf;
 
-    --primary:#788939;
-    --secondary:#92bd2e;
-    --tertiary:#c15546;
-    --danger:#af573c;
+    --primary:#b4c578;
+    --secondary:#c4e677;
+    --tertiary:#c98279;
+    --danger:#ec8b6d;
 
     --background-dark:#3a5e6d;
     --background-light:#a2e4f3;

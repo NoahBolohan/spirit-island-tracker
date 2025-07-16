@@ -52,7 +52,9 @@ $(document).ready(
         $("#button_toggle_innate_powers_row").on(
             "click",
             function() {
-                if($("#button_toggle_innate_powers_row").is(":checked")) {
+                if(
+                    $("#button_toggle_innate_powers_row").is(":checked")
+                ) {
 
                     $("#row_innate_powers").css(
                         {
@@ -406,3 +408,61 @@ function switch_theme(theme) {
         theme
     );
 }
+
+$(document).ready(
+
+    function() {
+
+        $("#button_dark_mode").on(
+            "click",
+            function() {
+
+                if(
+                    $("#button_dark_mode").is(":checked")
+                ) {
+                    $("body").addClass(
+                        "dark-mode-body"
+                    )
+                } else {
+                    $("body").removeClass(
+                        "dark-mode-body"
+                    )
+                }
+
+                $.each(
+                    [
+                        ".card",
+                        ".card-header",
+                        ".card-body",
+                        ".modal-content",
+                        ".modal-title",
+                        ".modal-header",
+                        ".settings-label",
+                        ".btn-lock-elements",
+                        ".btn-reset-elements",
+                        ".btn-settings",
+                        ".btn-reset-page",
+                        ".btn-innate-tier"
+                    ],
+                    function (
+                        idx,
+                        val
+                    ) {
+                        if(
+                            $("#button_dark_mode").is(":checked")
+                        ) {
+                            $(val).addClass(
+                                "dark-mode"
+                            )
+                        } else {
+                            $(val).removeClass(
+                                "dark-mode"
+                            )
+                        }
+
+                    }
+                )
+            }
+        )
+    }
+)
