@@ -491,7 +491,8 @@ $(document).ready(
                         ".plus-inner",
                         ".minus",
                         ".minus-border",
-                        ".minus-inner"
+                        ".minus-inner",
+                        ".hr2"
                     ],
                     function (
                         idx,
