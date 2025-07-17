@@ -592,3 +592,75 @@ ul {
     background-color:rgba(var(--background-dark));
     opacity: 0.7;
 }
+
+.plus-border {
+    --b: 5px;
+    --c: #0000 90deg,rgba(var(--font-color-dark)) 0;
+    width: 6vw;
+    aspect-ratio: 1;
+    z-index: 2;
+    vertical-align: middle;
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),var(--c)) 
+        calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+        calc(50%  + var(--b))   calc(50%  + var(--b));
+}
+
+.plus-inner {
+    --b: 3px;
+    --c: #0000 90deg, rgba(var(--font-color-light)) 0;
+    width: calc(6vw - 2px);
+    align-self: center;
+    aspect-ratio: 1;
+    position: fixed;
+    z-index: 3;
+    vertical-align: middle;
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),var(--c)) 
+        calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+        calc(50%  + var(--b))   calc(50%  + var(--b));
+}
+
+.dark-mode.plus-border {
+    --c: #0000 90deg,rgba(var(--font-color-light)) 0;
+}
+
+.dark-mode.plus-inner {
+    --c: #0000 90deg,rgba(var(--background-dark)) 0;
+}
+
+.minus-border {
+    --b: 5px;
+    --c: #0000 180deg,rgba(var(--font-color-dark)) 0;
+    width: 6vw;
+    aspect-ratio: 1;
+    z-index: 2;
+    vertical-align: middle;
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),var(--c)) 
+        calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+        calc(50%  + var(--b))   calc(50%  + var(--b));
+}
+
+.minus-inner {
+    --b: 3px;
+    --c: #0000 180deg, rgba(var(--font-color-light)) 0;
+    width: calc(6vw - 2px);
+    align-self: center;
+    aspect-ratio: 1;
+    position: fixed;
+    z-index: 3;
+    vertical-align: middle;
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b),var(--c)) 
+        calc(100% + var(--b)/2) calc(100% + var(--b)/2)/
+        calc(50%  + var(--b))   calc(50%  + var(--b));
+}
+
+.dark-mode.minus-border {
+    --c: #0000 180deg,rgba(var(--font-color-light)) 0;
+}
+
+.dark-mode.minus-inner {
+    --c: #0000 180deg,rgba(var(--background-dark)) 0;
+}

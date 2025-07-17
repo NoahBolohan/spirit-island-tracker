@@ -42,12 +42,13 @@ $(document).ready(
 
                     $("<button>").attr(
                         {
-                            class : "col btn astext btn-outlineless",
+                            class : "col mb-1 btn astext btn-outlineless",
                             id : `button_${element}_plus`,
-                            type : "button"
+                            type : "button",
+                            style : "width:100%;display: flex;justify-content: center;"
                         }
-                    ).text(
-                        "\u2795"
+                    ).html(
+                        '<div class="plus-border"></div><div class="plus-inner"></div>'
                     ).appendTo(
                         row_for_plus_button
                     );
@@ -78,9 +79,10 @@ $(document).ready(
                             class : "col btn astext btn-outlineless",
                             id : `button_${element}_minus`,
                             type : "button",
+                            style : "width:100%; display:flex; justify-content:center;"
                         }
-                    ).text(
-                        "\u2796"
+                    ).html(
+                        '<div class="minus-border"></div><div class="minus-inner"></div>'
                     ).appendTo(
                         row_for_minus_button
                     );

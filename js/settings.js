@@ -485,7 +485,11 @@ $(document).ready(
                         ".btn-reset-page",
                         ".btn-innate-tier",
                         ".text-line",
-                        ".slider"
+                        ".slider",
+                        ".plus-border",
+                        ".plus-inner",
+                        ".minus-border",
+                        ".minus-inner"
                     ],
                     function (
                         idx,
