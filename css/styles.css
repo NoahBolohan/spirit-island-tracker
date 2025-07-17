@@ -607,7 +607,7 @@ ul {
 }
 
 .plus-inner {
-    --b: 4px;
+    --b: 3px;
     --c: #0000 90deg, rgba(var(--font-color-light)) 0;
     width: calc(6vw - 2px);
     align-self: center;
@@ -630,7 +630,7 @@ ul {
 }
 
 .minus-border {
-    --b: 5px;
+    --b: 6px;
     --c: #0000 180deg,rgba(var(--font-color-dark)) 0;
     width: 6vw;
     aspect-ratio: 1;
