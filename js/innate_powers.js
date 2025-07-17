@@ -289,7 +289,7 @@ function assign_modal_to_tier_button(
             style : "position:absolute;right:1em;"
         }
     ).html(
-        "&#x274c;"
+        '<div class="close-x"></div>'
     ).appendTo(
         modal_header
     );

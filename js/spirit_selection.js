@@ -151,7 +151,21 @@ function generate_spirit_select_list_item_for_spirit(
         button
     );
 
-    $("<div>").css(
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
+    $("<div>").attr(
+        {
+            class : `text-line ${dark_mode_flag}`
+        }
+    ).css(
         {
             "text-align" : "center",
             "font-size" : "0.7em",
