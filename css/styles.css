@@ -594,7 +594,7 @@ ul {
 }
 
 .plus-border {
-    --b: 6px;
+    --b: 5px;
     --c: #0000 90deg,rgba(var(--font-color-dark)) 0;
     width: 6vw;
     aspect-ratio: 1;
@@ -607,7 +607,7 @@ ul {
 }
 
 .plus-inner {
-    --b: 3px;
+    --b: 4px;
     --c: #0000 90deg, rgba(var(--font-color-light)) 0;
     width: calc(6vw - 2px);
     align-self: center;
@@ -630,7 +630,7 @@ ul {
 }
 
 .minus-border {
-    --b: 6px;
+    --b: 5px;
     --c: #0000 180deg,rgba(var(--font-color-dark)) 0;
     width: 6vw;
     aspect-ratio: 1;
@@ -643,7 +643,7 @@ ul {
 }
 
 .minus-inner {
-    --b: 3px;
+    --b: 4px;
     --c: #0000 180deg, rgba(var(--font-color-light)) 0;
     width: calc(6vw - 2px);
     align-self: center;
