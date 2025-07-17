@@ -33,7 +33,7 @@
 
 	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-leading_adversary_level=0 data-supporting_adversary="" data-supporting_adversary_level=0 data-colour_scheme="light">
 
-		<div class="modal fade" id="modal_settings">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_settings">
 
 			<div class="modal-dialog" role="document">
 	
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_spirits">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_spirits">
 
 			<div class="modal-dialog" role="document">
 	
@@ -125,7 +125,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_leading_adversaries">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_leading_adversaries">
 
 			<div class="modal-dialog" role="document">
 	
@@ -162,7 +162,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_leading_adversary_level">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_leading_adversary_level">
 
 			<div class="modal-dialog modal-dialog-centered" role="document">
 	
@@ -197,7 +197,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_supporting_adversaries">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_supporting_adversaries">
 
 			<div class="modal-dialog" role="document">
 	
@@ -234,7 +234,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_supporting_adversary_level">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_supporting_adversary_level">
 
 			<div class="modal-dialog modal-dialog-centered" role="document">
 	
@@ -269,7 +269,7 @@
 			</div>
 		</div>
 
-		<div class="modal fade" id="modal_compute_score">
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_compute_score">
 
 			<div class="modal-dialog" role="document">
 	
@@ -345,6 +345,27 @@
 								Reset score
 							</button>
 						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_about">
+
+			<div class="modal-dialog" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">About</h2>
+						<button class="btn btn-settings" id="button_close_modal_about" style="position:absolute;right:1em;">
+							&#x274c;
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_about_body">
 
 					</div>
 				</div>
@@ -441,11 +462,14 @@
 				</div>
 			</div>
 
-			<div class="row p-0 mb-2 justify-content-center margin_auto">
+			<div class="row mb-2 justify-content-center">
 
-				<button class="col-5 btn btn-settings" id="button_compute_score" style="font-size: 1em;">
-					Compute score
-				</button>
+				<div class="col-6 align-self-center">
+
+					<button class="w-100 btn btn-settings" type="button" id="button_compute_score" style="font-size: 1em;">
+						Compute score
+					</button>
+				</div>
 			</div>
 
 			<div class="row gx-2">
