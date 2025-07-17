@@ -486,8 +486,10 @@ $(document).ready(
                         ".btn-innate-tier",
                         ".text-line",
                         ".slider",
+                        ".plus",
                         ".plus-border",
                         ".plus-inner",
+                        ".minus",
                         ".minus-border",
                         ".minus-inner"
                     ],

@@ -48,7 +48,7 @@ $(document).ready(
                             style : "width:100%;display: flex;justify-content: center;"
                         }
                     ).html(
-                        '<div class="plus-border"></div><div class="plus-inner"></div>'
+                        '<div class="plus"></div></div>'
                     ).appendTo(
                         row_for_plus_button
                     );
@@ -82,7 +82,7 @@ $(document).ready(
                             style : "width:100%; display:flex; justify-content:center;"
                         }
                     ).html(
-                        '<div class="minus-border"></div><div class="minus-inner"></div>'
+                        '<div class="minus"</div>'
                     ).appendTo(
                         row_for_minus_button
                     );
