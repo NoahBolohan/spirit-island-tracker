@@ -1,6 +1,6 @@
 # Spirit Island Tracker
 
-Track Spirit Island game processes on your device. The webpage of this tracker can be found [here](https://coral-app-py3eq.ondigitalocean.app/).
+Track Spirit Island game processes on your device. The webpage of this tracker can be found [here](https://spirit-island-tracker-h39oi.ondigitalocean.app/).
 
 ## Have feedback/requests/issues?
 
