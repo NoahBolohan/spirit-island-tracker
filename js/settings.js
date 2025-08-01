@@ -201,6 +201,7 @@ function reset_innate_power_row() {
 
     var fear_object = $("<object>").attr(
         {
+            class: "svg",
             data : "static/icons/fear.svg",
             height : "15px"
         }
@@ -257,6 +258,8 @@ $(document).ready(
                 switch_theme(
                     "default"
                 );
+
+                switch_font_color();
             }
         );
     }
@@ -432,7 +435,40 @@ function switch_theme(theme) {
         "data-theme",
         theme
     );
+
+    switch_font_color();
 }
+
+function switch_font_color() {
+
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var font_color = "--font-color-light";
+    } else {
+        var font_color = "--font-color-dark";
+    }
+
+    rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
+
+    let color = new Color(
+        rgb_triple[0], rgb_triple[1], rgb_triple[2]
+    );
+    let solver = new Solver(color);
+    let result = solver.solve()
+    let filterCSS = result.filter;
+
+    $(".svg").attr("style", filterCSS);
+}
+
+$(document).ready(
+
+    function() {
+        switch_font_color();
+    }
+)
 
 $(document).ready(
 
@@ -513,6 +549,8 @@ $(document).ready(
 
                     }
                 )
+
+                switch_font_color();
             }
         )
     }
