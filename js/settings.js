@@ -199,10 +199,10 @@ function reset_innate_power_row() {
         }
     );
 
-    var fear_object = $("<object>").attr(
+    var fear_object = $("<img>").attr(
         {
             class: "svg",
-            data : "static/icons/fear.svg",
+            src : "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg",
             height : "15px"
         }
     );
