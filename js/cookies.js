@@ -80,5 +80,3 @@ $(document).ready(
         );
     }
 )
-
-const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;

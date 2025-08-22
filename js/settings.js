@@ -86,6 +86,15 @@ $(document).ready(
                     // custom_show(
                     //     "#row_innate_power_cols"
                     // );
+
+                    const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+                    if (accepts_cookies) {
+                        localStorage.setItem(
+                            "toggle_innate_powers_row",
+                            true
+                        );
+                    }
                 }
                 else {
 
@@ -119,6 +128,14 @@ $(document).ready(
                     // custom_hide(
                     //     "#row_innate_power_cols"
                     // );
+
+                    const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+                    if (accepts_cookies) {
+                        localStorage.removeItem(
+                            "toggle_innate_powers_row"
+                        );
+                    }
                 }
             }
         )
@@ -435,9 +452,11 @@ $(document).ready(
     }
 )
 
+const theme = localStorage.getItem("theme") ? localStorage.getItem("theme") : "default";
+
 document.documentElement.setAttribute(
     "data-theme",
-    "default"
+    theme
 );
 
 $(document).ready(
@@ -457,6 +476,15 @@ function switch_theme(theme) {
     );
 
     switch_font_color();
+
+    const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+    if (accepts_cookies) {
+        localStorage.setItem(
+            "theme",
+            theme
+        );
+    }
 }
 
 function switch_font_color() {
@@ -498,83 +526,122 @@ $(document).ready(
             "click",
             function() {
 
-                if(
-                    $("#button_dark_mode").is(":checked")
-                ) {
-                    $("body").data(
-                        "colour_scheme",
-                        "dark"
-                    );
-                    
-                    $("body").addClass(
-                        "dark-mode-body"
-                    );
-                    $("input").addClass(
-                        "dark-mode-input"
-                    );
-                } else {
-                    $("body").data(
-                        "colour_scheme",
-                        "light"
-                    );
-                    
-                    $("body").removeClass(
-                        "dark-mode-body"
-                    );
-                    $("input").removeClass(
-                        "dark-mode-input"
-                    );
-                }
-
-                $.each(
-                    [
-                        ".card",
-                        ".card-header",
-                        ".card-body",
-                        ".modal-content",
-                        ".modal-title",
-                        ".modal-header",
-                        ".settings-label",
-                        ".btn-lock-elements",
-                        ".btn-reset-elements",
-                        ".btn-settings",
-                        ".btn-reset-page",
-                        ".btn-innate-tier",
-                        ".text-line",
-                        ".slider",
-                        ".plus",
-                        ".plus-border",
-                        ".plus-inner",
-                        ".minus",
-                        ".minus-border",
-                        ".minus-inner",
-                        ".hr2",
-                        ".close-x"
-                    ],
-                    function (
-                        idx,
-                        val
-                    ) {
-                        if(
-                            $("#button_dark_mode").is(":checked")
-                        ) {
-                            $(val).addClass(
-                                "dark-mode"
-                            )
-                        } else {
-                            $(val).removeClass(
-                                "dark-mode"
-                            )
-                        }
-
-                    }
-                )
-
-                switch_font_color();
+                dark_mode_content();
             }
         )
     }
 )
+
+function dark_mode_content() {
+
+    if(
+        $("#button_dark_mode").is(":checked")
+    ) {
+        $("body").data(
+            "colour_scheme",
+            "dark"
+        );
+        
+        $("body").addClass(
+            "dark-mode-body"
+        );
+        $("input").addClass(
+            "dark-mode-input"
+        );
+
+        const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+        if (accepts_cookies) {
+            localStorage.setItem(
+                "dark_mode",
+                true
+            );
+        }
+    } else {
+        $("body").data(
+            "colour_scheme",
+            "light"
+        );
+        
+        $("body").removeClass(
+            "dark-mode-body"
+        );
+        $("input").removeClass(
+            "dark-mode-input"
+        );
+
+        const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+        if (accepts_cookies) {
+            localStorage.removeItem(
+                "dark_mode"
+            );
+        }
+    }
+
+    $.each(
+        [
+            ".card",
+            ".card-header",
+            ".card-body",
+            ".modal-content",
+            ".modal-title",
+            ".modal-header",
+            ".settings-label",
+            ".btn-lock-elements",
+            ".btn-reset-elements",
+            ".btn-settings",
+            ".btn-reset-page",
+            ".btn-innate-tier",
+            ".text-line",
+            ".slider",
+            ".plus",
+            ".plus-border",
+            ".plus-inner",
+            ".minus",
+            ".minus-border",
+            ".minus-inner",
+            ".hr2",
+            ".close-x"
+        ],
+        function (
+            idx,
+            val
+        ) {
+            if(
+                $("#button_dark_mode").is(":checked")
+            ) {
+                $(val).addClass(
+                    "dark-mode"
+                )
+            } else {
+                $(val).removeClass(
+                    "dark-mode"
+                )
+            }
+
+        }
+    )
+
+    switch_font_color();
+}
+
+$(document).ready(
+    function() {
+
+        const dark_mode = localStorage.getItem("dark_mode") ? localStorage.getItem("dark_mode") : null;
+
+        if (dark_mode) {
+            $("#button_dark_mode").prop(
+                "checked",
+                true
+            );
+
+            dark_mode_content();
+        }
+    }
+)
+
 
 $(document).ready(
     function() {
@@ -599,3 +666,4 @@ $(document).ready(
         );
     }
 )
+
