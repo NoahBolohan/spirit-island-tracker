@@ -19,6 +19,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+		<script src="js/cookies.js"></script>
 		<script src="js/colour_filter_computer.js"></script>
 		<script src="js/no_sleep.min.js"></script>
 		<script src="js/misc_functions.js"></script>
@@ -33,6 +34,60 @@
 	</head>
 
 	<body class="parallax" id="spirit_island_tracker_body" data-leading_adversary="" data-leading_adversary_level=0 data-supporting_adversary="" data-supporting_adversary_level=0 data-colour_scheme="light">
+
+		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_cookies">
+
+			<div class="modal-dialog modal-dialog-centered" role="document">
+	
+				<div class="modal-content">
+	
+					<div class="modal-header justify-content-center" style="position:relative;">
+	
+						<h2 class="modal-title">Cookies</h2>
+						<button class="btn btn-settings" id="button_close_modal_cookies" style="position:absolute;right:1em;">
+							<div class="close-x"></div>
+						</button>
+					</div>
+	
+					<div class="modal-body" id="modal_cookies_body">
+
+						<div class="row mb-2 p-0 justify-content-center margin_auto" id="row_setting_toggle_screen_sleep">
+
+							<div class="col p-0 align-self-center text-line text-center">
+								This page would like to use local cookies to remember your selections. Do you accept?
+							</div>
+						</div>
+
+						<div class="row mb-2 gx-2">
+
+							<div class="col-3 offset-3 align-self-center">
+
+								<button class="w-100 btn btn-lock-elements" type="button" id="button_cookies_accept" style="font-size: 1em;">
+									Yes
+								</button>
+							</div>
+
+							<div class="col-3 align-self-center">
+
+								<button class="w-100 btn btn-reset-elements" type="button" id="button_cookies_deny_once" style="font-size: 1em;">
+									No
+								</button>
+							</div>
+						</div>
+
+						<div class="row justify-content-center">
+
+							<div class="col-8 align-self-center">
+
+								<button class="w-100 btn btn-reset-page" type="button" id="button_cookies_deny_forever" style="font-size: 1em;">
+									No and don't ask again
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_settings">
 

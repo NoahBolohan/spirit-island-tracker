@@ -160,6 +160,10 @@ function reset_spirit_selection() {
             "background-image" : ``,
         }
     );
+
+    localStorage.removeItem(
+        "spirit_button_name"
+    );
 }
 
 function reset_adversary_selection() {

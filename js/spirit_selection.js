@@ -294,6 +294,15 @@ function generate_spirit_select_list_item_for_spirit(
             switch_theme(
                 theme
             );
+
+            const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+            if (accepts_cookies) {
+                localStorage.setItem(
+                    "spirit_button_name",
+                    spirit_button_name
+                );
+            }
             
         }
     );
@@ -320,6 +329,12 @@ $(document).ready(
                 )
             }
         });
+
+        const spirit_button_name = localStorage.getItem("spirit_button_name") ? localStorage.getItem("spirit_button_name") : null;
+
+        if (spirit_button_name) {
+            $(`#button_${spirit_button_name}`).trigger("click");
+        }
     }
 )
 
