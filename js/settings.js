@@ -325,6 +325,10 @@ $(document).ready(
                     $("#button_toggle_lock_element_tracker").data("lock_status") == "locked"
                 ) {
                     unlock_element_tracker();
+
+                    localStorage.removeItem(
+                        "lock_element_tracker"
+                    );
                 }
                 
                 $.getJSON("https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/config.json", function(data) {
