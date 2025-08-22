@@ -62,6 +62,14 @@ $(document).ready(
                 );
 
                 $(`#modal_leading_adversaries`).modal("hide");
+
+                localStorage.removeItem(
+                    "leading_adversary_button_name"
+                );
+
+                localStorage.removeItem(
+                    "leading_adversary_level"
+                );
             }
         );
     }
@@ -93,6 +101,14 @@ $(document).ready(
                 );
                 
                 $(`#modal_supporting_adversaries`).modal("hide");
+
+                localStorage.removeItem(
+                    "supporting_adversary_button_name"
+                );
+
+                localStorage.removeItem(
+                    "supporting_adversary_level"
+                );
             }
         );
     }
@@ -252,48 +268,66 @@ function generate_adversary_select_list_item_for_adversary(
         "click",
         function() {
 
-            $(`#button_select_${adversary_type}_adversary`).empty();
-        
-            $("<img>").attr(
-                {
-                    "src" : generate_encoded_adversary_image_url(
-                        adversary_name
-                    ),
-                    "style" : "width : 100%",
-                }
-            ).appendTo(
-                `#button_select_${adversary_type}_adversary`
-            );
-
-            $(`#button_select_${adversary_type}_adversary`).removeClass(
-                "btn-settings"
-            );
-
-            $(`#button_select_${adversary_type}_adversary`).addClass(
-                "btn-outlineless"
-            );
-
-            $(`#button_select_${adversary_type}_adversary`).css(
-                {
-                    "height" : "",
-                    "aspect-ratio" : ""
-                }
-            );
-
-            custom_show(
-                "#section_supporting_adversary"
-            );
-
-            $("#spirit_island_tracker_body").data(
-                `${adversary_type}_adversary`,
-                adversary_name
+            button_set_adversary_content(
+                adversary_name,
+                adversary_type
             );
 
             $(`#modal_${adversary_type}_adversary_level`).modal("show");
             $(`#modal_${adversary_type}_adversaries`).modal("hide");
 
-            
+            const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+            if (accepts_cookies) {
+                localStorage.setItem(
+                    `${adversary_type}_adversary_button_name`,
+                    adversary_name
+                );
+            }
         }
+    );
+}
+
+function button_set_adversary_content(
+    adversary_name,
+    adversary_type
+) {
+
+    $(`#button_select_${adversary_type}_adversary`).empty();
+        
+    $("<img>").attr(
+        {
+            "src" : generate_encoded_adversary_image_url(
+                adversary_name
+            ),
+            "style" : "width : 100%",
+        }
+    ).appendTo(
+        `#button_select_${adversary_type}_adversary`
+    );
+
+    $(`#button_select_${adversary_type}_adversary`).removeClass(
+        "btn-settings"
+    );
+
+    $(`#button_select_${adversary_type}_adversary`).addClass(
+        "btn-outlineless"
+    );
+
+    $(`#button_select_${adversary_type}_adversary`).css(
+        {
+            "height" : "",
+            "aspect-ratio" : ""
+        }
+    );
+
+    custom_show(
+        "#section_supporting_adversary"
+    );
+
+    $("#spirit_island_tracker_body").data(
+        `${adversary_type}_adversary`,
+        adversary_name
     );
 }
 
@@ -319,6 +353,15 @@ $(document).ready(
                                 );
 
                                 difficulty_calculator();
+
+                                const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+                                if (accepts_cookies) {
+                                    localStorage.setItem(
+                                        `${adversary_type}_adversary_level`,
+                                        value
+                                    );
+                                }
 
                                 $(`#modal_${adversary_type}_adversary_level`).modal("hide");
                             }
@@ -416,6 +459,36 @@ $(document).ready(
                                 );
                             }
                         )
+
+                        const leading_adversary_button_name = localStorage.getItem("leading_adversary_button_name") ? localStorage.getItem("leading_adversary_button_name") : null;
+
+                        const leading_adversary_level = localStorage.getItem("leading_adversary_level") ? localStorage.getItem("leading_adversary_level") : null;
+
+                        if (leading_adversary_button_name) {
+                            button_set_adversary_content(
+                                leading_adversary_button_name,
+                                "leading"
+                            )
+
+                            $(
+                                `#col_button_leading_adversary_level_${leading_adversary_level}`
+                            ).trigger("click");
+                        }
+
+                        const supporting_adversary_button_name = localStorage.getItem("supporting_adversary_button_name") ? localStorage.getItem("supporting_adversary_button_name") : null;
+
+                        const supporting_adversary_level = localStorage.getItem("supporting_adversary_level") ? localStorage.getItem("supporting_adversary_level") : null;
+
+                        if (supporting_adversary_button_name) {
+                            button_set_adversary_content(
+                                supporting_adversary_button_name,
+                                "supporting"
+                            )
+
+                            $(
+                                `#col_button_supporting_adversary_level_${supporting_adversary_level}`
+                            ).trigger("click");
+                        }
                     }
                 )
             }

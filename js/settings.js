@@ -169,6 +169,22 @@ function reset_spirit_selection() {
 function reset_adversary_selection() {
 
     $(`#button_remove_leading_adversary`).click();
+
+    localStorage.removeItem(
+        "leading_adversary_button_name"
+    );
+
+    localStorage.removeItem(
+        "leading_adversary_level"
+    );
+
+    localStorage.removeItem(
+        "supporting_adversary_button_name"
+    );
+
+    localStorage.removeItem(
+        "supporting_adversary_level"
+    );
 }
 
 function reset_innate_power_row() {
