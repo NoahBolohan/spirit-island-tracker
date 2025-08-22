@@ -33,15 +33,48 @@ $(document).ready(
         $("#button_toggle_screen_sleep").on(
             "click",
             function() {
-                if (!wakeLockEnabled) {
-                    noSleep.enable(); // keep the screen on!
-                    wakeLockEnabled = true;
-                } else {
-                    noSleep.disable(); // let the screen turn off.
-                    wakeLockEnabled = false;
-                }
+
+                screen_sleep_content();
             }
         )
+    }
+)
+
+function screen_sleep_content() {
+    if (!wakeLockEnabled) {
+        noSleep.enable(); // keep the screen on!
+        wakeLockEnabled = true;
+
+        const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+        if (accepts_cookies) {
+            localStorage.setItem(
+                "prevent_screen_sleep",
+                true
+            );
+        }
+    } else {
+        noSleep.disable(); // let the screen turn off.
+        wakeLockEnabled = false;
+        localStorage.removeItem(
+            "prevent_screen_sleep"
+        );
+    }
+}
+
+$(document).ready(
+    function() {
+
+        const prevent_screen_sleep = localStorage.getItem("prevent_screen_sleep") ? localStorage.getItem("prevent_screen_sleep") : null;
+
+        if (prevent_screen_sleep) {
+            $("#button_toggle_screen_sleep").prop(
+                "checked",
+                true
+            );
+
+            screen_sleep_content();
+        }
     }
 )
 
