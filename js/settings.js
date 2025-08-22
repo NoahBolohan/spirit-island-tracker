@@ -85,93 +85,110 @@ $(document).ready(
         $("#button_toggle_innate_powers_row").on(
             "click",
             function() {
-                if(
-                    $("#button_toggle_innate_powers_row").is(":checked")
-                ) {
-
-                    $("#row_innate_powers").css(
-                        {
-                            "position" : "",
-                            "left" : ""
-                        }
-                        
-                    )
-
-                    $("#col_innate_powers").css(
-                        {
-                            "position" : "",
-                            "left" : ""
-                        }
-                        
-                    )
-
-                    $("#row_innate_power_cols").css(
-                        {
-                            "position" : "",
-                            "left" : ""
-                        }
-                        
-                    )
-
-                    // custom_show(
-                    //     "#row_innate_powers"
-                    // );
-                    // custom_show(
-                    //     "#row_innate_power_cols"
-                    // );
-
-                    const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
-
-                    if (accepts_cookies) {
-                        localStorage.setItem(
-                            "toggle_innate_powers_row",
-                            true
-                        );
-                    }
-                }
-                else {
-
-                    $("#row_innate_powers").css(
-                        {
-                            "position" : "absolute",
-                            "left" : "-99999px"
-                        }
-                        
-                    )
-
-                    $("#col_innate_powers").css(
-                        {
-                            "position" : "absolute",
-                            "left" : "-99999px"
-                        }
-                        
-                    )
-
-                    $("#row_innate_power_cols").css(
-                        {
-                            "position" : "absolute",
-                            "left" : "-99999px"
-                        }
-                        
-                    )
-
-                    // custom_hide(
-                    //     "#row_innate_powers"
-                    // );
-                    // custom_hide(
-                    //     "#row_innate_power_cols"
-                    // );
-
-                    const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
-
-                    if (accepts_cookies) {
-                        localStorage.removeItem(
-                            "toggle_innate_powers_row"
-                        );
-                    }
-                }
+                toggle_innate_powers_row_content();
             }
         )
+    }
+)
+
+function toggle_innate_powers_row_content() {
+
+    if(
+        $("#button_toggle_innate_powers_row").is(":checked")
+    ) {
+
+        $("#row_innate_powers").css(
+            {
+                "position" : "",
+                "left" : ""
+            }
+            
+        )
+
+        $("#col_innate_powers").css(
+            {
+                "position" : "",
+                "left" : ""
+            }
+            
+        )
+
+        $("#row_innate_power_cols").css(
+            {
+                "position" : "",
+                "left" : ""
+            }
+            
+        )
+
+        // custom_show(
+        //     "#row_innate_powers"
+        // );
+        // custom_show(
+        //     "#row_innate_power_cols"
+        // );
+
+        localStorage.removeItem(
+            "hide_innate_powers_row"
+        );
+    }
+    else {
+
+        $("#row_innate_powers").css(
+            {
+                "position" : "absolute",
+                "left" : "-99999px"
+            }
+            
+        )
+
+        $("#col_innate_powers").css(
+            {
+                "position" : "absolute",
+                "left" : "-99999px"
+            }
+            
+        )
+
+        $("#row_innate_power_cols").css(
+            {
+                "position" : "absolute",
+                "left" : "-99999px"
+            }
+            
+        )
+
+        // custom_hide(
+        //     "#row_innate_powers"
+        // );
+        // custom_hide(
+        //     "#row_innate_power_cols"
+        // );
+
+        const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+        if (accepts_cookies) {
+            localStorage.setItem(
+                "hide_innate_powers_row",
+                true
+            );
+        }
+    }
+}
+
+$(document).ready(
+    function() {
+
+        const hide_innate_powers_row = localStorage.getItem("hide_innate_powers_row") ? localStorage.getItem("hide_innate_powers_row") : null;
+
+        if (hide_innate_powers_row) {
+            $("#button_toggle_innate_powers_row").prop(
+                "checked",
+                false
+            );
+
+            toggle_innate_powers_row_content();
+        }
     }
 )
 
