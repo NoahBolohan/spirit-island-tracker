@@ -121,8 +121,6 @@ $(document).ready(
                         "click",
                         function () {
 
-                            alert(`${element} +1`)
-
                             // Increase the data counter by 1
                             $(`#element_${element}`).data(
                                 "counter",
@@ -180,8 +178,6 @@ $(document).ready(
                     $(`#button_${element}_minus`).on(
                         "click",
                         function () {
-
-                            alert(`${element} -1`)
 
                             // Increase the data counter by 1
                             $(`#element_${element}`).data(
