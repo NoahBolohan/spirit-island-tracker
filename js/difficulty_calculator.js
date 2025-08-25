@@ -48,8 +48,8 @@ function difficulty_calculator() {
             // }
 
             // Assign the difficulty value to the difficulty display div
-            $("#col_difficulty_number").text(
-                total_difficulty
+            $("#button_invader_rules").text(
+                "Difficulty: " + total_difficulty
             )
         })
     })
