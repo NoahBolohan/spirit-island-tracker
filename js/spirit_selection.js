@@ -295,6 +295,10 @@ function generate_spirit_select_list_item_for_spirit(
                 theme
             );
 
+            custom_show(
+                "#button_setup"
+            );
+
             const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
 
             if (accepts_cookies) {

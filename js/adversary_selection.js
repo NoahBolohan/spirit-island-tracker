@@ -63,6 +63,10 @@ $(document).ready(
 
                 $(`#modal_leading_adversaries`).modal("hide");
 
+                custom_hide(
+                    "#button_invader_rules"
+                );
+
                 localStorage.removeItem(
                     "leading_adversary_button_name"
                 );
@@ -284,6 +288,10 @@ function generate_adversary_select_list_item_for_adversary(
                     adversary_name
                 );
             }
+
+            custom_show(
+                "#button_invader_rules"
+            );
         }
     );
 }

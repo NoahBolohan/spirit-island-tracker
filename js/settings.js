@@ -231,6 +231,10 @@ function reset_spirit_selection() {
     localStorage.removeItem(
         "spirit_button_name"
     );
+
+    custom_hide(
+        "#button_setup"
+    );
 }
 
 function reset_adversary_selection() {
