@@ -137,12 +137,12 @@
     },
     "France (Plantation Colony)":{
         "additional_loss_condition":{
-            "title":"",
-            "effect":""
+            "title":"Sprawling Plantations",
+            "effect":"Before Setup, return all but 7 TOWN per player to the box. Invaders win if you ever cannot place a TOWN."
         },
         "stage_2_escalation":{
-            "title":"",
-            "effect":""
+            "title":"Demand for New Cash Crops",
+            "effect":"After Exploring, on each board, pick a land of the shown terrain. If it has TOWN/CITY, add 1 BLIGHT. Otherwise, add 1 TOWN."
         },
         "level":{
             "0":{
@@ -155,50 +155,50 @@
             },
             "1":{
                 "difficulty":3,
-                "fear_cards":"",
+                "fear_cards":"9 (3/3/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Frontier Explorers",
+                    "effect":"Except during Setup: After Invaders successfully Explore into a land which had no TOWN/CITY, add 1 EXPLORER there."
                 }
             },
             "2":{
                 "difficulty":5,
-                "fear_cards":"",
+                "fear_cards":"10 (3/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Slave Labor",
+                    "effect":"During Setup, put the 'Slave Rebellion' Event under the top 3 cards of the Event Deck. After Invaders Build in a land with 2 EXPLORER or more, replace all but 1 EXPLORER there with an equal number of TOWN."
                 }
             },
             "3":{
                 "difficulty":7,
-                "fear_cards":"",
+                "fear_cards":"11 (4/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Early Plantations",
+                    "effect":"During Setup, on each board add 1 TOWN to the highest-numbered land without TOWN. Add 1 TOWN to land #1."
                 }
             },
             "4":{
                 "difficulty":8,
-                "fear_cards":"",
+                "fear_cards":"12 (4/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Triangle Trade",
+                    "effect":"Whenever Invaders Build a Coastal CITY< add 1 TOWN to the adjavent land with the fewest TOWN."
                 }
             },
             "5":{
                 "difficulty":9,
-                "fear_cards":"",
+                "fear_cards":"13 (4/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Slow-Healing Ecosystem",
+                    "effect":"When you remove BLIGHT from the board, put it here instead of onto the Blight Card. As soon as you have 3 BLIGHT per player here, move it all back to the Blight Card."
                 }
             },
             "6 ":{
                 "difficulty":11,
-                "fear_cards":"",
+                "fear_cards":"14 (4/5/5)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Persistent Explorers",
+                    "effect":"After the normal Explorel, on each board add 1 EXPLORER to a land without any. Fear Card effects never remove EXPLORER. If one would, you may instead Push that EXPLORER."
                 }
             }
         }
