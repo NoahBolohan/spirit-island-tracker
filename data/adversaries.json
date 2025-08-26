@@ -1,90 +1,546 @@
 {
-    "Brandenburg-Prussia" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 2,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 9,
-            "6" : 10
+    "Brandenburg-Prussia":{
+        "additional_loss_condition":{
+            "title":"",
+            "effect":"None"
+        },
+        "stage_2_escalation":{
+            "title":"Land rush",
+            "effect":"On each board with TOWN/CITY, add 1 TOWN to a land without TOWN."
+        },
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":2,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"Fast Start",
+                    "effect":"During Setup, on each board add 1 TOWN to land #3."
+                }
+            },
+            "2":{
+                "difficulty":4,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"Surge of Colonists",
+                    "effect":"When making the Invader Deck, put 1 of the State III cards between Stage I and Stage II. (New Deck Order: 111-3-2222-3333)"
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"10 (3/4/3)",
+                "game_effects":{
+                    "title":"Efficient:",
+                    "effect":"When making the Invader Deck, remove an additional Stage I card. (New Deck Order: 11-3-2222-3333)"
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"11 (4/4/3)",
+                "game_effects":{
+                    "title":"Aggressive Timetable",
+                    "effect":"When making the Invader Deck, remove an additional Stage II card. (New Deck Order: 11-3-222-3333)"
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"11 (4/4/3)",
+                "game_effects":{
+                    "title":"Ruthlessly Efficient",
+                    "effect":"When making the Invader Deck, remove an additional Stage I card. (New Deck Order: 1-3-222-3333)"
+                }
+            },
+            "6":{
+                "difficulty":10,
+                "fear_cards":"12 (4/4/4)",
+                "game_effects":{
+                    "title":"Terrifyingly Efficient",
+                    "effect":"When making the Invader Deck, remove all the Stage I cards. (New Deck Order: 3-222-3333)"
+                }
+            }
         }
     },
-    "England" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 9,
-            "6" : 11
+    "England":{
+        "additional_loss_condition":{
+            "title":"Proud & Mighty Capital",
+            "effect":"If 7 or more TOWN/CITY are ever in a single land, the Invaders win."
+        },
+        "stage_2_escalation":{
+            "title":"Building Boom",
+            "effect":"On each board with TOWN/CITY, Build in the land with the most TOWN/CITY."
+        },
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"10 (3/4/3)",
+                "game_effects":{
+                    "title":"Indentured Servants Earn Land",
+                    "effect":"Invader Build actions affect lands without Invaders, if they are adjacent to at least 2 TOWN/CITY before the Build Action."
+                }
+            },
+            "2":{
+                "difficulty":4,
+                "fear_cards":"11 (4/4/3)",
+                "game_effects":{
+                    "title":"Criminals and Malcontents",
+                    "effect":"During Setup, on each board add 1 CITY to land #1, and 1 TOWN to land #2."
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"13 (4/5/4)",
+                "game_effects":{
+                    "title":"High Immigration (I)",
+                    "effect":"Put the 'High Immigration' tile on the Invader Board, to the left of 'Ravage'. The Invaders take this Build action each Invader Phase before Ravaging. Cards slide left from Ravage to it, and from it to the discard pile. Remove the tile when a Stage II card slides onto it, putting that card in the discard."
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"14 (4/5/5)",
+                "game_effects":{
+                    "title":"High Immigration (full)",
+                    "effect":"The extra Build tile remains out the entire game."
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"14 (4/5/5)",
+                "game_effects":{
+                    "title":"Local Autonomy",
+                    "effect":"TOWN/CITY have +1 Health."
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"13 (4/5/4)",
+                "game_effects":{
+                    "title":"Independent Resolve",
+                    "effect":"During Setup, add an additional FEAR to the Fear Pool per player in the game. During any Invader Phase where you resolve no Fear Cards, perform the Build from High Immigration twice. (This has no effect is no card is on the extra build slot)."
+                }
+            }
         }
     },
-    "France (Plantation Colony)" : {
-        "difficulty" : {
-            "0" : 2,
-            "1" : 3,
-            "2" : 5,
-            "3" : 7,
-            "4" : 8,
-            "5" : 9,
-            "6" : 11
+    "France (Plantation Colony)":{
+        "additional_loss_condition":{
+            "title":"Sprawling Plantations",
+            "effect":"Before Setup, return all but 7 TOWN per player to the box. Invaders win if you ever cannot place a TOWN."
+        },
+        "stage_2_escalation":{
+            "title":"Demand for New Cash Crops",
+            "effect":"After Exploring, on each board, pick a land of the shown terrain. If it has TOWN/CITY, add 1 BLIGHT. Otherwise, add 1 TOWN."
+        },
+        "level":{
+            "0":{
+                "difficulty":2,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"Frontier Explorers",
+                    "effect":"Except during Setup: After Invaders successfully Explore into a land which had no TOWN/CITY, add 1 EXPLORER there."
+                }
+            },
+            "2":{
+                "difficulty":5,
+                "fear_cards":"10 (3/4/3)",
+                "game_effects":{
+                    "title":"Slave Labor",
+                    "effect":"During Setup, put the 'Slave Rebellion' Event under the top 3 cards of the Event Deck. After Invaders Build in a land with 2 EXPLORER or more, replace all but 1 EXPLORER there with an equal number of TOWN."
+                }
+            },
+            "3":{
+                "difficulty":7,
+                "fear_cards":"11 (4/4/3)",
+                "game_effects":{
+                    "title":"Early Plantations",
+                    "effect":"During Setup, on each board add 1 TOWN to the highest-numbered land without TOWN. Add 1 TOWN to land #1."
+                }
+            },
+            "4":{
+                "difficulty":8,
+                "fear_cards":"12 (4/4/4)",
+                "game_effects":{
+                    "title":"Triangle Trade",
+                    "effect":"Whenever Invaders Build a Coastal CITY< add 1 TOWN to the adjavent land with the fewest TOWN."
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"13 (4/5/4)",
+                "game_effects":{
+                    "title":"Slow-Healing Ecosystem",
+                    "effect":"When you remove BLIGHT from the board, put it here instead of onto the Blight Card. As soon as you have 3 BLIGHT per player here, move it all back to the Blight Card."
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"14 (4/5/5)",
+                "game_effects":{
+                    "title":"Persistent Explorers",
+                    "effect":"After the normal Explorel, on each board add 1 EXPLORER to a land without any. Fear Card effects never remove EXPLORER. If one would, you may instead Push that EXPLORER."
+                }
+            }
         }
     },
-    "Habsburg Mining Expedition" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 5,
-            "4" : 7,
-            "5" : 9,
-            "6" : 11
+    "Habsburg Mining Expedition":{
+        "additional_loss_condition":{
+            "title":"",
+            "effect":""
+        },
+        "stage_2_escalation":{
+            "title":"",
+            "effect":""
+        },
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":5,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Habsburg Monarchy (Livestock Colony)" : {
-        "difficulty" : {
-            "0" : 2,
-            "1" : 3,
-            "2" : 5,
-            "3" : 6,
-            "4" : 8,
-            "5" : 9,
-            "6" : 11
+    "Habsburg Monarchy (Livestock Colony)":{
+        "additional_loss_condition":{
+            "title":"",
+            "effect":""
+        },
+        "stage_2_escalation":{
+            "title":"",
+            "effect":""
+        },
+        "level":{
+            "0":{
+                "difficulty":2,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":5,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Russia" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 9,
-            "6" : 11
+    "Russia":{
+        "additional_loss_condition":{
+            "title":"",
+            "effect":""
+        },
+        "stage_2_escalation":{
+            "title":"",
+            "effect":""
+        },
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Scotland" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 8,
-            "6" : 10
+    "Scotland":{
+        "additional_loss_condition":{
+            "title":"",
+            "effect":""
+        },
+        "stage_2_escalation":{
+            "title":"",
+            "effect":""
+        },
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":10,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Sweden" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 2,
-            "2" : 3,
-            "3" : 5,
-            "4" : 6,
-            "5" : 7,
-            "6" : 8
+    "Sweden":{
+        "additional_loss_condition":{
+            "title":"",
+            "effect":""
+        },
+        "stage_2_escalation":{
+            "title":"",
+            "effect":""
+        },
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"9 (3/3/3)",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":2,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":5,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     }
 }
