@@ -1,90 +1,498 @@
 {
-    "Brandenburg-Prussia" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 2,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 9,
-            "6" : 10
+    "Brandenburg-Prussia":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":2,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":10,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "England" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 9,
-            "6" : 11
+    "England":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "France (Plantation Colony)" : {
-        "difficulty" : {
-            "0" : 2,
-            "1" : 3,
-            "2" : 5,
-            "3" : 7,
-            "4" : 8,
-            "5" : 9,
-            "6" : 11
+    "France (Plantation Colony)":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":2,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":5, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Habsburg Mining Expedition" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 5,
-            "4" : 7,
-            "5" : 9,
-            "6" : 11
+    "Habsburg Mining Expedition":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":5,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Habsburg Monarchy (Livestock Colony)" : {
-        "difficulty" : {
-            "0" : 2,
-            "1" : 3,
-            "2" : 5,
-            "3" : 6,
-            "4" : 8,
-            "5" : 9,
-            "6" : 11
+    "Habsburg Monarchy (Livestock Colony)":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":2,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":5, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Russia" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 9,
-            "6" : 11
+    "Russia":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":9,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":11,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Scotland" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 3,
-            "2" : 4,
-            "3" : 6,
-            "4" : 7,
-            "5" : 8,
-            "6" : 10
+    "Scotland":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":3,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":4, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":10,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     },
-    "Sweden" : {
-        "difficulty" : {
-            "0" : 1,
-            "1" : 2,
-            "2" : 3,
-            "3" : 5,
-            "4" : 6,
-            "5" : 7,
-            "6" : 8
+    "Sweden":{
+        "additional_loss_condition":"",
+        "stage_2_escalation":"",
+        "level":{
+            "0":{
+                "difficulty":1,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "1":{
+                "difficulty":2,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "2":{
+                "difficulty":3, 
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "3":{
+                "difficulty":5,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "4":{
+                "difficulty":6,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "5":{
+                "difficulty":7,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            },
+            "6 ":{
+                "difficulty":8,
+                "fear_cards":"",
+                "game_effects":{
+                    "title":"",
+                    "effect":""
+                }
+            }
         }
     }
 }
