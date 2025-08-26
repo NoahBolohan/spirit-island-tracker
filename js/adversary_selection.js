@@ -559,7 +559,8 @@ function append_invader_rules_to_modal(
 
     var leading_rules_table  = $("<div>").attr(
         {
-            class:"table table-body"
+            class:"table",
+            style:"margin:0;padding:1vh;"
         }
     ).html(
         $("<thead>").attr(
@@ -594,14 +595,15 @@ function append_invader_rules_to_modal(
                 ).append(
                     $("<div>").attr(
                         {
-                            style:"align-self: flex-end;"
+                            style:"align-self: flex-end;",
+                            class:`text-line ${dark_mode_flag} table-header`
                         }
                     ).text("Game Effects")
                 ).append(
                     $("<button>").attr(
                         {
                             id: `button_leading_adversary_toggle_all_rules`,
-                            class:`p-1 btn btn-lock-elements ${dark_mode_flag}`,
+                            class:`p-1 btn btn-reset-page ${dark_mode_flag}`,
                              style:"margin-left: auto;"
                         }
                     ).text(
@@ -656,7 +658,7 @@ function append_invader_rules_to_modal(
                             $("<button>").attr(
                                 {
                                     id: `button_leading_adversary_rule_${level}_toggle`,
-                                    class:`w-100 btn btn-lock-elements ${dark_mode_flag}`
+                                    class:`w-100 btn btn-reset-page ${dark_mode_flag}`
                                 }
                             ).html(
                                 spirit_text_keyword_converter(
@@ -749,6 +751,44 @@ function append_invader_rules_to_modal(
                     
                 }
             )
+        }
+    )
+
+    $(`#button_leading_adversary_toggle_all_rules`).on(
+        "click",
+        function () {
+            if (
+                $(`#button_leading_adversary_toggle_all_rules`).text() == "Show all"
+            ) {
+                $.each(
+                    leading_adversary_config["level"],
+                    function(
+                        level
+                    ) {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "visible"
+                        );
+                    }
+                )
+                
+                $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
+            }
+            else {
+                $.each(
+                    leading_adversary_config["level"],
+                    function(
+                        level
+                    ) {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "collapse"
+                        );
+                    }
+                )
+
+                $(`#button_leading_adversary_toggle_all_rules`).text("Show all");
+            }
         }
     )
 }

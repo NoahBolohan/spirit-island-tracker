@@ -309,14 +309,34 @@ input:checked + .slider:before {
 }
 
 /* Tables */
+.table {
+    background-color: rgba(var(--primary))!important;
+    color: rgba(var(--font-color-dark));
+}
+
 .table-body {
-    background-color: rgba(var(--background-dark))!important;
+    background-color: rgba(var(--primary))!important;
     color: rgba(var(--font-color-dark));
 }
 
 .table-header {
-    background-color: rgba(var(--background-dark))!important;
+    background-color: rgba(var(--primary))!important;
     color: rgba(var(--font-color-dark));
+}
+
+.dark-mode.table {
+    background-color: rgba(var(--primary))!important;
+    color: rgba(var(--font-color-light));
+}
+
+.dark-mode.table-body {
+    background-color: rgba(var(--background-dark))!important;
+    color: rgba(var(--font-color-light));
+}
+
+.dark-mode.table-header {
+    background-color: rgba(var(--background-dark))!important;
+    color: rgba(var(--font-color-light));
 }
 
 /*Buttons*/
