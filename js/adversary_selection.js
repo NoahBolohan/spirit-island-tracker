@@ -288,10 +288,6 @@ function generate_adversary_select_list_item_for_adversary(
                     adversary_name
                 );
             }
-
-            custom_show(
-                "#button_invader_rules"
-            );
         }
     );
 }
@@ -327,6 +323,10 @@ function button_set_adversary_content(
             "height" : "",
             "aspect-ratio" : ""
         }
+    );
+
+    custom_show(
+        "#button_invader_rules"
     );
 
     custom_show(

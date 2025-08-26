@@ -22,6 +22,54 @@ $(document).ready(
     }
 )
 
+$(document).ready(
+    function() {
+
+        $("#button_setup").on(
+            "click",
+            function() {
+                $("#modal_setup").modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_close_modal_setup").on(
+            "click",
+            function() {
+                $("#modal_setup").modal("hide");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_invader_rules").on(
+            "click",
+            function() {
+                $("#modal_invader_rules").modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_close_modal_invader_rules").on(
+            "click",
+            function() {
+                $("#modal_invader_rules").modal("hide");
+            }
+        );
+    }
+)
+
 // https://github.com/richtr/NoSleep.js
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;

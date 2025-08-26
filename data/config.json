@@ -111,6 +111,10 @@
             "file_name" : "no_range.svg",
             "vertical-align" : ""
         },
+        "PLANT" : {
+            "file_name" : "plant.svg",
+            "vertical-align" : ""
+        },
         "PRESENCE" : {
             "file_name" : "presence.svg",
             "vertical-align" : "baseline"
@@ -133,6 +137,10 @@
         },
         "STRIFE" : {
             "file_name" : "strife.svg",
+            "vertical-align" : ""
+        },
+        "SUN" : {
+            "file_name" : "sun.svg",
             "vertical-align" : ""
         },
         "THE_ENDLESS_DARK" : {
