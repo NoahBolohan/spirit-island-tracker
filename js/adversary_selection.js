@@ -455,6 +455,16 @@ function append_invader_rules_to_modal(
 
     $("#modal_invader_rules_body").empty();
 
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
     // Loss Condition
 
     var top_row = $("<div>").attr(
@@ -470,7 +480,11 @@ function append_invader_rules_to_modal(
     );
 
     leading_loss_condition_div.append(
-        $("<b>").text("Additional Loss Condition")
+        $("<b>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`
+            }
+        ).text("Additional Loss Condition")
     );
 
     if (leading_adversary_config["additional_loss_condition"]["title"] != "") {
@@ -494,7 +508,11 @@ function append_invader_rules_to_modal(
     else {
         leading_loss_condition_div.append(
             $("<p>").html(
-                $("<i>").text("None")
+                $("<i>").attr(
+                    {
+                        class:`text-line ${dark_mode_flag}`
+                    }
+                ).text("None")
             )
         )
     };
@@ -508,7 +526,11 @@ function append_invader_rules_to_modal(
     );
 
     leading_stage_2_escalation_div.append(
-        $("<b>").text("Stage II Escalation")
+        $("<b>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`
+            }
+        ).text("Stage II Escalation")
     );
 
     leading_stage_2_escalation_div.append(
@@ -537,11 +559,12 @@ function append_invader_rules_to_modal(
 
     var leading_rules_table  = $("<div>").attr(
         {
-            class:"table"
+            class:"table table-body"
         }
     ).html(
         $("<thead>").attr(
             {
+                class:"table-header",
                 style: "width: 100%;display: table;"
             }
         ).html(
@@ -549,28 +572,51 @@ function append_invader_rules_to_modal(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:15%"
+                        style:"width:15%",
+                        class:`text-line ${dark_mode_flag} table-header`
                     }
                 ).text("Level")
             ).append(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:25%"
+                        style:"width:25%",
+                        class:`text-line ${dark_mode_flag} table-header`
                     }
                 ).text("Fear")
             ).append(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:60%"
+                        class:`text-line ${dark_mode_flag} table-header`,
+                        style:"display:flex;"
                     }
-                ).text("Game Effects")
+                ).append(
+                    $("<div>").attr(
+                        {
+                            style:"align-self: flex-end;"
+                        }
+                    ).text("Game Effects")
+                ).append(
+                    $("<button>").attr(
+                        {
+                            id: `button_leading_adversary_toggle_all_rules`,
+                            class:`p-1 btn btn-lock-elements ${dark_mode_flag}`,
+                             style:"margin-left: auto;"
+                        }
+                    ).text(
+                        "Show all"
+                    )
+                )
             )
         )
     );
 
-    var leading_rules_table_body = $("<tbody>");
+    var leading_rules_table_body = $("<tbody>").attr(
+        {
+            style: "width: 100%;display: table;"
+        }
+    );
 
     $.each(
         leading_adversary_config["level"],
@@ -580,16 +626,22 @@ function append_invader_rules_to_modal(
         ) {
             if (parseInt(level) > 0) {
                 leading_rules_table_body.append(
-                    $("<tr>").append(
+                    $("<tr>").attr(
+                        {
+                            class:"table-body"
+                        }
+                    ).append(
                         $("<td>").attr(
                             {
-                                style:"width:15%"
+                                style:"width:15%",
+                                class:`text-line ${dark_mode_flag} table-body`
                             }
                         ).html(level)
                     ).append(
                         $("<td>").attr(
                             {
-                                style:"width:25%"
+                                style:"width:25%",
+                                class:`text-line ${dark_mode_flag} table-body`
                             }
                         ).html(
                             level_config["fear_cards"]
@@ -597,12 +649,48 @@ function append_invader_rules_to_modal(
                     ).append(
                         $("<td>").attr(
                             {
-                                style:"width:60%"
+                                style:"width:60%",
+                                class:`text-line ${dark_mode_flag} table-body`
                             }
-                        ).html(
-                            spirit_text_keyword_converter(
-                                level_config["game_effects"]["effect"],
-                                18
+                        ).append(
+                            $("<button>").attr(
+                                {
+                                    id: `button_leading_adversary_rule_${level}_toggle`,
+                                    class:`w-100 btn btn-lock-elements ${dark_mode_flag}`
+                                }
+                            ).html(
+                                spirit_text_keyword_converter(
+                                    level_config["game_effects"]["title"],
+                                    18
+                                )
+                            )
+                        )
+                    )
+                )
+
+                leading_rules_table_body.append(
+                    $("<tr>").attr(
+                        {
+                            id: `row_leading_adversary_rule_${level}`,
+                            style:"visibility:collapse;"
+                        }
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:100%",
+                                class:`text-line ${dark_mode_flag} table-body`,
+                                colspan:"3"
+                            }
+                        ).append(
+                            $("<p>").attr(
+                                {
+                                    class:`${dark_mode_flag}`
+                                }
+                            ).html(
+                                spirit_text_keyword_converter(
+                                    level_config["game_effects"]["effect"],
+                                    18
+                                )
                             )
                         )
                     )
@@ -635,6 +723,33 @@ function append_invader_rules_to_modal(
 
     leading_rules_div.appendTo(
         $("#modal_invader_rules_body")
+    )
+
+    $.each(
+        leading_adversary_config["level"],
+        function(
+            level
+        ) {
+            $(`#button_leading_adversary_rule_${level}_toggle`).on(
+                "click",
+                function () {
+                    if (
+                        $(`#row_leading_adversary_rule_${level}`).css("visibility") == "collapse"
+                    ) {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "visible"
+                        );
+                    } else {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "collapse"
+                        );
+                    }
+                    
+                }
+            )
+        }
     )
 }
 

@@ -308,6 +308,17 @@ input:checked + .slider:before {
     color: rgba(var(--font-color-light));
 }
 
+/* Tables */
+.table-body {
+    background-color: rgba(var(--background-dark))!important;
+    color: rgba(var(--font-color-dark));
+}
+
+.table-header {
+    background-color: rgba(var(--background-dark))!important;
+    color: rgba(var(--font-color-dark));
+}
+
 /*Buttons*/
 .btn {
     color: rgba(var(--font-color-dark))!important;
