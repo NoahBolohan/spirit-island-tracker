@@ -296,7 +296,6 @@ function generate_spirit_select_list_item_for_spirit(
             );
 
             append_spirit_setup_to_modal(
-                spirit_name,
                 spirit_config
             );
 
@@ -318,7 +317,6 @@ function generate_spirit_select_list_item_for_spirit(
 }
 
 function append_spirit_setup_to_modal(
-    spirit_name,
     spirit_config
 ) {
     $("#modal_setup_body").empty();
