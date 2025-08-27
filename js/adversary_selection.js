@@ -538,7 +538,7 @@ function append_invader_rules_to_modal(
 
     // Loss Condition
 
-    var top_row = $("<div>").attr(
+    var  leading_loss_condition_row = $("<div>").attr(
         {
             class:"row mb-2"
         }
@@ -546,7 +546,7 @@ function append_invader_rules_to_modal(
 
     var leading_loss_condition_div = $("<div>").attr(
         {
-            class:"col-5"
+            class:"col-12"
         }
     );
 
@@ -566,26 +566,42 @@ function append_invader_rules_to_modal(
     if (leading_adversary_config["additional_loss_condition"]["title"] != "") {
 
         leading_loss_condition_div.append(
-            spirit_text_keyword_converter(
-                leading_adversary_config["additional_loss_condition"]["title"],
-                18,
-                "font-size:1.6vh;font-weight:bold;"
-            )
-        );
-
-        leading_loss_condition_div.append(
-            $("<span>").attr(
+            $("<button>").attr(
                 {
-                    class:`text-line ${dark_mode_flag}`
+                    id: `button_leading_adversary_additional_loss_condition_toggle`,
+                    class:`w-100 mb-2 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
                 }
-            ).text(": ")
-        );
+            ).html(
+                spirit_text_keyword_converter(
+                    leading_adversary_config["additional_loss_condition"]["title"],
+                    18,
+                    "text-align:left;"
+                ) + `<img style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+            )
+        )
+
+        // leading_loss_condition_div.append(
+        //     spirit_text_keyword_converter(
+        //         leading_adversary_config["additional_loss_condition"]["title"],
+        //         18,
+        //         "font-size:1.6vh;font-weight:bold;"
+        //     )
+        // );
+
+        // leading_loss_condition_div.append(
+        //     $("<span>").attr(
+        //         {
+        //             class:`text-line ${dark_mode_flag}`
+        //         }
+        //     ).text(": ")
+        // );
 
         leading_loss_condition_div.append(
             spirit_text_keyword_converter(
                 leading_adversary_config["additional_loss_condition"]["effect"],
                 18,
-                "font-size:1.6vh;display:inline;"
+                "font-size:1.6vh;display:inline;display:none;",
+                "leading_loss_condition_text"
             )
         );
     }
@@ -602,9 +618,15 @@ function append_invader_rules_to_modal(
 
     // Stage 2 Escalation
 
+    var  leading_stage_2_escalation_row = $("<div>").attr(
+        {
+            class:"row mb-2"
+        }
+    );
+
     var leading_stage_2_escalation_div = $("<div>").attr(
         {
-            class:"col-7",
+            class:"col-12",
         }
     );
 
@@ -631,26 +653,42 @@ function append_invader_rules_to_modal(
     );
 
     leading_stage_2_escalation_div.append(
-        spirit_text_keyword_converter(
-            leading_adversary_config["stage_2_escalation"]["title"],
-            18,
-            "font-size:1.6vh;font-weight:bold;"
+        $("<button>").attr(
+            {
+                id: `button_leading_adversary_stage_2_escalation_toggle`,
+                class:`w-100 mb-2 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+            }
+        ).html(
+            spirit_text_keyword_converter(
+                leading_adversary_config["stage_2_escalation"]["title"],
+                18,
+                "text-align:left;"
+            ) + `<img style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
         )
     );
 
-    leading_stage_2_escalation_div.append(
-        $("<span>").attr(
-            {
-                class:`text-line ${dark_mode_flag}`
-            }
-        ).text(": ")
-    );
+    // leading_stage_2_escalation_div.append(
+    //     spirit_text_keyword_converter(
+    //         leading_adversary_config["stage_2_escalation"]["title"],
+    //         18,
+    //         "font-size:1.6vh;font-weight:bold;"
+    //     )
+    // );
+
+    // leading_stage_2_escalation_div.append(
+    //     $("<span>").attr(
+    //         {
+    //             class:`text-line ${dark_mode_flag}`
+    //         }
+    //     ).text(": ")
+    // );
 
     leading_stage_2_escalation_div.append(
         spirit_text_keyword_converter(
             leading_adversary_config["stage_2_escalation"]["effect"],
             18,
-            "font-size:1.6vh;display:inline;"
+            "font-size:1.6vh;display:inline;display:none;",
+            "leading_stage_2_escalation_text"
         )
     );
 
@@ -841,14 +879,18 @@ function append_invader_rules_to_modal(
     );
 
     leading_loss_condition_div.appendTo(
-        top_row
+        leading_loss_condition_row
     );
 
     leading_stage_2_escalation_div.appendTo(
-        top_row
+        leading_stage_2_escalation_row
     );
 
-    top_row.appendTo(
+    leading_loss_condition_row.appendTo(
+        $("#modal_invader_rules_body")
+    );
+
+    leading_stage_2_escalation_row.appendTo(
         $("#modal_invader_rules_body")
     );
 
@@ -875,12 +917,30 @@ function append_invader_rules_to_modal(
                             "visibility",
                             "visible"
                         );
+
                         $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
                     } else {
                         $(`#row_leading_adversary_rule_${level}`).css(
                             "visibility",
                             "collapse"
                         );
+
+                        var text_show_all = true;
+
+                        $.each(
+                            [1,2,3,4,5,6],
+                            function (idx,level) {
+                                if (
+                                    $(`#row_leading_adversary_rule_${level}`).css("visibility") == "visible"
+                                ) {
+                                    text_show_all = false;
+                                }
+                            }
+                        )
+
+                        if (text_show_all) {
+                            $(`#button_leading_adversary_toggle_all_rules`).text("Show all");
+                        }
                     }
                 }
             )
@@ -924,6 +984,50 @@ function append_invader_rules_to_modal(
             }
         }
     )
+
+    $("#button_leading_adversary_additional_loss_condition_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#leading_loss_condition_text").css("display")=="none"
+            ) {
+                $("#leading_loss_condition_text").css(
+                    "display",
+                    "block"
+                )
+            }
+            else if (
+                $("#leading_loss_condition_text").css("display")=="block"
+            ) {
+                $("#leading_loss_condition_text").css(
+                    "display",
+                    "none"
+                )
+            }
+        }
+    );
+
+    $("#button_leading_adversary_stage_2_escalation_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#leading_stage_2_escalation_text").css("display")=="none"
+            ) {
+                $("#leading_stage_2_escalation_text").css(
+                    "display",
+                    "block"
+                )
+            }
+            else if (
+                $("#leading_stage_2_escalation_text").css("display")=="block"
+            ) {
+                $("#leading_stage_2_escalation_text").css(
+                    "display",
+                    "none"
+                )
+            }
+        }
+    );
 }
 
 
