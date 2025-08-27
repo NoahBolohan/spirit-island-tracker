@@ -601,20 +601,53 @@ function switch_font_color() {
         ) == "dark"
     ) {
         var font_color = "--font-color-light";
+
+        rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
+
+        let color = new Color(
+            rgb_triple[0], rgb_triple[1], rgb_triple[2]
+        );
+        let solver = new Solver(color);
+        let result = solver.solve()
+        let filterCSS = result.filter;
+
+        $(".svg").attr("style", filterCSS);
+
+        // $(".svg").css(filterCSS);
+
+        // $.each(
+        //     filterCSS,
+        //     function(
+        //         k,
+        //         v
+        //     ) {
+        //         alert(k)
+        //         $(".svg").css(k,v);
+        //     }
+        // )
+
     } else {
         var font_color = "--font-color-dark";
+
+        filterCSS = `-webkit-filter:;
+            -moz-filter:;
+            -o-filter:;
+            -ms-filter:;
+            filter:;`
+
+        $(".svg").attr("style", filterCSS);
+
+        // $(".svg").css(filterCSS);
     }
 
-    rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
+    // rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
 
-    let color = new Color(
-        rgb_triple[0], rgb_triple[1], rgb_triple[2]
-    );
-    let solver = new Solver(color);
-    let result = solver.solve()
-    let filterCSS = result.filter;
-
-    $(".svg").attr("style", filterCSS);
+    // let color = new Color(
+    //     rgb_triple[0], rgb_triple[1], rgb_triple[2]
+    // );
+    // let solver = new Solver(color);
+    // let result = solver.solve()
+    // let filterCSS = result.filter;
 }
 
 $(document).ready(

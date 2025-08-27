@@ -61,9 +61,14 @@ function spirit_text_keyword_converter(
                         return_html_array.push(
                             // `<object data="static/icons/${json["keywords"][value]}" height="${height}px"></object>`
                             // `<object data="static/icons/${json["keywords"][value]}" style="max-height: ${max_size}px; max-width: ${max_size}px;"></object>`
-                            `<object data="static/icons/${
+                            // `<object data="static/icons/${
+                            //     json["keywords"][value]["file_name"]
+                            // }" style="max-height: ${max_size}px; max-width: ${max_size}px;display: inline-block; vertical-align: baseline;"></object>`
+                            `<img class="svg" src="static/icons/${
                                 json["keywords"][value]["file_name"]
-                            }" style="max-height: ${max_size}px; max-width: ${max_size}px;display: inline-block; vertical-align: baseline;"></object>`
+                            }"></img>`
+
+                            // <img style="align-self: center" class="svg" src=""  height="25px"></img>
                         )
                     }
                     else {

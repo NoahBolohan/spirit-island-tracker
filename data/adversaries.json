@@ -125,7 +125,7 @@
                     "effect":"TOWN/CITY have +1 Health."
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":11,
                 "fear_cards":"13 (4/5/4)",
                 "game_effects":{

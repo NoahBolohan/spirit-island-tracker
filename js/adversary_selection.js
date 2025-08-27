@@ -705,6 +705,7 @@ function append_invader_rules_to_modal(
                                 spirit_text_keyword_converter(
                                     level_config["game_effects"]["title"],
                                     18,
+                                    "text-align:left;"
                                 ) + '<img style="align-self: center" class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>'
                             )
                         )
@@ -799,6 +800,7 @@ function append_invader_rules_to_modal(
                             "visibility",
                             "visible"
                         );
+                        $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
                     } else {
                         $(`#row_leading_adversary_rule_${level}`).css(
                             "visibility",
@@ -827,7 +829,7 @@ function append_invader_rules_to_modal(
                         );
                     }
                 )
-                
+
                 $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
             }
             else {
