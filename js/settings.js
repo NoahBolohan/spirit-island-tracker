@@ -690,6 +690,7 @@ function dark_mode_content() {
             ".card",
             ".card-header",
             ".card-body",
+            ".table-background",
             ".table-body",
             ".table-header",
             ".modal-content",

@@ -559,13 +559,12 @@ function append_invader_rules_to_modal(
 
     var leading_rules_table  = $("<div>").attr(
         {
-            class:"table",
+            class:`table ${dark_mode_flag} table-background`,
             style:"margin:0;padding:1vh;"
         }
     ).html(
         $("<thead>").attr(
             {
-                class:"table-header",
                 style: "width: 100%;display: table;"
             }
         ).html(
