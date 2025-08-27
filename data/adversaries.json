@@ -30,7 +30,7 @@
                 "fear_cards":"9 (3/3/3)",
                 "game_effects":{
                     "title":"Surge of Colonists",
-                    "effect":"When making the Invader Deck, put 1 of the State III cards between Stage I and Stage II. (New Deck Order: 111-3-2222-3333)"
+                    "effect":"When making the Invader Deck, put 1 of the State III cards between Stage I and Stage II. <em>(New Deck Order: 111-3-2222-3333)</em>"
                 }
             },
             "3":{
@@ -38,7 +38,7 @@
                 "fear_cards":"10 (3/4/3)",
                 "game_effects":{
                     "title":"Efficient",
-                    "effect":"When making the Invader Deck, remove an additional Stage I card. (New Deck Order: 11-3-2222-3333)"
+                    "effect":"When making the Invader Deck, remove an additional Stage I card. <em>(New Deck Order: 11-3-2222-3333)</em>"
                 }
             },
             "4":{
@@ -46,7 +46,7 @@
                 "fear_cards":"11 (4/4/3)",
                 "game_effects":{
                     "title":"Aggressive Timetable",
-                    "effect":"When making the Invader Deck, remove an additional Stage II card. (New Deck Order: 11-3-222-3333)"
+                    "effect":"When making the Invader Deck, remove an additional Stage II card. <em>(New Deck Order: 11-3-222-3333)</em>"
                 }
             },
             "5":{
@@ -54,7 +54,7 @@
                 "fear_cards":"11 (4/4/3)",
                 "game_effects":{
                     "title":"Ruthlessly Efficient",
-                    "effect":"When making the Invader Deck, remove an additional Stage I card. (New Deck Order: 1-3-222-3333)"
+                    "effect":"When making the Invader Deck, remove an additional Stage I card. <em>(New Deck Order: 1-3-222-3333)</em>"
                 }
             },
             "6":{
@@ -62,7 +62,7 @@
                 "fear_cards":"12 (4/4/4)",
                 "game_effects":{
                     "title":"Terrifyingly Efficient",
-                    "effect":"When making the Invader Deck, remove all the Stage I cards. (New Deck Order: 3-222-3333)"
+                    "effect":"When making the Invader Deck, remove all the Stage I cards. <em>(New Deck Order: 3-222-3333)</em>"
                 }
             }
         }
@@ -130,7 +130,7 @@
                 "fear_cards":"13 (4/5/4)",
                 "game_effects":{
                     "title":"Independent Resolve",
-                    "effect":"During Setup, add an additional FEAR to the Fear Pool per player in the game. During any Invader Phase where you resolve no Fear Cards, perform the Build from High Immigration twice. (This has no effect is no card is on the extra build slot)."
+                    "effect":"During Setup, add an additional FEAR to the Fear Pool per player in the game. During any Invader Phase where you resolve no Fear Cards, perform the Build from High Immigration twice. <em>(This has no effect is no card is on the extra build slot)</em>."
                 }
             }
         }
@@ -182,7 +182,7 @@
                 "fear_cards":"12 (4/4/4)",
                 "game_effects":{
                     "title":"Triangle Trade",
-                    "effect":"Whenever Invaders Build a Coastal CITY< add 1 TOWN to the adjavent land with the fewest TOWN."
+                    "effect":"Whenever Invaders Build a Coastal CITY, add 1 TOWN to the adjacent land with the fewest TOWN."
                 }
             },
             "5":{

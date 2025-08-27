@@ -529,7 +529,9 @@ function append_invader_rules_to_modal(
         $("<img>").attr(
             {
                 style:"height:6vh;",
-                src: `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/adversaries/${leading_adversary_name}.png`
+                src: generate_encoded_adversary_image_url(
+                    leading_adversary_name
+                )
             }
         )
     );

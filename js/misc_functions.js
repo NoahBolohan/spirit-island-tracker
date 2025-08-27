@@ -37,8 +37,9 @@ function spirit_text_keyword_converter(
     }
 
     var input_string_array = string.split(
-        /(\:|\(|\)|\/|\<|\>|\.|\,|\s+)/
+        /(\:|\(|\)|\/|\>|\.|\,|\s+)/
     );
+    // alert(input_string_array)
 
     if (style=="none") {
         var return_html_array = [`<span class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
@@ -69,6 +70,16 @@ function spirit_text_keyword_converter(
                             }"></img>`
 
                             // <img style="align-self: center" class="svg" src=""  height="25px"></img>
+                        )
+                    }
+                    else if (value == "<em") {
+                        return_html_array.push(
+                            `<em class="text-line ${dark_mode_flag}"`
+                        )
+                    }
+                    else if (value == "<b") {
+                        return_html_array.push(
+                            `<b class="text-line ${dark_mode_flag}"`
                         )
                     }
                     else {
