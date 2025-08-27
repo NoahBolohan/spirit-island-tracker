@@ -112,7 +112,7 @@
             "vertical-align" : ""
         },
         "PLANT" : {
-            "file_name" : "plant.svg",
+            "file_name" : "plant.png",
             "vertical-align" : ""
         },
         "PRESENCE" : {
@@ -140,7 +140,7 @@
             "vertical-align" : ""
         },
         "SUN" : {
-            "file_name" : "sun.svg",
+            "file_name" : "sun.png",
             "vertical-align" : ""
         },
         "THE_ENDLESS_DARK" : {
