@@ -295,6 +295,14 @@ function generate_spirit_select_list_item_for_spirit(
                 theme
             );
 
+            append_spirit_setup_to_modal(
+                spirit_config
+            );
+
+            custom_show(
+                "#button_setup"
+            );
+
             const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
 
             if (accepts_cookies) {
@@ -305,6 +313,19 @@ function generate_spirit_select_list_item_for_spirit(
             }
             
         }
+    );
+}
+
+function append_spirit_setup_to_modal(
+    spirit_config
+) {
+    $("#modal_setup_body").empty();
+
+    $("#modal_setup_body").html(
+        spirit_text_keyword_converter(
+            spirit_config["setup"],
+            18
+        )
     );
 }
 

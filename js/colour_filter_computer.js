@@ -209,11 +209,68 @@ class Solver {
 
     css(filters) {
         function fmt(idx, multiplier = 1) { return Math.round(filters[idx] * multiplier); }
-        return `-webkit-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
-            -moz-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
-            -o-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
-            -ms-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
-            filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);`
-        
+
+        // $("body").get(0).style.setProperty(
+        //     "--invert",
+        //     fmt(0)
+        // );
+        // $("body").get(0).style.setProperty(
+        //     "--sepia",
+        //     fmt(1)
+        // );
+        // $("body").get(0).style.setProperty(
+        //     "--saturate",
+        //     fmt(2)
+        // );
+        // $("body").get(0).style.setProperty(
+        //     "--hue-rotate",
+        //     fmt(3, 3.6)
+        // );
+        // $("body").get(0).style.setProperty(
+        //     "--brightness",
+        //     fmt(4)
+        // );
+        // $("body").get(0).style.setProperty(
+        //     "--contrast",
+        //     fmt(5)
+        // );
+
+        $("body").get(0).style.setProperty(
+            "--invert",
+            `${fmt(0)}%`
+        );
+        $("body").get(0).style.setProperty(
+            "--sepia",
+            `${fmt(1)}%`
+        );
+        $("body").get(0).style.setProperty(
+            "--saturate",
+            `${fmt(2)}%`
+        );
+        $("body").get(0).style.setProperty(
+            "--hue-rotate",
+            `${fmt(3, 3.6)}deg`
+        );
+        $("body").get(0).style.setProperty(
+            "--brightness",
+            `${fmt(4)}%`
+        );
+        $("body").get(0).style.setProperty(
+            "--contrast",
+            `${fmt(5)}%`
+        );
+        // reurn `-webkit-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
+        //     -moz-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
+        //     -o-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
+        //   t  -ms-filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);
+        //     filter:invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%);`
+
+        // return {
+        //     "-webkit-filter":"invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)",
+        //     "-moz-filter":"invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)",
+        //     "-o-filter":"invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)",
+        //     "-ms-filter":"invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)",
+        //     "filter":"invert(${fmt(0)}%) sepia(${fmt(1)}%) saturate(${fmt(2)}%) hue-rotate(${fmt(3, 3.6)}deg) brightness(${fmt(4)}%) contrast(${fmt(5)}%)"
+        // }
     }
 }

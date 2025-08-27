@@ -51,7 +51,7 @@ $(document).ready(
                     "#section_supporting_adversary"
                 );
 
-                difficulty_calculator();
+                append_invader_rules_and_difficulty();
 
                 $(`#button_select_leading_adversary`).removeClass(
                     "btn-outlineless"
@@ -62,6 +62,10 @@ $(document).ready(
                 );
 
                 $(`#modal_leading_adversaries`).modal("hide");
+
+                custom_hide(
+                    "#button_invader_rules"
+                );
 
                 localStorage.removeItem(
                     "leading_adversary_button_name"
@@ -90,7 +94,7 @@ $(document).ready(
                     ""
                 );
 
-                difficulty_calculator();
+                append_invader_rules_and_difficulty();
 
                 $(`#button_select_supporting_adversary`).removeClass(
                     "btn-outlineless"
@@ -322,6 +326,10 @@ function button_set_adversary_content(
     );
 
     custom_show(
+        "#button_invader_rules"
+    );
+
+    custom_show(
         "#section_supporting_adversary"
     );
 
@@ -352,7 +360,9 @@ $(document).ready(
                                     value
                                 );
 
-                                difficulty_calculator();
+                                append_invader_rules_and_difficulty();
+
+                                switch_font_color();
 
                                 const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
 
@@ -372,6 +382,550 @@ $(document).ready(
         )
     }
 )
+
+function append_invader_rules_and_difficulty() {
+    $.getJSON('https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/adversaries.json', function(adversaries) {
+        $.getJSON('https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/scenarios.json', function(scenarios) {
+
+            var total_difficulty = 0;
+
+            // Compute leading adversary difficulty
+            if ($("#spirit_island_tracker_body").data("leading_adversary") == "") {
+                var leading_adversary_difficulty = 0;
+            }
+            else {
+                leading_adversary_difficulty = adversaries[
+                    $("#spirit_island_tracker_body").data("leading_adversary")
+                ]["level"][
+                    $("#spirit_island_tracker_body").data("leading_adversary_level")
+                ]["difficulty"];
+            }
+
+            total_difficulty += leading_adversary_difficulty;
+
+            // Compute supporting adversary difficulty
+            if ($("#spirit_island_tracker_body").data("supporting_adversary") == "") {
+                var supporting_adversary_difficulty = 0;
+            }
+            else {
+                supporting_adversary_difficulty = adversaries[
+                    $("#spirit_island_tracker_body").data("supporting_adversary")
+                ]["level"][
+                    $("#spirit_island_tracker_body").data("supporting_adversary_level")
+                ]["difficulty"];
+            }
+
+            total_difficulty += supporting_adversary_difficulty;
+
+            // // Compute scenario difficulty
+            // if ($("#col_select_scenario").val() == "Second Wave") {
+            //     total_difficulty = `${total_difficulty + 1}/${total_difficulty - 1}`;
+            // }
+            // else {
+            //     if ($("#col_select_scenario").val() == null) {
+            //         var scenario_difficulty = 0;
+            //     }
+            //     else {
+            //         var scenario_difficulty = scenarios[$("#col_select_scenario").val()]["difficulty"];
+            //     }
+
+            //     total_difficulty += scenario_difficulty;
+            // }
+
+            // Assign the difficulty value to the difficulty display div
+            $("#button_invader_rules").text(
+                "Difficulty: " + total_difficulty
+            )
+        })
+
+        append_invader_rules_to_modal(
+            $("#spirit_island_tracker_body").data("leading_adversary"),
+            adversaries[
+                $("#spirit_island_tracker_body").data("leading_adversary")
+            ],
+            $("#spirit_island_tracker_body").data("supporting_adversary"),
+            adversaries[
+                $("#spirit_island_tracker_body").data("supporting_adversary")
+            ],
+            18
+        );
+    })
+}
+
+function append_invader_rules_to_modal(
+    leading_adversary_name,
+    leading_adversary_config,
+    supporting_adversary_name,
+    supporting_adversary_config
+) {
+
+    $("#modal_invader_rules_body").empty();
+
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
+    // Header
+
+    var header = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var leading_invader_header_text = $("<div>").attr(
+        {
+            class:"col-9"
+        }
+    );
+
+    var header_1 = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var header_2 = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    $("<div>").attr(
+        {
+            class:`col text-line ${dark_mode_flag}`,
+            style:"font-size:2.5vh;"
+        }
+    ).text(
+        leading_adversary_name
+    ).appendTo(
+        header_1
+    );
+
+    $("<div>").attr(
+        {
+            class:`col text-line ${dark_mode_flag}`,
+            style:"font-size:1.5vh;font-style:italic;"
+        }
+    ).text(
+        "Level "+$("#spirit_island_tracker_body").data("leading_adversary_level")+" / Difficulty "+leading_adversary_config["level"][
+            $("#spirit_island_tracker_body").data("leading_adversary_level")
+        ]["difficulty"]
+    ).appendTo(
+        header_2
+    );
+
+    var leading_invader_header_image = $("<div>").attr(
+        {
+            class:"col-3"
+        }
+    ).append(
+        $("<img>").attr(
+            {
+                style:"height:6vh;",
+                src: generate_encoded_adversary_image_url(
+                    leading_adversary_name
+                )
+            }
+        )
+    );
+
+    // Loss Condition
+
+    var top_row = $("<div>").attr(
+        {
+            class:"row mb-2"
+        }
+    );
+
+    var leading_loss_condition_div = $("<div>").attr(
+        {
+            class:"col-6"
+        }
+    );
+
+    leading_loss_condition_div.append(
+        $("<b>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`,
+                style:"font-style:italic;font-size:1.5vh;"
+            }
+        ).text("Additional Loss Condition")
+    );
+
+    leading_loss_condition_div.append(
+        $("<br>")
+    );
+
+    if (leading_adversary_config["additional_loss_condition"]["title"] != "") {
+
+        leading_loss_condition_div.append(
+            spirit_text_keyword_converter(
+                leading_adversary_config["additional_loss_condition"]["title"],
+                18,
+                "font-size:1.3vh;font-weight:bold;"
+            )
+        );
+
+        leading_loss_condition_div.append(
+            $("<span>").attr(
+                {
+                    class:`text-line ${dark_mode_flag}`
+                }
+            ).text(": ")
+        );
+
+        leading_loss_condition_div.append(
+            spirit_text_keyword_converter(
+                leading_adversary_config["additional_loss_condition"]["effect"],
+                18,
+                "font-size:1.3vh;display:inline;"
+            )
+        );
+    }
+    else {
+        leading_loss_condition_div.append(
+            $("<p>").attr(
+                {
+                    class:`text-line ${dark_mode_flag}`,
+                    style:"font-style:italic;"
+                }
+            ).text("None")
+        )
+    };
+
+    // Stage 2 Escalation
+
+    var leading_stage_2_escalation_div = $("<div>").attr(
+        {
+            class:"col-6",
+        }
+    );
+
+    leading_stage_2_escalation_div.append(
+        $("<b>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`,
+                style:"font-style:italic;font-size:1.5vh;"
+            }
+        ).text("Stage II Escalation ").append(
+            $("<img>").attr(
+                {
+                    style:"align-self: center;",
+                    class:`svg ${dark_mode_flag}`,
+                    src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/town.svg"
+
+                }
+            )
+        )
+    );
+
+    leading_stage_2_escalation_div.append(
+        $("<br>")
+    );
+
+    leading_stage_2_escalation_div.append(
+        spirit_text_keyword_converter(
+            leading_adversary_config["stage_2_escalation"]["title"],
+            18,
+            "font-size:1.3vh;font-weight:bold;"
+        )
+    );
+
+    leading_stage_2_escalation_div.append(
+        $("<span>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`
+            }
+        ).text(": ")
+    );
+
+    leading_stage_2_escalation_div.append(
+        spirit_text_keyword_converter(
+            leading_adversary_config["stage_2_escalation"]["effect"],
+            18,
+            "font-size:1.3vh;display:inline;"
+        )
+    );
+
+    // Rules
+
+    var leading_rules_div = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var leading_rules_table  = $("<div>").attr(
+        {
+            class:`table ${dark_mode_flag} table-background`,
+            style:"margin:0;padding:1vh;"
+        }
+    ).html(
+        $("<thead>").attr(
+            {
+                style: "width: 100%;display: table;"
+            }
+        ).html(
+            $("<tr>").append(
+                $("<th>").attr(
+                    {
+                        scope:"col",
+                        style:"width:15%;font-style:italic;",
+                        class:`text-line ${dark_mode_flag} table-header`
+                    }
+                ).text("Level")
+            ).append(
+                $("<th>").attr(
+                    {
+                        scope:"col",
+                        style:"width:25%;font-style:italic;",
+                        class:`text-line ${dark_mode_flag} table-header`
+                    }
+                ).text("Fear")
+            ).append(
+                $("<th>").attr(
+                    {
+                        scope:"col",
+                        class:`text-line ${dark_mode_flag} table-header`,
+                        style:"display:flex;"
+                    }
+                ).append(
+                    $("<div>").attr(
+                        {
+                            style:"align-self: flex-end;font-style:italic;",
+                            class:`text-line ${dark_mode_flag} table-header`
+                        }
+                    ).text("Game Effects")
+                ).append(
+                    $("<button>").attr(
+                        {
+                            id: `button_leading_adversary_toggle_all_rules`,
+                            class:`p-1 btn btn-reset-page ${dark_mode_flag}`,
+                            style:"margin-left: auto;"
+                        }
+                    ).text(
+                        "Show all"
+                    )
+                )
+            )
+        )
+    );
+
+    var leading_rules_table_body = $("<tbody>").attr(
+        {
+            style: "width: 100%;display: table;"
+        }
+    );
+
+    $.each(
+        leading_adversary_config["level"],
+        function (
+            level,
+            level_config
+        ) {
+            if (parseInt(level) > 0) {
+                leading_rules_table_body.append(
+                    $("<tr>").attr(
+                        {
+                            class:"table-body"
+                        }
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:15%",
+                                class:`text-line ${dark_mode_flag} table-body`
+                            }
+                        ).html(level)
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:25%",
+                                class:`text-line ${dark_mode_flag} table-body`
+                            }
+                        ).html(
+                            level_config["fear_cards"]
+                        )
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:60%",
+                                class:`text-line ${dark_mode_flag} table-body`
+                            }
+                        ).append(
+                            $("<button>").attr(
+                                {
+                                    id: `button_leading_adversary_rule_${level}_toggle`,
+                                    class:`w-100 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+                                }
+                            ).html(
+                                spirit_text_keyword_converter(
+                                    level_config["game_effects"]["title"],
+                                    18,
+                                    "text-align:left;"
+                                ) + `<img style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                            )
+                        )
+                    )
+                )
+
+                leading_rules_table_body.append(
+                    $("<tr>").attr(
+                        {
+                            id: `row_leading_adversary_rule_${level}`,
+                            style:"visibility:collapse;"
+                        }
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:100%",
+                                class:`text-line ${dark_mode_flag} table-body`,
+                                colspan:"3"
+                            }
+                        ).append(
+                            $("<p>").attr(
+                                {
+                                    class:`${dark_mode_flag}`
+                                }
+                            ).html(
+                                spirit_text_keyword_converter(
+                                    level_config["game_effects"]["effect"],
+                                    18
+                                )
+                            )
+                        )
+                    )
+                )
+            }
+        }
+    )
+
+    leading_rules_table_body.appendTo(
+        leading_rules_table
+    );
+
+    // Appending
+
+    header.appendTo(
+        $("#modal_invader_rules_body")
+    );
+
+    header_1.appendTo(
+        leading_invader_header_text
+    );
+
+    header_2.appendTo(
+        leading_invader_header_text
+    );
+
+    leading_invader_header_image.appendTo(
+        header
+    );
+
+    leading_invader_header_text.appendTo(
+        header
+    );
+
+    $("<hr>").attr(
+        {
+            class:`hr2 ${dark_mode_flag}`
+        }
+    ).appendTo(
+        $("#modal_invader_rules_body")
+    );
+
+    leading_loss_condition_div.appendTo(
+        top_row
+    );
+
+    leading_stage_2_escalation_div.appendTo(
+        top_row
+    );
+
+    top_row.appendTo(
+        $("#modal_invader_rules_body")
+    );
+
+    leading_rules_table.appendTo(
+        leading_rules_div
+    );
+
+    leading_rules_div.appendTo(
+        $("#modal_invader_rules_body")
+    )
+
+    $.each(
+        leading_adversary_config["level"],
+        function(
+            level
+        ) {
+            $(`#button_leading_adversary_rule_${level}_toggle`).on(
+                "click",
+                function () {
+                    if (
+                        $(`#row_leading_adversary_rule_${level}`).css("visibility") == "collapse"
+                    ) {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "visible"
+                        );
+                        $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
+                    } else {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "collapse"
+                        );
+                    }
+                }
+            )
+        }
+    )
+
+    $(`#button_leading_adversary_toggle_all_rules`).on(
+        "click",
+        function () {
+            if (
+                $(`#button_leading_adversary_toggle_all_rules`).text() == "Show all"
+            ) {
+                $.each(
+                    leading_adversary_config["level"],
+                    function(
+                        level
+                    ) {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "visible"
+                        );
+                    }
+                )
+
+                $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
+            }
+            else {
+                $.each(
+                    leading_adversary_config["level"],
+                    function(
+                        level
+                    ) {
+                        $(`#row_leading_adversary_rule_${level}`).css(
+                            "visibility",
+                            "collapse"
+                        );
+                    }
+                )
+
+                $(`#button_leading_adversary_toggle_all_rules`).text("Show all");
+            }
+        }
+    )
+}
+
 
 function generate_default_leading_adversary_select_button() {
 

@@ -22,6 +22,54 @@ $(document).ready(
     }
 )
 
+$(document).ready(
+    function() {
+
+        $("#button_setup").on(
+            "click",
+            function() {
+                $("#modal_setup").modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_close_modal_setup").on(
+            "click",
+            function() {
+                $("#modal_setup").modal("hide");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_invader_rules").on(
+            "click",
+            function() {
+                $("#modal_invader_rules").modal("show");
+            }
+        );
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $("#button_close_modal_invader_rules").on(
+            "click",
+            function() {
+                $("#modal_invader_rules").modal("hide");
+            }
+        );
+    }
+)
+
 // https://github.com/richtr/NoSleep.js
 var noSleep = new NoSleep();
 var wakeLockEnabled = false;
@@ -230,6 +278,10 @@ function reset_spirit_selection() {
 
     localStorage.removeItem(
         "spirit_button_name"
+    );
+
+    custom_hide(
+        "#button_setup"
     );
 }
 
@@ -549,20 +601,78 @@ function switch_font_color() {
         ) == "dark"
     ) {
         var font_color = "--font-color-light";
+
+        rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
+
+        let color = new Color(
+            rgb_triple[0], rgb_triple[1], rgb_triple[2]
+        );
+        let solver = new Solver(color);
+        let result = solver.solve()
+        let filterCSS = result.filter;
+
+        // $(".svg").attr("style", filterCSS);
+
+        // $(".svg").css(filterCSS);
+
+        // $.each(
+        //     filterCSS,
+        //     function(
+        //         k,
+        //         v
+        //     ) {
+        //         alert(k)
+        //         $(".svg").css(k,v);
+        //     }
+        // )
+
     } else {
         var font_color = "--font-color-dark";
+
+        // filterCSS = `-webkit-filter:;
+        //     -moz-filter:;
+        //     -o-filter:;
+        //     -ms-filter:;
+        //     filter:;`
+
+        // $(".svg").attr("style", filterCSS);
+
+        $("body").get(0).style.setProperty(
+            "--invert",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--sepia",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--saturate",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--hue-rotate",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--brightness",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--contrast",
+            ""
+        );
+
+        // $(".svg").css(filterCSS);
     }
 
-    rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
+    // rgb_triple = window.getComputedStyle(document.body).getPropertyValue(font_color).split(',');
 
-    let color = new Color(
-        rgb_triple[0], rgb_triple[1], rgb_triple[2]
-    );
-    let solver = new Solver(color);
-    let result = solver.solve()
-    let filterCSS = result.filter;
-
-    $(".svg").attr("style", filterCSS);
+    // let color = new Color(
+    //     rgb_triple[0], rgb_triple[1], rgb_triple[2]
+    // );
+    // let solver = new Solver(color);
+    // let result = solver.solve()
+    // let filterCSS = result.filter;
 }
 
 $(document).ready(
@@ -595,7 +705,7 @@ function dark_mode_content() {
             "colour_scheme",
             "dark"
         );
-        
+
         $("body").addClass(
             "dark-mode-body"
         );
@@ -616,7 +726,7 @@ function dark_mode_content() {
             "colour_scheme",
             "light"
         );
-        
+
         $("body").removeClass(
             "dark-mode-body"
         );
@@ -638,6 +748,9 @@ function dark_mode_content() {
             ".card",
             ".card-header",
             ".card-body",
+            ".table-background",
+            ".table-body",
+            ".table-header",
             ".modal-content",
             ".modal-title",
             ".modal-header",
@@ -656,7 +769,8 @@ function dark_mode_content() {
             ".minus-border",
             ".minus-inner",
             ".hr2",
-            ".close-x"
+            ".close-x",
+            ".svg"
         ],
         function (
             idx,
@@ -668,6 +782,7 @@ function dark_mode_content() {
                 $(val).addClass(
                     "dark-mode"
                 )
+
             } else {
                 $(val).removeClass(
                     "dark-mode"
@@ -695,7 +810,6 @@ $(document).ready(
         }
     }
 )
-
 
 $(document).ready(
     function() {
