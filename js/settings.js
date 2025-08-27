@@ -756,6 +756,7 @@ function dark_mode_content() {
                 $(val).addClass(
                     "dark-mode"
                 )
+
             } else {
                 $(val).removeClass(
                     "dark-mode"
@@ -783,7 +784,6 @@ $(document).ready(
         }
     }
 )
-
 
 $(document).ready(
     function() {

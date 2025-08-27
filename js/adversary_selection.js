@@ -362,6 +362,8 @@ $(document).ready(
 
                                 append_invader_rules_and_difficulty();
 
+                                switch_font_color();
+
                                 const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
 
                                 if (accepts_cookies) {
