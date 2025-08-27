@@ -78,6 +78,11 @@ function spirit_text_keyword_converter(
                             `<b class="text-line ${dark_mode_flag}"`
                         )
                     }
+                    else if (value == "<u") {
+                        return_html_array.push(
+                            `<u class="text-line ${dark_mode_flag}"`
+                        )
+                    }
                     else {
                         return_html_array.push(
                             value

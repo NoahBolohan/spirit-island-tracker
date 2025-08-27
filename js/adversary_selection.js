@@ -713,11 +713,11 @@ function append_invader_rules_to_modal(
                     $("<button>").attr(
                         {
                             id: `button_leading_adversary_toggle_all_rules`,
-                            class:`p-1 btn btn-reset-page ${dark_mode_flag}`,
+                            class:`p-1 btn btn-reset-page ${dark_mode_flag} d-flex`,
                             style:"margin-left: auto;"
                         }
-                    ).text(
-                        "Show all"
+                    ).html(
+                        '<span id="leading_adversary_toggle_all_rules_text">Show all</span>' + `<img id="leading_adversary_toggle_all_rules_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
                     )
                 )
             )
@@ -890,7 +890,11 @@ function append_invader_rules_to_modal(
                             "img-vert"
                         );
 
-                        $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
+                        $(`#leading_adversary_toggle_all_rules_text`).text("Hide all");
+
+                        $(`#leading_adversary_toggle_all_rules_dropdown_arrow`).addClass(
+                            "img-vert"
+                        );
                     } else {
                         $(`#row_leading_adversary_rule_${level}`).css(
                             "visibility",
@@ -915,8 +919,12 @@ function append_invader_rules_to_modal(
                         )
 
                         if (text_show_all) {
-                            $(`#button_leading_adversary_toggle_all_rules`).text("Show all");
+                            $(`#leading_adversary_toggle_all_rules_text`).text("Show all");
                         }
+
+                        $(`#leading_adversary_toggle_all_rules_dropdown_arrow`).removeClass(
+                            "img-vert"
+                        );
                     }
                 }
             )
@@ -945,7 +953,11 @@ function append_invader_rules_to_modal(
                     }
                 )
 
-                $(`#button_leading_adversary_toggle_all_rules`).text("Hide all");
+                $(`#leading_adversary_toggle_all_rules_text`).text("Hide all");
+
+                $(`#leading_adversary_toggle_all_rules_dropdown_arrow`).addClass(
+                    "img-vert"
+                );
             }
             else {
                 $.each(
@@ -964,7 +976,11 @@ function append_invader_rules_to_modal(
                     }
                 )
 
-                $(`#button_leading_adversary_toggle_all_rules`).text("Show all");
+                $(`#leading_adversary_toggle_all_rules_text`).text("Show all");
+
+                $(`#leading_adversary_toggle_all_rules_dropdown_arrow`).removeClass(
+                    "img-vert"
+                );
             }
         }
     )
