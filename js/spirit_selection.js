@@ -303,6 +303,8 @@ function generate_spirit_select_list_item_for_spirit(
                 "#button_setup"
             );
 
+            check_tier_availabilities();
+
             const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
 
             if (accepts_cookies) {

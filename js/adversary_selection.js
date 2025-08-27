@@ -554,7 +554,7 @@ function append_invader_rules_to_modal(
         $("<b>").attr(
             {
                 class:`text-line ${dark_mode_flag}`,
-                style:"font-style:italic;font-size:1.5vh;"
+                style:"font-style:italic;font-size:1.6vh;"
             }
         ).text("Additional Loss Condition")
     );
@@ -569,7 +569,7 @@ function append_invader_rules_to_modal(
             spirit_text_keyword_converter(
                 leading_adversary_config["additional_loss_condition"]["title"],
                 18,
-                "font-size:1.3vh;font-weight:bold;"
+                "font-size:1.4vh;font-weight:bold;"
             )
         );
 
@@ -585,7 +585,7 @@ function append_invader_rules_to_modal(
             spirit_text_keyword_converter(
                 leading_adversary_config["additional_loss_condition"]["effect"],
                 18,
-                "font-size:1.3vh;display:inline;"
+                "font-size:1.4vh;display:inline;"
             )
         );
     }
@@ -594,7 +594,7 @@ function append_invader_rules_to_modal(
             $("<p>").attr(
                 {
                     class:`text-line ${dark_mode_flag}`,
-                    style:"font-style:italic;"
+                    style:"font-style:italic;font-size:1.4vh;"
                 }
             ).text("None")
         )
@@ -612,7 +612,7 @@ function append_invader_rules_to_modal(
         $("<b>").attr(
             {
                 class:`text-line ${dark_mode_flag}`,
-                style:"font-style:italic;font-size:1.5vh;"
+                style:"font-style:italic;font-size:1.6vh;"
             }
         ).text("Stage II Escalation ").append(
             $("<img>").attr(
@@ -634,7 +634,7 @@ function append_invader_rules_to_modal(
         spirit_text_keyword_converter(
             leading_adversary_config["stage_2_escalation"]["title"],
             18,
-            "font-size:1.3vh;font-weight:bold;"
+            "font-size:1.4vh;font-weight:bold;"
         )
     );
 
@@ -650,7 +650,7 @@ function append_invader_rules_to_modal(
         spirit_text_keyword_converter(
             leading_adversary_config["stage_2_escalation"]["effect"],
             18,
-            "font-size:1.3vh;display:inline;"
+            "font-size:1.4vh;display:inline;"
         )
     );
 
