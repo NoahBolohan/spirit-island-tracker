@@ -645,7 +645,7 @@ function append_invader_rules_to_modal(
                         {
                             id: `button_leading_adversary_toggle_all_rules`,
                             class:`p-1 btn btn-reset-page ${dark_mode_flag}`,
-                             style:"margin-left: auto;"
+                            style:"margin-left: auto;"
                         }
                     ).text(
                         "Show all"
@@ -699,13 +699,13 @@ function append_invader_rules_to_modal(
                             $("<button>").attr(
                                 {
                                     id: `button_leading_adversary_rule_${level}_toggle`,
-                                    class:`w-100 btn btn-reset-page ${dark_mode_flag}`
+                                    class:`w-100 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
                                 }
                             ).html(
                                 spirit_text_keyword_converter(
                                     level_config["game_effects"]["title"],
-                                    18
-                                )
+                                    18,
+                                ) + '<img style="align-self: center" class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>'
                             )
                         )
                     )

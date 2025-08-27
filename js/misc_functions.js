@@ -22,7 +22,8 @@ function custom_hide(div_id) {
 
 function spirit_text_keyword_converter(
     string,
-    max_size
+    max_size,
+    style="none"
 ) {
 
     if (
@@ -39,7 +40,13 @@ function spirit_text_keyword_converter(
         /(\:|\(|\)|\/|\<|\>|\.|\,|\s+)/
     );
 
-    var return_html_array = [`<p class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
+    if (style=="none") {
+        var return_html_array = [`<p class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
+    }
+    else {
+        var return_html_array = [`<p class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;${style}">`];
+    };
+
 
     $.ajax({
         url: 'https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/config.json',
@@ -49,7 +56,7 @@ function spirit_text_keyword_converter(
             $.each(
                 input_string_array,
                 function(key, value) {
-                    
+
                     if (value in json["keywords"]) {
                         return_html_array.push(
                             // `<object data="static/icons/${json["keywords"][value]}" height="${height}px"></object>`
