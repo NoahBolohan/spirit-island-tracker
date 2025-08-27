@@ -41,10 +41,10 @@ function spirit_text_keyword_converter(
     );
 
     if (style=="none") {
-        var return_html_array = [`<p class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
+        var return_html_array = [`<span class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
     }
     else {
-        var return_html_array = [`<p class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;${style}">`];
+        var return_html_array = [`<span class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;${style}">`];
     };
 
 
@@ -82,7 +82,7 @@ function spirit_text_keyword_converter(
     });
 
     return_html_array.push(
-        "</p>"
+        "</span>"
     )
 
     var return_html_string = return_html_array.join("");

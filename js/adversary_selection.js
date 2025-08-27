@@ -473,6 +473,18 @@ function append_invader_rules_to_modal(
 
     // Header
 
+    var header = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var leading_invader_header_text = $("<div>").attr(
+        {
+            class:"col-9"
+        }
+    );
+
     var header_1 = $("<div>").attr(
         {
             class:"row"
@@ -488,7 +500,7 @@ function append_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:3vh;"
+            style:"font-size:2.5vh;"
         }
     ).text(
         leading_adversary_name
@@ -499,7 +511,7 @@ function append_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:2vh;"
+            style:"font-size:1.5vh;font-style:italic;"
         }
     ).text(
         "Level "+$("#spirit_island_tracker_body").data("leading_adversary_level")+" / Difficulty "+leading_adversary_config["level"][
@@ -509,11 +521,24 @@ function append_invader_rules_to_modal(
         header_2
     );
 
+    var leading_invader_header_image = $("<div>").attr(
+        {
+            class:"col-3"
+        }
+    ).append(
+        $("<img>").attr(
+            {
+                style:"height:6vh;",
+                src: `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/adversaries/${leading_adversary_name}.png`
+            }
+        )
+    );
+
     // Loss Condition
 
     var top_row = $("<div>").attr(
         {
-            class:"row"
+            class:"row mb-2"
         }
     );
 
@@ -526,38 +551,50 @@ function append_invader_rules_to_modal(
     leading_loss_condition_div.append(
         $("<b>").attr(
             {
-                class:`text-line ${dark_mode_flag}`
+                class:`text-line ${dark_mode_flag}`,
+                style:"font-style:italic;font-size:1.5vh;"
             }
         ).text("Additional Loss Condition")
+    );
+
+    leading_loss_condition_div.append(
+        $("<br>")
     );
 
     if (leading_adversary_config["additional_loss_condition"]["title"] != "") {
 
         leading_loss_condition_div.append(
-            $("<b>").html(
-                spirit_text_keyword_converter(
-                    leading_adversary_config["additional_loss_condition"]["title"],
-                    18
-                )
+            spirit_text_keyword_converter(
+                leading_adversary_config["additional_loss_condition"]["title"],
+                18,
+                "font-size:1.3vh;font-weight:bold;"
             )
+        );
+
+        leading_loss_condition_div.append(
+            $("<span>").attr(
+                {
+                    class:`text-line ${dark_mode_flag}`
+                }
+            ).text(": ")
         );
 
         leading_loss_condition_div.append(
             spirit_text_keyword_converter(
                 leading_adversary_config["additional_loss_condition"]["effect"],
-                18
+                18,
+                "font-size:1.3vh;display:inline;"
             )
         );
     }
     else {
         leading_loss_condition_div.append(
-            $("<p>").html(
-                $("<i>").attr(
-                    {
-                        class:`text-line ${dark_mode_flag}`
-                    }
-                ).text("None")
-            )
+            $("<p>").attr(
+                {
+                    class:`text-line ${dark_mode_flag}`,
+                    style:"font-style:italic;"
+                }
+            ).text("None")
         )
     };
 
@@ -565,31 +602,53 @@ function append_invader_rules_to_modal(
 
     var leading_stage_2_escalation_div = $("<div>").attr(
         {
-            class:"col-6"
+            class:"col-6",
         }
     );
 
     leading_stage_2_escalation_div.append(
         $("<b>").attr(
             {
-                class:`text-line ${dark_mode_flag}`
+                class:`text-line ${dark_mode_flag}`,
+                style:"font-style:italic;font-size:1.5vh;"
             }
-        ).text("Stage II Escalation")
-    );
+        ).text("Stage II Escalation ").append(
+            $("<img>").attr(
+                {
+                    style:"align-self: center;",
+                    class:`svg ${dark_mode_flag}`,
+                    src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/town.svg"
 
-    leading_stage_2_escalation_div.append(
-        $("<b>").html(
-            spirit_text_keyword_converter(
-                leading_adversary_config["stage_2_escalation"]["title"],
-                18
+                }
             )
         )
     );
 
     leading_stage_2_escalation_div.append(
+        $("<br>")
+    );
+
+    leading_stage_2_escalation_div.append(
+        spirit_text_keyword_converter(
+            leading_adversary_config["stage_2_escalation"]["title"],
+            18,
+            "font-size:1.3vh;font-weight:bold;"
+        )
+    );
+
+    leading_stage_2_escalation_div.append(
+        $("<span>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`
+            }
+        ).text(": ")
+    );
+
+    leading_stage_2_escalation_div.append(
         spirit_text_keyword_converter(
             leading_adversary_config["stage_2_escalation"]["effect"],
-            18
+            18,
+            "font-size:1.3vh;display:inline;"
         )
     );
 
@@ -616,7 +675,7 @@ function append_invader_rules_to_modal(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:15%",
+                        style:"width:15%;font-style:italic;",
                         class:`text-line ${dark_mode_flag} table-header`
                     }
                 ).text("Level")
@@ -624,7 +683,7 @@ function append_invader_rules_to_modal(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:25%",
+                        style:"width:25%;font-style:italic;",
                         class:`text-line ${dark_mode_flag} table-header`
                     }
                 ).text("Fear")
@@ -638,7 +697,7 @@ function append_invader_rules_to_modal(
                 ).append(
                     $("<div>").attr(
                         {
-                            style:"align-self: flex-end;",
+                            style:"align-self: flex-end;font-style:italic;",
                             class:`text-line ${dark_mode_flag} table-header`
                         }
                     ).text("Game Effects")
@@ -751,17 +810,29 @@ function append_invader_rules_to_modal(
 
     // Appending
 
-    header_1.appendTo(
+    header.appendTo(
         $("#modal_invader_rules_body")
     );
 
+    header_1.appendTo(
+        leading_invader_header_text
+    );
+
     header_2.appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_header_text
+    );
+
+    leading_invader_header_image.appendTo(
+        header
+    );
+
+    leading_invader_header_text.appendTo(
+        header
     );
 
     $("<hr>").attr(
         {
-            class:"hr2"
+            class:`hr2 ${dark_mode_flag}`
         }
     ).appendTo(
         $("#modal_invader_rules_body")
