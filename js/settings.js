@@ -647,7 +647,7 @@ function dark_mode_content() {
             "colour_scheme",
             "dark"
         );
-        
+
         $("body").addClass(
             "dark-mode-body"
         );
@@ -668,7 +668,7 @@ function dark_mode_content() {
             "colour_scheme",
             "light"
         );
-        
+
         $("body").removeClass(
             "dark-mode-body"
         );

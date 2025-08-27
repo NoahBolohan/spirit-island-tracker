@@ -437,9 +437,11 @@ function append_invader_rules_and_difficulty() {
         })
 
         append_invader_rules_to_modal(
+            $("#spirit_island_tracker_body").data("leading_adversary"),
             adversaries[
                 $("#spirit_island_tracker_body").data("leading_adversary")
             ],
+            $("#spirit_island_tracker_body").data("supporting_adversary"),
             adversaries[
                 $("#spirit_island_tracker_body").data("supporting_adversary")
             ],
@@ -449,7 +451,9 @@ function append_invader_rules_and_difficulty() {
 }
 
 function append_invader_rules_to_modal(
+    leading_adversary_name,
     leading_adversary_config,
+    supporting_adversary_name,
     supporting_adversary_config
 ) {
 
@@ -464,6 +468,44 @@ function append_invader_rules_to_modal(
     } else {
         var dark_mode_flag = "";
     }
+
+    // Header
+
+    var header_1 = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var header_2 = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    $("<div>").attr(
+        {
+            class:`col text-line ${dark_mode_flag}`,
+            style:"font-size:3vh;"
+        }
+    ).text(
+        leading_adversary_name
+    ).appendTo(
+        header_1
+    );
+
+    $("<div>").attr(
+        {
+            class:`col text-line ${dark_mode_flag}`,
+            style:"font-size:2vh;"
+        }
+    ).text(
+        "Level "+$("#spirit_island_tracker_body").data("leading_adversary_level")+" / Difficulty "+leading_adversary_config["level"][
+            $("#spirit_island_tracker_body").data("leading_adversary_level")
+        ]["difficulty"]
+    ).appendTo(
+        header_2
+    );
 
     // Loss Condition
 
@@ -516,7 +558,7 @@ function append_invader_rules_to_modal(
             )
         )
     };
-    
+
     // Stage 2 Escalation
 
     var leading_stage_2_escalation_div = $("<div>").attr(
@@ -706,6 +748,22 @@ function append_invader_rules_to_modal(
 
     // Appending
 
+    header_1.appendTo(
+        $("#modal_invader_rules_body")
+    );
+
+    header_2.appendTo(
+        $("#modal_invader_rules_body")
+    );
+
+    $("<hr>").attr(
+        {
+            class:"hr2"
+        }
+    ).appendTo(
+        $("#modal_invader_rules_body")
+    );
+
     leading_loss_condition_div.appendTo(
         top_row
     );
@@ -747,7 +805,6 @@ function append_invader_rules_to_modal(
                             "collapse"
                         );
                     }
-                    
                 }
             )
         }
