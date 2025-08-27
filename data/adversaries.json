@@ -205,12 +205,12 @@
     },
     "Habsburg Mining Expedition":{
         "additional_loss_condition":{
-            "title":"",
-            "effect":""
+            "title":"Land Stripped Bare",
+            "effect":"At the end of the FAST Phase, the Invaders win if any land has at least 8 total Invaders/BLIGHT <em>(combined)</em>."
         },
         "stage_2_escalation":{
-            "title":"",
-            "effect":""
+            "title":"Mining Tunnels",
+            "effect":"After Advancing Invader Cards: On each board, Explore in 2 lands whose terrains don't match a Ravage or Build Card <em>(no source required)</em>."
         },
         "level":{
             "0":{
@@ -223,62 +223,62 @@
             },
             "1":{
                 "difficulty":3,
-                "fear_cards":"",
+                "fear_cards":"9 (3/3/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Avarice Rewarded & Ceaseless Mining",
+                    "effect":"When BLIGHT added by a Ravage Action would cascade, instead Upgrade 1 EXPLORER/TOWN <em>(before DAHAN counterattack)</em>. Lands with 3 or more Invaders are <b>Mining lands</b>. In Mining lands: BLIGHT and modifiers to BLIGHT affect Ravage Actions as though they were Build Actions and; During the Build Step, Build Cards cause Ravage Actions (instead of Build Actions)."
                 }
             },
             "2":{
                 "difficulty":4,
-                "fear_cards":"",
+                "fear_cards":"10 (3/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Miners Come From Far and Wide",
+                    "effect":"<u>Setup:</u> Add 1 EXPLORER in each land with no DAHAN. Add 1 BLIGHT and 1 CITY in the highest-numbered land with a TOWN Setup symbol."
                 }
             },
             "3":{
                 "difficulty":5,
-                "fear_cards":"",
+                "fear_cards":"11 (3/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Mining Boom (I)",
+                    "effect":"After the Build Step, on each board: Choose a land with EXPLORER. Upgrade 1 EXPLORER there."
                 }
             },
             "4":{
                 "difficulty":7,
-                "fear_cards":"",
+                "fear_cards":"12 (4/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Untapped Salt Deposits",
+                    "effect":"<u>Setup:</u> Remove the Stage II 'Coastal Lands' card before randomly choose Stage II cards. Place the 'Salt Deposits' card in place of the 2nd Stage II card. <em>New Deck Order: 111-2S22-33333, where S is the Salt Deposits card. TOWN ignores S.</em>"
                 }
             },
             "5":{
                 "difficulty":9,
-                "fear_cards":"",
+                "fear_cards":"13 (4/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Mining Boom (II)",
+                    "effect":"Instead of Mining Boom (I), after the Build Step, on each board: Choose a land with EXPLORER. Build there, then Upgrade EXPLORER. <em>(Build normally in a Mining land.)</em>"
                 }
             },
             "6 ":{
                 "difficulty":11,
-                "fear_cards":"",
+                "fear_cards":"13 (4/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"The Empire Ascendant",
+                    "effect":"<u>Setup and During the Explore Step:</u> On boards with 3 or fewer BLIGHT, Add +1 EXPLORER in each land successfully explored. (Max. 2 lands per board per Explore card.)"
                 }
             }
         }
     },
     "Habsburg Monarchy (Livestock Colony)":{
         "additional_loss_condition":{
-            "title":"",
-            "effect":""
+            "title":"Irreparable Damage",
+            "effect":"Track how many BLIGHT come off the Blight Card during Ravage Actions that do 8+ Damage to the land. If that number ever exceeds players, the Invaders win."
         },
         "stage_2_escalation":{
-            "title":"",
-            "effect":""
+            "title":"Seek Prime Territory",
+            "effect":"After the Explore Step: On eah board with 4 of fewer BLIGHT, add 1 TOWN to a land without TOWN/BLIGHT. On each board with 2 or fewer BLIGHT, do so again."
         },
         "level":{
             "0":{
@@ -291,62 +291,62 @@
             },
             "1":{
                 "difficulty":3,
-                "fear_cards":"",
+                "fear_cards":"10 (3/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Migratory Herders",
+                    "effect":"After the normal Build Step: In each land matching a Build Card, Gather 1 TOWN from a land <b>not</b> matching a Build Card. (In board/land order.)"
                 }
             },
             "2":{
                 "difficulty":5,
-                "fear_cards":"",
+                "fear_cards":"11 (4/5/2)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"More Rural than Urban",
+                    "effect":"During Setup, on each board, add 1 TOWN to land #2 and 1 TOWN to the highest-numbered land without Setup symbols. During Play, when Invaders would Build 1 CITY in an inland land, they instead Build 2 TOWN."
                 }
             },
             "3":{
                 "difficulty":6,
-                "fear_cards":"",
+                "fear_cards":"12 (4/5/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Fast Spread",
+                    "effect":"When making the Invader Deck, Remove 1 addition Stage 1 Card. <em>(New deck order: 11-2222-33333)</em>"
                 }
             },
             "4":{
                 "difficulty":8,
-                "fear_cards":"",
+                "fear_cards":"12 (4/5/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Herds Thrive in Verdant Lands",
+                    "effect":"TOWN in lands without BLIGHT are <b>Durable:</b> they have +2 Health, and 'Destroy TOWN' effects instead deal 2 Damage per TOWN they could Destroy. (To those TOWN only. 'Destroy all TOWN' works normally.)"
                 }
             },
             "5":{
                 "difficulty":9,
-                "fear_cards":"",
+                "fear_cards":"13 (4/6/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Wave of Immigration",
+                    "effect":"Before the initial Explore, put the Habsburg Reminder Card under the top 5 Invader Cards. When revealed, on each board, add 1 CITY to a coastal land without CITY and 1 TOWN to the 3 Inland lands with the fewest BLIGHT."
                 }
             },
             "6 ":{
                 "difficulty":11,
-                "fear_cards":"",
+                "fear_cards":"14 (5/6/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Far-Flung Herds",
+                    "effect":"Ravages do +2 Damage (total) if any adjacent lands have TOWN. <em>(This does not cause lands without Invaders to Ravage.)</em>"
                 }
             }
         }
     },
     "Russia":{
         "additional_loss_condition":{
-            "title":"",
-            "effect":""
+            "title":"Hunters Swarm the Island",
+            "effect":"Put BEASTS Destroyed by Adversary rules on this panel. If there are ever more BEASTS on this panel than on the island, the Invaders win."
         },
         "stage_2_escalation":{
-            "title":"",
-            "effect":""
+            "title":"Stalk the Predators",
+            "effect":"On each board: Add 2 EXPLORER (total) among lands with BEASTS. If you can't, instead add 2 EXPLORER among lands with BEASTS on a different board."
         },
         "level":{
             "0":{
@@ -359,62 +359,62 @@
             },
             "1":{
                 "difficulty":3,
-                "fear_cards":"",
+                "fear_cards":"10 (3/3/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Hunters Seek Shell and Hide",
+                    "effect":"During Setup, on each board, add 1 BEASTS and 1 EXPLORER to the highest-numbered land without TOWN/CITY. During Play, EXPLORER do +1 Damage. When Ravage adds BLIGHT to a land (including cascades), Destroy 1 BEASTS in that land."
                 }
             },
             "2":{
                 "difficulty":4,
-                "fear_cards":"",
+                "fear_cards":"11 (4/3/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"A Sense for Impending Disaster",
+                    "effect":"The first time each Action would Destroy EXPLORER: If possible, 1 of those EXPLORER is instead Pushed; 1 FEAR when you do so."
                 }
             },
             "3":{
                 "difficulty":6,
-                "fear_cards":"",
+                "fear_cards":"11 (4/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Competition Among Hunters",
+                    "effect":"Ravage Cards also match lands with 3 or more EXPLORER. <em>(If the land already matched theRavage Card, it still Ravages just once.)</em>"
                 }
             },
             "4":{
                 "difficulty":7,
-                "fear_cards":"",
+                "fear_cards":"12 (4/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Accelerated Exploitation",
+                    "effect":"Whe making the Invader Deck, put 1 Stage III Card after each Stage II Card. <em>(New Deck Order: 111-2-3-2-3-2-3-2-33)</em>"
                 }
             },
             "5":{
                 "difficulty":9,
-                "fear_cards":"",
+                "fear_cards":"13 (4/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Entrench in the Face of Fear",
+                    "effect":"Put an unused Stage II Invader Card under the top 3 Fear Cards, and an unused Stage III Card under the top 7 Fear Cards. When one is revealed, immediately place it in the Build space (face-up)."
                 }
             },
             "6 ":{
                 "difficulty":11,
-                "fear_cards":"",
+                "fear_cards":"14 (5/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Pressure for Fast Profit",
+                    "effect":"After the Ravage Step of turn 2+, on each board where it added no BLIGHT: In the land with the most EXPLORER (min. 1), add 1 EXPLORER and 1 TOWN."
                 }
             }
         }
     },
     "Scotland":{
         "additional_loss_condition":{
-            "title":"",
-            "effect":""
+            "title":"Trade Hub",
+            "effect":"If the number of Coastal lands with CITY is ever greater than (2 x # of boards), the Invaders win."
         },
         "stage_2_escalation":{
-            "title":"",
-            "effect":""
+            "title":"Ports Sprawl Outward",
+            "effect":"<em>(Before Exploring)</em> On the single board with the most Costal TOWN/CITY, add 1 TOWN to the N lands with the fewest TOWN. (N = # of players.)"
         },
         "level":{
             "0":{
@@ -427,50 +427,50 @@
             },
             "1":{
                 "difficulty":3,
-                "fear_cards":"",
+                "fear_cards":"10 (3/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Trading Port",
+                    "effect":"During Play, i Coastal lands, Explore Cards add 1 TOWN instead of 1 EXPLORER. 'Coastal Lands' Invader Cards do this for maximum 2 lands per board."
                 }
             },
             "2":{
                 "difficulty":4,
-                "fear_cards":"",
+                "fear_cards":"11 (4/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Seize Opportunity",
+                    "effect":"During Setup, add 1 CITY to land #2. Place 'Coastal Lands' as the 3rd Stage II card, and move he two Stage II Cards above it up by one. <em>(New Deck Order: 11-22-1-C2-33333)</em>"
                 }
             },
             "3":{
                 "difficulty":6,
-                "fear_cards":"",
+                "fear_cards":"13 (4/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Chart the Coastline",
+                    "effect":"In Coastal lands, Build Cards affect lands without Invaders, so long as there is an adjacent CITY."
                 }
             },
             "4":{
                 "difficulty":7,
-                "fear_cards":"",
+                "fear_cards":"14 (5/5/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Ambition of a Minor Nation",
+                    "effect":"During Setup, replace the bottom Stage I Card with the bottom Stage III Card. <em>(New Deck Order: 11-22-3-C2-3333)</em>"
                 }
             },
             "5":{
                 "difficulty":8,
-                "fear_cards":"",
+                "fear_cards":"15 (5/6/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Runoff and Bilgewater",
+                    "effect":"After a Ravage Action adds BLIGHT to a Coastal land, add 1 BLIGHT to that board's OCean (without cascading). Treat the Ocean as a Coastal Wetland for this rule and for BLIGHT removal/movement."
                 }
             },
             "6 ":{
                 "difficulty":10,
-                "fear_cards":"",
+                "fear_cards":"16 (6/6/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Exports Fuel Inward Growth",
+                    "effect":"After the Ravage Step, add 1 TOWN to each Inland land that matches a Ravage card and is within 1_RANGE of TOWN/CITY."
                 }
             }
         }
@@ -481,8 +481,8 @@
             "effect":""
         },
         "stage_2_escalation":{
-            "title":"",
-            "effect":""
+            "title":"Swayed by the Invaders",
+            "effect":"After Invaders Explore into each land this Phase, if that land has at least as many Invaders as DAHAN, replace 1 DAHAN with 1 TOWN."
         },
         "level":{
             "0":{
@@ -495,50 +495,50 @@
             },
             "1":{
                 "difficulty":2,
-                "fear_cards":"",
+                "fear_cards":"9 (3/3/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Heavy Mining",
+                    "effect":"If the Invaders do at least 6 Damage to the land during Ravage, add an extra BLIGHT. The additional BLIGHT does not destroy PRESENCE or cause cascade."
                 }
             },
             "2":{
                 "difficulty":3,
-                "fear_cards":"",
+                "fear_cards":"10 (3/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Population Pressure at Home",
+                    "effect":"During Setup, on each board add 1 CITY to land #4. On boards where land #4 starts with BLIGHT, put that BLIGHT in land #5 instead."
                 }
             },
             "3":{
                 "difficulty":5,
-                "fear_cards":"",
+                "fear_cards":"10 (3/4/3)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Fine Steel for Tools and Guns",
+                    "effect":"TOWN del 3 Damage. CITY deal 5 Damage."
                 }
             },
             "4":{
                 "difficulty":6,
-                "fear_cards":"",
+                "fear_cards":"11 (3/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Royal Backing",
+                    "effect":"During Setup, after adding all other Invaders, discard the top card of the Invader Deck. On each board, add 1 TOWN to the land of that terrain with the fewest Invaders."
                 }
             },
             "5":{
                 "difficulty":7,
-                "fear_cards":"",
+                "fear_cards":"12 (4/4/4)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Mining Rush",
+                    "effect":"When Ravaging adds at least 1 BLIGHT to a land, also add 1 TOWN to an adjacent land without TOWN/CITY. Cascading BLIGHT does not cause this effect."
                 }
             },
             "6 ":{
                 "difficulty":8,
-                "fear_cards":"",
+                "fear_cards":"13 (4/4/5)",
                 "game_effects":{
-                    "title":"",
-                    "effect":""
+                    "title":"Prospecting Output",
+                    "effect":"During Setup, on each board add 1 TOWN and 1 BLIGHT to land #8. The BLIGHT comes from the box, not the Blight Card."
                 }
             }
         }
