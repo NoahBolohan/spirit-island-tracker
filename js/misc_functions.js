@@ -23,7 +23,8 @@ function custom_hide(div_id) {
 function spirit_text_keyword_converter(
     string,
     max_size,
-    style="none"
+    style="none",
+    id="none"
 ) {
 
     if (
@@ -41,12 +42,7 @@ function spirit_text_keyword_converter(
     );
     // alert(input_string_array)
 
-    if (style=="none") {
-        var return_html_array = [`<span class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;">`];
-    }
-    else {
-        var return_html_array = [`<span class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;${style}">`];
-    };
+    var return_html_array = [`<span id="${id}" class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;${style}">`];
 
 
     $.ajax({
