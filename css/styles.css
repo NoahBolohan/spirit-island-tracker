@@ -39,6 +39,19 @@ html *
     max-width: 18px;
     display: inline-block;
     vertical-align: baseline;
+    -webkit-filter:"";
+    -moz-filter:"";
+    -o-filter:"";
+    -ms-filter:"";
+    filter:"";
+}
+
+.dark-mode.svg {
+    -webkit-filter:invert(var(--invert)) sepia(var(--sepia)) saturate(var(--saturate)) hue-rotate(var(--hue-rotate)) brightness(var(--brightness)) contrast(var(--contrast));
+    -moz-filter:invert(var(--invert)) sepia(var(--sepia)) saturate(var(--saturate)) hue-rotate(var(--hue-rotate)) brightness(var(--brightness)) contrast(var(--contrast));
+    -o-filter:invert(var(--invert)) sepia(var(--sepia)) saturate(var(--saturate)) hue-rotate(var(--hue-rotate)) brightness(var(--brightness)) contrast(var(--contrast));
+    -ms-filter:invert(var(--invert)) sepia(var(--sepia)) saturate(var(--saturate)) hue-rotate(var(--hue-rotate)) brightness(var(--brightness)) contrast(var(--contrast));
+    filter:invert(var(--invert)) sepia(var(--sepia)) saturate(var(--saturate)) hue-rotate(var(--hue-rotate)) brightness(var(--brightness)) contrast(var(--contrast));
 }
 
 body {

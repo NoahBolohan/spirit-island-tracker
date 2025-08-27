@@ -64,7 +64,7 @@ function spirit_text_keyword_converter(
                             // `<object data="static/icons/${
                             //     json["keywords"][value]["file_name"]
                             // }" style="max-height: ${max_size}px; max-width: ${max_size}px;display: inline-block; vertical-align: baseline;"></object>`
-                            `<img class="svg" src="static/icons/${
+                            `<img class="svg ${dark_mode_flag}" src="static/icons/${
                                 json["keywords"][value]["file_name"]
                             }"></img>`
 

@@ -708,7 +708,7 @@ function append_invader_rules_to_modal(
                                     level_config["game_effects"]["title"],
                                     18,
                                     "text-align:left;"
-                                ) + '<img style="align-self: center" class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>'
+                                ) + `<img style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
                             )
                         )
                     )

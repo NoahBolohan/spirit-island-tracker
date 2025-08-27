@@ -611,7 +611,7 @@ function switch_font_color() {
         let result = solver.solve()
         let filterCSS = result.filter;
 
-        $(".svg").attr("style", filterCSS);
+        // $(".svg").attr("style", filterCSS);
 
         // $(".svg").css(filterCSS);
 
@@ -629,13 +629,38 @@ function switch_font_color() {
     } else {
         var font_color = "--font-color-dark";
 
-        filterCSS = `-webkit-filter:;
-            -moz-filter:;
-            -o-filter:;
-            -ms-filter:;
-            filter:;`
+        // filterCSS = `-webkit-filter:;
+        //     -moz-filter:;
+        //     -o-filter:;
+        //     -ms-filter:;
+        //     filter:;`
 
-        $(".svg").attr("style", filterCSS);
+        // $(".svg").attr("style", filterCSS);
+
+        $("body").get(0).style.setProperty(
+            "--invert",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--sepia",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--saturate",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--hue-rotate",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--brightness",
+            ""
+        );
+        $("body").get(0).style.setProperty(
+            "--contrast",
+            ""
+        );
 
         // $(".svg").css(filterCSS);
     }
@@ -744,7 +769,8 @@ function dark_mode_content() {
             ".minus-border",
             ".minus-inner",
             ".hr2",
-            ".close-x"
+            ".close-x",
+            ".svg"
         ],
         function (
             idx,
