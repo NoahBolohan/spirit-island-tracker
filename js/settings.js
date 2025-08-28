@@ -811,6 +811,126 @@ $(document).ready(
     }
 )
 
+function toggle_element_in_tracker(
+    element
+) {
+    if(
+        $(`#button_toggle_${element}`).is(":checked")
+    ) {
+        $(`#col_${element}_element_counter`).css(
+            "display",
+            "block"
+        );
+
+        const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+        if (accepts_cookies) {
+            localStorage.setItem(
+                `toggle_${element}`,
+                "show"
+            );
+        }
+    } else {
+        $(`#col_${element}_element_counter`).css(
+            "display",
+            "none"
+        );
+
+        const accepts_cookies = localStorage.getItem("accepts_cookies") ? localStorage.getItem("accepts_cookies") : null;
+
+        if (accepts_cookies) {
+            localStorage.setItem(
+                `toggle_${element}`,
+                "hide"
+            );
+        }
+    }
+}
+
+$(document).ready(
+    function() {
+
+        $.getJSON(
+            "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/config.json",
+            function (data) {
+
+                $.each(
+                    data["elements"],
+                    function (key, element) {
+
+                        $(`#button_toggle_${element}`).on(
+                            "click",
+                            function() {
+                                toggle_element_in_tracker(
+                                    element
+                                )
+                            }
+                        )
+                    }
+                )
+
+                $("#button_show_all_elements").on(
+                    "click",
+                    function() {
+                        $.each(
+                        data["elements"],
+                            function (key, element) {
+
+                                if (
+                                    ~$(`#button_toggle_${element}`).is(":checked")
+                                ) {
+                                    $(`#button_toggle_${element}`).prop(
+                                        "checked",
+                                        true
+                                    )
+
+                                    toggle_element_in_tracker(
+                                        element
+                                    );
+                                }
+                            }
+                        )
+                    }
+                )
+            }
+        )
+    }
+)
+
+$(document).ready(
+    function() {
+
+        $.getJSON(
+            "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/data/config.json",
+            function (data) {
+
+                $.each(
+                    data["elements"],
+                    function (key, element) {
+
+                    
+                        const toggle_element = localStorage.getItem(`toggle_${element}`) ? localStorage.getItem(`toggle_${element}`) : null;
+
+                        if (toggle_element == "hide") {
+                            $(`#button_toggle_${element}`).prop(
+                                "checked",
+                                false
+                            );
+                        }
+                        else {
+
+                            $(`#button_toggle_${element}`).prop(
+                                "checked",
+                                true
+                            );
+                        }
+                    }
+                )
+            }
+        )
+    }
+)
+
 $(document).ready(
     function() {
 

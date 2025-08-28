@@ -228,7 +228,7 @@ input:checked + .slider:before {
 .element_img {
     object-fit: cover;
     width: auto;
-    height: 35px;
+    height: 4vh;
     opacity: 0.3;
 }
 

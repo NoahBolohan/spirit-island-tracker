@@ -12,10 +12,20 @@ $(document).ready(
                 data["elements"],
                 function (key, element) {
 
+                    const toggle_element = localStorage.getItem(`toggle_${element}`) ? localStorage.getItem(`toggle_${element}`) : null;
+
+                    if (toggle_element == "hide") {
+                        var display_var = "none";
+                    }
+                    else {
+                        var display_var = "block";
+                    }
+
                     var col_for_element = $("<div>").attr(
                         {
                             class: "col p-0",
-                            id: `col_${element}_element_counter`
+                            id: `col_${element}_element_counter`,
+                            style:`display:${display_var};`
                         }
                     ).data(
                         "locked_count", 0
