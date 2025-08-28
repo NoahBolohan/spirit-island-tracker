@@ -789,7 +789,7 @@ function append_invader_rules_to_modal(
                 leading_adversary_rules_table_body.append(
                     $("<tr>").attr(
                         {
-                            class:"table-body"
+                            id: `row_leading_adversary_info_${level}`
                         }
                     ).append(
                         $("<td>").attr(
@@ -943,6 +943,8 @@ function append_invader_rules_to_modal(
         $("#modal_invader_rules_body")
     )
 
+
+
     $("#button_leading_adversary_toggle").on(
         "click",
         function() {
@@ -978,6 +980,20 @@ function append_invader_rules_to_modal(
         function(
             level
         ) {
+            if (
+                level > $("#spirit_island_tracker_body").data("leading_adversary_level")
+            ) {
+                $(`#row_leading_adversary_info_${level} .table-body`).css(
+                    "opacity",
+                    "0.5"
+                );
+
+                $(`#row_leading_adversary_rule_${level} .table-body`).css(
+                    "opacity",
+                    "0.5"
+                );
+            };
+
             $(`#button_leading_adversary_rule_${level}_toggle`).on(
                 "click",
                 function () {
