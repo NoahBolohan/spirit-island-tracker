@@ -294,6 +294,15 @@ function button_set_adversary_content(
         `#button_select_${adversary_type}_adversary`
     );
 
+    $("<div>").attr(
+        {
+            class: `${adversary_type}_adversary_img_text_overlay`,
+            id: `${adversary_type}_adversary_img_text_overlay`
+        }
+    ).appendTo(
+        `#button_select_${adversary_type}_adversary`
+    );
+
     $(`#button_select_${adversary_type}_adversary`).removeClass(
         "btn-settings"
     );
@@ -442,6 +451,10 @@ function append_invader_rules_and_difficulty() {
         } else {
             var dark_mode_flag = "";
         }
+
+        $(`#leading_adversary_img_text_overlay`).text(
+            $("#spirit_island_tracker_body").data("leading_adversary_level")
+        );
 
         $("#supporting_invader_rules_body").empty();
 
