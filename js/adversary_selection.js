@@ -571,6 +571,20 @@ function append_invader_rules_to_modal(
         )
     );
 
+    var leading_invader_super_row = $("<div>").attr(
+        {
+            id:"leading_invader_super_row",
+            class:"row",
+            style:"display:block;"
+        }
+    );
+
+    var leading_invader_super_col = $("<div>").attr(
+        {
+            class:"col-12"
+        }
+    );
+
     // Loss Condition
 
     var  leading_adversary_additional_loss_condition_row = $("<div>").attr(
@@ -894,7 +908,7 @@ function append_invader_rules_to_modal(
             class:`hr2 ${dark_mode_flag}`
         }
     ).appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
     );
 
     leading_adversary_additional_loss_condition_div.appendTo(
@@ -906,11 +920,11 @@ function append_invader_rules_to_modal(
     );
 
     leading_adversary_additional_loss_condition_row.appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
     );
 
     leading_adversary_stage_2_escalation_row.appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
     );
 
     leading_adversary_rules_table.appendTo(
@@ -918,7 +932,45 @@ function append_invader_rules_to_modal(
     );
 
     leading_adversary_rules_div.appendTo(
+        leading_invader_super_col
+    )
+
+    leading_invader_super_col.appendTo(
+        leading_invader_super_row
+    );
+
+    leading_invader_super_row.appendTo(
         $("#modal_invader_rules_body")
+    )
+
+    $("#button_leading_adversary_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#leading_invader_super_row").css("display")=="block"
+            ) {
+                $("#leading_invader_super_row").css(
+                    "display",
+                    "none"
+                );
+
+                leading_adversary_toggle_dropdown_arrow.addClass(
+                    "img-vert"
+                );
+            }
+            else if (
+                $("#leading_invader_super_row").css("display")=="none"
+            ) {
+                $("#leading_invader_super_row").css(
+                    "display",
+                    "block"
+                );
+
+                leading_adversary_toggle_dropdown_arrow.removeClass(
+                    "img-vert"
+                );
+            }
+        }
     )
 
     $.each(
