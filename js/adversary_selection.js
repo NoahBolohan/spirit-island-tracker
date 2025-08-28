@@ -53,14 +53,6 @@ $(document).ready(
 
                 append_invader_rules_and_difficulty();
 
-                $(`#button_select_leading_adversary`).removeClass(
-                    "btn-outlineless"
-                );
-
-                $(`#button_select_leading_adversary`).addClass(
-                    "btn-settings"
-                );
-
                 $(`#modal_leading_adversaries`).modal("hide");
 
                 custom_hide(
@@ -95,14 +87,6 @@ $(document).ready(
                 );
 
                 append_invader_rules_and_difficulty();
-
-                $(`#button_select_supporting_adversary`).removeClass(
-                    "btn-outlineless"
-                );
-
-                $(`#button_select_supporting_adversary`).addClass(
-                    "btn-settings"
-                );
                 
                 $(`#modal_supporting_adversaries`).modal("hide");
 
@@ -298,7 +282,7 @@ function button_set_adversary_content(
 ) {
 
     $(`#button_select_${adversary_type}_adversary`).empty();
-        
+
     $("<img>").attr(
         {
             "src" : generate_encoded_adversary_image_url(
@@ -408,12 +392,16 @@ function append_invader_rules_and_difficulty() {
                 var supporting_adversary_difficulty = 0;
             }
             else {
-                supporting_adversary_difficulty = adversaries[
-                    $("#spirit_island_tracker_body").data("supporting_adversary")
-                ]["level"][
-                    $("#spirit_island_tracker_body").data("supporting_adversary_level")
-                ]["difficulty"];
-            }
+                supporting_adversary_difficulty = Math.round(
+                    0.625*parseInt(
+                        adversaries[
+                            $("#spirit_island_tracker_body").data("supporting_adversary")
+                        ]["level"][
+                            $("#spirit_island_tracker_body").data("supporting_adversary_level")
+                        ]["difficulty"]
+                    )
+                );
+            };
 
             total_difficulty += supporting_adversary_difficulty;
 
@@ -438,28 +426,52 @@ function append_invader_rules_and_difficulty() {
             )
         })
 
-        append_invader_rules_to_modal(
+        append_leading_invader_rules_to_modal(
             $("#spirit_island_tracker_body").data("leading_adversary"),
             adversaries[
                 $("#spirit_island_tracker_body").data("leading_adversary")
-            ],
-            $("#spirit_island_tracker_body").data("supporting_adversary"),
-            adversaries[
-                $("#spirit_island_tracker_body").data("supporting_adversary")
-            ],
-            18
+            ]
         );
+
+        if (
+            $("body").data(
+                "colour_scheme"
+            ) == "dark"
+        ) {
+            var dark_mode_flag = "dark-mode";
+        } else {
+            var dark_mode_flag = "";
+        }
+
+        $("#supporting_invader_rules_body").empty();
+
+        if ($("#spirit_island_tracker_body").data("supporting_adversary") == "") {
+            $("<div>").attr(
+                {
+                    class:`text-line ${dark_mode_flag}`,
+                    style:"font-style:italic;text-align:center;"
+                }
+            ).text("No Supporting Adversary selected").appendTo(
+                supporting_invader_rules_body
+            )
+        }
+        else {
+            append_supporting_invader_rules_to_modal(
+                $("#spirit_island_tracker_body").data("supporting_adversary"),
+                adversaries[
+                    $("#spirit_island_tracker_body").data("supporting_adversary")
+                ]
+            );
+        };
     })
 }
 
-function append_invader_rules_to_modal(
+function append_leading_invader_rules_to_modal(
     leading_adversary_name,
-    leading_adversary_config,
-    supporting_adversary_name,
-    supporting_adversary_config
+    leading_adversary_config
 ) {
 
-    $("#modal_invader_rules_body").empty();
+    $("#leading_invader_rules_body").empty();
 
     if (
         $("body").data(
@@ -479,9 +491,28 @@ function append_invader_rules_to_modal(
         }
     );
 
+    var button_leading_adversary_toggle_col = $("<div>").attr(
+        {
+            class:"col-12"
+        }
+    );
+
+    var button_leading_adversary_toggle = $("<button>").attr(
+        {
+            id: `button_leading_adversary_toggle`,
+            class:`w-100 btn btn-reset-page ${dark_mode_flag}`
+        }
+    );
+
+    var header_for_button = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
     var leading_adversary_header_text = $("<div>").attr(
         {
-            class:"col-9"
+            class:"col-8"
         }
     );
 
@@ -523,7 +554,7 @@ function append_invader_rules_to_modal(
 
     var leading_adversary_header_image = $("<div>").attr(
         {
-            class:"col-3"
+            class:"col-3 align-self-center",
         }
     ).append(
         $("<img>").attr(
@@ -534,6 +565,36 @@ function append_invader_rules_to_modal(
                 )
             }
         )
+    );
+
+    var leading_adversary_toggle_dropdown_arrow = $("<div>").attr(
+        {
+            class:"col-1 p-1 d-flex"
+        }
+    ).html(
+        $("<img>").attr(
+            {
+                id:"leading_adversary_toggle_dropdown_arrow",
+                style:"align-self: center",
+                class:`svg ${dark_mode_flag} img-vert`,
+                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg" ,
+                // height="25px"
+            }
+        )
+    );
+
+    var leading_invader_super_row = $("<div>").attr(
+        {
+            id:"leading_invader_super_row",
+            class:"row",
+            style:"display:block;"
+        }
+    );
+
+    var leading_invader_super_col = $("<div>").attr(
+        {
+            class:"col-12"
+        }
     );
 
     // Loss Condition
@@ -740,7 +801,7 @@ function append_invader_rules_to_modal(
                 leading_adversary_rules_table_body.append(
                     $("<tr>").attr(
                         {
-                            class:"table-body"
+                            id: `row_leading_adversary_info_${level}`
                         }
                     ).append(
                         $("<td>").attr(
@@ -819,7 +880,15 @@ function append_invader_rules_to_modal(
     // Appending
 
     header.appendTo(
-        $("#modal_invader_rules_body")
+        $("#leading_invader_rules_body")
+    );
+
+    button_leading_adversary_toggle_col.appendTo(
+        header
+    );
+
+    button_leading_adversary_toggle.appendTo(
+        button_leading_adversary_toggle_col
     );
 
     header_1.appendTo(
@@ -831,11 +900,19 @@ function append_invader_rules_to_modal(
     );
 
     leading_adversary_header_image.appendTo(
-        header
+        header_for_button
     );
 
     leading_adversary_header_text.appendTo(
-        header
+        header_for_button
+    );
+
+    header_for_button.append(
+        leading_adversary_toggle_dropdown_arrow
+    );
+
+    header_for_button.appendTo(
+        button_leading_adversary_toggle
     );
 
     $("<hr>").attr(
@@ -843,7 +920,7 @@ function append_invader_rules_to_modal(
             class:`hr2 ${dark_mode_flag}`
         }
     ).appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
     );
 
     leading_adversary_additional_loss_condition_div.appendTo(
@@ -855,11 +932,11 @@ function append_invader_rules_to_modal(
     );
 
     leading_adversary_additional_loss_condition_row.appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
     );
 
     leading_adversary_stage_2_escalation_row.appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
     );
 
     leading_adversary_rules_table.appendTo(
@@ -867,7 +944,45 @@ function append_invader_rules_to_modal(
     );
 
     leading_adversary_rules_div.appendTo(
-        $("#modal_invader_rules_body")
+        leading_invader_super_col
+    )
+
+    leading_invader_super_col.appendTo(
+        leading_invader_super_row
+    );
+
+    leading_invader_super_row.appendTo(
+        $("#leading_invader_rules_body")
+    )
+
+    $("#button_leading_adversary_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#leading_invader_super_row").css("display")=="block"
+            ) {
+                $("#leading_invader_super_row").css(
+                    "display",
+                    "none"
+                );
+
+                leading_adversary_toggle_dropdown_arrow.addClass(
+                    "img-vert"
+                );
+            }
+            else if (
+                $("#leading_invader_super_row").css("display")=="none"
+            ) {
+                $("#leading_invader_super_row").css(
+                    "display",
+                    "block"
+                );
+
+                leading_adversary_toggle_dropdown_arrow.removeClass(
+                    "img-vert"
+                );
+            }
+        }
     )
 
     $.each(
@@ -875,6 +990,20 @@ function append_invader_rules_to_modal(
         function(
             level
         ) {
+            if (
+                level > $("#spirit_island_tracker_body").data("leading_adversary_level")
+            ) {
+                $(`#row_leading_adversary_info_${level} .table-body`).css(
+                    "opacity",
+                    "0.5"
+                );
+
+                $(`#row_leading_adversary_rule_${level} .table-body`).css(
+                    "opacity",
+                    "0.5"
+                );
+            };
+
             $(`#button_leading_adversary_rule_${level}_toggle`).on(
                 "click",
                 function () {
@@ -1046,6 +1175,766 @@ function append_invader_rules_to_modal(
     );
 }
 
+function parse_supporting_adversary_fear_deck_change(
+    supporting_adversary_fear_deck_string
+) {
+    var supporting_adversary_fear_deck_string_array = supporting_adversary_fear_deck_string.split(
+        /(\(|\)|\/+)/
+    );
+
+    var return_string = "";
+
+    $.each(
+        [
+            2,4,6
+        ],
+        function(idx,pos) {
+            if (
+                parseInt(
+                    supporting_adversary_fear_deck_string_array.at(pos)
+                ) - 3 >= 0
+            ) {
+                return_string += "+" + String(
+                    parseInt(
+                        supporting_adversary_fear_deck_string_array.at(pos)
+                    ) - 3
+                )
+            }
+            else {
+                return_string += String(
+                    parseInt(
+                        supporting_adversary_fear_deck_string_array.at(pos)
+                    ) - 3
+                )
+            }
+
+            if (pos != 6) {
+                return_string += "/"
+            }
+        }
+    )
+
+    
+
+    return return_string;
+}
+
+function append_supporting_invader_rules_to_modal(
+    supporting_adversary_name,
+    supporting_adversary_config
+) {
+
+    $("#supporting_invader_rules_body").empty();
+
+    if (
+        $("body").data(
+            "colour_scheme"
+        ) == "dark"
+    ) {
+        var dark_mode_flag = "dark-mode";
+    } else {
+        var dark_mode_flag = "";
+    }
+
+    // Header
+
+    var header = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var button_supporting_adversary_toggle_col = $("<div>").attr(
+        {
+            class:"col-12"
+        }
+    );
+
+    var button_supporting_adversary_toggle = $("<button>").attr(
+        {
+            id: `button_supporting_adversary_toggle`,
+            class:`w-100 btn btn-reset-page ${dark_mode_flag}`
+        }
+    );
+
+    var header_for_button = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var supporting_adversary_header_text = $("<div>").attr(
+        {
+            class:"col-8"
+        }
+    );
+
+    var header_1 = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var header_2 = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    $("<div>").attr(
+        {
+            class:`col text-line ${dark_mode_flag}`,
+            style:"font-size:2.5vh;"
+        }
+    ).text(
+        supporting_adversary_name
+    ).appendTo(
+        header_1
+    );
+
+    $("<div>").attr(
+        {
+            class:`col text-line ${dark_mode_flag}`,
+            style:"font-size:1.5vh;font-style:italic;"
+        }
+    ).text(
+        "Level "+$("#spirit_island_tracker_body").data("supporting_adversary_level")+" / Difficulty +"+Math.round(
+            0.625*parseInt(
+                supporting_adversary_config["level"][
+                    $("#spirit_island_tracker_body").data("supporting_adversary_level")
+                ]["difficulty"]
+            )
+        )
+    ).appendTo(
+        header_2
+    );
+
+    var supporting_adversary_header_image = $("<div>").attr(
+        {
+            class:"col-3 align-self-center",
+        }
+    ).append(
+        $("<img>").attr(
+            {
+                style:"height:6vh;",
+                src: generate_encoded_adversary_image_url(
+                    supporting_adversary_name
+                )
+            }
+        )
+    );
+
+    var supporting_adversary_toggle_dropdown_arrow = $("<div>").attr(
+        {
+            class:"col-1 p-1 d-flex"
+        }
+    ).html(
+        $("<img>").attr(
+            {
+                id:"supporting_adversary_toggle_dropdown_arrow",
+                style:"align-self: center",
+                class:`svg ${dark_mode_flag} img-vert`,
+                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg" ,
+                // height="25px"
+            }
+        )
+    );
+
+    var supporting_invader_super_row = $("<div>").attr(
+        {
+            id:"supporting_invader_super_row",
+            class:"row",
+            style:"display:block;"
+        }
+    );
+
+    var supporting_invader_super_col = $("<div>").attr(
+        {
+            class:"col-12"
+        }
+    );
+
+    // Loss Condition
+
+    var  supporting_adversary_additional_loss_condition_row = $("<div>").attr(
+        {
+            class:"row mb-2"
+        }
+    );
+
+    var supporting_adversary_additional_loss_condition_div = $("<div>").attr(
+        {
+            class:"col-12"
+        }
+    );
+
+    supporting_adversary_additional_loss_condition_div.append(
+        $("<b>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`,
+                style:"font-style:italic;font-size:1.8vh;"
+            }
+        ).text("Additional Loss Condition")
+    );
+
+    supporting_adversary_additional_loss_condition_div.append(
+        $("<br>")
+    );
+
+    if (supporting_adversary_config["additional_loss_condition"]["title"] != "") {
+
+        supporting_adversary_additional_loss_condition_div.append(
+            $("<button>").attr(
+                {
+                    id: `button_supporting_adversary_additional_loss_condition_toggle`,
+                    class:`w-100 mb-2 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+                }
+            ).html(
+                spirit_text_keyword_converter(
+                    supporting_adversary_config["additional_loss_condition"]["title"],
+                    18,
+                    "text-align:left;"
+                ) + `<img id="supporting_adversary_additional_loss_condition_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+            )
+        )
+
+        supporting_adversary_additional_loss_condition_div.append(
+            spirit_text_keyword_converter(
+                supporting_adversary_config["additional_loss_condition"]["effect"],
+                18,
+                "font-size:1.6vh;display:inline;display:none;",
+                "supporting_adversary_additional_loss_condition_text"
+            )
+        );
+    }
+    else {
+        supporting_adversary_additional_loss_condition_div.append(
+            $("<p>").attr(
+                {
+                    class:`text-line ${dark_mode_flag}`,
+                    style:"font-style:italic;font-size:1.6vh;"
+                }
+            ).text("None")
+        )
+    };
+
+    // Stage 2 Escalation
+
+    var  supporting_adversary_stage_3_escalation_row = $("<div>").attr(
+        {
+            class:"row mb-2"
+        }
+    );
+
+    var supporting_adversary_stage_3_escalation_div = $("<div>").attr(
+        {
+            class:"col-12",
+        }
+    );
+
+    supporting_adversary_stage_3_escalation_div.append(
+        $("<b>").attr(
+            {
+                class:`text-line ${dark_mode_flag}`,
+                style:"font-style:italic;font-size:1.8vh;"
+            }
+        ).text("Stage III Escalation ").append(
+            $("<img>").attr(
+                {
+                    style:"align-self: center;",
+                    class:`svg ${dark_mode_flag}`,
+                    src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/town.svg"
+
+                }
+            )
+        )
+    );
+
+    supporting_adversary_stage_3_escalation_div.append(
+        $("<br>")
+    );
+
+    supporting_adversary_stage_3_escalation_div.append(
+        $("<button>").attr(
+            {
+                id: `button_supporting_adversary_stage_3_escalation_toggle`,
+                class:`w-100 mb-2 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+            }
+        ).html(
+            spirit_text_keyword_converter(
+                supporting_adversary_config["stage_2_escalation"]["title"],
+                18,
+                "text-align:left;"
+            ) + `<img id="supporting_adversary_stage_3_escalation_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+        )
+    );
+
+    supporting_adversary_stage_3_escalation_div.append(
+        spirit_text_keyword_converter(
+            supporting_adversary_config["stage_2_escalation"]["effect"],
+            18,
+            "font-size:1.6vh;display:inline;display:none;",
+            "supporting_adversary_stage_3_escalation_text"
+        )
+    );
+
+    // Rules
+
+    var supporting_adversary_rules_div = $("<div>").attr(
+        {
+            class:"row"
+        }
+    );
+
+    var supporting_adversary_rules_table  = $("<div>").attr(
+        {
+            class:`table ${dark_mode_flag} table-background`,
+            style:"margin:0;padding:1vh;"
+        }
+    ).html(
+        $("<thead>").attr(
+            {
+                style: "width: 100%;display: table;"
+            }
+        ).html(
+            $("<tr>").append(
+                $("<th>").attr(
+                    {
+                        scope:"col",
+                        style:"width:15%;font-style:italic;",
+                        class:`text-line ${dark_mode_flag} table-header`
+                    }
+                ).text("Level")
+            ).append(
+                $("<th>").attr(
+                    {
+                        scope:"col",
+                        style:"width:25%;font-style:italic;",
+                        class:`text-line ${dark_mode_flag} table-header`
+                    }
+                ).text("Fear")
+            ).append(
+                $("<th>").attr(
+                    {
+                        scope:"col",
+                        class:`text-line ${dark_mode_flag} table-header`,
+                        style:"display:flex;"
+                    }
+                ).append(
+                    $("<div>").attr(
+                        {
+                            style:"align-self: flex-end;font-style:italic;",
+                            class:`text-line ${dark_mode_flag} table-header`
+                        }
+                    ).text("Game Effects")
+                ).append(
+                    $("<button>").attr(
+                        {
+                            id: `button_supporting_adversary_toggle_all_rules`,
+                            class:`p-1 btn btn-reset-page ${dark_mode_flag} d-flex`,
+                            style:"margin-left: auto;"
+                        }
+                    ).html(
+                        '<span id="supporting_adversary_toggle_all_rules_text">Show all</span>' + `<img id="supporting_adversary_toggle_all_rules_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                    )
+                )
+            )
+        )
+    );
+
+    var supporting_adversary_rules_table_body = $("<tbody>").attr(
+        {
+            style: "width: 100%;display: table;"
+        }
+    );
+
+    $.each(
+        supporting_adversary_config["level"],
+        function (
+            level,
+            level_config
+        ) {
+            if (parseInt(level) > 0) {
+                supporting_adversary_rules_table_body.append(
+                    $("<tr>").attr(
+                        {
+                            id: `row_supporting_adversary_info_${level}`
+                        }
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:15%",
+                                class:`text-line ${dark_mode_flag} table-body`
+                            }
+                        ).html(level)
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:25%",
+                                class:`text-line ${dark_mode_flag} table-body`
+                            }
+                        ).html(
+                            parse_supporting_adversary_fear_deck_change(
+                                level_config["fear_cards"]
+                            )
+                        )
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:60%",
+                                class:`text-line ${dark_mode_flag} table-body`
+                            }
+                        ).append(
+                            $("<button>").attr(
+                                {
+                                    id: `button_supporting_adversary_rule_${level}_toggle`,
+                                    class:`w-100 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+                                }
+                            ).html(
+                                spirit_text_keyword_converter(
+                                    level_config["game_effects"]["title"],
+                                    18,
+                                    "text-align:left;"
+                                ) + `<img id="supporting_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                            )
+                        )
+                    )
+                )
+
+                supporting_adversary_rules_table_body.append(
+                    $("<tr>").attr(
+                        {
+                            id: `row_supporting_adversary_rule_${level}`,
+                            style:"visibility:collapse;"
+                        }
+                    ).append(
+                        $("<td>").attr(
+                            {
+                                style:"width:100%",
+                                class:`text-line ${dark_mode_flag} table-body`,
+                                colspan:"3"
+                            }
+                        ).append(
+                            $("<p>").attr(
+                                {
+                                    class:`${dark_mode_flag}`
+                                }
+                            ).html(
+                                spirit_text_keyword_converter(
+                                    level_config["game_effects"]["effect"],
+                                    18
+                                )
+                            )
+                        )
+                    )
+                )
+            }
+        }
+    )
+
+    supporting_adversary_rules_table_body.appendTo(
+        supporting_adversary_rules_table
+    );
+
+    // Appending
+
+    header.appendTo(
+        $("#supporting_invader_rules_body")
+    );
+
+    button_supporting_adversary_toggle_col.appendTo(
+        header
+    );
+
+    button_supporting_adversary_toggle.appendTo(
+        button_supporting_adversary_toggle_col
+    );
+
+    header_1.appendTo(
+        supporting_adversary_header_text
+    );
+
+    header_2.appendTo(
+        supporting_adversary_header_text
+    );
+
+    supporting_adversary_header_image.appendTo(
+        header_for_button
+    );
+
+    supporting_adversary_header_text.appendTo(
+        header_for_button
+    );
+
+    header_for_button.append(
+        supporting_adversary_toggle_dropdown_arrow
+    );
+
+    header_for_button.appendTo(
+        button_supporting_adversary_toggle
+    );
+
+    $("<hr>").attr(
+        {
+            class:`hr2 ${dark_mode_flag}`
+        }
+    ).appendTo(
+        supporting_invader_super_col
+    );
+
+    supporting_adversary_additional_loss_condition_div.appendTo(
+        supporting_adversary_additional_loss_condition_row
+    );
+
+    supporting_adversary_stage_3_escalation_div.appendTo(
+        supporting_adversary_stage_3_escalation_row
+    );
+
+    supporting_adversary_additional_loss_condition_row.appendTo(
+        supporting_invader_super_col
+    );
+
+    supporting_adversary_stage_3_escalation_row.appendTo(
+        supporting_invader_super_col
+    );
+
+    supporting_adversary_rules_table.appendTo(
+        supporting_adversary_rules_div
+    );
+
+    supporting_adversary_rules_div.appendTo(
+        supporting_invader_super_col
+    )
+
+    supporting_invader_super_col.appendTo(
+        supporting_invader_super_row
+    );
+
+    supporting_invader_super_row.appendTo(
+        $("#supporting_invader_rules_body")
+    )
+
+
+
+    $("#button_supporting_adversary_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#supporting_invader_super_row").css("display")=="block"
+            ) {
+                $("#supporting_invader_super_row").css(
+                    "display",
+                    "none"
+                );
+
+                supporting_adversary_toggle_dropdown_arrow.addClass(
+                    "img-vert"
+                );
+            }
+            else if (
+                $("#supporting_invader_super_row").css("display")=="none"
+            ) {
+                $("#supporting_invader_super_row").css(
+                    "display",
+                    "block"
+                );
+
+                supporting_adversary_toggle_dropdown_arrow.removeClass(
+                    "img-vert"
+                );
+            }
+        }
+    )
+
+    $.each(
+        supporting_adversary_config["level"],
+        function(
+            level
+        ) {
+            if (
+                level > $("#spirit_island_tracker_body").data("supporting_adversary_level")
+            ) {
+                $(`#row_supporting_adversary_info_${level} .table-body`).css(
+                    "opacity",
+                    "0.5"
+                );
+
+                $(`#row_supporting_adversary_rule_${level} .table-body`).css(
+                    "opacity",
+                    "0.5"
+                );
+            };
+
+            $(`#button_supporting_adversary_rule_${level}_toggle`).on(
+                "click",
+                function () {
+                    if (
+                        $(`#row_supporting_adversary_rule_${level}`).css("visibility") == "collapse"
+                    ) {
+                        $(`#row_supporting_adversary_rule_${level}`).css(
+                            "visibility",
+                            "visible"
+                        );
+
+                        $(`#supporting_adversary_rule_${level}_dropdown_arrow`).addClass(
+                            "img-vert"
+                        );
+
+                        $(`#supporting_adversary_toggle_all_rules_text`).text("Hide all");
+
+                        $(`#supporting_adversary_toggle_all_rules_dropdown_arrow`).addClass(
+                            "img-vert"
+                        );
+                    } else {
+                        $(`#row_supporting_adversary_rule_${level}`).css(
+                            "visibility",
+                            "collapse"
+                        );
+
+                        $(`#supporting_adversary_rule_${level}_dropdown_arrow`).removeClass(
+                            "img-vert"
+                        );
+
+                        var text_show_all = true;
+
+                        $.each(
+                            [1,2,3,4,5,6],
+                            function (idx,level) {
+                                if (
+                                    $(`#row_supporting_adversary_rule_${level}`).css("visibility") == "visible"
+                                ) {
+                                    text_show_all = false;
+                                }
+                            }
+                        )
+
+                        if (text_show_all) {
+                            $(`#supporting_adversary_toggle_all_rules_text`).text("Show all");
+                        }
+
+                        $(`#supporting_adversary_toggle_all_rules_dropdown_arrow`).removeClass(
+                            "img-vert"
+                        );
+                    }
+                }
+            )
+        }
+    )
+
+    $(`#button_supporting_adversary_toggle_all_rules`).on(
+        "click",
+        function () {
+            if (
+                $(`#button_supporting_adversary_toggle_all_rules`).text() == "Show all"
+            ) {
+                $.each(
+                    supporting_adversary_config["level"],
+                    function(
+                        level
+                    ) {
+                        $(`#row_supporting_adversary_rule_${level}`).css(
+                            "visibility",
+                            "visible"
+                        );
+
+                        $(`#supporting_adversary_rule_${level}_dropdown_arrow`).addClass(
+                            "img-vert"
+                        );
+                    }
+                )
+
+                $(`#supporting_adversary_toggle_all_rules_text`).text("Hide all");
+
+                $(`#supporting_adversary_toggle_all_rules_dropdown_arrow`).addClass(
+                    "img-vert"
+                );
+            }
+            else {
+                $.each(
+                    supporting_adversary_config["level"],
+                    function(
+                        level
+                    ) {
+                        $(`#row_supporting_adversary_rule_${level}`).css(
+                            "visibility",
+                            "collapse"
+                        );
+
+                        $(`#supporting_adversary_rule_${level}_dropdown_arrow`).removeClass(
+                            "img-vert"
+                        );
+                    }
+                )
+
+                $(`#supporting_adversary_toggle_all_rules_text`).text("Show all");
+
+                $(`#supporting_adversary_toggle_all_rules_dropdown_arrow`).removeClass(
+                    "img-vert"
+                );
+            }
+        }
+    )
+
+    $("#button_supporting_adversary_additional_loss_condition_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#supporting_adversary_additional_loss_condition_text").css("display")=="none"
+            ) {
+                $("#supporting_adversary_additional_loss_condition_text").css(
+                    "display",
+                    "block"
+                )
+
+                $("#supporting_adversary_additional_loss_condition_dropdown_arrow").addClass(
+                    "img-vert"
+                );
+            }
+            else if (
+                $("#supporting_adversary_additional_loss_condition_text").css("display")=="block"
+            ) {
+                $("#supporting_adversary_additional_loss_condition_text").css(
+                    "display",
+                    "none"
+                )
+
+                $("#supporting_adversary_additional_loss_condition_dropdown_arrow").removeClass(
+                    "img-vert"
+                );
+            }
+        }
+    );
+
+    $("#button_supporting_adversary_stage_3_escalation_toggle").on(
+        "click",
+        function() {
+            if (
+                $("#supporting_adversary_stage_3_escalation_text").css("display")=="none"
+            ) {
+                $("#supporting_adversary_stage_3_escalation_text").css(
+                    "display",
+                    "block"
+                )
+
+                $("#supporting_adversary_stage_3_escalation_dropdown_arrow").addClass(
+                    "img-vert"
+                );
+            }
+            else if (
+                $("#supporting_adversary_stage_3_escalation_text").css("display")=="block"
+            ) {
+                $("#supporting_adversary_stage_3_escalation_text").css(
+                    "display",
+                    "none"
+                )
+
+                $("#supporting_adversary_stage_3_escalation_dropdown_arrow").removeClass(
+                    "img-vert"
+                );
+            }
+        }
+    );
+}
 
 function generate_default_leading_adversary_select_button() {
 
@@ -1080,6 +1969,14 @@ function generate_default_leading_adversary_select_button() {
         "leading_adversary_level",
         0
     );
+
+    $(`#button_select_leading_adversary`).removeClass(
+        "btn-outlineless"
+    );
+
+    $(`#button_select_leading_adversary`).addClass(
+        "btn-settings"
+    );
 }
 
 function generate_default_supporting_adversary_select_button()  {
@@ -1102,6 +1999,14 @@ function generate_default_supporting_adversary_select_button()  {
     $("#spirit_island_tracker_body").data(
         "leading_supporting_difficulty",
         0
+    );
+
+    $(`#button_select_supporting_adversary`).removeClass(
+        "btn-outlineless"
+    );
+
+    $(`#button_select_supporting_adversary`).addClass(
+        "btn-settings"
     );
 }
 
