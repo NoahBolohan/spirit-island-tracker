@@ -298,7 +298,7 @@ function button_set_adversary_content(
 ) {
 
     $(`#button_select_${adversary_type}_adversary`).empty();
-        
+
     $("<img>").attr(
         {
             "src" : generate_encoded_adversary_image_url(
@@ -475,13 +475,32 @@ function append_invader_rules_to_modal(
 
     var header = $("<div>").attr(
         {
+            class:"row mb-2"
+        }
+    );
+
+    var button_leading_adversary_toggle_col = $("<div>").attr(
+        {
+            class:"col-12"
+        }
+    );
+
+    var button_leading_adversary_toggle = $("<button>").attr(
+        {
+            id: `button_leading_adversary_toggle`,
+            class:`w-100 btn btn-reset-page ${dark_mode_flag}`
+        }
+    );
+
+    var header_for_button = $("<div>").attr(
+        {
             class:"row"
         }
     );
 
     var leading_adversary_header_text = $("<div>").attr(
         {
-            class:"col-9"
+            class:"col-8"
         }
     );
 
@@ -523,7 +542,7 @@ function append_invader_rules_to_modal(
 
     var leading_adversary_header_image = $("<div>").attr(
         {
-            class:"col-3"
+            class:"col-3 align-self-center",
         }
     ).append(
         $("<img>").attr(
@@ -532,6 +551,22 @@ function append_invader_rules_to_modal(
                 src: generate_encoded_adversary_image_url(
                     leading_adversary_name
                 )
+            }
+        )
+    );
+
+    var leading_adversary_toggle_dropdown_arrow = $("<div>").attr(
+        {
+            class:"col-1 p-1 d-flex"
+        }
+    ).html(
+        $("<img>").attr(
+            {
+                id:"leading_adversary_toggle_dropdown_arrow",
+                style:"align-self: center",
+                class:`svg ${dark_mode_flag} img-vert`,
+                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg" ,
+                // height="25px"
             }
         )
     );
@@ -822,6 +857,14 @@ function append_invader_rules_to_modal(
         $("#modal_invader_rules_body")
     );
 
+    button_leading_adversary_toggle_col.appendTo(
+        header
+    );
+
+    button_leading_adversary_toggle.appendTo(
+        button_leading_adversary_toggle_col
+    );
+
     header_1.appendTo(
         leading_adversary_header_text
     );
@@ -831,11 +874,19 @@ function append_invader_rules_to_modal(
     );
 
     leading_adversary_header_image.appendTo(
-        header
+        header_for_button
     );
 
     leading_adversary_header_text.appendTo(
-        header
+        header_for_button
+    );
+
+    header_for_button.append(
+        leading_adversary_toggle_dropdown_arrow
+    );
+
+    header_for_button.appendTo(
+        button_leading_adversary_toggle
     );
 
     $("<hr>").attr(
