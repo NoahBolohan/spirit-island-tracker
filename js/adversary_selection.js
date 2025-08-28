@@ -408,12 +408,16 @@ function append_invader_rules_and_difficulty() {
                 var supporting_adversary_difficulty = 0;
             }
             else {
-                supporting_adversary_difficulty = adversaries[
-                    $("#spirit_island_tracker_body").data("supporting_adversary")
-                ]["level"][
-                    $("#spirit_island_tracker_body").data("supporting_adversary_level")
-                ]["difficulty"];
-            }
+                supporting_adversary_difficulty = Math.round(
+                    0.625*parseInt(
+                        adversaries[
+                            $("#spirit_island_tracker_body").data("supporting_adversary")
+                        ]["level"][
+                            $("#spirit_island_tracker_body").data("supporting_adversary_level")
+                        ]["difficulty"]
+                    )
+                );
+            };
 
             total_difficulty += supporting_adversary_difficulty;
 
@@ -1288,9 +1292,13 @@ function append_supporting_invader_rules_to_modal(
             style:"font-size:1.5vh;font-style:italic;"
         }
     ).text(
-        "Level "+$("#spirit_island_tracker_body").data("supporting_adversary_level")+" / Difficulty +"+supporting_adversary_config["level"][
-            $("#spirit_island_tracker_body").data("supporting_adversary_level")
-        ]["difficulty"]
+        "Level "+$("#spirit_island_tracker_body").data("supporting_adversary_level")+" / Difficulty +"+Math.round(
+            0.625*parseInt(
+                supporting_adversary_config["level"][
+                    $("#spirit_island_tracker_body").data("supporting_adversary_level")
+                ]["difficulty"]
+            )
+        )
     ).appendTo(
         header_2
     );
