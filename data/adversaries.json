@@ -193,12 +193,12 @@
                     "effect":"When you remove BLIGHT from the board, put it here instead of onto the Blight Card. As soon as you have 3 BLIGHT per player here, move it all back to the Blight Card."
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":11,
                 "fear_cards":"14 (4/5/5)",
                 "game_effects":{
                     "title":"Persistent Explorers",
-                    "effect":"After the normal Explorel, on each board add 1 EXPLORER to a land without any. Fear Card effects never remove EXPLORER. If one would, you may instead Push that EXPLORER."
+                    "effect":"After the normal Explore, on each board add 1 EXPLORER to a land without any. Fear Card effects never remove EXPLORER. If one would, you may instead Push that EXPLORER."
                 }
             }
         }
@@ -261,7 +261,7 @@
                     "effect":"Instead of Mining Boom (I), after the Build Step, on each board: Choose a land with EXPLORER. Build there, then Upgrade EXPLORER. <em>(Build normally in a Mining land.)</em>"
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":11,
                 "fear_cards":"13 (4/5/4)",
                 "game_effects":{
@@ -329,7 +329,7 @@
                     "effect":"Before the initial Explore, put the Habsburg Reminder Card under the top 5 Invader Cards. When revealed, on each board, add 1 CITY to a coastal land without CITY and 1 TOWN to the 3 Inland lands with the fewest BLIGHT."
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":11,
                 "fear_cards":"14 (5/6/3)",
                 "game_effects":{
@@ -397,7 +397,7 @@
                     "effect":"Put an unused Stage II Invader Card under the top 3 Fear Cards, and an unused Stage III Card under the top 7 Fear Cards. When one is revealed, immediately place it in the Build space (face-up)."
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":11,
                 "fear_cards":"14 (5/5/4)",
                 "game_effects":{
@@ -462,10 +462,10 @@
                 "fear_cards":"15 (5/6/4)",
                 "game_effects":{
                     "title":"Runoff and Bilgewater",
-                    "effect":"After a Ravage Action adds BLIGHT to a Coastal land, add 1 BLIGHT to that board's OCean (without cascading). Treat the Ocean as a Coastal Wetland for this rule and for BLIGHT removal/movement."
+                    "effect":"After a Ravage Action adds BLIGHT to a Coastal land, add 1 BLIGHT to that board's Ocean (without cascading). Treat the Ocean as a Coastal Wetland for this rule and for BLIGHT removal/movement."
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":10,
                 "fear_cards":"16 (6/6/4)",
                 "game_effects":{
@@ -533,7 +533,7 @@
                     "effect":"When Ravaging adds at least 1 BLIGHT to a land, also add 1 TOWN to an adjacent land without TOWN/CITY. Cascading BLIGHT does not cause this effect."
                 }
             },
-            "6 ":{
+            "6":{
                 "difficulty":8,
                 "fear_cards":"13 (4/4/5)",
                 "game_effects":{

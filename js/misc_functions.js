@@ -38,7 +38,7 @@ function spirit_text_keyword_converter(
     }
 
     var input_string_array = string.split(
-        /(\:|\(|\)|\/|\>|\.|\,|\s+)/
+        /(\:|\(|\)|\/|\>|\'|\.|\,|\s+)/
     );
     // alert(input_string_array)
 
