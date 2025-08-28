@@ -53,14 +53,6 @@ $(document).ready(
 
                 append_invader_rules_and_difficulty();
 
-                $(`#button_select_leading_adversary`).removeClass(
-                    "btn-outlineless"
-                );
-
-                $(`#button_select_leading_adversary`).addClass(
-                    "btn-settings"
-                );
-
                 $(`#modal_leading_adversaries`).modal("hide");
 
                 custom_hide(
@@ -95,14 +87,6 @@ $(document).ready(
                 );
 
                 append_invader_rules_and_difficulty();
-
-                $(`#button_select_supporting_adversary`).removeClass(
-                    "btn-outlineless"
-                );
-
-                $(`#button_select_supporting_adversary`).addClass(
-                    "btn-settings"
-                );
                 
                 $(`#modal_supporting_adversaries`).modal("hide");
 
@@ -1985,6 +1969,14 @@ function generate_default_leading_adversary_select_button() {
         "leading_adversary_level",
         0
     );
+
+    $(`#button_select_leading_adversary`).removeClass(
+        "btn-outlineless"
+    );
+
+    $(`#button_select_leading_adversary`).addClass(
+        "btn-settings"
+    );
 }
 
 function generate_default_supporting_adversary_select_button()  {
@@ -2007,6 +1999,14 @@ function generate_default_supporting_adversary_select_button()  {
     $("#spirit_island_tracker_body").data(
         "leading_supporting_difficulty",
         0
+    );
+
+    $(`#button_select_supporting_adversary`).removeClass(
+        "btn-outlineless"
+    );
+
+    $(`#button_select_supporting_adversary`).addClass(
+        "btn-settings"
     );
 }
 
