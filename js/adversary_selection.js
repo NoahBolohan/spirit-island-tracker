@@ -1232,7 +1232,7 @@ function parse_supporting_adversary_fear_deck_change(
         }
     )
 
-    
+
 
     return return_string;
 }
@@ -2049,13 +2049,13 @@ $(document).ready(
                         "supporting"
                     ],
                     function (idx, adversary_type) {
-        
+
                         $(`#list_${adversary_type}_adversary_select_buttons`).empty();
 
                         $.each(
                             json,
                             function(adversary_name, value) {
-        
+
                                 generate_adversary_select_list_item_for_adversary(
                                     adversary_name,
                                     adversary_type
@@ -2107,7 +2107,7 @@ function adversary_select_filter(
 
     var input = $(`#input_${adversary_type}_adversary_select_search`).val().toUpperCase();
     var adversary_select_list_items = $(`#list_${adversary_type}_adversary_select_buttons li`);
-  
+
     adversary_select_list_items.each(function(idx, li) {
 
         var adversary_select_item = $(li);
