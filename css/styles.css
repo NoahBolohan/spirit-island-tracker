@@ -243,17 +243,29 @@ input:checked + .slider:before {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    font-size: 35px;
-    color: white;
+    font-size: 4vh;
+    color: rgba(var(--font-color-light));
     margin: 0;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px rgba(var(--font-color-dark));
     paint-order: stroke fill;
+}
+
+.leading_adversary_img_col {
+    position: relative;
+    display: inline-block;
+  }
+
+.leading_adversary_img {
+    object-fit: cover;
+    /* width: auto; */
+    /* height: 4vh; */
+    /* opacity: 0.3; */
 }
 
 .leading_adversary_img_text_overlay{
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: 30%;
+    left: 15%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
@@ -261,10 +273,40 @@ input:checked + .slider:before {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    font-size: 35px;
-    color: white;
+    font-size: 7vh;
+    color: rgba(var(--font-color-light));
     margin: 0;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px rgba(var(--font-color-dark));
+    paint-order: stroke fill;
+}
+
+.supporting_adversary_img_col {
+    position: relative;
+    display: inline-block;
+  }
+
+.supporting_adversary_img {
+    object-fit: cover;
+    /* width: auto; */
+    /* height: 4vh; */
+    /* opacity: 0.3; */
+}
+
+.supporting_adversary_img_text_overlay{
+    position: absolute;
+    top: 75%;
+    left: 85%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    font-size: 7vh;
+    color: rgba(var(--font-color-light));
+    margin: 0;
+    -webkit-text-stroke: 2px rgba(var(--font-color-dark));
     paint-order: stroke fill;
 }
 

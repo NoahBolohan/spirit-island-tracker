@@ -87,7 +87,7 @@ $(document).ready(
                 );
 
                 append_invader_rules_and_difficulty();
-                
+
                 $(`#modal_supporting_adversaries`).modal("hide");
 
                 localStorage.removeItem(
@@ -285,6 +285,7 @@ function button_set_adversary_content(
 
     $("<img>").attr(
         {
+            class:`${adversary_type}_adversary_img`,
             "src" : generate_encoded_adversary_image_url(
                 adversary_name
             ),
@@ -469,6 +470,10 @@ function append_invader_rules_and_difficulty() {
             )
         }
         else {
+            $(`#supporting_adversary_img_text_overlay`).text(
+                $("#spirit_island_tracker_body").data("supporting_adversary_level")
+            );
+
             append_supporting_invader_rules_to_modal(
                 $("#spirit_island_tracker_body").data("supporting_adversary"),
                 adversaries[
@@ -2001,13 +2006,19 @@ function generate_default_supporting_adversary_select_button()  {
             "background-color": "",
             "border" : "",
             "height" : "40%",
-            "aspect-ratio" : "1/1"
+            "aspect-ratio" : "1/1",
+            "display": "flex",
+            "justify-content": "center"
         }
     );
 
-    $(`#button_select_supporting_adversary`).html(
-        "&#x2795;"
-    );
+    $(`#button_select_supporting_adversary`).append(
+        $("<div>").attr(
+            {
+                class:"plus"
+            }
+        )
+    )
 
     $("#spirit_island_tracker_body").data(
         "leading_supporting_difficulty",
