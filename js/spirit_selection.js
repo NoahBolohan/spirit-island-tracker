@@ -168,9 +168,9 @@ function generate_spirit_select_list_item_for_spirit(
     ).css(
         {
             "text-align" : "center",
-            "font-size" : "0.7em",
+            "font-size" : "max(1.3vh,1.3vw)",
             "height" : "4lh",
-            "padding-top" : "5px"
+            "padding-top" : "max(0.8vh,0.8vw)"
         }
     ).text(
         spirit_name

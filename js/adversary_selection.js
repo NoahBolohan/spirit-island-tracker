@@ -228,8 +228,8 @@ function generate_adversary_select_list_item_for_adversary(
     ).css(
         {
             "text-align" : "center",
-            "font-size" : "1.5vh",
-            "height" : "10vh",
+            "font-size" : "max(1.5vh,15vw)",
+            "height" : "max(10vh,10vw);",
             "padding-top" : "5px"
         }
     ).text(
@@ -549,7 +549,7 @@ function append_leading_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:2.5vh;"
+            style:"font-size:max(2.5vh,2.5vw);"
         }
     ).text(
         leading_adversary_name
@@ -560,7 +560,7 @@ function append_leading_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:1.5vh;font-style:italic;"
+            style:"font-size:max(1.5vh,1.5vw);font-style:italic;"
         }
     ).text(
         "Level "+$("#spirit_island_tracker_body").data("leading_adversary_level")+" / Difficulty "+leading_adversary_config["level"][
@@ -577,7 +577,7 @@ function append_leading_invader_rules_to_modal(
     ).append(
         $("<img>").attr(
             {
-                style:"height:6vh;",
+                style:"height:max(6vh,6vw);",
                 src: generate_encoded_adversary_image_url(
                     leading_adversary_name
                 )
@@ -633,7 +633,7 @@ function append_leading_invader_rules_to_modal(
         $("<b>").attr(
             {
                 class:`text-line ${dark_mode_flag}`,
-                style:"font-style:italic;font-size:1.8vh;"
+                style:"font-style:italic;font-size:max(1.8vh,1.8vw);"
             }
         ).text("Additional Loss Condition")
     );
@@ -663,7 +663,7 @@ function append_leading_invader_rules_to_modal(
             spirit_text_keyword_converter(
                 leading_adversary_config["additional_loss_condition"]["effect"],
                 18,
-                "font-size:1.6vh;display:inline;display:none;",
+                "font-size:max(1.6vh,1.6vw);display:inline;display:none;",
                 "leading_adversary_additional_loss_condition_text"
             )
         );
@@ -673,7 +673,7 @@ function append_leading_invader_rules_to_modal(
             $("<p>").attr(
                 {
                     class:`text-line ${dark_mode_flag}`,
-                    style:"font-style:italic;font-size:1.6vh;"
+                    style:"font-style:italic;font-size:max(1.6vh,1.6vw);"
                 }
             ).text("None")
         )
@@ -697,7 +697,7 @@ function append_leading_invader_rules_to_modal(
         $("<b>").attr(
             {
                 class:`text-line ${dark_mode_flag}`,
-                style:"font-style:italic;font-size:1.8vh;"
+                style:"font-style:italic;font-size:max(1.8vh,1.8vw);"
             }
         ).text("Stage II Escalation ").append(
             $("<img>").attr(
@@ -734,7 +734,7 @@ function append_leading_invader_rules_to_modal(
         spirit_text_keyword_converter(
             leading_adversary_config["stage_2_escalation"]["effect"],
             18,
-            "font-size:1.6vh;display:inline;display:none;",
+            "font-size:max(1.6vh,1.6vw);display:inline;display:none;",
             "leading_adversary_stage_2_escalation_text"
         )
     );
@@ -750,7 +750,7 @@ function append_leading_invader_rules_to_modal(
     var leading_adversary_rules_table  = $("<div>").attr(
         {
             class:`table ${dark_mode_flag} table-background`,
-            style:"margin:0;padding:1vh;"
+            style:"margin:0;padding:max(1vh,1vw);"
         }
     ).html(
         $("<thead>").attr(
@@ -1302,7 +1302,7 @@ function append_supporting_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:2.5vh;"
+            style:"font-size:max(2.5vh,2.5vw);"
         }
     ).text(
         supporting_adversary_name
@@ -1313,7 +1313,7 @@ function append_supporting_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:1.5vh;font-style:italic;"
+            style:"font-size:max(1.5vh,1.5vw);font-style:italic;"
         }
     ).text(
         "Level "+$("#spirit_island_tracker_body").data("supporting_adversary_level")+" / Difficulty +"+Math.round(
@@ -1334,7 +1334,7 @@ function append_supporting_invader_rules_to_modal(
     ).append(
         $("<img>").attr(
             {
-                style:"height:6vh;",
+                style:"height:max(6vh,6vw);",
                 src: generate_encoded_adversary_image_url(
                     supporting_adversary_name
                 )
@@ -1390,7 +1390,7 @@ function append_supporting_invader_rules_to_modal(
         $("<b>").attr(
             {
                 class:`text-line ${dark_mode_flag}`,
-                style:"font-style:italic;font-size:1.8vh;"
+                style:"font-style:italic;font-size:max(1.8vh,1.8vw);"
             }
         ).text("Additional Loss Condition")
     );
@@ -1420,7 +1420,7 @@ function append_supporting_invader_rules_to_modal(
             spirit_text_keyword_converter(
                 supporting_adversary_config["additional_loss_condition"]["effect"],
                 18,
-                "font-size:1.6vh;display:inline;display:none;",
+                "font-size:max(1.6vh,1.6vw);display:inline;display:none;",
                 "supporting_adversary_additional_loss_condition_text"
             )
         );
@@ -1430,7 +1430,7 @@ function append_supporting_invader_rules_to_modal(
             $("<p>").attr(
                 {
                     class:`text-line ${dark_mode_flag}`,
-                    style:"font-style:italic;font-size:1.6vh;"
+                    style:"font-style:italic;font-size:max(1.6vh,1.6vw);"
                 }
             ).text("None")
         )
@@ -1454,7 +1454,7 @@ function append_supporting_invader_rules_to_modal(
         $("<b>").attr(
             {
                 class:`text-line ${dark_mode_flag}`,
-                style:"font-style:italic;font-size:1.8vh;"
+                style:"font-style:italic;font-size:max(1.8vh,1.8vw);"
             }
         ).text("Stage III Escalation ").append(
             $("<img>").attr(
@@ -1491,7 +1491,7 @@ function append_supporting_invader_rules_to_modal(
         spirit_text_keyword_converter(
             supporting_adversary_config["stage_2_escalation"]["effect"],
             18,
-            "font-size:1.6vh;display:inline;display:none;",
+            "font-size:max(1.6vh,1.6vw);display:inline;display:none;",
             "supporting_adversary_stage_3_escalation_text"
         )
     );
@@ -1507,7 +1507,7 @@ function append_supporting_invader_rules_to_modal(
     var supporting_adversary_rules_table  = $("<div>").attr(
         {
             class:`table ${dark_mode_flag} table-background`,
-            style:"margin:0;padding:1vh;"
+            style:"margin:0;padding:max(1vh,1vw);"
         }
     ).html(
         $("<thead>").attr(

@@ -190,7 +190,7 @@ function append_threshold_string(
                     $("<img>").attr(
                         {
                             src : "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/destroyed_presence.svg",
-                            style: "height: 1em; display: inline-block; vertical-align: baseline;"
+                            style: "height: max(1.9vh,1.9vw); display: inline-block; vertical-align: baseline;"
                         }
                     ).appendTo(
                         div
@@ -286,7 +286,7 @@ function assign_modal_to_tier_button(
         {
             class : `btn btn-settings ${dark_mode_flag}`,
             id : `button_close_modal_innate_power_${innate_power_number}_${innate_power_tier}`,
-            style : "position:absolute;right:1em;"
+            style : "position:absolute;right:max(1.9vh,1.9vw);"
         }
     ).html(
         '<div class="close-x"></div>'
