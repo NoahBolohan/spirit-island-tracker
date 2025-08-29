@@ -342,7 +342,7 @@ function reset_innate_power_row() {
         {
             class: "svg",
             src : "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg",
-            height : "15px"
+            height : "max(15vh,1.5vw)"
         }
     );
 

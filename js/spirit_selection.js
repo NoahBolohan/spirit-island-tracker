@@ -135,7 +135,7 @@ function generate_spirit_select_list_item_for_spirit(
             id : `button_${
                 spirit_button_name
             }`,
-            "style" : "padding : 0px;"
+            "style" : "padding : 0;"
         }
     )
 

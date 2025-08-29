@@ -36,7 +36,7 @@ function parse_innate_power(
             $("<div>").attr(
                     {
                         class : `card-header text-center ${dark_mode_flag}`,
-                        style: "font-size : 13px"
+                        style: "font-size : max(1.5vh,1.5vw)"
                     }
                 ).text(
                     value.toUpperCase()

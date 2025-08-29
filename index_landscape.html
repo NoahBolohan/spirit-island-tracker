@@ -14,7 +14,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/styles_landscape.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/themes.css" media="screen" />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -692,9 +692,8 @@
                                     <li class="text-line">Game design by <a class="text-line" target="_blank" rel="noopener noreferrer" href="https://rericreuss.com/">Eric Reuss</a></li>
 									<li class="text-line">
 										All art on this page is made by one of:
-										<div id="contentBox" style="margin:0px auto; width:100%">
+										<div id="contentBox" style="margin:0 auto; width:100%">
 
-										<!-- columns divs, float left, no margin so there is no space between column, width=1/3 -->
 											<div id="column1" style="float:left; margin:0; width:50%;">
 												<ul>
 													<li class="text-line"><a class="text-line" target="_blank" rel="noopener noreferrer" href="https://boardgamegeek.com/boardgamedesigner/11462/loic-billiau">Loic Belliau</a></li>
@@ -746,9 +745,9 @@
 
 						<div class="row mb-1 p-0 justify-content-center margin_auto">
                             <div class="col-auto p-0 align-self-center text-line">
-								<object class="text-line svg" data="static/icons/fear.svg" height="15px"></object>
+								<object class="text-line svg" data="static/icons/fear.svg" height="max(15vh,1.5vw)"></object>
                                 Not an official Spirit Island product.
-								<object class="text-line svg" data="static/icons/fear.svg" height="15px"></object>
+								<object class="text-line svg" data="static/icons/fear.svg" height="max(15vh,1.5vw)"></object>
                             </div>
                         </div>
 
@@ -878,31 +877,6 @@
                             </button>
                         </div>
                     </div>
-
-                    <!-- <div class="row gx-2 mb-2">
-
-                        <div class="col-5 align-self-center">
-
-                            <button class="w-100 btn btn-settings is_hidden" type="button" id="button_setup" style="font-size: max(1.9vh,1.9vw);">
-                                Setup
-                            </button>
-                        </div>
-
-                        <div class="col-5 align-self-center">
-
-                            <button class="w-100 btn btn-settings is_hidden" type="button" id="button_invader_rules" style="font-size: max(1.9vh,1.9vw);">
-                                Difficulty: 0
-                            </button>
-                        </div>
-
-                        <div class="col-2 align-self-center">
-
-                            <button class="w-100 btn btn-settings" style="align-items: center;" type="button" id="button_settings">
-
-                                <img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/gear.svg" style="vertical-align: middle;max-height:2.5vh;max-width:2.5vh">
-                            </button>
-                        </div>
-                    </div> -->
                 </div>
 
                 <div class="col-8">
@@ -926,15 +900,14 @@
 
                     <div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
 
-                        <!-- <div class="card mt-2 p-0 margin_auto card-body" id="col_innate_powers" style="background-blend-mode : lighten; background-size : cover;"> -->
                         <div class="mt-2 p-0 margin_auto" id="col_innate_powers" style="background-blend-mode : lighten; background-size : cover;">
 
                             <div class="row p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
 
                                 <p class="col m-0 mb-1 d-flex justify-content-center text-line">
-                                    <img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg"  height="15px"></img>
+                                    <img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg"  height="max(15vh,1.5vw)"></img>
                                     Select a Spirit to display their innate powers
-                                    <img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg"  height="15px"></img>
+                                    <img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg"  height="max(15vh,1.5vw)"></img>
                                 </p>
                             </div>
                         </div>
@@ -943,126 +916,6 @@
                 </div>
 				
 			</div>
-
-			<!-- <div class="row justify-content-center">
-				<img class="col-9" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/master/static/misc/Spirit_Island_Logo.png"></img>
-			</div> -->
-
-			<!-- <div class="row gx-2">
-
-				<div class="col-5 align-self-center">
-
-					<button class="w-100 btn btn-settings is_hidden" type="button" id="button_setup" style="font-size: max(1.9vh,1.9vw);">
-						Setup
-					</button>
-				</div>
-
-				<div class="col-5 align-self-center">
-
-					<button class="w-100 btn btn-settings is_hidden" type="button" id="button_invader_rules" style="font-size: max(1.9vh,1.9vw);">
-						Difficulty: 0
-					</button>
-				</div>
-
-				<div class="col-2 align-self-center">
-
-					<button class="w-100 btn btn-settings" style="align-items: center;" type="button" id="button_settings">
-						<img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/gear.svg" style="vertical-align: middle;max-height:2.5vh;max-width:2.5vh">
-					</button>
-				</div>
-			</div> -->
-
-			<!-- <div class="row mt-0 p-0 g-2" id="row_game_info">
-
-				<div class="col-6">
-
-					<div class="row p-0 justify-content-center margin_auto">
-
-						<button class="p-0 btn  btn-settings" id="button_select_spirit">
-							Select spirit
-						</button>
-					</div>
-				</div>
-
-				<div class="col-6">
-
-					<div class="row p-0 justify-content-center margin_auto wrapper">
-
-						<section class="leading_adversary_img_col" id="section_leading_adversary">
-
-							<button class="p-0 btn  btn-settings" id="button_select_leading_adversary" style="width: 100%;">
-								Select adversary
-							</button>
-						</section>
-
-						<section class="leading_adversary_img_col is_hidden" id="section_supporting_adversary">
-
-							<button class="p-0 btn  btn-settings" id="button_select_supporting_adversary" style="margin:auto 0 0 auto;height:40%;aspect-ratio: 1/1;display: flex;justify-content: center;">
-								<div class="plus"></div>
-							</button>
-						</section>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- <div class="row my-2 p-0 justify-content-center margin_auto" id="row_element_tracker">
-
-				<div class="card col p-0 margin_auto card-body" id="col_element_tracker_card" style="background-blend-mode : lighten">
-
-					<div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker"></div>
-
-					<div class="row mb-2 p-0 justify-content-center margin-auto">
-
-						<button class="col-3 btn btn-lock-elements" id="button_toggle_lock_element_tracker" type="button" data-lock_status="unlocked">Lock</button>
-
-						<button class="col-3 offset-1 btn btn-reset-elements" id="button_reset_element_tracker" type="button">
-							Reset
-						</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
-
-				<div class="mt-2 p-0 margin_auto" id="col_innate_powers" style="background-blend-mode : lighten; background-size : cover;">
-
-					<div class="row p-0 g-2 justify-content-center margin-auto" id="row_innate_power_cols">
-
-						<p class="col m-0 mb-1 d-flex justify-content-center text-line">
-							<img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg"  height="15px"></img>
-							Select a Spirit to display their innate powers
-							<img class="svg" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/86920873d14d49cb59716c9b04930e996d66b930/static/icons/fear.svg"  height="15px"></img>
-						</p>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- <div class="row mb-2 justify-content-center">
-
-				<div class="col-6 align-self-center">
-
-					<button class="w-100 btn btn-settings" type="button" id="button_compute_score" style="font-size: max(1.9vh,1.9vw);">
-						Compute score
-					</button>
-				</div>
-			</div>
-
-			<div class="row gx-2">
-
-				<div class="col-6 align-self-center">
-
-					<button class="w-100 btn btn-reset-page" type="button" id="button_about" style="font-size: max(1.9vh,1.9vw);">
-						About
-					</button>
-				</div>
-
-				<div class="col-6 align-self-center">
-
-					<button class="w-100 btn btn-reset-page" type="button" id="button_reset_selections" style="font-size: max(1.9vh,1.9vw);">
-						Reset page
-					</button>
-				</div>
-			</div> -->
 		</div>
 	</body>
 </html>

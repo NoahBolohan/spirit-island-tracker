@@ -42,7 +42,7 @@ function spirit_text_keyword_converter(
     );
     // alert(input_string_array)
 
-    var return_html_array = [`<span id="${id}" class="text-line ${dark_mode_flag}" style="margin-bottom: 0px;${style}">`];
+    var return_html_array = [`<span id="${id}" class="text-line ${dark_mode_flag}" style="margin-bottom: 0;${style}">`];
 
 
     $.ajax({
@@ -56,16 +56,9 @@ function spirit_text_keyword_converter(
 
                     if (value in json["keywords"]) {
                         return_html_array.push(
-                            // `<object data="static/icons/${json["keywords"][value]}" height="${height}px"></object>`
-                            // `<object data="static/icons/${json["keywords"][value]}" style="max-height: ${max_size}px; max-width: ${max_size}px;"></object>`
-                            // `<object data="static/icons/${
-                            //     json["keywords"][value]["file_name"]
-                            // }" style="max-height: ${max_size}px; max-width: ${max_size}px;display: inline-block; vertical-align: baseline;"></object>`
                             `<img class="svg ${dark_mode_flag}" src="static/icons/${
                                 json["keywords"][value]["file_name"]
                             }"></img>`
-
-                            // <img style="align-self: center" class="svg" src=""  height="25px"></img>
                         )
                     }
                     else if (value == "<em") {

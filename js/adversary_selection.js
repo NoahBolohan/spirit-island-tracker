@@ -196,7 +196,7 @@ function generate_adversary_select_list_item_for_adversary(
             }_${
                 adversary_button_name
             }`,
-            "style" : "padding : 0px;"
+            "style" : "padding : 0;"
         }
     )
 
@@ -230,7 +230,7 @@ function generate_adversary_select_list_item_for_adversary(
             "text-align" : "center",
             "font-size" : "max(1.5vh,15vw)",
             "height" : "max(10vh,10vw);",
-            "padding-top" : "5px"
+            "padding-top" : "max(0.8vh,0.8vw)"
         }
     ).text(
         adversary_name
@@ -595,8 +595,7 @@ function append_leading_invader_rules_to_modal(
                 id:"leading_adversary_toggle_dropdown_arrow",
                 style:"align-self: center",
                 class:`svg ${dark_mode_flag} img-vert`,
-                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg" ,
-                // height="25px"
+                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"
             }
         )
     );
@@ -655,7 +654,7 @@ function append_leading_invader_rules_to_modal(
                     leading_adversary_config["additional_loss_condition"]["title"],
                     18,
                     "text-align:left;"
-                ) + `<img id="leading_adversary_additional_loss_condition_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                ) + `<img id="leading_adversary_additional_loss_condition_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
             )
         )
 
@@ -726,7 +725,7 @@ function append_leading_invader_rules_to_modal(
                 leading_adversary_config["stage_2_escalation"]["title"],
                 18,
                 "text-align:left;"
-            ) + `<img id="leading_adversary_stage_2_escalation_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+            ) + `<img id="leading_adversary_stage_2_escalation_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
         )
     );
 
@@ -796,7 +795,7 @@ function append_leading_invader_rules_to_modal(
                             style:"margin-left: auto;"
                         }
                     ).html(
-                        '<span id="leading_adversary_toggle_all_rules_text">Show all</span>' + `<img id="leading_adversary_toggle_all_rules_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                        '<span id="leading_adversary_toggle_all_rules_text">Show all</span>' + `<img id="leading_adversary_toggle_all_rules_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                     )
                 )
             )
@@ -854,7 +853,7 @@ function append_leading_invader_rules_to_modal(
                                     level_config["game_effects"]["title"],
                                     18,
                                     "text-align:left;"
-                                ) + `<img id="leading_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                                ) + `<img id="leading_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                             )
                         )
                     )
@@ -1352,8 +1351,7 @@ function append_supporting_invader_rules_to_modal(
                 id:"supporting_adversary_toggle_dropdown_arrow",
                 style:"align-self: center",
                 class:`svg ${dark_mode_flag} img-vert`,
-                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg" ,
-                // height="25px"
+                src:"https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"
             }
         )
     );
@@ -1412,7 +1410,7 @@ function append_supporting_invader_rules_to_modal(
                     supporting_adversary_config["additional_loss_condition"]["title"],
                     18,
                     "text-align:left;"
-                ) + `<img id="supporting_adversary_additional_loss_condition_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                ) + `<img id="supporting_adversary_additional_loss_condition_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
             )
         )
 
@@ -1483,7 +1481,7 @@ function append_supporting_invader_rules_to_modal(
                 supporting_adversary_config["stage_2_escalation"]["title"],
                 18,
                 "text-align:left;"
-            ) + `<img id="supporting_adversary_stage_3_escalation_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+            ) + `<img id="supporting_adversary_stage_3_escalation_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
         )
     );
 
@@ -1553,7 +1551,7 @@ function append_supporting_invader_rules_to_modal(
                             style:"margin-left: auto;"
                         }
                     ).html(
-                        '<span id="supporting_adversary_toggle_all_rules_text">Show all</span>' + `<img id="supporting_adversary_toggle_all_rules_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                        '<span id="supporting_adversary_toggle_all_rules_text">Show all</span>' + `<img id="supporting_adversary_toggle_all_rules_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                     )
                 )
             )
@@ -1613,7 +1611,7 @@ function append_supporting_invader_rules_to_modal(
                                     level_config["game_effects"]["title"],
                                     18,
                                     "text-align:left;"
-                                ) + `<img id="supporting_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"  height="25px"></img>`
+                                ) + `<img id="supporting_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                             )
                         )
                     )
