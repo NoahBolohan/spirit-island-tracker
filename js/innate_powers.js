@@ -170,7 +170,7 @@ function append_threshold_string(
                     $("<img>").attr(
                         {
                             src : `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/${count}_cost.png`,
-                            style: "height: 1.5em; display: inline-block; vertical-align: middle;"
+                            style: "height: max(2.2vh,2.2vw); display: inline-block; vertical-align: middle;"
                         }
                     ).appendTo(
                         div
@@ -180,7 +180,7 @@ function append_threshold_string(
                     $("<img>").attr(
                         {
                             src : "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/beasts.svg",
-                            style: "height: 1.3em; display: inline-block; vertical-align: middle;"
+                            style: "height: max(2.1vh,2.1vw); display: inline-block; vertical-align: middle;"
                         }
                     ).appendTo(
                         div
@@ -200,7 +200,7 @@ function append_threshold_string(
                     $("<img>").attr(
                         {
                             src : "https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/power_card.svg",
-                            style: "height: 1.5em; display: inline-block; vertical-align: middle;"
+                            style: "height: max(2.2vh,2.2vw); display: inline-block; vertical-align: middle;"
                         }
                     ).appendTo(
                         div
@@ -210,7 +210,7 @@ function append_threshold_string(
                     $("<img>").attr(
                         {
                             src : `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/${element}.png`,
-                            style: "height: 1.5em; display: inline-block; vertical-align: middle;"
+                            style: "height: max(2.2vh,2.2vw); display: inline-block; vertical-align: middle;"
                         }
                     ).appendTo(
                         div
