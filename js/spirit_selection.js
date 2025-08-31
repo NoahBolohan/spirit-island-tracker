@@ -313,7 +313,6 @@ function generate_spirit_select_list_item_for_spirit(
                     spirit_button_name
                 );
             }
-            
         }
     );
 }
@@ -367,7 +366,7 @@ function spirit_select_filter() {
 
     var input = $("#input_spirit_select_search").val().toUpperCase();
     var spirit_select_list_items = $("#list_spirit_select_buttons li");
-  
+
     spirit_select_list_items.each(function(idx, li) {
 
         var spirit_select_item = $(li);

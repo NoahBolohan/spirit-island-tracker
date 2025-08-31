@@ -196,7 +196,7 @@ function generate_adversary_select_list_item_for_adversary(
             }_${
                 adversary_button_name
             }`,
-            "style" : "padding : 0;"
+            "style" : "padding : 0;width:100%;"
         }
     )
 
@@ -228,8 +228,8 @@ function generate_adversary_select_list_item_for_adversary(
     ).css(
         {
             "text-align" : "center",
-            "font-size" : "max(1.5vh,15vw)",
-            "height" : "max(10vh,10vw);",
+            "font-size" : "max(1.3vh,1.3vw)",
+            "height" : "2lh",
             "padding-top" : "max(0.8vh,0.8vw)"
         }
     ).text(
