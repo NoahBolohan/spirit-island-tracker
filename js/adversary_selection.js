@@ -457,7 +457,8 @@ function append_invader_rules_and_difficulty() {
             $("#spirit_island_tracker_body").data("leading_adversary_level")
         );
 
-        $("#supporting_invader_rules_body").empty();
+        $("#supporting_invader_rules_body_1").empty();
+        $("#supporting_invader_rules_body_2").empty();
 
         if ($("#spirit_island_tracker_body").data("supporting_adversary") == "") {
             $("<div>").attr(
@@ -489,7 +490,8 @@ function append_leading_invader_rules_to_modal(
     leading_adversary_config
 ) {
 
-    $("#leading_invader_rules_body").empty();
+    $("#leading_invader_rules_body_1").empty();
+    $("#leading_invader_rules_body_2").empty();
 
     if (
         $("body").data(
@@ -524,13 +526,13 @@ function append_leading_invader_rules_to_modal(
 
     var header_for_button = $("<div>").attr(
         {
-            class:"row"
+            class:"row gx-2"
         }
     );
 
     var leading_adversary_header_text = $("<div>").attr(
         {
-            class:"col-8"
+            class:"col-8 p-0"
         }
     );
 
@@ -549,7 +551,7 @@ function append_leading_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:max(2.5vh,2.5vw);"
+            style:"font-size:max(2.5vh,2vw);"
         }
     ).text(
         leading_adversary_name
@@ -572,12 +574,12 @@ function append_leading_invader_rules_to_modal(
 
     var leading_adversary_header_image = $("<div>").attr(
         {
-            class:"col-3 align-self-center",
+            class:"col-3 align-self-center p-0",
         }
     ).append(
         $("<img>").attr(
             {
-                style:"height:max(6vh,6vw);",
+                style:"width:100%;",
                 src: generate_encoded_adversary_image_url(
                     leading_adversary_name
                 )
@@ -587,7 +589,7 @@ function append_leading_invader_rules_to_modal(
 
     var leading_adversary_toggle_dropdown_arrow = $("<div>").attr(
         {
-            class:"col-1 p-1 d-flex"
+            class:"col-1 d-flex"
         }
     ).html(
         $("<img>").attr(
@@ -897,7 +899,7 @@ function append_leading_invader_rules_to_modal(
     // Appending
 
     header.appendTo(
-        $("#leading_invader_rules_body")
+        $("#leading_invader_rules_body_1")
     );
 
     button_leading_adversary_toggle_col.appendTo(
@@ -957,7 +959,7 @@ function append_leading_invader_rules_to_modal(
     );
 
     leading_adversary_rules_table.appendTo(
-        leading_adversary_rules_div
+        $("#leading_invader_rules_body_2")
     );
 
     leading_adversary_rules_div.appendTo(
@@ -969,7 +971,7 @@ function append_leading_invader_rules_to_modal(
     );
 
     leading_invader_super_row.appendTo(
-        $("#leading_invader_rules_body")
+        $("#leading_invader_rules_body_1")
     )
 
     $("#button_leading_adversary_toggle").on(
@@ -983,6 +985,11 @@ function append_leading_invader_rules_to_modal(
                     "none"
                 );
 
+                $("#leading_invader_rules_body_2").css(
+                    "display",
+                    "none"
+                );
+
                 leading_adversary_toggle_dropdown_arrow.addClass(
                     "img-vert"
                 );
@@ -991,6 +998,11 @@ function append_leading_invader_rules_to_modal(
                 $("#leading_invader_super_row").css("display")=="none"
             ) {
                 $("#leading_invader_super_row").css(
+                    "display",
+                    "block"
+                );
+
+                $("#leading_invader_rules_body_2").css(
                     "display",
                     "block"
                 );
@@ -1241,7 +1253,8 @@ function append_supporting_invader_rules_to_modal(
     supporting_adversary_config
 ) {
 
-    $("#supporting_invader_rules_body").empty();
+    $("#supporting_invader_rules_body_1").empty();
+    $("#supporting_invader_rules_body_2").empty();
 
     if (
         $("body").data(
@@ -1276,7 +1289,7 @@ function append_supporting_invader_rules_to_modal(
 
     var header_for_button = $("<div>").attr(
         {
-            class:"row"
+            class:"row gx-2"
         }
     );
 
@@ -1301,7 +1314,7 @@ function append_supporting_invader_rules_to_modal(
     $("<div>").attr(
         {
             class:`col text-line ${dark_mode_flag}`,
-            style:"font-size:max(2.5vh,2.5vw);"
+            style:"font-size:max(2vh,2vw);"
         }
     ).text(
         supporting_adversary_name
@@ -1333,7 +1346,7 @@ function append_supporting_invader_rules_to_modal(
     ).append(
         $("<img>").attr(
             {
-                style:"height:max(6vh,6vw);",
+                style:"width:100%;",
                 src: generate_encoded_adversary_image_url(
                     supporting_adversary_name
                 )
@@ -1343,7 +1356,7 @@ function append_supporting_invader_rules_to_modal(
 
     var supporting_adversary_toggle_dropdown_arrow = $("<div>").attr(
         {
-            class:"col-1 p-1 d-flex"
+            class:"col-1 d-flex"
         }
     ).html(
         $("<img>").attr(
@@ -1655,7 +1668,7 @@ function append_supporting_invader_rules_to_modal(
     // Appending
 
     header.appendTo(
-        $("#supporting_invader_rules_body")
+        $("#supporting_invader_rules_body_1")
     );
 
     button_supporting_adversary_toggle_col.appendTo(
@@ -1715,7 +1728,7 @@ function append_supporting_invader_rules_to_modal(
     );
 
     supporting_adversary_rules_table.appendTo(
-        supporting_adversary_rules_div
+       $("#supporting_invader_rules_body_2")
     );
 
     supporting_adversary_rules_div.appendTo(
@@ -1727,10 +1740,8 @@ function append_supporting_invader_rules_to_modal(
     );
 
     supporting_invader_super_row.appendTo(
-        $("#supporting_invader_rules_body")
+        $("#supporting_invader_rules_body_1")
     )
-
-
 
     $("#button_supporting_adversary_toggle").on(
         "click",
@@ -1743,6 +1754,11 @@ function append_supporting_invader_rules_to_modal(
                     "none"
                 );
 
+                $("#supporting_invader_rules_body_2").css(
+                    "display",
+                    "none"
+                );
+
                 supporting_adversary_toggle_dropdown_arrow.addClass(
                     "img-vert"
                 );
@@ -1751,6 +1767,11 @@ function append_supporting_invader_rules_to_modal(
                 $("#supporting_invader_super_row").css("display")=="none"
             ) {
                 $("#supporting_invader_super_row").css(
+                    "display",
+                    "block"
+                );
+
+                $("#supporting_invader_rules_body_2").css(
                     "display",
                     "block"
                 );
