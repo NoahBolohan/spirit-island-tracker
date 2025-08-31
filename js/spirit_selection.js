@@ -198,14 +198,14 @@ function generate_spirit_select_list_item_for_spirit(
                 "selected_spirit_config",
                 spirit_config
             );
-        
+
             $("<img>").attr(
                 {
                     "src" : generate_encoded_spirit_image_url(
                         spirit_name,
                         spirit_config
                     ),
-                    "style" : "width:100%;"
+                    "style" : "max-height:min(29vh,29vw);"
                 }
             ).appendTo(
                 `#button_select_spirit`
