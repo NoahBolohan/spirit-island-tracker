@@ -209,7 +209,7 @@ input:checked + .slider:before {
 .spirit_select_list_item {
     list-style:none;
     display: inline-block;
-    width: 25%;
+    width: 20%;
     padding: max(0.2vh,0.2vw);
 }
 
@@ -370,6 +370,11 @@ input:checked + .slider:before {
     border:rgba(var(--font-color-dark)) 1px solid;
 }
 
+.card-shape {
+    border:rgba(var(--font-color-dark)) 1px solid;
+    border-radius: max(2vh,2vh);
+}
+
 .card-header {
     background-color: rgba(var(--background-dark));
     border-bottom-color: rgba(var(--font-color-dark));
@@ -382,6 +387,10 @@ input:checked + .slider:before {
 }
 
 .dark-mode.card {
+    border:rgba(var(--font-color-light)) 1px solid;
+}
+
+.dark-mode.card-shape {
     border:rgba(var(--font-color-light)) 1px solid;
 }
 

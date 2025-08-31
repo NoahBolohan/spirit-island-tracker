@@ -403,7 +403,7 @@
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_spirits">
 
-			<div class="modal-dialog" role="document">
+			<div class="modal-dialog" style="max-width: 80%;" role="document">
 
 				<div class="modal-content">
 
@@ -917,7 +917,33 @@
 
                 <div class="col-8">
 
-                    <div class="row my-2 p-0 justify-content-center margin_auto" id="row_element_tracker">
+					<div class="row my-2 margin_auto card-body card-shape p-2" id="row_element_tracker">
+
+						<div class="col-10">
+							<div class="row" id="row_counters_element_tracker"></div>
+						</div>
+
+						<div class="col-2">
+
+							<div class="row mb-2">
+
+								<div class="col-12 p-0">
+
+									<button class="w-100 btn btn-lock-elements" id="button_toggle_lock_element_tracker" type="button" data-lock_status="unlocked"style="font-size: max(1.9vh,1.9vw);">Lock</button>
+								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-12 p-0">
+
+									<button class="w-100 btn btn-reset-elements" id="button_reset_element_tracker" type="button" style="font-size: max(1.9vh,1.9vw);">Reset</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                    <!-- <div class="row my-2 p-0 justify-content-center margin_auto" id="row_element_tracker">
 
                         <div class="card col p-0 margin_auto card-body" id="col_element_tracker_card" style="background-blend-mode : lighten">
 
@@ -932,7 +958,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
 
