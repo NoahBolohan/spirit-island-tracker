@@ -406,6 +406,12 @@ input:checked + .slider:before {
 }
 
 /* Tables */
+.table-fixed tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 .table-background {
     background-color: rgba(var(--primary));
     color: rgba(var(--font-color-dark));

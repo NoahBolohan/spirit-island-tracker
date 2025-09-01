@@ -90,7 +90,7 @@
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_setup">
 
-			<div class="modal-dialog" role="document">
+			<div class="modal-dialog" style="max-width:60%;" role="document">
 
 				<div class="modal-content">
 
@@ -125,28 +125,36 @@
 
 					<div class="modal-body" id="modal_invader_rules_body">
 
-						<div class="row mb-2">
-
-							<div class="col">
-								Leading:
-							</div>
-						</div>
-
 						<div class="row mb-2" id="leading_invader_rules_body">
-							<div class="col-5" id="leading_invader_rules_body_1"></div>
-							<div class="col-7" id="leading_invader_rules_body_2"></div>
-						</div>
 
-						<div class="row mb-2">
+							<div class="col-5" id="leading_invader_rules_body_1">
 
-							<div class="col">
-								Supporting:
+								<div class="row mb-2">
+
+									<div class="col">
+										Leading:
+									</div>
+								</div>
+
+								<div class="row mb-2" id="leading_invader_rules_body_1_content"></div>
 							</div>
+							<div class="col-7" id="leading_invader_rules_body_2_content"></div>
 						</div>
 
-						<div class="row" id="supporting_invader_rules_body">
-							<div class="col-5" id="supporting_invader_rules_body_1"></div>
-							<div class="col-7" id="supporting_invader_rules_body_2"></div>
+						<div class="row mb-2" id="supporting_invader_rules_body">
+
+							<div class="col-5" id="supporting_invader_rules_body_1">
+
+								<div class="row mb-2">
+
+									<div class="col">
+										Supporting:
+									</div>
+								</div>
+
+								<div class="row mb-2" id="supporting_invader_rules_body_1_content"></div>
+							</div>
+							<div class="col-7" id="supporting_invader_rules_body_2_content"></div>
 						</div>
 					</div>
 				</div>
@@ -430,7 +438,7 @@
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_leading_adversaries">
 
-			<div class="modal-dialog" role="document">
+			<div class="modal-dialog" style="max-width:60%;" role="document">
 
 				<div class="modal-content">
 
@@ -467,7 +475,7 @@
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_leading_adversary_level">
 
-			<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-dialog modal-dialog-centered" style="max-width:60%;" role="document">
 
 				<div class="modal-content">
 
@@ -501,7 +509,7 @@
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_supporting_adversaries">
 
-			<div class="modal-dialog" role="document">
+			<div class="modal-dialog" style="max-width:60%;" role="document">
 
 				<div class="modal-content">
 
@@ -538,7 +546,7 @@
 
 		<div class="modal fade" data-bs-backdrop="static" data-keyboard="false" id="modal_supporting_adversary_level">
 
-			<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-dialog modal-dialog-centered" style="max-width:60%;" role="document">
 
 				<div class="modal-content">
 
@@ -588,27 +596,6 @@
 
 						<div class="row gx-2">
 
-							<div class="col-4">
-
-								<div class="row mb-2 justify-content-center" id="row_score">
-
-									<div class="col-2 p-0 text-line text-end" id="col_score_text">
-										Score:
-									</div>
-
-									<div class="col-2 p-0 text-line text-center" id="col_score_number">
-										0
-									</div>
-								</div>
-
-								<div class="row p-0 justify-content-center margin_auto">
-
-									<button class="col-8 btn btn-reset-page" id="button_reset_score" style="font-size: max(1.9vh,1.9vw);">
-										Reset score
-									</button>
-								</div>
-							</div>
-
 							<div class="col-8">
 
 								<div class="row mb-2 margin_auto" id="row_n_players">
@@ -652,6 +639,27 @@
 										How much blight is on the island?
 									</div>
 									<input class=" col-2 p-0" id="text_blight_on_island" name="blight_on_island" type="number" min="0" step="1" required></input>
+								</div>
+							</div>
+
+							<div class="col-4">
+
+								<div class="row mb-2 justify-content-center" id="row_score">
+
+									<div class="col-2 p-0 text-line text-end" id="col_score_text">
+										Score:
+									</div>
+
+									<div class="col-2 p-0 text-line text-center" id="col_score_number">
+										0
+									</div>
+								</div>
+
+								<div class="row p-0 justify-content-center margin_auto">
+
+									<button class="col-8 btn btn-reset-page" id="button_reset_score" style="font-size: max(1.9vh,1.9vw);">
+										Reset score
+									</button>
 								</div>
 							</div>
 						</div>
@@ -873,7 +881,7 @@
                             </div>
 
                             <div class="row">
-                                
+
                                 <div class="col-12">
 
                                     <div class="row wrapper">
@@ -942,23 +950,6 @@
 							</div>
 						</div>
 					</div>
-
-                    <!-- <div class="row my-2 p-0 justify-content-center margin_auto" id="row_element_tracker">
-
-                        <div class="card col p-0 margin_auto card-body" id="col_element_tracker_card" style="background-blend-mode : lighten">
-
-                            <div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker"></div>
-
-                            <div class="row mb-2 p-0 justify-content-center margin-auto">
-
-                                <button class="col-3 btn btn-lock-elements" id="button_toggle_lock_element_tracker" type="button" data-lock_status="unlocked">Lock</button>
-
-                                <button class="col-3 offset-1 btn btn-reset-elements" id="button_reset_element_tracker" type="button">
-                                    Reset
-                                </button>
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="row p-0 justify-content-center margin_auto" id="row_innate_powers">
 

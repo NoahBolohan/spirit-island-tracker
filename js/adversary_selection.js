@@ -457,8 +457,8 @@ function append_invader_rules_and_difficulty() {
             $("#spirit_island_tracker_body").data("leading_adversary_level")
         );
 
-        $("#supporting_invader_rules_body_1").empty();
-        $("#supporting_invader_rules_body_2").empty();
+        $("#supporting_invader_rules_body_1_content").empty();
+        $("#supporting_invader_rules_body_2_content").empty();
 
         if ($("#spirit_island_tracker_body").data("supporting_adversary") == "") {
             $("<div>").attr(
@@ -490,8 +490,8 @@ function append_leading_invader_rules_to_modal(
     leading_adversary_config
 ) {
 
-    $("#leading_invader_rules_body_1").empty();
-    $("#leading_invader_rules_body_2").empty();
+    $("#leading_invader_rules_body_1_content").empty();
+    $("#leading_invader_rules_body_2_content").empty();
 
     if (
         $("body").data(
@@ -750,8 +750,8 @@ function append_leading_invader_rules_to_modal(
 
     var leading_adversary_rules_table  = $("<div>").attr(
         {
-            class:`table ${dark_mode_flag} table-background`,
-            style:"margin:0;padding:max(1vh,1vw);"
+            class:`table py-1 px-2 ${dark_mode_flag} table-background table-fixed`,
+            style:"margin:0;"
         }
     ).html(
         $("<thead>").attr(
@@ -793,7 +793,7 @@ function append_leading_invader_rules_to_modal(
                     $("<button>").attr(
                         {
                             id: `button_leading_adversary_toggle_all_rules`,
-                            class:`p-1 btn btn-reset-page ${dark_mode_flag} d-flex`,
+                            class:`px-1 py-0 btn btn-reset-page ${dark_mode_flag} d-flex`,
                             style:"margin-left: auto;"
                         }
                     ).html(
@@ -841,20 +841,20 @@ function append_leading_invader_rules_to_modal(
                     ).append(
                         $("<td>").attr(
                             {
-                                style:"width:60%",
+                                style:"width:60%;",
                                 class:`text-line ${dark_mode_flag} table-body`
                             }
                         ).append(
                             $("<button>").attr(
                                 {
                                     id: `button_leading_adversary_rule_${level}_toggle`,
-                                    class:`w-100 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+                                    class:`w-100 btn btn-reset-page py-0 ${dark_mode_flag} d-flex justify-content-between`
                                 }
                             ).html(
                                 spirit_text_keyword_converter(
                                     level_config["game_effects"]["title"],
                                     18,
-                                    "text-align:left;"
+                                    "text-align:left;text-overflow:ellipsis;overflow: hidden;white-space:nowrap;"
                                 ) + `<img id="leading_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                             )
                         )
@@ -899,7 +899,7 @@ function append_leading_invader_rules_to_modal(
     // Appending
 
     header.appendTo(
-        $("#leading_invader_rules_body_1")
+        $("#leading_invader_rules_body_1_content")
     );
 
     button_leading_adversary_toggle_col.appendTo(
@@ -959,7 +959,7 @@ function append_leading_invader_rules_to_modal(
     );
 
     leading_adversary_rules_table.appendTo(
-        $("#leading_invader_rules_body_2")
+        $("#leading_invader_rules_body_2_content")
     );
 
     leading_adversary_rules_div.appendTo(
@@ -971,7 +971,7 @@ function append_leading_invader_rules_to_modal(
     );
 
     leading_invader_super_row.appendTo(
-        $("#leading_invader_rules_body_1")
+        $("#leading_invader_rules_body_1_content")
     )
 
     $("#button_leading_adversary_toggle").on(
@@ -985,7 +985,7 @@ function append_leading_invader_rules_to_modal(
                     "none"
                 );
 
-                $("#leading_invader_rules_body_2").css(
+                $("#leading_invader_rules_body_2_content").css(
                     "display",
                     "none"
                 );
@@ -1002,7 +1002,7 @@ function append_leading_invader_rules_to_modal(
                     "block"
                 );
 
-                $("#leading_invader_rules_body_2").css(
+                $("#leading_invader_rules_body_2_content").css(
                     "display",
                     "block"
                 );
@@ -1253,8 +1253,8 @@ function append_supporting_invader_rules_to_modal(
     supporting_adversary_config
 ) {
 
-    $("#supporting_invader_rules_body_1").empty();
-    $("#supporting_invader_rules_body_2").empty();
+    $("#supporting_invader_rules_body_1_content").empty();
+    $("#supporting_invader_rules_body_2_content").empty();
 
     if (
         $("body").data(
@@ -1517,8 +1517,8 @@ function append_supporting_invader_rules_to_modal(
 
     var supporting_adversary_rules_table  = $("<div>").attr(
         {
-            class:`table ${dark_mode_flag} table-background`,
-            style:"margin:0;padding:max(1vh,1vw);"
+            class:`table py-1 px-2 ${dark_mode_flag} table-background table-fixed`,
+            style:"margin:0;"
         }
     ).html(
         $("<thead>").attr(
@@ -1560,7 +1560,7 @@ function append_supporting_invader_rules_to_modal(
                     $("<button>").attr(
                         {
                             id: `button_supporting_adversary_toggle_all_rules`,
-                            class:`p-1 btn btn-reset-page ${dark_mode_flag} d-flex`,
+                            class:`px-1 py-0 btn btn-reset-page ${dark_mode_flag} d-flex`,
                             style:"margin-left: auto;"
                         }
                     ).html(
@@ -1617,13 +1617,13 @@ function append_supporting_invader_rules_to_modal(
                             $("<button>").attr(
                                 {
                                     id: `button_supporting_adversary_rule_${level}_toggle`,
-                                    class:`w-100 btn btn-reset-page ${dark_mode_flag} d-flex justify-content-between`
+                                    class:`w-100 btn btn-reset-page py-0 ${dark_mode_flag} d-flex justify-content-between`
                                 }
                             ).html(
                                 spirit_text_keyword_converter(
                                     level_config["game_effects"]["title"],
                                     18,
-                                    "text-align:left;"
+                                    "text-align:left;text-overflow:ellipsis;overflow: hidden;white-space:nowrap;"
                                 ) + `<img id="supporting_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                             )
                         )
@@ -1668,7 +1668,7 @@ function append_supporting_invader_rules_to_modal(
     // Appending
 
     header.appendTo(
-        $("#supporting_invader_rules_body_1")
+        $("#supporting_invader_rules_body_1_content")
     );
 
     button_supporting_adversary_toggle_col.appendTo(
@@ -1728,7 +1728,7 @@ function append_supporting_invader_rules_to_modal(
     );
 
     supporting_adversary_rules_table.appendTo(
-       $("#supporting_invader_rules_body_2")
+       $("#supporting_invader_rules_body_2_content")
     );
 
     supporting_adversary_rules_div.appendTo(
@@ -1740,7 +1740,7 @@ function append_supporting_invader_rules_to_modal(
     );
 
     supporting_invader_super_row.appendTo(
-        $("#supporting_invader_rules_body_1")
+        $("#supporting_invader_rules_body_1_content")
     )
 
     $("#button_supporting_adversary_toggle").on(
@@ -1754,7 +1754,7 @@ function append_supporting_invader_rules_to_modal(
                     "none"
                 );
 
-                $("#supporting_invader_rules_body_2").css(
+                $("#supporting_invader_rules_body_2_content").css(
                     "display",
                     "none"
                 );
@@ -1771,7 +1771,7 @@ function append_supporting_invader_rules_to_modal(
                     "block"
                 );
 
-                $("#supporting_invader_rules_body_2").css(
+                $("#supporting_invader_rules_body_2_content").css(
                     "display",
                     "block"
                 );

@@ -23,6 +23,18 @@
             "file_name" : "2_range.svg",
             "vertical-align" : "baseline"
         },
+        "ANIMAL" : {
+            "file_name" : "animal.png",
+            "vertical-align" : ""
+        },
+        "ANY" : {
+            "file_name" : "any.png",
+            "vertical-align" : ""
+        },
+        "AIR" : {
+            "file_name" : "air.png",
+            "vertical-align" : ""
+        },
         "BADLANDS" : {
             "file_name" : "badlands.svg",
             "vertical-align" : "middle"
@@ -55,6 +67,10 @@
             "file_name" : "disease.svg",
             "vertical-align" : ""
         },
+        "EARTH" : {
+            "file_name" : "earth.png",
+            "vertical-align" : ""
+        },
         "EXPLORER" : {
             "file_name" : "explorer.svg",
             "vertical-align" : ""
@@ -65,6 +81,10 @@
         },
         "FEAR" : {
             "file_name" : "fear.svg",
+            "vertical-align" : ""
+        },
+        "FIRE" : {
+            "file_name" : "fire.png",
             "vertical-align" : ""
         },
         "IMPENDING_CARD" : {
@@ -101,6 +121,10 @@
         },
         "INCARNA_WANDERING_VOICE_KEENS_DELIRIUM" : {
             "file_name" : "incarna_wandering_voice_keens_delirium.svg",
+            "vertical-align" : ""
+        },
+        "MOON" : {
+            "file_name" : "moon.png",
             "vertical-align" : ""
         },
         "MOVE_ARROW" : {
@@ -153,6 +177,10 @@
         },
         "VITALITY" : {
             "file_name" : "vitality.svg",
+            "vertical-align" : ""
+        },
+        "WATER" : {
+            "file_name" : "water.png",
             "vertical-align" : ""
         },
         "WILDS" : {
