@@ -43,6 +43,19 @@
                     "plant" : 4,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -83,6 +96,19 @@
                     "water" : 3,
                     "earth" : 1,
                     "plant" : 5,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -133,6 +159,19 @@
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 4,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -295,6 +334,19 @@
                     "plant" : 5,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -397,6 +449,19 @@
                     "plant" : 0,
                     "animal" : 2
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -424,6 +489,32 @@
                 "threshold" : {
                     "sun" : 0,
                     "moon" : 3,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
                     "water" : 0,
@@ -473,6 +564,19 @@
                     "plant" : 0,
                     "animal" : 1
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -503,6 +607,32 @@
                 "threshold" : {
                     "sun" : 0,
                     "moon" : 3,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
                     "water" : 0,
@@ -602,6 +732,32 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -643,6 +799,19 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 1
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -748,6 +917,19 @@
                     "plant" : 0,
                     "animal" : 0,
                     "CARDS_IN_PLAY" : 7
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -856,6 +1038,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -896,6 +1091,19 @@
                     "water" : 7,
                     "earth" : 2,
                     "plant" : 3,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -1125,6 +1333,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -1165,6 +1386,19 @@
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 2,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -1214,6 +1448,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -1238,6 +1485,32 @@
                     "moon" : 3,
                     "fire" : 0,
                     "air" : 2,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
@@ -1272,6 +1545,32 @@
                     "moon" : 2,
                     "fire" : 1,
                     "air" : 2,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
@@ -1434,6 +1733,19 @@
                     "plant" : 2,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -1539,6 +1851,19 @@
                     "plant" : 0,
                     "animal" : 1
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -1641,6 +1966,19 @@
                     "plant" : 0,
                     "animal" : 4
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -1686,6 +2024,19 @@
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 4,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -1791,6 +2142,19 @@
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 4,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -2147,6 +2511,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -2427,6 +2804,19 @@
                     "plant" : 0,
                     "animal" : 2
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -2533,6 +2923,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -2572,6 +2975,19 @@
                     "air" : 0,
                     "water" : 4,
                     "earth" : 3,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
                 }
@@ -2625,6 +3041,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -2664,6 +3093,19 @@
                     "air" : 0,
                     "water" : 4,
                     "earth" : 3,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
                 }
@@ -2889,6 +3331,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -2935,6 +3390,19 @@
                     "fire" : 0,
                     "air" : 0,
                     "water" : 2,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
@@ -2986,6 +3454,19 @@
                     "air" : 0,
                     "water" : 4,
                     "earth" : 1,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
                 }
@@ -3099,6 +3580,19 @@
                     "plant" : 3,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3141,6 +3635,19 @@
                     "plant" : 0,
                     "animal" : 0,
                     "COST" : -7
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -3179,6 +3686,32 @@
                     "plant" : 1,
                     "animal" : 0
                 }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3221,6 +3754,19 @@
                     "plant" : 0,
                     "animal" : 0,
                     "COST" : -7
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -3264,6 +3810,19 @@
                     "moon" : 4,
                     "fire" : 3,
                     "air" : 2,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
@@ -3319,6 +3878,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -3369,6 +3941,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -3414,6 +3999,19 @@
                     "moon" : 4,
                     "fire" : 3,
                     "air" : 2,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
@@ -3532,6 +4130,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -3579,6 +4190,19 @@
                     "plant" : 0,
                     "animal" : 2
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3607,6 +4231,32 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 5
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -3658,6 +4308,19 @@
                     "plant" : 2,
                     "animal" : 4
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3686,6 +4349,32 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 5
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -3737,6 +4426,19 @@
                     "plant" : 0,
                     "animal" : 2
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3765,6 +4467,32 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 5
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         }
@@ -3813,6 +4541,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3837,6 +4578,32 @@
                     "moon" : 2,
                     "fire" : 0,
                     "air" : 1,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
@@ -3892,6 +4659,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -3916,6 +4696,32 @@
                     "moon" : 2,
                     "fire" : 0,
                     "air" : 1,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
                     "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
@@ -3968,6 +4774,19 @@
                     "air" : 3,
                     "water" : 0,
                     "earth" : 4,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
                 }
@@ -4128,6 +4947,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -4229,6 +5061,19 @@
                     "fire" : 0,
                     "air" : 3,
                     "water" : 4,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
@@ -4370,6 +5215,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_2" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -4417,6 +5275,19 @@
                     "plant" : 1,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -4456,6 +5327,19 @@
                     "air" : 0,
                     "water" : 0,
                     "earth" : 7,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
                     "plant" : 0,
                     "animal" : 0
                 }
@@ -4621,6 +5505,19 @@
                     "plant" : 4,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -4654,6 +5551,32 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 1
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         },
@@ -4691,6 +5614,19 @@
                     "sun" : 4,
                     "moon" : 0,
                     "fire" : 3,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
                     "air" : 0,
                     "water" : 0,
                     "earth" : 0,
@@ -4734,6 +5670,32 @@
                     "plant" : 0,
                     "animal" : 1
                 }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -4770,6 +5732,19 @@
                     "sun" : 4,
                     "moon" : 0,
                     "fire" : 3,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
                     "air" : 0,
                     "water" : 0,
                     "earth" : 0,
@@ -4813,6 +5788,32 @@
                     "plant" : 0,
                     "animal" : 1
                 }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -4836,6 +5837,32 @@
                     "sun" : 3,
                     "moon" : 0,
                     "fire" : 3,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_3" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
                     "air" : 0,
                     "water" : 0,
                     "earth" : 0,
@@ -4888,6 +5915,19 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 5
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         },
@@ -4991,6 +6031,19 @@
                     "plant" : 3,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -5039,6 +6092,19 @@
                     "water" : 0,
                     "earth" : 4,
                     "plant" : 3,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -5154,6 +6220,19 @@
                     "plant" : 3,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -5194,6 +6273,19 @@
                     "water" : 1,
                     "earth" : 1,
                     "plant" : 2,
+                    "animal" : 0
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
                     "animal" : 0
                 }
             }
@@ -5418,6 +6510,19 @@
                     "plant" : 0,
                     "animal" : 0
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         }
     },
@@ -5465,6 +6570,19 @@
                     "plant" : 2,
                     "animal" : 2
                 }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
+                }
             }
         },
         "innate_power_2" : {
@@ -5506,6 +6624,19 @@
                     "earth" : 0,
                     "plant" : 0,
                     "animal" : 5
+                }
+            },
+            "tier_4" : {
+                "effect" : "n/a",
+                "threshold" : {
+                    "sun" : 0,
+                    "moon" : 0,
+                    "fire" : 0,
+                    "air" : 0,
+                    "water" : 0,
+                    "earth" : 0,
+                    "plant" : 0,
+                    "animal" : 0
                 }
             }
         },
