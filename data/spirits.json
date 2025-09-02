@@ -500,7 +500,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -618,7 +618,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -736,7 +736,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -1494,7 +1494,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -1554,7 +1554,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -3690,7 +3690,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -4236,7 +4236,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -4354,7 +4354,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -4472,7 +4472,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -4587,7 +4587,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -4705,7 +4705,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -5556,7 +5556,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -5674,7 +5674,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -5792,7 +5792,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
@@ -5847,7 +5847,7 @@
             "tier_3" : {
                 "effect" : "n/a",
                 "threshold" : {
-                    "sun" : 0,
+                    "sun" : 1,
                     "moon" : 0,
                     "fire" : 0,
                     "air" : 0,
