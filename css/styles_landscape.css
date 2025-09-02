@@ -781,7 +781,7 @@ input:checked + .slider:before {
 .plus {
     --b: 5px;
     --c: #0000 90deg, rgba(var(--font-color-dark)) 0;
-    width: min(6vw,6vh);
+    width: max(3vw,3vh);
     align-self: center;
     aspect-ratio: 1;
     z-index: 2;
@@ -835,7 +835,7 @@ input:checked + .slider:before {
 .minus {
     --b: 5px;
     --c: #0000 180deg, rgba(var(--font-color-dark)) 0;
-    width: min(6vw,6vh);
+    width: max(3vw,3vh);
     align-self: center;
     aspect-ratio: 1;
     z-index: 2;
