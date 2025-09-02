@@ -35,18 +35,24 @@ function parse_innate_power(
         if (key == "name") {
             $("<div>").attr(
                     {
-                        class : `card-header text-center ${dark_mode_flag}`,
-                        style: "font-size : max(1.5vh,1.5vw)"
+                        class : `card-header ${dark_mode_flag}`
                     }
-                ).text(
-                    value.toUpperCase()
+                ).append(
+                    $("<span>").attr(
+                        {
+                            class : `text-line ${dark_mode_flag}`,
+                            style: "font-size : max(1.5vh,1.5vw);color: rgba(var(--font-color-light));display: flex;justify-content: center;text-align: center;height:2lh;align-items: center;"
+                        }
+                    ).text(
+                        value.toUpperCase()
+                    )
                 ).appendTo(
                     innate_power_card
                 );
                 
                 var innate_power_card_body = $("<div>").attr(
                     {
-                        class : `card-body p-1 ${dark_mode_flag}`
+                        class : `card-body ${dark_mode_flag}`
                     }
                 );
 
