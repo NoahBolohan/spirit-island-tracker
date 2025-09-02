@@ -467,7 +467,7 @@ function append_invader_rules_and_difficulty() {
                     style:"font-style:italic;text-align:center;"
                 }
             ).text("No Supporting Adversary selected").appendTo(
-                supporting_invader_rules_body
+                $("#supporting_invader_rules_body_1_content")
             )
         }
         else {
