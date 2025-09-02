@@ -78,10 +78,19 @@ function parse_innate_tier(
     innate_power_tier_config
 ) {
 
+    if (
+        innate_power_tier_config["effect"] == "n/a"
+    ) {
+        var visibility = "hidden";
+    } else {
+        var visibility = "visible";
+    }
+
     var tier_row = $("<div>").attr(
         {
             class : "row mb-1 mx-1 justify-content-center",
-            id : `row_innate_power_${innate_power_number}_${innate_power_tier}`
+            id : `row_innate_power_${innate_power_number}_${innate_power_tier}`,
+            style:`visibility:${visibility}`
         }
     );
 
