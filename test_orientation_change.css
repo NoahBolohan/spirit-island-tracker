@@ -1,0 +1,11 @@
+@media (min-width: 992px) and (orientation:landscape) {
+    .col-6 {
+        width:100%;
+    }
+}
+
+@media (min-width: 992px) and (orientation:portrait) {
+    .col-6 {
+        width:50%;
+    }
+}
