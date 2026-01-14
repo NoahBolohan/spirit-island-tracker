@@ -27,7 +27,7 @@
 		<script src="js/spirit_selection.js"></script>
 		<script src="js/adversary_selection.js"></script>
 		<script src="js/innate_powers.js"></script>
-		<script src="js/element_tracker.js"></script>
+		<script src="js/element_tracker_landscape.js"></script>
 
 		<!-- <script src="https://kit.fontawesome.com/1cbbe880ba.js" crossorigin="anonymous"></script> -->
 	</head>
@@ -372,12 +372,12 @@
 									</div>
 								</div>
 
-								<div class="row mt-2 p-0 justify-content-center margin_auto" id="row_setting_optional_elements_any_show_all">
+								<div class="row mt-3 p-0 justify-content-center margin_auto" id="row_setting_optional_elements_any_show_all">
 
-									<div class="col-4 p-0">
+									<!-- <div class="col-4 p-0">
 										<div class="row p-0 justify-content-end margin_auto" id="row_setting_optional_elements_any">
 											<div class="col-4 offset-2 p-0 text-line">
-												<img style="width: auto;height: max(4vh,4vw);" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/any.png">
+												<img style="width: auto;height: 4vh;" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/any.png">
 											</div>
 
 											<div class="col-6 p-0">
@@ -387,12 +387,22 @@
 												</label>
 											</div>
 										</div>
+									</div> -->
+
+									<div class="col-4 p-0">
+										<div class="row p-0 justify-content-end margin_auto" id="row_setting_optional_elements_hide_all">
+											<div class="col-10 p-0">
+												<button class="w-100 btn btn-reset-page" type="button" id="button_hide_all_elements" style="font-size: 1em;">
+													Hide all
+												</button>
+											</div>
+										</div>
 									</div>
 
 									<div class="col-4 p-0">
 										<div class="row p-0 justify-content-end margin_auto" id="row_setting_optional_elements_show_all">
 											<div class="col-10 p-0">
-												<button class="w-100 btn btn-reset-page" type="button" id="button_show_all_elements">
+												<button class="w-100 btn btn-reset-page" type="button" id="button_show_all_elements" style="font-size: 1em;">
 													Show all
 												</button>
 											</div>
@@ -927,7 +937,7 @@
 
 					<div class="row my-2 margin_auto card-body card-shape p-2" id="row_element_tracker">
 
-						<div class="col-10">
+						<div class="col-10 align-self-center">
 							<div class="row" id="row_counters_element_tracker"></div>
 						</div>
 
