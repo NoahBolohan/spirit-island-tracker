@@ -12,106 +12,110 @@ $(document).ready(
                 data["elements"],
                 function (key, element) {
 
-                    const toggle_element = localStorage.getItem(`toggle_${element}`) ? localStorage.getItem(`toggle_${element}`) : null;
+                    if (element != "any") {
 
-                    if (toggle_element == "hide") {
-                        var display_var = "none";
+                        const toggle_element = localStorage.getItem(`toggle_${element}`) ? localStorage.getItem(`toggle_${element}`) : null;
+
+                        if (toggle_element == "hide") {
+                            var display_var = "none";
+                        }
+                        else {
+                            var display_var = "block";
+                        }
+
+                        var col_for_element = $("<div>").attr(
+                            {
+                                class: "col p-0",
+                                id: `col_${element}_element_counter`,
+                                style:`display:${display_var};`
+                            }
+                        ).data(
+                            "locked_count", 0
+                        );
+
+                        var row_for_plus_button = $("<div>").attr(
+                            {
+                                class: "row p-0 justify-content-center margin_auto"
+                            }
+                        );
+
+                        var row_for_element_img = $("<div>").attr(
+                            {
+                                class: "row justify-content-center",
+                                style: "position: relative;"
+                            }
+                        );
+
+                        var row_for_minus_button = $("<div>").attr(
+                            {
+                                class: "row p-0 justify-content-center margin_auto"
+                            }
+                        );
+
+                        $("<button>").attr(
+                            {
+                                class: "col mb-1 btn astext btn-outlineless",
+                                id: `button_${element}_plus`,
+                                type: "button",
+                                style: "width:100%;display: flex;justify-content: center;"
+                            }
+                        ).html(
+                            '<div class="plus"></div></div>'
+                        ).appendTo(
+                            row_for_plus_button
+                        );
+
+                        $("<img>").attr(
+                            {
+                                class: "col-1 element_img",
+                                src: `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/${element}.png`,
+                                id: `element_${element}`
+                            }
+                        ).data(
+                            "counter", 0
+                        ).appendTo(
+                            row_for_element_img
+                        );
+
+                        $("<div>").attr(
+                            {
+                                class: "element_img_text_overlay",
+                                id: `element_${element}_overlay_text`
+                            }
+                        ).appendTo(
+                            row_for_element_img
+                        );
+
+                        $("<button>").attr(
+                            {
+                                class: "col btn astext btn-outlineless",
+                                id: `button_${element}_minus`,
+                                type: "button",
+                                style: "width:100%; display:flex; justify-content:center;"
+                            }
+                        ).html(
+                            '<div class="minus"</div>'
+                        ).appendTo(
+                            row_for_minus_button
+                        );
+
+                        row_for_plus_button.appendTo(
+                            col_for_element
+                        );
+
+                        row_for_element_img.appendTo(
+                            col_for_element
+                        );
+
+                        row_for_minus_button.appendTo(
+                            col_for_element
+                        );
+
+                        col_for_element.appendTo(
+                            $("#row_counters_element_tracker")
+                        );
+
                     }
-                    else {
-                        var display_var = "block";
-                    }
-
-                    var col_for_element = $("<div>").attr(
-                        {
-                            class: "col p-0",
-                            id: `col_${element}_element_counter`,
-                            style:`display:${display_var};`
-                        }
-                    ).data(
-                        "locked_count", 0
-                    );
-
-                    var row_for_plus_button = $("<div>").attr(
-                        {
-                            class: "row p-0 justify-content-center margin_auto"
-                        }
-                    );
-
-                    var row_for_element_img = $("<div>").attr(
-                        {
-                            class: "row justify-content-center",
-                            style: "position: relative;"
-                        }
-                    );
-
-                    var row_for_minus_button = $("<div>").attr(
-                        {
-                            class: "row p-0 justify-content-center margin_auto"
-                        }
-                    );
-
-                    $("<button>").attr(
-                        {
-                            class: "col mb-1 btn astext btn-outlineless",
-                            id: `button_${element}_plus`,
-                            type: "button",
-                            style: "width:100%;display: flex;justify-content: center;"
-                        }
-                    ).html(
-                        '<div class="plus"></div></div>'
-                    ).appendTo(
-                        row_for_plus_button
-                    );
-
-                    $("<img>").attr(
-                        {
-                            class: "col-1 element_img",
-                            src: `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/${element}.png`,
-                            id: `element_${element}`
-                        }
-                    ).data(
-                        "counter", 0
-                    ).appendTo(
-                        row_for_element_img
-                    );
-
-                    $("<div>").attr(
-                        {
-                            class: "element_img_text_overlay",
-                            id: `element_${element}_overlay_text`
-                        }
-                    ).appendTo(
-                        row_for_element_img
-                    );
-
-                    $("<button>").attr(
-                        {
-                            class: "col btn astext btn-outlineless",
-                            id: `button_${element}_minus`,
-                            type: "button",
-                            style: "width:100%; display:flex; justify-content:center;"
-                        }
-                    ).html(
-                        '<div class="minus"</div>'
-                    ).appendTo(
-                        row_for_minus_button
-                    );
-
-                    row_for_plus_button.appendTo(
-                        col_for_element
-                    );
-
-                    row_for_element_img.appendTo(
-                        col_for_element
-                    );
-
-                    row_for_minus_button.appendTo(
-                        col_for_element
-                    );
-
-                    col_for_element.appendTo(
-                        $("#row_counters_element_tracker")
-                    );
                 }
             )
         });

@@ -892,6 +892,30 @@ $(document).ready(
                         )
                     }
                 )
+
+                $("#button_hide_all_elements").on(
+                    "click",
+                    function() {
+                        $.each(
+                        data["elements"],
+                            function (key, element) {
+
+                                if (
+                                    $(`#button_toggle_${element}`).is(":checked")
+                                ) {
+                                    $(`#button_toggle_${element}`).prop(
+                                        "checked",
+                                        false
+                                    )
+
+                                    toggle_element_in_tracker(
+                                        element
+                                    );
+                                }
+                            }
+                        )
+                    }
+                )
             }
         )
     }
