@@ -771,7 +771,7 @@ function append_leading_invader_rules_to_modal(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:25%;font-style:italic;",
+                        style:"width:26%;font-style:italic;",
                         class:`text-line ${dark_mode_flag} table-header`
                     }
                 ).text("Fear")
@@ -832,7 +832,7 @@ function append_leading_invader_rules_to_modal(
                     ).append(
                         $("<td>").attr(
                             {
-                                style:"width:25%",
+                                style:"width:26%",
                                 class:`text-line ${dark_mode_flag} table-body`
                             }
                         ).html(
@@ -841,7 +841,7 @@ function append_leading_invader_rules_to_modal(
                     ).append(
                         $("<td>").attr(
                             {
-                                style:"width:60%;",
+                                style:"width:50%;",
                                 class:`text-line ${dark_mode_flag} table-body`
                             }
                         ).append(
@@ -854,7 +854,7 @@ function append_leading_invader_rules_to_modal(
                                 spirit_text_keyword_converter(
                                     level_config["game_effects"]["title"],
                                     18,
-                                    "text-align:left;text-overflow:ellipsis;overflow: hidden;white-space:nowrap;"
+                                    "text-align:left;text-overflow:ellipsis;overflow: hidden;"
                                 ) + `<img id="leading_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                             )
                         )
@@ -1538,7 +1538,7 @@ function append_supporting_invader_rules_to_modal(
                 $("<th>").attr(
                     {
                         scope:"col",
-                        style:"width:25%;font-style:italic;",
+                        style:"width:26%;font-style:italic;",
                         class:`text-line ${dark_mode_flag} table-header`
                     }
                 ).text("Fear")
@@ -1599,7 +1599,7 @@ function append_supporting_invader_rules_to_modal(
                     ).append(
                         $("<td>").attr(
                             {
-                                style:"width:25%",
+                                style:"width:26%",
                                 class:`text-line ${dark_mode_flag} table-body`
                             }
                         ).html(
@@ -1623,7 +1623,7 @@ function append_supporting_invader_rules_to_modal(
                                 spirit_text_keyword_converter(
                                     level_config["game_effects"]["title"],
                                     18,
-                                    "text-align:left;text-overflow:ellipsis;overflow: hidden;white-space:nowrap;"
+                                    "text-align:left;text-overflow:ellipsis;overflow: hidden;"
                                 ) + `<img id="supporting_adversary_rule_${level}_dropdown_arrow" style="align-self: center" class="svg ${dark_mode_flag}" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/icons/dropdown_arrow.svg"></img>`
                             )
                         )
