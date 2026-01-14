@@ -90,7 +90,7 @@ $(document).ready(
                                     class: "col-1 element_img",
                                     src: `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/${element}.png`,
                                     id: `element_${element}`,
-                                    style: "width:60%;height:auto;"
+                                    style: "width:13vw;height:auto;"
                                 }
                             ).data(
                                 "counter", 0
