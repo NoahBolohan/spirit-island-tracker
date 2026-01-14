@@ -199,7 +199,7 @@
 							</div>
 						</div>
 
-						<div class="row mt-2 p-0 justify-content-center margin_auto" id="row_setting_optional_elements_text">
+						<!-- <div class="row mt-2 p-0 justify-content-center margin_auto" id="row_setting_optional_elements_text">
 
 							<div class="col-5 p-0 align-self-center text-line">
 								Elements in tracker:
@@ -343,7 +343,7 @@
 
 						<div class="row mt-3 p-0 justify-content-center margin_auto" id="row_setting_optional_elements_any_show_all">
 
-							<!-- <div class="col-4 p-0">
+							<div class="col-4 p-0">
 								<div class="row p-0 justify-content-end margin_auto" id="row_setting_optional_elements_any">
 									<div class="col-4 offset-2 p-0 text-line">
 										<img style="width: auto;height: 4vh;" src="https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/any.png">
@@ -356,7 +356,7 @@
 										</label>
 									</div>
 								</div>
-							</div> -->
+							</div>
 
 							<div class="col-4 p-0">
 								<div class="row p-0 justify-content-end margin_auto" id="row_setting_optional_elements_hide_all">
@@ -377,7 +377,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -844,15 +844,28 @@
 
 				<div class="card col p-0 margin_auto card-body" id="col_element_tracker_card" style="background-blend-mode : lighten">
 
-					<div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker"></div>
+					<div class="row m-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker">
 
-					<div class="row mb-2 p-0 justify-content-center margin-auto">
+						<div class="col-9 p-0 margin_auto">
 
-						<button class="col-3 btn btn-lock-elements" id="button_toggle_lock_element_tracker" type="button" data-lock_status="unlocked">Lock</button>
+							<div class="row p-0 justify-content-center margin_auto" id="row_counters_element_tracker_sun_to_air"></div>
+							<div class="row mt-2 p-0 justify-content-center margin_auto" id="row_counters_element_tracker_water_to_animal"></div>
+						</div>
 
-						<button class="col-3 offset-1 btn btn-reset-elements" id="button_reset_element_tracker" type="button">
-							Reset
-						</button>
+						<div class="col-3 p-0 margin_auto align-self-center">
+
+							<div class="row p-0 justify-content-center margin_auto">
+
+								<button class="col-12 btn btn-lock-elements" id="button_toggle_lock_element_tracker" type="button" data-lock_status="unlocked">Lock</button>
+							</div>
+
+							<div class="row mt-4 p-0 justify-content-center margin_auto">
+
+								<button class="col-12 btn btn-reset-elements" id="button_reset_element_tracker" type="button">
+									Reset
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

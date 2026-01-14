@@ -89,7 +89,8 @@ $(document).ready(
                                 {
                                     class: "col-1 element_img",
                                     src: `https://raw.githubusercontent.com/NoahBolohan/spirit-island-tracker/refs/heads/main/static/elements/${element}.png`,
-                                    id: `element_${element}`
+                                    id: `element_${element}`,
+                                    style: "width:60%;height:auto;"
                                 }
                             ).data(
                                 "counter", 0
@@ -132,9 +133,24 @@ $(document).ready(
                         //     col_for_element
                         // );
 
-                        col_for_element.appendTo(
-                            $("#row_counters_element_tracker")
-                        );
+                        if (
+                            [
+                                "sun",
+                                "moon",
+                                "fire",
+                                "air"
+                            ].indexOf(element) >= 0
+                        ) {
+                            col_for_element.appendTo(
+                                $("#row_counters_element_tracker_sun_to_air")
+                            );
+                        } else {
+                            col_for_element.appendTo(
+                                $("#row_counters_element_tracker_water_to_animal")
+                            );
+                        }
+
+                        
 
                     }
                 }
