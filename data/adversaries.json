@@ -430,7 +430,7 @@
                 "fear_cards":"10 (3/4/3)",
                 "game_effects":{
                     "title":"Trading Port",
-                    "effect":"During Play, i Coastal lands, Explore Cards add 1 TOWN instead of 1 EXPLORER. 'Coastal Lands' Invader Cards do this for maximum 2 lands per board."
+                    "effect":"During Play, ni Coastal lands, Explore Cards add 1 TOWN instead of 1 EXPLORER. 'Coastal Lands' Invader Cards do this for maximum 2 lands per board."
                 }
             },
             "2":{
@@ -438,7 +438,7 @@
                 "fear_cards":"11 (4/4/3)",
                 "game_effects":{
                     "title":"Seize Opportunity",
-                    "effect":"During Setup, add 1 CITY to land #2. Place 'Coastal Lands' as the 3rd Stage II card, and move he two Stage II Cards above it up by one. <em>(New Deck Order: 11-22-1-C2-33333)</em>"
+                    "effect":"During Setup, add 1 CITY to land #2. Place 'Coastal Lands' as the 3rd Stage II card, and move the two Stage II Cards above it up by one. <em>(New Deck Order: 11-22-1-C2-33333)</em>"
                 }
             },
             "3":{
